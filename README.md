@@ -2,20 +2,29 @@
 
 Research OS archive for the Janus MoSSe finite-contact mechanical rectification project.
 
-This repository preserves the scientific workflow, verification gates, manuscript history, reproducibility artifacts, publication figures, and ACS Nano submission preparation produced through the Research OS pipeline.
+This repository is intended to preserve the scientific workflow, verification gates, manuscript history, reproducibility artifacts, publication figures, and ACS Nano submission preparation produced through the Research OS pipeline.
 
 ## Current status
 
-- Scientific layer: passed through citation audit, Red Team, Five Reviewer audit, targeted revision, and reproducibility clean replay.
-- Figure layer: publication-figure audit completed and handed off to ACS Nano venue preparation.
-- Submission layer: ACS Nano initial submission package prepared, with final submission metadata still requiring author-side completion where applicable.
+- Manuscript stage: manuscript and Supporting Information are in the submission-writing/audit stage.
+- Document consistency: central numerical claims checked so far are consistent between the current manuscript and SI.
+- Repository provenance gate: **BLOCKED**. The canonical execution/reproducibility evidence package described by the manuscript/SI is not yet present on the current repository tree.
+- Submission metadata: author-side metadata and final deposition identifiers remain incomplete where applicable.
 
-## Repository layout
+See:
+- `docs/MANUSCRIPT_INTEGRITY_GATE.md`
+- `docs/CLAIM_EVIDENCE_MATRIX.md`
+- `docs/REPOSITORY_EVIDENCE_MANIFEST.md`
+- `docs/RESEARCH_OS_PIPELINE.md`
+
+## Intended repository layout
 
 - `archive/`: chronological gate bundles and provenance snapshots.
 - `reproducibility/`: canonical current reproducibility release.
 - `submission/`: current ACS Nano initial-submission artifacts.
 - `docs/`: project-level provenance and status notes.
+
+The first three directories are intended targets and must not be treated as present evidence until populated or replaced by an immutable external deposition reference.
 
 ## Important scope notes
 
@@ -23,6 +32,6 @@ The project uses the published Janus MoSSe generalized stacking-fault-energy mod
 
 The dynamical results are reduced-model results under declared dimensionless parameters and loading protocols; they are not calibrated experimental predictions in SI units. The two in-plane relaxation representations share the same GSFE and target elastic constants and are therefore cross-representation checks, not fully independent atomistic validation.
 
-## Provenance
+## Provenance rule
 
-Current canonical artifacts are retained together with historical audit bundles so rejected or superseded claims remain traceable rather than silently disappearing.
+Rejected and superseded claims should remain traceable rather than being silently deleted. A gate may be marked passed only when the corresponding evidence artifact is committed or immutably linked.
