@@ -278,3 +278,156 @@ to the finite-contact energy. The branch-resolved search is then repeated at sel
 The published-GSFE implementation, analytic gradient and Hessian, and the canonical unguided release were regenerated from clean directories and compared with independent reference implementations. The claim-frozen evidence package contains the dense prepared-branch continuation; stationary-point checkpoints; translation/gauge and same-spectrum symmetry audits; exact characteristic-angle and dense compact size/shape calculations; boundary-registry and edge-weight analyses; cycle-resolved 91-point winding map; representative shooting, Floquet, time-step, continuation, and basin checks; the joint damping-drive audit; stationary trajectory-level thermal data and bootstrap/Hotelling summaries; trajectory-count convergence; and fresh FEM and independently reconstructed nonlinear-VFF calculations.
 
 The model hierarchy is intentionally bounded. The present work establishes reduced-model behavior anchored to the published lateral GSFE and tested against two in-plane relaxation representations. It does **not** supply a full three-dimensional atomistically relaxed finite MoSSe interface, a demonstrated physical mapping between mathematical GSFE inversion and reversal of Janus polarization, or a calibration that converts \(T^*\), \(\tau^*\), \(m^*\), \(\gamma^*\), and \(F_0^*\) into kelvin, hertz, physical mass, damping, or device force. Those quantities require independent atomistic or experimental input.
+
+
+## 3. Results
+
+### 3.1. The published 2H GSFE contains non-removable registry inversion asymmetry
+
+The mechanism tested below depends first on whether the imported lateral energy landscape is itself inversion asymmetric in a coordinate-independent sense. We therefore begin with the published 2H Se–S–Se–S GSFE rather than with a phenomenological ratchet potential. The three-shell Fourier representation in Eq. (1), together with the \(N=127\) unguided contact and lowest-energy zero-force preparation, defines the reference model used throughout the main figures (Figure 1a,b). Independent complex and conjugate-paired implementations of the published coefficients agree at approximately \(10^{-13}\) or better, and the 2024 Erratum does not alter the GSFE coefficient set used here. Varying the printed amplitudes and phases over their reporting-resolution intervals also preserves the sign of the static directional split and the canonical \((1,-1)\) deterministic winding. This check bounds sensitivity to the published decimal precision; it does not replace the unavailable source-fit covariance or raw GSFE grid.
+
+A registry-origin shift cannot remove the asymmetric component. Minimizing Eq. (5) over translations gives
+
+\[
+A_{\min}=0.0425361,
+\qquad
+\sqrt{A_{\min}}=0.206243,
+\]
+
+and independent local refinements converge to the same minimum with a multistart spread of order \(10^{-16}\). The first-shell triad invariant gives
+\(\chi_1=0.583541\), with changes below \(10^{-15}\) under random registry translations. By contrast, the symmetric 3R controls have translation-minimized odd power at numerical zero, whereas the asymmetric 3R control retains a smaller but finite odd component (Figure 1c). The relevant conservative property is therefore the non-removable inversion asymmetry of the lateral registry landscape, not the 2H or 3R label by itself.
+
+This conclusion is deliberately restricted to the lateral GSFE. It does not identify registry-space inversion with experimental reversal of the out-of-plane Janus polarization. The consequence of the registry asymmetry must instead be tested directly in the prepared finite contact.
+
+**Figure 1. Credible model input and registry-space inversion asymmetry.** (a) Unguided finite-contact and preparation contract: the center-of-mass registry is free in two dimensions, loading is along the declared \(\pm y\) axis, and the prepared state is the lowest-energy zero-force stable minimum. The schematic is illustrative rather than numerical evidence. (b) Published three-shell 2H MoSSe GSFE used as the conservative input. (c) Translation-minimized odd-RMS diagnostic for the 2H landscape and published 3R controls, together with the coordinate-independent \(A_{\min}\) and \(\chi_1\) diagnostics. Lateral registry inversion is not equated with physical Janus-polarity reversal.
+
+### 3.2. The prepared ground-state branch exhibits direction-split unguided depinning
+
+We next ask whether the asymmetric registry landscape produces a directional static response when the contact is prepared in a physically declared state rather than when one simply searches for the last surviving minimum anywhere in the primitive cell. The \(N=127\) contact contains two stable zero-force minima. Dense continuation follows both families separately over \(0^\circ\le\theta\le3^\circ\). At every one of the 491 continuation points, the family selected as the zero-force ground state remains lower in energy than the competing metastable family and remains stable to larger force in both loading directions (Figure 2c,d). Independent \(21\times21\) stationary-point enumerations at 16 checkpoints likewise recover two stable zero-force minima. The directional split is therefore not generated by switching to different last-surviving basins under opposite loading directions.
+
+At the reference twist \(\theta=1.5^\circ\), the prepared ground-state branch loses stability at
+
+\[
+F_{c,+}^*=3.071135,
+\qquad
+F_{c,-}^*=1.258672,
+\]
+
+so that
+\(\Delta F_c^*=1.812463\) and \(\rho=0.418601\) (Figure 2a,b). The competing higher-energy zero-force minimum has the opposite signed response, with thresholds \(0.211059\) and \(0.611697\). Thus directionality is not a basin-independent scalar property of the GSFE; it is a response of a specified prepared registry family under a specified loading axis. The minimum ground-to-metastable energy margin and the minimum positive- and negative-loading survival margins remain positive throughout the dense \(0^\circ\)–\(3^\circ\) continuation, closing the preparation ambiguity for the headline branch.
+
+The stability boundary is generically fold-like, but it is not uniformly a generic saddle-node. Near
+\(\theta=2.97338566^\circ\) on the \(+y\) branch, the stability loss occurs at \(F^*\approx1.91007353\) with one soft mode and a positive orthogonal curvature of approximately 6.9138, while the generic cubic condition along the soft direction fails. We therefore describe the complete curve as a depinning or stability boundary and reserve fold terminology for its generic segments. The main result is the branch-followed directional splitting itself, not a universal bifurcation classification.
+
+**Figure 2. Prepared-state directional depinning in the unguided contact.** (a,b) Positive- and negative-\(y\) stability thresholds followed from the lowest-energy zero-force family, with the competing metastable family represented separately and the isolated higher-order event marked without treating it as a generic fold. (c) Zero-force energy margin between the prepared and competing families. (d) Positive survival margin of the prepared family under both loading directions. The threshold comparison is state- and axis-conditioned.
+
+### 3.3. Same-spectrum controls identify registry inversion asymmetry as the directional source
+
+The prepared-state splitting establishes the phenomenon, but it does not by itself identify which part of the GSFE causes it. We therefore alter only the inversion content of the same translation-centered 2H Fourier spectrum. In the matched symmetrized surface, the inversion-odd coefficients are removed while the even sector is retained. The resulting landscape contains an exactly degenerate inversion-related pair of minima (Figure 3a). Individual members of this pair can retain asymmetric branch-specific thresholds, but the symmetry-respecting paired/global envelope is direction degenerate: at \(\theta=1.5^\circ\),
+
+\[
+F_{c,+}^*\simeq F_{c,-}^*\simeq1.767700,
+\]
+
+with a residual split of order \(10^{-9}\) or smaller. Under the canonical zero-mean rocking protocol, the corresponding deterministic current is zero to numerical precision.
+
+Exact spatial inversion gives the complementary test. Without changing the Fourier amplitudes or reciprocal spectrum, inversion swaps the two prepared thresholds from
+\((3.071135,1.258672)\) to
+\((1.258672,3.071135)\)
+and reverses the canonical lattice winding from \((1,-1)\) to \((-1,1)\) (Figure 3b,c). The threshold-swap errors are below \(2\times10^{-15}\), and the original and inverted lattice currents cancel to approximately \(10^{-14}\). Representative relative-periodic closure residuals remain at their numerical floor under the transformation (Figure 3d).
+
+These matched interventions discriminate the mechanism within the reduced model: removing the non-removable inversion-odd registry content removes the global directional response, whereas reversing that content reverses both the static and dynamical response. The inference is a same-spectrum symmetry result. Exact mathematical inversion is not, by itself, evidence that an experimental reversal of Janus polarization would implement the same transformation.
+
+**Figure 3. Same-spectrum symmetry controls for the directional mechanism.** (a) Matched registry landscapes for the original, symmetrized, and exactly inverted Fourier surfaces shown on a common scale. (b) Static threshold contract: symmetrization removes the paired/global directional split and exact inversion swaps the two thresholds. (c) Rocking-current contract: the original and inverted landscapes carry opposite lattice winding, while the matched symmetric control carries zero current. (d) Numerical closure diagnostics for the transformed relative-periodic states.
+
+### 3.4. Compact-contact similarity and two in-plane relaxation models preserve the directional sign
+
+A mechanism confined to one rigid \(N=127\) geometry would have limited significance, so we next test compact-contact scaling and internal compliance. For the original ten-contact hexagonal family, characteristic angles defined by Eq. (11) obey
+\(\theta_q\propto N^{-\alpha}\)
+with \(\alpha=0.50357\)–0.50365 across \(q=0.80\)–0.95 and both loading directions, with \(R^2\ge0.999993\). Removing the smallest contacts drives the fitted exponent toward the geometric value \(1/2\); for \(N\ge217\), \(\alpha=0.50127\)–0.50130. We therefore interpret the fit as inverse-linear-size structure-factor scaling with finite-size corrections rather than as a new critical exponent.
+
+The stronger test is direct collapse in \(\Theta=\theta\sqrt N\). Across the dense \(\Theta=0\)–20 grid, the larger hexagonal family remains collapsed with maximum cross-size deviations of 0.0818% for \(+y\) and 0.0800% for \(-y\). The independently constructed disk-like family is tighter still, with corresponding maxima of 0.0230% and 0.0222%. The largest difference between the hexagonal and disk family-mean normalized thresholds is approximately 0.105% at \(\Theta=20\) (Figure 4a,b). The similarity therefore survives a change of compact perimeter over the tested families, but it is not asserted for arbitrary edges.
+
+Allowing internal in-plane relaxation changes the absolute force scale more visibly than changing the compact perimeter. At \(\theta=1.5^\circ\), the nominal linear membrane gives
+
+\[
+F_{c,+}^*=2.934302,\qquad
+F_{c,-}^*=1.190210,\qquad
+\rho=0.422860,
+\]
+
+compared with the rigid values \(3.071135\), \(1.258672\), and \(0.418601\). Half and twice the nominal stiffness, an independent literature-level elastic pair, and a \(100C\) rigid-limit calculation all retain \(F_{c,+}>F_{c,-}\). The nonlinear bond-angle model gives
+\(F_{c,+}^*=2.935400\),
+\(F_{c,-}^*=1.190479\), and
+\(\rho=0.422921\)
+at the same twist and nominal matched stiffness (Figure 4c,d). Its deviations from the fresh linear-membrane values are only about 0.037%, 0.023%, and 0.014% in \(F_{c,+}\), \(F_{c,-}\), and \(\rho\), respectively.
+
+The two internal representations therefore agree that in-plane compliance renormalizes the absolute pinning scale without removing the prepared-state directional sign over the tested stiffness range. This is a model-form robustness result for in-plane relaxation, not a full three-dimensional atomistic validation.
+
+**Figure 4. Compact-contact and in-plane robustness of the prepared directional response.** (a) Normalized threshold collapse for self-similar compact contacts under the scaled twist \(\Theta=\theta\sqrt N\). (b) Residual size and shape dependence for the tested hexagonal and disk-like families. (c) Renormalization of the force scale by in-plane compliance. (d) Directional splitting retained by the rigid, linear-FEM, and nonlinear-VFF representations at matched conditions.
+
+### 3.5. Boundary-driven registry competition can reverse the prepared response
+
+The compact-contact collapse does not imply that all boundary modifications are perturbative. Rotated triangular contacts introduce a qualitatively different effect: two low-energy registry families coexist and carry opposite branch-followed directional biases. For the \(20^\circ\) and \(25^\circ\) cuts, their zero-force energies cross as twist increases (Figure 5a,b). Under the fixed-twist preparation protocol, that crossing changes which family is selected as the ground state and therefore reverses the sign of the prepared response (Figure 5c).
+
+The equilibrium crossings occur at
+
+\[
+\theta_{\rm sw}=2.92127801^\circ
+\quad (20^\circ\ {\rm cut}),
+\qquad
+\theta_{\rm sw}=2.84723312^\circ
+\quad (25^\circ\ {\rm cut}).
+\]
+
+The two registry families carry opposite splittings of approximately \(\pm0.67\) and \(\pm0.70\) near the respective crossings. This sign change is therefore a state-selection effect, not a smooth zero of a single branch. No transition path, activation barrier, continuous twist-sweep protocol, or hysteresis calculation is used to infer kinetic switching.
+
+The location of the crossing is substantially more sensitive to the edge model than the compact-contact similarity is to size. Varying the relative local-GSFE weight of the 48 outer sites from 0.5 to 1.5 moves the \(20^\circ\) crossing over \(2.7779^\circ\)–\(3.1701^\circ\) and the \(25^\circ\) crossing over \(2.7108^\circ\)–\(3.0832^\circ\) (Figure 5d). Competing A/B registry families and their crossing persist for all tested weights, but only 3 of 5 and 4 of 5 weights, respectively, place the crossing inside the nominal \(0^\circ\)–\(3^\circ\) window. The robust reduced-model statement is therefore boundary-controlled registry competition; the numerical reversal angle is not a universal material constant.
+
+**Figure 5. Boundary-controlled registry competition and preparation switching.** (a) Zero-force energy difference between registry families for two triangular boundary orientations. (b) The competing families carry opposite directional splitting. (c) Equilibrium selection of the lower-energy family reverses the prepared response across the registry crossing. (d) Surrogate outer-site weighting shifts the crossing substantially, demonstrating that the quantitative switch angle is edge-model sensitive.
+
+### 3.6. Zero-mean forcing produces protocol-specific vector-locked relative-periodic states
+
+Having established the static mechanism and its geometric limits, we test whether the same unguided landscape organizes motion under zero-mean forcing. At the canonical point
+\(\theta=1.5^\circ\),
+\(F_0^*=2.0\), and
+\(\tau^*=40\),
+the contact advances by the lattice winding \((m,n)=(1,-1)\) per cycle. Across the complete 13-by-7 sampled amplitude-period grid, all 91 points are assigned an integer winding after transients, including both pinned and transporting states (Figure 6a,b). The stricter cycle-resolved replay confirms that every one of the 40 measured cycles at every sampled point repeats the same integer pair; the largest single-cycle lattice-rounding residual is approximately \(9.55\times10^{-10}\). A \(\tau^*=40\) slice resolves a staircase of finite-width winding states rather than a single transport mode (Figure 6c).
+
+Representative plateaus satisfy stronger dynamical tests. For the canonical \((1,-1)\) state, one-period relative-lattice closure is of order \(2\times10^{-11}\), and independent DOP853 and Radau monodromy integrations give a leading Floquet spectral radius
+\(\rho_F\approx6.31\times10^{-22}\) (Figure 6d). The extreme magnitude is used only as evidence of strong numerical contraction. Five additional representative plateaus, spanning pinned, low-winding, and higher-winding states, also satisfy \(\rho_F<1\) under the cross-solver test. Across the six representative states, 24 of 24 time-step checks retain the expected winding and 162 of 162 local position/velocity perturbations return to that winding. These tests establish local attraction for representative states; they do not certify every sampled state by Floquet analysis or prove global attractor uniqueness.
+
+The map is also not a material-only phase diagram. A 72-point joint damping-drive audit over
+\(\gamma^*=2,3,4,5,6,8\),
+four amplitudes, and three periods shows that damping can reorganize the winding structure: only 1 of 12 sampled drive points preserves the \(\gamma^*=4\) winding across all tested damping values, and as many as five distinct winding pairs occur at one fixed drive point. The 91-point map should therefore be read as a reproducible property of the declared \(m^*=1,\gamma^*=4\) protocol.
+
+**Figure 6. Deterministic vector mode locking under zero-mean forcing.** (a,b) Integer winding components \(m\) and \(n\) across the 91-point amplitude-period grid; pinned states are marked directly and the two winding components use ordered discrete scales. (c) Vector staircase along the \(\tau^*=40\) slice. (d) Cross-solver Floquet and relative-periodic consistency diagnostics for representative attracting states. The map is conditional on the declared reduced mass and damping.
+
+### 3.7. Thermal noise destroys exact winding identity before erasing the stationary mean current
+
+Thermal noise separates exact mode identity from directed transport. After 60 burn cycles and over 100 measured cycles, the full \(T^*=0.02\)–0.70 series uses 500 independent trajectories per temperature, while the high-temperature band is independently replicated and pooled to \(N=1000\). The probability that a noisy cycle remains in the deterministic target winding \((1,-1)\) is already small at nonzero temperature and is only about 0.011–0.016 across the pooled high-temperature band. In contrast, the mean lattice current decays continuously but remains directed (Figure 7a,b). Exact cycle identity is therefore a much more fragile observable than the stationary mean displacement per cycle.
+
+The distinction remains statistically resolved at the largest sampled temperature. At \(T^*=0.70\), the pooled stationary estimate is
+
+\[
+(\langle u\rangle,\langle v\rangle)
+=
+(0.036998,-0.076448).
+\]
+
+A 50,000-resample trajectory bootstrap gives
+\(u\in[0.01265,0.06132]\) and
+\(v\in[-0.10088,-0.05195]\).
+The corresponding zero-current Mahalanobis statistic is 38.07, compared with a 95% threshold of 6.04, so the zero vector is excluded. The same joint test excludes zero at every sampled high-temperature point from \(T^*=0.50\) through 0.70 (Figure 7c). Because trajectories, rather than cycles, are the resampling units, these intervals do not rely on cycle-level pseudoreplication.
+
+A separate sample-count audit supports the pooled design. At least 95% of without-replacement subsamples reproduce the zero-vector rejection decision by
+\(N=100,200,200,300,\) and \(500\)
+for \(T^*=0.50,0.55,0.60,0.65,\) and \(0.70\), respectively. Thus the pooled \(N=1000\) high-temperature analysis is conservative relative to the observed decision-stability thresholds and is not a post hoc redefinition of the significance boundary.
+
+The cycle-sign statistic provides a weaker but complementary view of the same hierarchy. The negative-\(v\) fraction decreases toward one-half from
+\(0.51933\,[0.51632,0.52237]\) at \(T^*=0.50\)
+to
+\(0.50802\,[0.50506,0.51100]\) at \(T^*=0.70\),
+while the target-winding probability at \(0.70\) is only about 0.011 (Figure 7d). Targeted \(dt=0.04,0.02,\) and \(0.01\) reruns at \(T^*=0.60,0.65,\) and 0.70 differ by no more than 1.12 combined standard errors in either current component. The validated conclusion is therefore finite and observable specific: exact winding identity is strongly mixed, but a weaker stationary directed mean current remains statistically nonzero through the largest sampled \(T^*=0.70\). No thermal critical temperature or behavior beyond the sampled range is inferred.
+
+**Figure 7. Thermal hierarchy of mode identity and stationary directed current.** (a) Temperature evolution of the stationary mean lattice displacement per cycle. (b) Dedicated high-\(T^*\) view of trajectory-level 95% intervals for the two mean-current components. (c) Joint zero-current exclusion statistic relative to its 95% threshold. (d) Negative-\(v\) cycle probability compared with the probability of the exact deterministic target winding. Insets are avoided so that uncertainty, statistical exclusion, and mode-identity degradation remain separate visual jobs.
