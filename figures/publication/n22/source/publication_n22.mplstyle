@@ -1,0 +1,23 @@
+# Research OS publication-figure baseline. Venue rules may override.
+font.family: sans-serif
+font.sans-serif: Arial, Helvetica, DejaVu Sans
+font.size: 8
+axes.labelsize: 8
+axes.titlesize: 8
+xtick.labelsize: 7.5
+ytick.labelsize: 7.5
+legend.fontsize: 7.5
+axes.linewidth: 0.65
+axes.grid: False
+axes.spines.top: False
+axes.spines.right: False
+lines.linewidth: 1.2
+lines.markersize: 3.5
+legend.frameon: False
+legend.borderaxespad: 0.4
+legend.handlelength: 1.8
+savefig.bbox: tight
+savefig.pad_inches: 0.02
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none
