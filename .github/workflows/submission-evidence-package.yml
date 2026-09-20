@@ -1,0 +1,95 @@
+name: Submission Evidence Package
+
+on:
+  pull_request:
+    paths:
+      - "reproducibility/**"
+      - "submission/acs-nano/**"
+      - ".github/workflows/submission-evidence-package.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "reproducibility/**"
+      - "submission/acs-nano/**"
+      - ".github/workflows/submission-evidence-package.yml"
+  workflow_dispatch:
+
+jobs:
+  build-and-replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+          cache-dependency-path: reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/requirements.txt
+
+      - name: Install numerical environment
+        run: python -m pip install -r reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/requirements.txt
+
+      - name: Validate source release
+        working-directory: reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2
+        run: |
+          python validate_release.py
+          python validate_canonical_baseline.py
+          python recompute_stationary_thermal.py
+          python pre_submission_integrity_check.py
+          sha256sum -c SHA256SUMS.txt
+
+      - name: Verify LFS manuscript payloads are materialized
+        working-directory: reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2
+        run: |
+          test "$(stat -c%s manuscript/Janus_MoSSe_Current_Manuscript.docx)" -gt 10000
+          test "$(stat -c%s manuscript/Janus_MoSSe_Current_SupplementaryInformation.docx)" -gt 10000
+
+      - name: Build clean submission ZIP
+        run: |
+          rm -rf /tmp/janus-package /tmp/janus-replay
+          mkdir -p /tmp/janus-package
+          rsync -a             --exclude='__pycache__/'             --exclude='*.pyc'             reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/             /tmp/janus-package/Janus_MoSSe_Current_ReproducibilityRelease_v2/
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import zipfile
+
+          root = Path("/tmp/janus-package/Janus_MoSSe_Current_ReproducibilityRelease_v2")
+          out = Path("Janus_MoSSe_Current_ReproducibilityRelease_v2.zip")
+          with zipfile.ZipFile(out, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+              for p in sorted(root.rglob("*")):
+                  if p.is_file():
+                      z.write(p, p.relative_to(root.parent))
+          h = hashlib.sha256(out.read_bytes()).hexdigest()
+          Path("Janus_MoSSe_Current_ReproducibilityRelease_v2.zip.sha256").write_text(
+              f"{h}  {out.name}\n", encoding="utf-8"
+          )
+          print("PACKAGE_SHA256", h)
+          PY
+
+      - name: Fresh-extraction replay
+        run: |
+          mkdir -p /tmp/janus-replay
+          python - <<'PY'
+          import zipfile
+          with zipfile.ZipFile("Janus_MoSSe_Current_ReproducibilityRelease_v2.zip") as z:
+              z.extractall("/tmp/janus-replay")
+          PY
+          cd /tmp/janus-replay/Janus_MoSSe_Current_ReproducibilityRelease_v2
+          python validate_release.py
+          python validate_canonical_baseline.py
+          python recompute_stationary_thermal.py
+          python pre_submission_integrity_check.py
+          sha256sum -c SHA256SUMS.txt
+
+      - name: Upload submission evidence artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Janus_MoSSe_Current_ReproducibilityRelease_v2
+          path: |
+            Janus_MoSSe_Current_ReproducibilityRelease_v2.zip
+            Janus_MoSSe_Current_ReproducibilityRelease_v2.zip.sha256
+          if-no-files-found: error
+          retention-days: 90
