@@ -91,10 +91,10 @@ a.text(0.04, 0.91, 'ground', transform=a.transAxes, color=BLUE, fontsize=7.0,
        ha='left', va='top')
 a.text(0.04, 0.17, 'metastable', transform=a.transAxes, color=BLUE, fontsize=7.0,
        ha='left', va='top')
-a.text(1.5, 3.28, r'$\theta=1.5^\circ$', ha='center', va='bottom', fontsize=6.8, color=MID)
+a.text(1.5, 3.28, r'$\theta=1.5$°', ha='center', va='bottom', fontsize=6.8, color=MID)
 fref = float(np.interp(1.5, fd.theta.to_numpy(), fd.Ff.to_numpy()))
 a.plot([1.5], [fref], marker='o', ms=4.2, mfc=BLUE, mec='white', mew=0.7, zorder=6)
-a.text(0.97, 0.06, fr'$F_{{c,+}}^*={fref:.3f}$ at $1.5^\circ$',
+a.text(0.97, 0.06, fr'$F_{{c,+}}^*={fref:.3f}$ at 1.5°',
        transform=a.transAxes, ha='right', va='bottom', fontsize=6.6, color=MID)
 # Independent nondegeneracy audit: isolated higher-order point on the +y ground branch.
 a.plot(float(ho.theta_deg), float(ho.F_star), marker='D', ms=4.4, color=DARK, zorder=7)
@@ -116,7 +116,7 @@ b.text(0.04, 0.21, 'metastable', transform=b.transAxes, color=VERM, fontsize=7.0
        ha='left', va='top')
 rref = float(np.interp(1.5, fd.theta.to_numpy(), fd.Fr.to_numpy()))
 b.plot([1.5], [rref], marker='s', ms=4.0, mfc=VERM, mec='white', mew=0.7, zorder=6)
-b.text(0.97, 0.06, fr'$F_{{c,-}}^*={rref:.3f}$ at $1.5^\circ$',
+b.text(0.97, 0.06, fr'$F_{{c,-}}^*={rref:.3f}$ at 1.5°',
        transform=b.transAxes, ha='right', va='bottom', fontsize=6.6, color=MID)
 panel_label(b, 'b'); panel_title(b, r'$-y$ prepared-state depinning'); finish(b)
 
