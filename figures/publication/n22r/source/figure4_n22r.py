@@ -147,7 +147,7 @@ for _,r in vff.iterrows():
     c.plot(xi,float(r.Fm)/Fm_rigid,marker='s',ms=4.3,mfc='white',mec=VERM,mew=1.0,linestyle='none',zorder=5)
 c.axhline(1.0,color=LIGHT,lw=0.75,zorder=0)
 c.set_xticks(x,xlabels); c.set_xlim(-0.35,4.35); c.set_ylim(0.895,1.006)
-c.set_xlabel(r'in-plane stiffness condition, $\theta=1.5^\circ$')
+c.set_xlabel(r'in-plane stiffness condition, $\theta=1.5$°')
 c.set_ylabel(r'$F_c/F_c^{\mathrm{rigid}}$')
 c.text(0.03,0.05,'filled = FEM\nopen = nonlinear VFF',transform=c.transAxes,
        ha='left',va='bottom',fontsize=6.7,color=MID)
@@ -163,7 +163,7 @@ for _,r in vff.iterrows():
     d.plot(xi,dv,marker='D',ms=4.2,mfc='white',mec=DARK,mew=0.9,linestyle='none',zorder=5)
 d.axhline(0,color=LIGHT,lw=0.75,zorder=0)
 d.set_xticks(x,xlabels); d.set_xlim(-0.35,4.35); d.set_ylim(-0.08,1.50)
-d.set_xlabel(r'in-plane stiffness condition, $\theta=1.5^\circ$')
+d.set_xlabel(r'in-plane stiffness condition, $\theta=1.5$°')
 d.set_ylabel(r'$100(\rho/\rho_{\mathrm{rigid}}-1)$ (%)')
 d.text(0.03,0.08,'filled circle = FEM\nopen diamond = VFF',transform=d.transAxes,
        ha='left',va='bottom',fontsize=6.6,color=MID)
@@ -171,7 +171,7 @@ row15=modelcmp[np.isclose(modelcmp.theta,1.5)].iloc[0]
 row30=modelcmp[np.isclose(modelcmp.theta,3.0)].iloc[0]
 d.text(0.98,0.93,
        'FEM-VFF relative difference in $\\rho$\n'
-       +fr'$0.014\%$ at $1.5^\circ$; $0.122\%$ at $3^\circ$',
+       +fr'$0.014\%$ at 1.5°; $0.122\%$ at 3°',
        transform=d.transAxes,ha='right',va='top',fontsize=6.4,color=MID)
 panel_label(d,'d'); panel_title(d,'directional split is stable across representations'); finish(d)
 
