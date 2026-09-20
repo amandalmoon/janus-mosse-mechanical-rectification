@@ -76,7 +76,7 @@ fig = plt.figure(figsize=(inch(177.8), inch(72.0)))
 gs = fig.add_gridspec(
     1, 3,
     left=0.045, right=0.985, bottom=0.18, top=0.86,
-    wspace=0.32, width_ratios=[1.02, 1.32, 0.84],
+    wspace=0.52, width_ratios=[1.00, 1.23, 0.82],
 )
 ax_a = fig.add_subplot(gs[0, 0])
 ax_b = fig.add_subplot(gs[0, 1])
@@ -130,9 +130,9 @@ ax_b.contour(U, V, Z, levels=[0.0], colors=[DARK], linewidths=0.75)
 ax_b.set_xlabel(r'$u$ along $\mathbf{a}_1$')
 ax_b.set_ylabel(r'$v$ along $\mathbf{a}_2$')
 ax_b.set_aspect('equal', adjustable='box')
-cb = fig.colorbar(im, ax=ax_b, fraction=0.046, pad=0.025)
+cb = fig.colorbar(im, ax=ax_b, fraction=0.040, pad=0.020)
 cb.set_label(r'$U/E_0$')
-cb.ax.tick_params(labelsize=7.0, width=0.5, length=2)
+cb.ax.tick_params(labelsize=6.5, width=0.5, length=2)
 panel_label(ax_b, 'b', x=-0.09)
 panel_title(ax_b, '2H MoSSe GSFE', x=0.06)
 finish(ax_b)
