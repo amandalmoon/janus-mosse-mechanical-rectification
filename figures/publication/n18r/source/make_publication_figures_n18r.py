@@ -16,7 +16,16 @@ def main() -> int:
     ap.add_argument("--font-family", default="Arial",
                     help="Figure text font; ACS Nano venue render must use literal Arial.")
     args = ap.parse_args()
-    plt.rcParams.update({"font.family": args.font_family, "font.sans-serif": [args.font_family]})
+    plt.rcParams.update({
+        "font.family": args.font_family,
+        "font.sans-serif": [args.font_family],
+        "mathtext.fontset": "custom",
+        "mathtext.rm": args.font_family,
+        "mathtext.it": f"{args.font_family}:italic",
+        "mathtext.bf": f"{args.font_family}:bold",
+        "mathtext.sf": args.font_family,
+        "mathtext.fallback": "stix",
+    })
     root = args.release.resolve()
     out = args.out.resolve()
     for fn in [figure1, figure2, figure3, figure4, figure5, figure6]:
