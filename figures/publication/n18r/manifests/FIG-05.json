@@ -115,7 +115,7 @@
     "svg": "../figures/Figure_5_vector_mode_map_floquet_N18R.svg",
     "tiff": null,
     "png_preview": "../figures/Figure_5_vector_mode_map_floquet_N18R.png",
-    "source": "../source/make_publication_figures_n18r.py"
+    "source": "../source/n18r_figures_5_6.py"
   },
   "caption": "Figure 5. Two-dimensional vector mode locking. (a,b) Integer windings m and n over the 91 sampled rocking-amplitude/period points at theta=1.5 deg; the map includes pinned (0,0) as well as transporting integer-winding states. (c) The tau*=40 slice shows the sampled vector staircase. (d) Independent DOP853 and Radau monodromy calculations agree on the extremely small leading Floquet spectral radius and relative-periodic closure of the representative (1,-1) orbit; this is local attraction evidence rather than a claim of global uniqueness.",
   "visual_qa": {
@@ -127,7 +127,7 @@
     "redundant_series_encoding": true,
     "caption_parameter_complete": true,
     "not_default_matplotlib": true,
-    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+    "notes": "Final-size literal-Arial venue render was opened and visually inspected; current Publication Figure Designer manifest/package audits are required before downstream freeze."
   },
   "qa": {
     "scientific": "PASS",
