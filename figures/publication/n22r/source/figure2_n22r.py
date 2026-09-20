@@ -51,7 +51,7 @@ def inch(mm: float) -> float:
     return mm / MM
 
 
-def panel_label(ax, letter: str, x=-0.055, y=1.045):
+def panel_label(ax, letter: str, x=-0.055, y=1.032):
     ax.text(
         x, y, f'({letter})', transform=ax.transAxes,
         ha='left', va='bottom', fontsize=9.3,
@@ -59,7 +59,7 @@ def panel_label(ax, letter: str, x=-0.055, y=1.045):
     )
 
 
-def panel_title(ax, title: str, x=0.055, y=1.025):
+def panel_title(ax, title: str, x=0.060, y=1.015):
     ax.text(
         x, y, title, transform=ax.transAxes,
         ha='left', va='bottom', fontsize=8.4,
@@ -168,7 +168,7 @@ d.set_xlim(0, 3)
 d.set_ylim(0, max(mp) * 1.12)
 d.set_xlabel(r'twist $\theta$ (deg)')
 d.set_ylabel(r'$F_c^{\mathrm{ground}}-F_c^{\mathrm{meta}}$')
-d.legend(loc='upper left', handlelength=2.0, borderaxespad=0.3, ncol=1)
+d.legend(loc='upper right', handlelength=2.0, borderaxespad=0.3, ncol=1)
 panel_label(d, 'd')
 panel_title(d, 'prepared-branch survival margin')
 finish(d)
