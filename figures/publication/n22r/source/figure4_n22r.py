@@ -108,8 +108,8 @@ leg_dir = [
 leg1 = a.legend(handles=leg_dir, loc='lower left', bbox_to_anchor=(0.00,0.00), ncol=2,
                 handlelength=1.6, columnspacing=1.0, borderaxespad=0.2)
 a.add_artist(leg1)
-a.text(0.98,0.04,'filled = hex\nopen = disk', transform=a.transAxes,
-       ha='right', va='bottom', fontsize=6.7, color=MID)
+a.text(0.98,0.93,'filled = hex\nopen = disk', transform=a.transAxes,
+       ha='right', va='top', fontsize=6.7, color=MID)
 panel_label(a,'a'); panel_title(a,'compact contacts collapse under scaled twist'); finish(a)
 
 rows=[]
@@ -149,8 +149,8 @@ c.axhline(1.0,color=LIGHT,lw=0.75,zorder=0)
 c.set_xticks(x,xlabels); c.set_xlim(-0.35,4.35); c.set_ylim(0.895,1.006)
 c.set_xlabel(r'in-plane stiffness condition, $\theta=1.5$°')
 c.set_ylabel(r'$F_c/F_c^{\mathrm{rigid}}$')
-c.text(0.03,0.05,'filled = FEM\nopen = nonlinear VFF',transform=c.transAxes,
-       ha='left',va='bottom',fontsize=6.7,color=MID)
+c.text(0.98,0.16,'filled = FEM\nopen = nonlinear VFF',transform=c.transAxes,
+       ha='right',va='bottom',fontsize=6.7,color=MID)
 c.text(0.98,0.93,r'rigid reference = 1',transform=c.transAxes,ha='right',va='top',fontsize=6.6,color=MID)
 panel_label(c,'c'); panel_title(c,'compliance renormalizes the absolute force scale'); finish(c)
 
