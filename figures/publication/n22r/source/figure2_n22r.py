@@ -6,7 +6,6 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 
 ROOT = Path(os.environ['N22R_RELEASE_ROOT'])
 OUT = Path(os.environ['N22R_OUT'])
@@ -113,17 +112,6 @@ a.set_xlim(0, 3)
 a.set_ylim(0, 3.65)
 a.set_xlabel(r'twist $\theta$ (deg)')
 a.set_ylabel(r'branch-followed threshold $F_c^*$')
-legend_handles = [
-    Line2D([0], [0], color=BLUE, lw=1.55, label='ground branch'),
-    Line2D([0], [0], color=BLUE, lw=1.0, ls='--', marker='o',
-           mfc='white', mec=BLUE, mew=0.8, ms=4.0, label='metastable branch'),
-    Line2D([0], [0], color='none', marker='D', mfc=DARK, mec=DARK,
-           ms=4.5, label='higher-order point'),
-]
-a.legend(
-    handles=legend_handles, loc='center left', bbox_to_anchor=(0.03, 0.52),
-    handlelength=2.1, borderaxespad=0.0,
-)
 panel_label(a, 'a')
 panel_title(a, r'$+y$ prepared-state depinning')
 finish(a)
