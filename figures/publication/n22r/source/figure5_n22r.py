@@ -51,7 +51,7 @@ def panel_label(ax, letter: str, x: float = -0.09, y: float = 1.04) -> None:
     ax.text(x, y, f'({letter})', transform=ax.transAxes, ha='left', va='bottom',
             fontsize=9.2, fontweight='bold', color=DARK, clip_on=False)
 
-def panel_title(ax, title: str, x: float = 0.0) -> None:
+def panel_title(ax, title: str, x: float = 0.07) -> None:
     ax.text(x, 1.02, title, transform=ax.transAxes, ha='left', va='bottom',
             fontsize=8.1, color=DARK, clip_on=False)
 
@@ -133,14 +133,8 @@ def main() -> None:
     ax_b.set_ylim(-0.78, 0.78)
     ax_b.set_xlabel(r'twist $\theta$ (deg)')
     ax_b.set_ylabel(r'family split $\Delta F_c^*$')
-    ax_b.legend(handles=[
-        Line2D([0], [0], color=DARK, ls='--', marker='o', mfc='white', mec=DARK,
-               label='family A'),
-        Line2D([0], [0], color=DARK, ls='-', marker='s', mfc='white', mec=DARK,
-               label='family B'),
-        Line2D([0], [0], color='none', marker='o', mfc=DARK, mec=DARK,
-               label='selected'),
-    ], loc='upper center', ncol=3, columnspacing=0.8, handlelength=1.4, fontsize=6.6)
+    ax_b.text(2.838, 0.67, 'family A', fontsize=6.8, color=DARK, ha='left', va='center')
+    ax_b.text(2.838, -0.69, 'family B', fontsize=6.8, color=DARK, ha='left', va='center')
     panel_label(ax_b, 'b')
     panel_title(ax_b, 'Competing-family bias')
     finish(ax_b)
