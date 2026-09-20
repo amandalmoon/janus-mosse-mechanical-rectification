@@ -7,7 +7,7 @@ def figure5(root: Path, out: Path) -> None:
     def pivot(col): return vm.pivot(index='period',columns='F0',values=col).loc[Pvals,Fvals].to_numpy()
 
     fig=plt.figure(figsize=(inch(177.8),inch(124.0)))
-    gs=fig.add_gridspec(2,2,left=0.075,right=0.985,bottom=0.105,top=0.955,wspace=0.27,hspace=0.38)
+    gs=fig.add_gridspec(2,2,left=0.075,right=0.925,bottom=0.105,top=0.955,wspace=0.29,hspace=0.38)
     a=fig.add_subplot(gs[0,0]); b=fig.add_subplot(gs[0,1],sharex=a,sharey=a); c=fig.add_subplot(gs[1,0])
     sub=gs[1,1].subgridspec(2,1,hspace=0.08)
     d1=fig.add_subplot(sub[0,0]); d2=fig.add_subplot(sub[1,0],sharex=d1)
