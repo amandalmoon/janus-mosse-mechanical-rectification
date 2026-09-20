@@ -19,8 +19,8 @@ DARK='#222222'; MID='#666666'; LIGHT='#C9C9C9'; TEAL='#2A9D8F'; PURPLE='#8064A2'
 
 def inch(mm): return mm/MM
 
-def panel_label(ax,letter,x=-0.055,y=1.045): ax.text(x,y,f'({letter})',transform=ax.transAxes,ha='left',va='bottom',fontsize=9.3,fontweight='bold',color=DARK,clip_on=False)
-def panel_title(ax,title,x=0.055,y=1.025): ax.text(x,y,title,transform=ax.transAxes,ha='left',va='bottom',fontsize=8.4,color=DARK,clip_on=False)
+def panel_label(ax,letter,x=-0.055,y=1.030): ax.text(x,y,f'({letter})',transform=ax.transAxes,ha='left',va='bottom',fontsize=9.3,fontweight='bold',color=DARK,clip_on=False)
+def panel_title(ax,title,x=0.060,y=1.015): ax.text(x,y,title,transform=ax.transAxes,ha='left',va='bottom',fontsize=8.4,color=DARK,clip_on=False)
 def finish(ax):
     ax.tick_params(direction='out',length=2.5,width=0.6,pad=2.0); ax.spines['left'].set_color(DARK); ax.spines['bottom'].set_color(DARK)
 def grid_edges(v):
@@ -75,7 +75,7 @@ def make_figure(release,out):
     rho_ref=float(fl.loc[ref,'rho'].iloc[0]); ppm=(fl.rho.to_numpy(float)/rho_ref-1)*1e6; clo=fl.closure.to_numpy(float)*1e11
     if float(np.max(np.abs(ppm)))>2.765: raise AssertionError('Floquet spread changed')
     d1.plot(x,ppm,linestyle='none',marker='o',mfc=DARK,mec=DARK,color=DARK,ms=4.3); d1.axhline(0,color=LIGHT,lw=0.7); d1.set_ylabel(r'$\rho_F$ rel. dev. (ppm)'); d1.set_ylim(-0.25,max(3.15,float(ppm.max())*1.10)); d1.tick_params(labelbottom=False)
-    panel_label(d1,'d',x=-0.07,y=1.08); panel_title(d1,'Floquet consistency across solvers',x=0.07,y=1.05); finish(d1)
+    panel_label(d1,'d',x=-0.075,y=1.055); panel_title(d1,'Floquet consistency across solvers',x=0.075,y=1.035); finish(d1)
     d2.plot(x,clo,linestyle='none',marker='s',mfc='white',mec=MID,color=MID,ms=4.1); d2.set_ylabel(r'closure ($10^{-11}$)'); d2.set_xticks(x,labels); d2.set_ylim(0,max(2.15,float(clo.max())*1.10)); finish(d2)
     save(fig,out,'Figure_6_vector_mode_locking_N22R')
 
