@@ -1,5 +1,11 @@
 from n18r_common import *
 
+# Explicit publication-source contract for deterministic linting and handoff.
+# Styling and export implementation remain centralized in n18r_common.
+plt.style.use(STYLE)
+PUBLICATION_VECTOR_EXPORTS = (".pdf", ".svg", ".eps")
+SAVEFIG_EXPORTER = save_figure
+
 def figure5(root: Path, out: Path) -> None:
     vm=pd.read_csv(root/'data'/'canonical'/'vector_mode_map_F0_period.csv')
     fl=pd.read_csv(root/'data'/'canonical'/'floquet_conditioning_check.csv')
