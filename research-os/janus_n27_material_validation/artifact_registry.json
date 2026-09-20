@@ -176,6 +176,51 @@
       ],
       "supersedes": null,
       "material_change_note": "Approves read-only scientific handoff to venue layer."
+    },
+    {
+      "id": "DOCX-N27-FINAL",
+      "type": "final frozen manuscript DOCX",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx",
+      "path": "external-release:Janus_MoSSe_N27_ScientificFreeze_Final.docx",
+      "hash": "ce16d631ff481b0095131c7a5c448ba27b4002ad7f47a0fa0822037454296829",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "DOCX assembled from exact frozen manuscript; 20-page render and accessibility QA passed."
+    },
+    {
+      "id": "DOCX-QA-N27",
+      "type": "DOCX render and accessibility QA",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx",
+      "path": "research-os/janus_n27_scientific_freeze/N27_FINAL_DOCX_QA.md",
+      "hash": "f1ab0f296b21755017235380c7c1e1fc9679fdb6",
+      "depends_on": [
+        "DOCX-N27-FINAL"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "RELEASE-N27",
+      "type": "immutable reproducibility release",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "research-os-orchestrator",
+      "path": "research-os/janus_n27_release/N27_IMMUTABLE_RELEASE_RECORD.md",
+      "hash": "1146c1495363336237fcde5c01845737913de9d7",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "DOCX-N27-FINAL",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Public content-addressed Git commit 327c58e2684398ba7bc11205865f8222066c3539 is the immutable source identifier; bundle SHA-256 is recorded."
     }
   ]
 }
