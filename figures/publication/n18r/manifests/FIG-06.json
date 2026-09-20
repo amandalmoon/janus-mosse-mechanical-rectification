@@ -63,7 +63,7 @@
     {
       "id": "B",
       "question": "Does the two-component stationary current remain distinguishable from zero at high temperature?",
-      "role": "statistical-validation",
+      "role": "validation",
       "visual_type": "line",
       "evidence_ids": [
         "C17"
@@ -104,7 +104,7 @@
     "svg": "../figures/Figure_6_thermal_stationary_hierarchy_N18R.svg",
     "tiff": null,
     "png_preview": "../figures/Figure_6_thermal_stationary_hierarchy_N18R.png",
-    "source": "../source/make_publication_figures_n18r.py"
+    "source": "../source/n18r_figures_5_6.py"
   },
   "caption": "Figure 6. Stationary thermal hierarchy from trajectory-level inference. (a) Mean lattice-coordinate currents after 60 burn cycles and 100 measured cycles with trajectory-level 95% intervals; open low-temperature markers use N=500 trajectories per T*, whereas filled T*=0.50-0.70 markers use pooled two-seed N=1000 estimates. (b) High-temperature Hotelling zero-current rejection ratio relative to the declared 95% threshold; this ratio is not interpreted as a thermal critical scale. (c) The negative-v cycle probability approaches one-half while the exact deterministic target-winding probability remains near 1% in the high-temperature band, with bootstrap intervals shown where available.",
   "visual_qa": {
@@ -116,7 +116,7 @@
     "redundant_series_encoding": true,
     "caption_parameter_complete": true,
     "not_default_matplotlib": true,
-    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+    "notes": "Final-size literal-Arial venue render was opened and visually inspected; current Publication Figure Designer manifest/package audits are required before downstream freeze."
   },
   "qa": {
     "scientific": "PASS",
