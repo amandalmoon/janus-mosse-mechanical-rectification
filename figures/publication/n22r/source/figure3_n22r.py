@@ -6,6 +6,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 
 ROOT = Path(os.environ['N22R_RELEASE_ROOT'])
 OUT = Path(os.environ['N22R_OUT'])
@@ -177,15 +178,19 @@ for yi, (_, row) in zip(y, rows):
     b.plot(row.Fc_minus, yi, marker='s', ms=4.9, color=VERM,
            mfc=VERM, mec=VERM, zorder=3)
 b.set_yticks(y, ['original', 'sym.', 'inverted'])
-b.set_ylim(-0.55, 2.55)
+b.set_ylim(-0.78, 2.55)
 b.set_xlim(1.0, 3.25)
 b.set_xticks([1.0, 1.5, 2.0, 2.5, 3.0])
 b.set_xlabel(r'depinning threshold $F_c^*$')
 b.grid(axis='x', color=GRID, lw=0.5)
-b.text(0.63, 1.025, r'$ullet$ +y', transform=b.transAxes, color=BLUE,
-       fontsize=7.2, ha='left', va='bottom', clip_on=False)
-b.text(0.82, 1.025, r'$lacksquare$ -y', transform=b.transAxes, color=VERM,
-       fontsize=7.2, ha='left', va='bottom', clip_on=False)
+handles = [
+    Line2D([0], [0], marker='o', color='none', markerfacecolor=BLUE,
+           markeredgecolor=BLUE, label='+y', markersize=4.6),
+    Line2D([0], [0], marker='s', color='none', markerfacecolor=VERM,
+           markeredgecolor=VERM, label='-y', markersize=4.4),
+]
+b.legend(handles=handles, loc='lower right', ncol=2, handletextpad=0.35,
+         columnspacing=0.8, borderaxespad=0.25)
 panel_label(b, 'b', x=-0.13)
 panel_title(b, 'static thresholds', x=0.02)
 finish(b)
