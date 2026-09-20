@@ -115,8 +115,8 @@ def make_figure(release: Path, out: Path) -> None:
     ax_a = fig.add_subplot(gs[0, :]); ax_b = fig.add_subplot(gs[1, 0]); ax_c = fig.add_subplot(gs[1, 1])
 
     low_specs = [
-        (GREEN, 'o', '-', r'$\langle u\rangle$', 'mean_u', 'u_ci_lo', 'u_ci_hi'),
-        (PURPLE, 's', '--', r'$\langle v\rangle$', 'mean_v', 'v_ci_lo', 'v_ci_hi'),
+        (GREEN, 'o', '-', r'mean $u$', 'mean_u', 'u_ci_lo', 'u_ci_hi'),
+        (PURPLE, 's', '--', r'mean $v$', 'mean_v', 'v_ci_lo', 'v_ci_hi'),
     ]
     for color, marker, ls, label, mean_col, lo_col, hi_col in low_specs:
         m = low[mean_col].to_numpy(float); lo = low[lo_col].to_numpy(float); hi = low[hi_col].to_numpy(float)
