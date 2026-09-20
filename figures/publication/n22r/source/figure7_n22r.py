@@ -36,8 +36,8 @@ plt.rcParams['font.family'] = FONT_FAMILY
 if FONT_FAMILY.lower() == 'arial':
     plt.rcParams['font.sans-serif'] = ['Arial']
 
-GREEN = '#009E73'
-PURPLE = '#CC79A7'
+BLUE = '#0072B2'
+VERM = '#D55E00'
 DARK = '#222222'
 MID = '#6F6F6F'
 LIGHT = '#C9C9C9'
@@ -115,8 +115,8 @@ def make_figure(release: Path, out: Path) -> None:
     ax_a = fig.add_subplot(gs[0, :]); ax_b = fig.add_subplot(gs[1, 0]); ax_c = fig.add_subplot(gs[1, 1])
 
     low_specs = [
-        (GREEN, 'o', '-', r'mean $u$', 'mean_u', 'u_ci_lo', 'u_ci_hi'),
-        (PURPLE, 's', '--', r'mean $v$', 'mean_v', 'v_ci_lo', 'v_ci_hi'),
+        (BLUE, 'o', '-', r'mean $u$', 'mean_u', 'u_ci_lo', 'u_ci_hi'),
+        (VERM, 's', '--', r'mean $v$', 'mean_v', 'v_ci_lo', 'v_ci_hi'),
     ]
     for color, marker, ls, label, mean_col, lo_col, hi_col in low_specs:
         m = low[mean_col].to_numpy(float); lo = low[lo_col].to_numpy(float); hi = low[hi_col].to_numpy(float)
@@ -129,8 +129,9 @@ def make_figure(release: Path, out: Path) -> None:
     ax_a.axhline(0, color=LIGHT, lw=0.75); ax_a.axvspan(0.49, 0.71, color=VERY_LIGHT, zorder=0)
     ax_a.set_xlim(0.0, 0.72); ax_a.set_ylim(-2.60, 1.40)
     ax_a.set_xlabel(r'reduced temperature $T^*$'); ax_a.set_ylabel('mean lattice displacement / cycle')
-    ax_a.legend(loc='lower left', ncol=2, columnspacing=1.25, handlelength=2.1)
-    ax_a.text(0.475, 0.08, 'open: N=500   filled: pooled N=1000',
+    ax_a.legend(loc='lower center', bbox_to_anchor=(0.22, 0.015), ncol=2,
+                columnspacing=1.25, handlelength=2.1)
+    ax_a.text(0.36, 0.12, 'open: N=500   filled: pooled N=1000',
               transform=ax_a.transAxes, ha='center', va='bottom', fontsize=7.0, color=MID)
     panel_label(ax_a, 'a', x=-0.055)
     panel_title(ax_a, 'stationary mean displacement with trajectory-level 95% intervals')
@@ -169,27 +170,28 @@ def make_figure(release: Path, out: Path) -> None:
     ax_bi.text(0.96, 0.08, r'$\leq 1.12$', transform=ax_bi.transAxes,
                ha='right', va='bottom', fontsize=7.0, color=MID)
 
-    ax_c.plot(low['T'], low.P_v_negative_cycle, color=PURPLE, marker='s', mfc='white', mec=PURPLE, mew=0.9,
+    ax_c.plot(low['T'], low.P_v_negative_cycle, color=VERM, marker='s', mfc='white', mec=VERM, mew=0.9,
               ms=3.5, lw=1.0, ls='-', label=r'$P(v_{\mathrm{cycle}}<0)$')
     ax_c.plot(low['T'], low.P_target_cycle, color=DARK, marker='D', mfc='white', mec=DARK, mew=0.8,
               ms=3.2, lw=1.0, ls='--', label=r'$P[(m,n)=(1,-1)]$')
     pneg = sign.Pneg.to_numpy(float); ptar = sign.Ptarget.to_numpy(float)
     ax_c.errorbar(sign['T'], pneg,
                   yerr=ci_err(pneg, sign.Pneg_ci_lo.to_numpy(float), sign.Pneg_ci_hi.to_numpy(float)),
-                  color=PURPLE, marker='s', mfc=PURPLE, mec=PURPLE, ms=3.5, lw=1.0, ls='-', capsize=1.5)
+                  color=VERM, marker='s', mfc=VERM, mec=VERM, ms=3.5, lw=1.0, ls='-', capsize=1.5)
     ax_c.errorbar(sign['T'], ptar,
                   yerr=ci_err(ptar, sign.Ptarget_ci_lo.to_numpy(float), sign.Ptarget_ci_hi.to_numpy(float)),
                   color=DARK, marker='D', mfc=DARK, mec=DARK, ms=3.2, lw=1.0, ls='--', capsize=1.5)
     ax_c.axhline(0.5, color=LIGHT, lw=0.8, ls=':')
     ax_c.set_xlim(0.0, 0.72); ax_c.set_ylim(-0.02, 1.02)
     ax_c.set_xlabel(r'$T^*$'); ax_c.set_ylabel('cycle probability')
-    ax_c.legend(loc='upper right', handlelength=2.1)
+    ax_c.legend(loc='upper center', bbox_to_anchor=(0.66, 0.99), ncol=2,
+                columnspacing=1.0, handlelength=1.8)
     panel_label(ax_c, 'c'); panel_title(ax_c, 'cycle-sign bias vs exact target winding'); finish(ax_c)
 
     ax_ci = inset_axes(ax_c, width='45%', height='39%', loc='center right', borderpad=1.0)
     excess = pneg - 0.5; ex_lo = sign.Pneg_ci_lo.to_numpy(float) - 0.5; ex_hi = sign.Pneg_ci_hi.to_numpy(float) - 0.5
     ax_ci.errorbar(sign['T'], excess, yerr=ci_err(excess, ex_lo, ex_hi),
-                   color=PURPLE, marker='s', mfc=PURPLE, mec=PURPLE, ms=2.9, lw=0.9, capsize=1.3)
+                   color=VERM, marker='s', mfc=VERM, mec=VERM, ms=2.9, lw=0.9, capsize=1.3)
     ax_ci.axhline(0, color=LIGHT, lw=0.65); ax_ci.set_xlim(0.49, 0.71); ax_ci.set_ylim(0.0, 0.024)
     ax_ci.set_xticks([0.50, 0.60, 0.70]); ax_ci.set_yticks([0.00, 0.01, 0.02])
     ax_ci.tick_params(labelsize=7.0, direction='out', length=1.8, width=0.5, pad=1.2)
