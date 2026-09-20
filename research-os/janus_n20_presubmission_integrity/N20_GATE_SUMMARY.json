@@ -2,7 +2,7 @@
   "gate": "N20_PRE_SUBMISSION_REPRODUCIBILITY_INTEGRITY",
   "status": "PENDING_EXECUTION",
   "scientific_result_regression": false,
-  "issues_found": 4,
+  "issues_found": 6,
   "repairs_staged": true,
   "required_checks": [
     "validate_release.py",
