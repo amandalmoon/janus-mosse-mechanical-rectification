@@ -1,0 +1,130 @@
+{
+  "figure_id": "FIG-07",
+  "manuscript_role": "main",
+  "core_conclusion": "Thermal noise strongly mixes exact deterministic winding identity, while a weaker stationary directed mean current remains statistically distinguishable from zero through the largest sampled reduced temperature T*=0.70.",
+  "claim_ids": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 102,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v3-argument-aligned",
+    "font_family": "Local benchmark: DejaVu Sans fallback; literal Arial required at later venue handoff",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.65,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Evidence-bearing numerical panels use executed simulation outputs. Color and marker/line semantics are redundant where series are compared. Illustrative schematic elements are explicitly non-evidentiary.",
+    "scale_policy": "Shared scales for direct comparisons; transformed/log scales only when explicitly labeled and scientifically necessary.",
+    "legend_policy": "Compact legends or direct labels placed in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "All quantitative evidence panels derive from verified executed simulations. Explicit schematic panels are illustrative only and are not used as numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "How do the stationary mean lattice-current components vary with temperature and trajectory-level uncertainty?",
+      "role": "hero",
+      "visual_type": "errorbar",
+      "evidence_ids": [
+        "C15",
+        "C16",
+        "C17"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/thermal_stationary_series_N500.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_current_two_seed_pooled.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_thermal_bootstrap_50k.csv"
+      ],
+      "uncertainty_shown": true,
+      "uncertainty_definition": "Trajectory-level 95% intervals; low-T N=500 per T*, high-T pooled two-seed N=1000.",
+      "processing_notes": [
+        "60 burn cycles and 100 measured cycles under the stationary protocol."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "Does the joint two-component stationary current remain separated from zero at high temperature?",
+      "role": "validation",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C17"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_current_two_seed_pooled.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Plots the Hotelling T^2 statistic divided by the declared 95% critical value; threshold=1."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "How does directional cycle bias compare with survival of the exact deterministic target winding?",
+      "role": "mechanism",
+      "visual_type": "line-errorbar",
+      "evidence_ids": [
+        "C15",
+        "C18"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/thermal_stationary_series_N500.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_sign_target_bootstrap.csv"
+      ],
+      "uncertainty_shown": true,
+      "uncertainty_definition": "High-temperature bootstrap 95% intervals are encoded in the source data and rendered where resolvable at final size.",
+      "processing_notes": [
+        "No critical-temperature inference.",
+        "C19 timestep-robustness evidence remains in Supporting Information rather than adding a redundant main panel."
+      ],
+      "scale": "linear"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_7_thermal_hierarchy_N22.pdf",
+    "svg": "../figures/Figure_7_thermal_hierarchy_N22.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_7_thermal_hierarchy_N22.png",
+    "source": "../source/n22_figures_5_7.py"
+  },
+  "caption": "Figure 7. Stationary thermal hierarchy from trajectory-level inference. (a) Mean lattice-current components after 60 burn cycles and 100 measured cycles with trajectory-level 95% intervals. Open low-temperature markers use N=500 trajectories per T*, whereas filled T*=0.50–0.70 markers use pooled two-seed N=1000 estimates. (b) The high-temperature Hotelling zero-current statistic divided by its declared 95% critical value remains above the threshold of 1 through T*=0.70; this ratio is not interpreted as a thermal critical scale. (c) The negative-v cycle probability approaches one-half while the exact deterministic target-winding probability falls to approximately the percent level in the high-temperature band. Targeted timestep checks are retained as numerical-robustness evidence in the Supporting Information. No extinction temperature or equilibrium transition is inferred.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "300 dpi final-physical-size benchmark render opened and visually inspected after the final rendering iteration. Literal Arial is deferred to the later ACS Nano venue handoff."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "NOT_RUN"
+  },
+  "publication_gate": "BENCHMARK_PASS"
+}

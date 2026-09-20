@@ -1,0 +1,134 @@
+{
+  "figure_id": "FIG-05",
+  "manuscript_role": "main",
+  "core_conclusion": "Rotated triangular boundaries create competing stable registry families with opposite directional bias; selecting the lower-energy family reverses the equilibrium prepared response, while the switching location is edge-model sensitive.",
+  "claim_ids": [
+    "C8",
+    "C9"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 121,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v3-argument-aligned",
+    "font_family": "Local benchmark: DejaVu Sans fallback; literal Arial required at later venue handoff",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.65,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Evidence-bearing numerical panels use executed simulation outputs. Color and marker/line semantics are redundant where series are compared. Illustrative schematic elements are explicitly non-evidentiary.",
+    "scale_policy": "Shared scales for direct comparisons; transformed/log scales only when explicitly labeled and scientifically necessary.",
+    "legend_policy": "Compact legends or direct labels placed in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "All quantitative evidence panels derive from verified executed simulations. Explicit schematic panels are illustrative only and are not used as numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "Where do the two registry families cross in zero-force energy?",
+      "role": "mechanism",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C8"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/triangle_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "Do the competing registry families carry opposite branch-followed bias?",
+      "role": "mechanism",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C8"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/triangle_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "Does equilibrium re-preparation on the lower-energy family reverse the sign?",
+      "role": "hero",
+      "visual_type": "discontinuous-line",
+      "evidence_ids": [
+        "C8"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/triangle_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "No line is drawn across the family-switch discontinuity."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "D",
+      "question": "How sensitive is the equilibrium switch angle to an outer-site energy-weight perturbation?",
+      "role": "robustness",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C9"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/edge_weight_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Gray band marks switching outside the original 0–3 deg twist window."
+      ],
+      "scale": "linear"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_5_boundary_registry_switching_N22.pdf",
+    "svg": "../figures/Figure_5_boundary_registry_switching_N22.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_5_boundary_registry_switching_N22.png",
+    "source": "../source/n22_figures_5_7.py"
+  },
+  "caption": "Figure 5. Boundary-induced registry-state competition. (a) Zero-force energy differences locate equilibrium crossings of registry families A and B for triangular cuts with edge orientations phi_e=20 deg and 25 deg. (b) The competing families carry opposite branch-followed directional splittings. (c) Selecting the lower-energy family at each fixed twist reverses the prepared-state directional sign at the energy crossing; no dynamical trajectory across the discontinuous family change is implied. (d) Varying the outer-site energy weight shifts the equilibrium switching angle and can move it outside the original 0–3 deg window. The mechanism is therefore registry-state competition, whereas the exact switch angle is edge-model sensitive.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "300 dpi final-physical-size benchmark render opened and visually inspected after the final rendering iteration. Literal Arial is deferred to the later ACS Nano venue handoff."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "NOT_RUN"
+  },
+  "publication_gate": "BENCHMARK_PASS"
+}

@@ -1,0 +1,133 @@
+{
+  "figure_id": "FIG-03",
+  "manuscript_role": "main",
+  "core_conclusion": "Within the reduced same-spectrum model, removing the inversion-odd registry sector eliminates the global directional response, whereas exact spatial inversion swaps the static thresholds and reverses the deterministic winding/current.",
+  "claim_ids": [
+    "C4"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 108,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v3-argument-aligned",
+    "font_family": "Local benchmark: DejaVu Sans fallback; literal Arial required at later venue handoff",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.65,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Evidence-bearing numerical panels use executed simulation outputs. Color and marker/line semantics are redundant where series are compared. Illustrative schematic elements are explicitly non-evidentiary.",
+    "scale_policy": "Shared scales for direct comparisons; transformed/log scales only when explicitly labeled and scientifically necessary.",
+    "legend_policy": "Compact legends or direct labels placed in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "All quantitative evidence panels derive from verified executed simulations. Explicit schematic panels are illustrative only and are not used as numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "What controlled symmetry interventions are applied to isolate the mechanism?",
+      "role": "mechanism",
+      "visual_type": "schematic",
+      "evidence_ids": [
+        "C4"
+      ],
+      "source_paths": [
+        "figures/publication/n22/source/n22_figures_3_4.py"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "ILLUSTRATIVE definition panel; formulas specify the interventions but quantitative evidence is in B-D."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "Do the static global thresholds obey the symmetry contracts?",
+      "role": "hero",
+      "visual_type": "paired-dot",
+      "evidence_ids": [
+        "C4"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/matched_symmetry_final.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "Does exact inversion reverse the deterministic winding while matched symmetrization removes it?",
+      "role": "validation",
+      "visual_type": "vector-arrow",
+      "evidence_ids": [
+        "C4"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/matched_symmetry_final.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "D",
+      "question": "Are the removal/swap/reversal contracts satisfied to numerical precision?",
+      "role": "control",
+      "visual_type": "dot-log",
+      "evidence_ids": [
+        "C4"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/matched_symmetry_final_contracts.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Absolute residuals displayed on a log axis."
+      ],
+      "scale": "log"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_3_same_spectrum_mechanism_N22.pdf",
+    "svg": "../figures/Figure_3_same_spectrum_mechanism_N22.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_3_same_spectrum_mechanism_N22.png",
+    "source": "../source/n22_figures_3_4.py"
+  },
+  "caption": "Figure 3. Same-spectrum symmetry interventions isolate the directional mechanism within the reduced model. (a) Intervention definitions: the original landscape retains the inversion-odd sector, matched symmetrization removes it while keeping the same 2H spectral content, and exact spatial inversion reverses it. This panel is schematic. (b) At theta=1.5 deg, the original global thresholds are split, the matched symmetrized thresholds are degenerate, and exact inversion swaps the two thresholds. (c) The deterministic winding changes from the original (1,-1) state to zero under matched symmetrization and to (-1,1) after exact inversion. (d) Static and dynamic symmetry-contract residuals are at numerical-precision scales. These are mathematical mechanism controls and do not establish a physical polarization-reversal law.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "300 dpi final-physical-size benchmark render opened and visually inspected after the final rendering iteration. Literal Arial is deferred to the later ACS Nano venue handoff."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "NOT_RUN"
+  },
+  "publication_gate": "BENCHMARK_PASS"
+}

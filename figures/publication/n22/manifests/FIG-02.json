@@ -1,0 +1,138 @@
+{
+  "figure_id": "FIG-02",
+  "manuscript_role": "main",
+  "core_conclusion": "For the declared N=127 unguided preparation, the ground-state family remains lower in energy and longer lived under loading while the positive- and negative-y depinning thresholds remain unequal over the tested 0–3 degree twist interval.",
+  "claim_ids": [
+    "C2",
+    "C3"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 124,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v3-argument-aligned",
+    "font_family": "Local benchmark: DejaVu Sans fallback; literal Arial required at later venue handoff",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.65,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Evidence-bearing numerical panels use executed simulation outputs. Color and marker/line semantics are redundant where series are compared. Illustrative schematic elements are explicitly non-evidentiary.",
+    "scale_policy": "Shared scales for direct comparisons; transformed/log scales only when explicitly labeled and scientifically necessary.",
+    "legend_policy": "Compact legends or direct labels placed in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "All quantitative evidence panels derive from verified executed simulations. Explicit schematic panels are illustrative only and are not used as numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "What is the +y branch-followed threshold of the prepared and competing metastable families?",
+      "role": "hero",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "What is the -y branch-followed threshold of the same families?",
+      "role": "validation",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "Does the prepared family remain the lower zero-force minimum?",
+      "role": "control",
+      "visual_type": "margin-line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Plots U_meta-U_ground."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "D",
+      "question": "Does the prepared family remain the last survivor and where is the nongeneric stability point?",
+      "role": "validation",
+      "visual_type": "margin-line",
+      "evidence_ids": [
+        "C2",
+        "C3"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Vertical magenta guide marks the audited isolated higher-order stability degeneracy near theta=2.97338566 deg."
+      ],
+      "scale": "linear"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_2_prepared_state_depinning_N22.pdf",
+    "svg": "../figures/Figure_2_prepared_state_depinning_N22.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_2_prepared_state_depinning_N22.png",
+    "source": "../source/n22_figures_1_2.py"
+  },
+  "caption": "Figure 2. Prepared-state unguided directional depinning. For the rigid N=127 contact with k_perp*=0, (a,b) branch-followed thresholds under +y and -y loading are shown for the lowest-energy prepared family (solid) and competing metastable family (open markers, dashed). (c) The positive zero-force energy margin U_meta-U_ground shows that the prepared family remains lower in energy over the tested 0–3 deg interval. (d) Positive stability margins F_c^ground-F_c^meta show that the prepared family also remains the last surviving pinned branch in both directions; the magenta guide marks the isolated higher-order stability degeneracy near theta=2.97338566 deg. The gray vertical guide marks theta=1.5 deg used for the reference thresholds. The result is preparation- and loading-axis-conditioned; generic fold language is not applied to the isolated nongeneric point.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "300 dpi final-physical-size benchmark render opened and visually inspected after the final rendering iteration. Literal Arial is deferred to the later ACS Nano venue handoff."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "NOT_RUN"
+  },
+  "publication_gate": "BENCHMARK_PASS"
+}
