@@ -1,7 +1,7 @@
 {
   "research_id": "JANUS-MOSSE-N27-R01",
-  "current_stage": "post-review scientific-freeze preparation",
-  "last_valid_gate": "GATE-REVIEW",
+  "current_stage": "venue submission layer",
+  "last_valid_gate": "GATE-SCIENTIFIC-FREEZE",
   "gate_status": "PASS",
   "target_venue": "ACS Nano",
   "claims": [
@@ -94,6 +94,14 @@
     {
       "id": "EXP-N27-R01-DATA",
       "status": "SUPERSEDED"
+    },
+    {
+      "id": "SCI-FREEZE-N27",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DEC-N27-FINAL-CLAIMS-FREEZE",
+      "status": "VERIFIED"
     }
   ],
   "blockers": [
@@ -123,6 +131,11 @@
       "gate_id": "HG-N27-R01-BOUNDARY",
       "status": "APPROVED",
       "decision_id": "DEC-N27-R01-BOUNDARY"
+    },
+    {
+      "gate_id": "HG-N27-FINAL-CLAIMS",
+      "status": "APPROVED",
+      "decision_id": "DEC-N27-FINAL-CLAIMS-FREEZE"
     }
   ],
   "dirty_artifact_ids": [],
@@ -161,6 +174,11 @@
       "stage": "N27 Five Reviewer re-audit",
       "gate_status": "PASS",
       "note": "0 BLOCKER; 0 unresolved MAJOR; N27-R01 reclassified MINOR / ACCEPTED_WITH_BOUNDARY."
+    },
+    {
+      "stage": "N27 scientific freeze",
+      "gate_status": "PASS",
+      "note": "Claims, manuscript, figures, statistics, references, and review state synchronized; scientific content is read-only for venue handoff."
     }
   ]
 }
