@@ -19,3 +19,11 @@ savefig.pad_inches: 0
 pdf.fonttype: 42
 ps.fonttype: 42
 svg.fonttype: none
+mathtext.fontset: custom
+mathtext.rm: Arial
+mathtext.it: Arial:italic
+mathtext.bf: Arial:bold
+mathtext.sf: Arial
+mathtext.tt: Arial
+mathtext.cal: Arial
+mathtext.fallback: None

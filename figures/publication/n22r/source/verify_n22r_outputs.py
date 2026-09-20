@@ -30,7 +30,9 @@ def main():
         fonts={str(f[3]) for f in page.get_fonts(full=True)}
         if args.require_arial:
             if not any('Arial' in name for name in fonts): raise AssertionError(f'{stem}: literal Arial missing: {sorted(fonts)}')
-            if any(('Arimo' in name or 'Liberation' in name or 'DejaVu' in name) for name in fonts): raise AssertionError(f'{stem}: fallback font leaked: {sorted(fonts)}')
+            bad=('Arimo','Liberation','DejaVu','STIX','ComputerModern')
+            if any(any(token in name for token in bad) for name in fonts):
+                raise AssertionError(f'{stem}: non-Arial fallback font leaked: {sorted(fonts)}')
         doc.close()
         png=Image.open(out/f'{stem}.png'); expected=(round(wmm/25.4*300),round(hmm/25.4*300))
         if any(abs(a-b)>1 for a,b in zip(png.size,expected)): raise AssertionError(f'{stem}: wrong PNG canvas {png.size}, expected {expected} +/-1')
