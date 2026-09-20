@@ -101,7 +101,7 @@ def main() -> None:
     fig = plt.figure(figsize=(inch(177.8), inch(116.0)))
     gs = fig.add_gridspec(
         2, 2,
-        left=0.083, right=0.982, bottom=0.105, top=0.895,
+        left=0.095, right=0.982, bottom=0.105, top=0.885,
         wspace=0.30, hspace=0.48,
     )
     a = fig.add_subplot(gs[0, 0])
