@@ -332,14 +332,14 @@
       "status": "VERIFIED",
       "owner": "docx + publication-figure-designer",
       "path": "external-deliverable:ACS_Nano_N29_Priority_Repaired_Manuscript_AUTHOR_METADATA_PENDING.docx",
-      "hash": "eb4b063285733a61295f7dc89ef425d85aa7fff90ba46127aec0f5363f067fb5",
+      "hash": "79dd95856a19285ceba00d097795df6a21627001123a57962a89023796000aa8",
       "depends_on": [
         "SCI-FREEZE-N27",
         "ACS-MANUSCRIPT-N28",
         "ACS-FIGSET-N28"
       ],
       "supersedes": "ACS-MANUSCRIPT-N28",
-      "material_change_note": "Presentation-only repair: display math rendering, targeted inline-math renderer fallbacks, caption cleanup, and whitespace-only figure scaling; scientific content unchanged."
+      "material_change_note": "Presentation-only polished repair: exact equation-context remapping, inline-math renderer fallbacks, page-break polish, caption cleanup, and figure whitespace/line-floor fixes; scientific content unchanged."
     },
     {
       "id": "N29-VISUAL-MATH-QA",
@@ -348,12 +348,88 @@
       "status": "VERIFIED",
       "owner": "docx + publication-figure-designer",
       "path": "research-os/janus_n29_visual_math_repair/N29_VISUAL_MATH_REPAIR_REPORT.md",
-      "hash": "4d75ea5638b9644c19e046c8bbfb2d6ea6af02aa",
+      "hash": "7aba6accca764a0ef07b1864c978ab77a56d919d",
       "depends_on": [
         "ACS-MANUSCRIPT-N29-REPAIRED"
       ],
       "supersedes": null,
-      "material_change_note": "19-page visual inspection pass; accessibility 0/0/0; PDF preflight openable/text-based."
+      "material_change_note": "19-page visual inspection after equation-context repair and page-break polish; figure-set PASS 0 warnings; accessibility 0/0/0; PDF preflight PASS."
+    },
+    {
+      "id": "ACS-FIGSET-N29",
+      "type": "ACS Nano polished venue figure set",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "publication-figure-designer",
+      "path": "external-deliverable:ACS_Nano_N29_Submission_Package_AUTHOR_INPUT_PENDING/figures",
+      "hash": null,
+      "depends_on": [
+        "ACS-FIGSET-N28",
+        "N29-VISUAL-MATH-QA"
+      ],
+      "supersedes": "ACS-FIGSET-N28",
+      "material_change_note": "Figure-set audit PASS (0 warnings); Figure 1 line floor fixed to 0.50 pt; other changes are presentation-only crops."
+    },
+    {
+      "id": "ACS-SUBMISSION-MANIFEST-N29",
+      "type": "ACS Nano polished submission manifest",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "research-os/janus_n29_visual_math_repair/N29_ACS_SUBMISSION_MANIFEST.json",
+      "hash": "668a2fb7253a97351c695d13c1760e6f54afc149",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED",
+        "ACS-FIGSET-N29"
+      ],
+      "supersedes": "ACS-SUBMISSION-MANIFEST-N28",
+      "material_change_note": "Deterministic audit: NOT_READY only because TOC_MISSING; major 0; upstream scientific handoff 0."
+    },
+    {
+      "id": "ACS-COVER-N29",
+      "type": "ACS Nano cover-letter draft",
+      "version": 1,
+      "status": "TENTATIVE",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N29_Cover_Letter_DRAFT_AUTHOR_METADATA_PENDING.docx",
+      "hash": "cab1280b2e13a96fa973f669e69d155fcd2bcae843ac1da89a61cd71c40a911c",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED"
+      ],
+      "supersedes": "ACS-COVER-N28",
+      "material_change_note": "Scientific fit text complete; author/contact/preprint/editor/Review-Only-Material confirmations remain."
+    },
+    {
+      "id": "ACS-TOC-N29",
+      "type": "ACS Nano TOC graphic",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "human + publication-figure-designer",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "SCI-FREEZE-N27"
+      ],
+      "supersedes": "ACS-TOC-N28",
+      "material_change_note": "Final upload artwork remains a human-created non-AI asset."
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N29",
+      "type": "ACS Nano author-input-pending package",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N29_Submission_Package_AUTHOR_INPUT_PENDING.zip",
+      "hash": "02d509c869d9f961238cebe8eb7f9be3cab1315a3353958a2ca3183900a7e2e3",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED",
+        "ACS-FIGSET-N29",
+        "ACS-SUBMISSION-MANIFEST-N29",
+        "ACS-COVER-N29",
+        "RELEASE-N27"
+      ],
+      "supersedes": "ACS-SUBMISSION-PACKAGE-N28",
+      "material_change_note": "Machine-complete package; blocked only by author-controlled metadata and final human-created TOC."
     }
   ]
 }
