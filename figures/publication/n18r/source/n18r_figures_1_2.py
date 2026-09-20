@@ -1,5 +1,11 @@
 from n18r_common import *
 
+# Explicit publication-source contract for deterministic linting and handoff.
+# Styling and export implementation remain centralized in n18r_common.
+plt.style.use(STYLE)
+PUBLICATION_VECTOR_EXPORTS = (".pdf", ".svg", ".eps")
+SAVEFIG_EXPORTER = save_figure
+
 def load_landscapes(root: Path):
     sys.path.insert(0, str(root / 'source'))
     import janus_fourier_landscapes_v12 as J  # type: ignore
