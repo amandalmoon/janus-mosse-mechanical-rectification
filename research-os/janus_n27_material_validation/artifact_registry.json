@@ -145,6 +145,37 @@
       ],
       "supersedes": "REVIEW-N27-FIVE-ORIGINAL",
       "material_change_note": "Re-audit result: 0 BLOCKER, 0 unresolved MAJOR."
+    },
+    {
+      "id": "SCI-FREEZE-N27",
+      "type": "scientific freeze record",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "research-os-orchestrator",
+      "path": "research-os/janus_n27_scientific_freeze/N27_SCIENTIFIC_FREEZE.md",
+      "hash": "e43e30d448d26b346a419b877daff2c3120113fd",
+      "depends_on": [
+        "MANUSCRIPT-N27-PREFLIGHT",
+        "FIGSET-N25",
+        "REVIEW-N27-REAUDIT",
+        "DEC-N27-R01-BOUNDARY"
+      ],
+      "supersedes": null,
+      "material_change_note": "Scientific content frozen after zero-major Five Reviewer re-audit."
+    },
+    {
+      "id": "DEC-N27-FINAL-CLAIMS-FREEZE",
+      "type": "human final claim-set decision",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "human",
+      "path": "research-os/janus_n27_scientific_freeze/DEC-N27-FINAL-CLAIMS-FREEZE.json",
+      "hash": "dcd70e24d7158de4220baf278e1b591ab2cef24c",
+      "depends_on": [
+        "SCI-FREEZE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Approves read-only scientific handoff to venue layer."
     }
   ]
 }
