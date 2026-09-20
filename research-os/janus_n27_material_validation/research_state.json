@@ -142,6 +142,26 @@
     {
       "id": "N29-VISUAL-MATH-QA",
       "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-FIGSET-N29",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-SUBMISSION-MANIFEST-N29",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-COVER-N29",
+      "status": "TENTATIVE"
+    },
+    {
+      "id": "ACS-TOC-N29",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N29",
+      "status": "BLOCKED"
     }
   ],
   "blockers": [
@@ -161,24 +181,24 @@
       ]
     },
     {
-      "id": "N28-V01",
+      "id": "N29-V01",
       "type": "VENUE_FORMAT / author-controlled submission metadata",
       "owner": "human",
       "status": "OPEN",
       "affected_ids": [
-        "ACS-MANUSCRIPT-N28",
-        "ACS-COVER-N28",
-        "ACS-SUBMISSION-PACKAGE-N28"
+        "ACS-MANUSCRIPT-N29-REPAIRED",
+        "ACS-COVER-N29",
+        "ACS-SUBMISSION-PACKAGE-N29"
       ]
     },
     {
-      "id": "N28-V02",
-      "type": "VENUE_FORMAT / final non-AI TOC graphic",
+      "id": "N29-V02",
+      "type": "VENUE_FORMAT / final human-created non-AI TOC graphic",
       "owner": "human + publication-figure-designer",
       "status": "OPEN",
       "affected_ids": [
-        "ACS-TOC-N28",
-        "ACS-SUBMISSION-PACKAGE-N28"
+        "ACS-TOC-N29",
+        "ACS-SUBMISSION-PACKAGE-N29"
       ]
     }
   ],
@@ -265,6 +285,11 @@
       "stage": "N29 priority visual/math repair",
       "gate_status": "PASS",
       "note": "24 display equations re-rendered from frozen source; 57 problematic inline math objects converted to editable rich text; Figure 1/3/6 prioritized; captions shortened; AI-repeat prose removed; all 19 pages visually inspected."
+    },
+    {
+      "stage": "N29 polished ACS package re-audit",
+      "gate_status": "PARTIAL",
+      "note": "Equation-context mapping verified, page-break polish applied, 19-page render QA PASS, figure-set audit PASS (0 warnings), accessibility 0/0/0, PDF preflight PASS. Deterministic ACS audit has 1 blocker only (TOC_MISSING), 0 major, 0 scientific handoffs."
     }
   ]
 }
