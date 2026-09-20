@@ -116,7 +116,7 @@
     "svg": "../figures/Figure_1_symmetry_contracts_N18R.svg",
     "tiff": null,
     "png_preview": "../figures/Figure_1_symmetry_contracts_N18R.png",
-    "source": "../source/make_publication_figures_n18r.py"
+    "source": "../source/n18r_figures_1_2.py"
   },
   "caption": "Figure 1. Material registry asymmetry and matched symmetry contracts. (a) Translation-centered asymmetric 2H MoSSe GSFE. (b) Matched same-spectrum inversion-even surface on the same color scale. (c) Translation-minimized odd RMS fraction for the published 2H/3R controls on a log10 display; the exact-zero symmetric control is placed at 1e-18 only as a plotting floor and is labeled 0. (d) At theta=1.5 deg, paired global thresholds show directional splitting for the original landscape, degeneracy for the matched symmetrized landscape, and exact threshold/winding reversal after spatial inversion. The controls are mathematical symmetry tests, not a demonstrated physical polarity-reversal law.",
   "visual_qa": {
@@ -128,7 +128,7 @@
     "redundant_series_encoding": true,
     "caption_parameter_complete": true,
     "not_default_matplotlib": true,
-    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+    "notes": "Final-size literal-Arial venue render was opened and visually inspected; current Publication Figure Designer manifest/package audits are required before downstream freeze."
   },
   "qa": {
     "scientific": "PASS",
