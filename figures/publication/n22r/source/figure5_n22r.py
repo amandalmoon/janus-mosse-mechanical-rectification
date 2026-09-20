@@ -73,8 +73,8 @@ def main() -> None:
     tr = pd.read_csv(DATA / 'triangle_ground_switch.csv')
     ew = pd.read_csv(DATA / 'edge_weight_ground_switch.csv')
     phi_style = {
-        20: dict(color=DARK, linestyle='-', label=r'$\phi_e=20^\circ$'),
-        25: dict(color=PALE, linestyle='--', label=r'$\phi_e=25^\circ$'),
+        20: dict(color=DARK, linestyle='-', label=r'$\phi_e$ = 20°'),
+        25: dict(color=PALE, linestyle='--', label=r'$\phi_e$ = 25°'),
     }
 
     fig = plt.figure(figsize=(inch(177.8), inch(78.0)))
@@ -95,7 +95,7 @@ def main() -> None:
         ax_a.plot(q.theta, du, color=st['color'], ls=st['linestyle'],
                   marker='o', ms=3.4, mfc='white', mec=st['color'], mew=0.8)
         ax_a.axvline(sw, color=st['color'], ls=':', lw=0.75)
-        ax_a.annotate(fr'{phi}$^\circ$', (float(q.theta.iloc[0]), float(du.iloc[0])),
+        ax_a.annotate(f'{phi}°', (float(q.theta.iloc[0]), float(du.iloc[0])),
                       xytext=(5, 4), textcoords='offset points',
                       fontsize=6.8, color=st['color'], ha='left', va='bottom')
 
@@ -133,8 +133,8 @@ def main() -> None:
     ax_b.set_ylim(-0.78, 0.78)
     ax_b.set_xlabel(r'twist $\theta$ (deg)')
     ax_b.set_ylabel(r'family split $\Delta F_c^*$')
-    ax_b.text(2.838, 0.67, 'family A', fontsize=6.8, color=DARK, ha='left', va='center')
-    ax_b.text(2.838, -0.69, 'family B', fontsize=6.8, color=DARK, ha='left', va='center')
+    ax_b.text(2.875, 0.67, 'family A', fontsize=6.8, color=DARK, ha='center', va='center')
+    ax_b.text(2.875, -0.69, 'family B', fontsize=6.8, color=DARK, ha='center', va='center')
     panel_label(ax_b, 'b')
     panel_title(ax_b, 'Competing-family bias')
     finish(ax_b)
