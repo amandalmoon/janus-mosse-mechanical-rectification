@@ -1,0 +1,646 @@
+{
+  "paper_id": "janus-mosse-mechanical-rectification",
+  "target_venue": "ACS Nano Article",
+  "research_question": "How does the non-removable lateral registry inversion asymmetry of the published 2H Janus MoSSe GSFE translate into prepared-state directional depinning and zero-mean vector transport in an unguided finite two-dimensional contact, and which parts of that response survive geometry changes, thermal noise, and in-plane compliance?",
+  "central_thesis": "Within a DFT-anchored reduced finite-contact model, non-removable registry inversion asymmetry produces prepared-state direction-split unguided depinning; same-spectrum symmetry controls identify that asymmetry as the source of the directional response, while compact-contact scaling, boundary-state competition, vector locking, thermal statistics, and in-plane relaxation define the regimes in which the effect persists and the boundaries beyond which it has not been established.",
+  "paper_argument_map": {
+    "problem": "Twist suppresses corrugation in finite van der Waals contacts, but residual finite-contact pinning can remain direction dependent when the lateral registry landscape is not inversion symmetric.",
+    "gap": "The published Janus MoSSe lateral GSFE had not been connected through a coordinate-independent symmetry test to unguided prepared-state full-2D rectification, matched mechanism falsification, geometry dependence, vector locking, thermal hierarchy, and in-plane compliance within one evidence chain.",
+    "approach": "Published three-shell GSFE -> unguided lowest-energy prepared contact -> branch depinning -> matched symmetrization/exact inversion -> compact geometry and in-plane relaxation -> boundary registry competition -> deterministic rocking -> stationary thermal inference.",
+    "main_finding": "Prepared-state directional depinning and protocol-specific vector winding arise in the reduced model; the sign survives tested compact/contact-compliance checks, boundary state selection can reverse it, and a weaker stationary mean current survives thermal mixing after exact winding identity becomes rare.",
+    "mechanism": "Non-removable inversion-odd lateral registry content controls the directionality within the model, as shown by same-spectrum symmetrization and exact inversion.",
+    "implication": "Registry symmetry, prepared state, boundary geometry and drive protocol jointly determine finite-contact directionality; compact similarity and boundary-state selection are distinct geometry regimes.",
+    "scope_boundary": "No physical polarity law, universal friction constant, continuous global locking phase diagram, thermal critical point, full 3D atomistic validation or calibrated experimental unit conversion is established."
+  },
+  "claim_order": [
+    {
+      "claim_id": "M0",
+      "claim": "Published three-shell 2H MoSSe GSFE is the declared conservative input.",
+      "status": "VERIFIED",
+      "evidence_ids": [
+        "fr_m01_published_precision_summary"
+      ],
+      "depends_on": [],
+      "next_question": "Does the lateral landscape contain non-removable inversion asymmetry?"
+    },
+    {
+      "claim_id": "C5",
+      "claim": "The canonical headline baseline is unguided and prepared from the lowest-energy zero-force stable minimum.",
+      "status": "VERIFIED",
+      "evidence_ids": [
+        "canonical-baseline-validator"
+      ],
+      "depends_on": [
+        "M0"
+      ],
+      "next_question": "What symmetry property does that baseline inherit?"
+    },
+    {
+      "claim_id": "C1",
+      "claim": "The 2H MoSSe lateral GSFE has non-removable registry-space inversion asymmetry.",
+      "status": "VERIFIED",
+      "evidence_ids": [
+        "N4-odd-sector-gauge-gate"
+      ],
+      "depends_on": [
+        "M0"
+      ],
+      "next_question": "Does that asymmetry generate directional depinning?"
+    },
+    {
+      "claim_id": "C2",
+      "claim": "The prepared unguided contact exhibits direction-split full-2D depinning.",
+      "status": "VERIFIED",
+      "evidence_ids": [
+        "N1-continuous-branch-verification"
+      ],
+      "depends_on": [
+        "C1",
+        "C5"
+      ],
+      "next_question": "Is the split controlled by the inversion-odd sector?"
+    },
+    {
+      "claim_id": "C3",
+      "claim": "The stability boundary is generically fold-like but contains an isolated higher-order degeneracy.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "nongeneric-point-audit"
+      ],
+      "depends_on": [
+        "C2"
+      ],
+      "next_question": "Can a matched symmetry intervention isolate the cause?"
+    },
+    {
+      "claim_id": "C4",
+      "claim": "Within the same-spectrum reduced model, registry inversion asymmetry controls the directional static and dynamical response.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "N2-same-spectrum-symmetry-causality-gate"
+      ],
+      "depends_on": [
+        "C1",
+        "C2"
+      ],
+      "next_question": "Does the sign survive finite-contact and compliance changes?"
+    },
+    {
+      "claim_id": "C6",
+      "claim": "Compact self-similar contacts are governed primarily by scaled twist theta*sqrt(N).",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "N2-finite-size-shape-gate"
+      ],
+      "depends_on": [
+        "C2"
+      ],
+      "next_question": "Does an independent compact shape agree?"
+    },
+    {
+      "claim_id": "C7",
+      "claim": "Tested hexagonal and disk-like compact families nearly coincide through Theta=20.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "extended-shape-dense-metrics"
+      ],
+      "depends_on": [
+        "C6"
+      ],
+      "next_question": "Does in-plane compliance remove the sign?"
+    },
+    {
+      "claim_id": "C20",
+      "claim": "In-plane compliance softens absolute thresholds but preserves the directional sign.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "n8-elastic-linear-tight"
+      ],
+      "depends_on": [
+        "C2"
+      ],
+      "next_question": "Is this representation dependent?"
+    },
+    {
+      "claim_id": "C21",
+      "claim": "A nonlinear VFF closely matches the linear-FEM in-plane relaxation result.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "n8-vff-reconstructed"
+      ],
+      "depends_on": [
+        "C20"
+      ],
+      "next_question": "What changes when boundaries select a different registry state?"
+    },
+    {
+      "claim_id": "C8",
+      "claim": "Triangular boundaries can reverse the prepared response through a ground-state switch between opposite-bias registry families.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "N3-boundary-registry-competition-gate"
+      ],
+      "depends_on": [
+        "C2",
+        "C4"
+      ],
+      "next_question": "How edge-model sensitive is the switching location?"
+    },
+    {
+      "claim_id": "C9",
+      "claim": "The registry competition persists under tested edge weighting while the exact switching angle is edge-model sensitive.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "n3-edge-weight-sensitivity"
+      ],
+      "depends_on": [
+        "C8"
+      ],
+      "next_question": "Can zero-mean driving organize vector transport?"
+    },
+    {
+      "claim_id": "C13",
+      "claim": "The declared zero-mean rocking protocol yields sampled integer winding states including pinned and transporting states.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "vector-mode-map-F0-period"
+      ],
+      "depends_on": [
+        "C2",
+        "C4",
+        "C5"
+      ],
+      "next_question": "Are representative transporting states attracting?"
+    },
+    {
+      "claim_id": "C14",
+      "claim": "Representative transporting plateaus satisfy relative-periodic closure and Floquet attraction.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "n5-newton-shooting-floquet"
+      ],
+      "depends_on": [
+        "C13"
+      ],
+      "next_question": "What survives thermal mode mixing?"
+    },
+    {
+      "claim_id": "C15",
+      "claim": "Exact deterministic winding identity is less thermally robust than the stationary directed mean current.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "RTB01-thermal-stationarity-closure"
+      ],
+      "depends_on": [
+        "C13",
+        "C14"
+      ],
+      "next_question": "Does the joint stationary current remain nonzero at the sampled high-T end?"
+    },
+    {
+      "claim_id": "C17",
+      "claim": "The two-component stationary mean current remains statistically nonzero through T*=0.70.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "stationary-current-two-seed-pooled",
+        "fr_s01-thermal-n-convergence"
+      ],
+      "depends_on": [
+        "C15"
+      ],
+      "next_question": "How does cycle-sign bias compare with exact winding survival?"
+    },
+    {
+      "claim_id": "C18",
+      "claim": "The cycle-sign statistic approaches one-half while exact target winding becomes rare.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "stationary-sign-target-bootstrap"
+      ],
+      "depends_on": [
+        "C15",
+        "C17"
+      ],
+      "next_question": "Are targeted mean-current estimates timestep compatible?"
+    },
+    {
+      "claim_id": "C19",
+      "claim": "High-temperature stationary mean-current estimates are compatible across the tested timestep range.",
+      "status": "SUPPORTED",
+      "evidence_ids": [
+        "highT-dt-pairwise-z"
+      ],
+      "depends_on": [
+        "C17"
+      ],
+      "next_question": "What conclusions remain outside the validated model scope?"
+    }
+  ],
+  "figure_storyboard": [
+    {
+      "figure_id": "FIG-01",
+      "question": "Is the material/model starting point credible and genuinely inversion asymmetric?",
+      "role": "credibility/setup",
+      "claim_ids": [
+        "M0",
+        "C5",
+        "C1"
+      ],
+      "evidence_ids": [
+        "published-GSFE",
+        "translation-minimized-asymmetry",
+        "canonical-baseline"
+      ],
+      "answer": "The declared published input has non-removable lateral inversion asymmetry in an unguided prepared-state contact.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "Define finite-contact/full-2D preparation."
+        },
+        {
+          "panel_id": "B",
+          "job": "Show published 2H GSFE."
+        },
+        {
+          "panel_id": "C",
+          "job": "Quantify coordinate-independent asymmetry against controls."
+        }
+      ],
+      "next_question": "Does it produce directional depinning?"
+    },
+    {
+      "figure_id": "FIG-02",
+      "question": "Does the prepared family exhibit direction-split unguided depinning?",
+      "role": "phenomenon",
+      "claim_ids": [
+        "C2",
+        "C3"
+      ],
+      "evidence_ids": [
+        "branch-continuation",
+        "energy-margin",
+        "stability-boundary"
+      ],
+      "answer": "Opposite loading directions have unequal branch-followed thresholds while the prepared family remains relevant.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "+y thresholds."
+        },
+        {
+          "panel_id": "B",
+          "job": "-y thresholds."
+        },
+        {
+          "panel_id": "C",
+          "job": "Preparation-energy margin."
+        },
+        {
+          "panel_id": "D",
+          "job": "Stability margins and higher-order-point nuance."
+        }
+      ],
+      "next_question": "Is registry asymmetry the cause?"
+    },
+    {
+      "figure_id": "FIG-03",
+      "question": "Do same-spectrum symmetry interventions remove and reverse the response?",
+      "role": "validation",
+      "claim_ids": [
+        "C4"
+      ],
+      "evidence_ids": [
+        "matched-symmetrization",
+        "exact-inversion",
+        "static-dynamic-contracts"
+      ],
+      "answer": "Symmetrization removes global bias/current and exact inversion swaps/reverses them.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "Define symmetry interventions."
+        },
+        {
+          "panel_id": "B",
+          "job": "Compare paired thresholds."
+        },
+        {
+          "panel_id": "C",
+          "job": "Compare deterministic winding/current."
+        },
+        {
+          "panel_id": "D",
+          "job": "Report symmetry residuals."
+        }
+      ],
+      "next_question": "Does the sign survive geometric and compliance changes?"
+    },
+    {
+      "figure_id": "FIG-04",
+      "question": "Is the response robust to compact geometry and in-plane compliance?",
+      "role": "robustness/generalization",
+      "claim_ids": [
+        "C6",
+        "C7",
+        "C20",
+        "C21"
+      ],
+      "evidence_ids": [
+        "scaled-twist-collapse",
+        "shape-deviation",
+        "FEM",
+        "VFF"
+      ],
+      "answer": "Compact families nearly collapse and two in-plane models preserve the sign while renormalizing force scales.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "Compact-family collapse."
+        },
+        {
+          "panel_id": "B",
+          "job": "Residual size/shape deviations."
+        },
+        {
+          "panel_id": "C",
+          "job": "Rigid/FEM/VFF thresholds."
+        },
+        {
+          "panel_id": "D",
+          "job": "Normalized split across stiffness/representation."
+        }
+      ],
+      "next_question": "What happens when a boundary changes registry-state selection?"
+    },
+    {
+      "figure_id": "FIG-05",
+      "question": "Can boundary geometry change the prepared state and reverse the sign?",
+      "role": "implication/design-rule",
+      "claim_ids": [
+        "C8",
+        "C9"
+      ],
+      "evidence_ids": [
+        "triangle-ground-switch",
+        "edge-weight-sensitivity"
+      ],
+      "answer": "Opposite-bias registry families cross in energy, allowing equilibrium sign reversal with an edge-sensitive switching angle.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "Energy crossings."
+        },
+        {
+          "panel_id": "B",
+          "job": "Opposite family splittings."
+        },
+        {
+          "panel_id": "C",
+          "job": "Discontinuous prepared sign switch."
+        },
+        {
+          "panel_id": "D",
+          "job": "Edge-weight sensitivity."
+        }
+      ],
+      "next_question": "Can zero-mean driving organize vector transport?"
+    },
+    {
+      "figure_id": "FIG-06",
+      "question": "What states arise under zero-mean rocking and are representative transporting plateaus attracting?",
+      "role": "implication/design-rule",
+      "claim_ids": [
+        "C13",
+        "C14"
+      ],
+      "evidence_ids": [
+        "vector-winding-map",
+        "Floquet"
+      ],
+      "answer": "The sampled map contains pinned and transporting integer winding states; representative transporting plateaus are attracting.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "Discrete m map."
+        },
+        {
+          "panel_id": "B",
+          "job": "Discrete n map."
+        },
+        {
+          "panel_id": "C",
+          "job": "Vector staircase."
+        },
+        {
+          "panel_id": "D",
+          "job": "Floquet/closure validation."
+        }
+      ],
+      "next_question": "What survives thermal mixing?"
+    },
+    {
+      "figure_id": "FIG-07",
+      "question": "What survives thermal noise after exact winding identity is lost?",
+      "role": "robustness/generalization",
+      "claim_ids": [
+        "C15",
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "evidence_ids": [
+        "stationary-current",
+        "Hotelling",
+        "cycle-sign-bootstrap",
+        "timestep-robustness"
+      ],
+      "answer": "Exact winding becomes rare but a weaker stationary mean vector remains nonzero through sampled T*=0.70.",
+      "panels": [
+        {
+          "panel_id": "A",
+          "job": "Mean current with trajectory-level 95% intervals."
+        },
+        {
+          "panel_id": "B",
+          "job": "Joint zero-current rejection."
+        },
+        {
+          "panel_id": "C",
+          "job": "Cycle-sign versus exact target winding."
+        },
+        {
+          "panel_id": "D",
+          "job": "Optional numerical-robustness inset; otherwise SI."
+        }
+      ],
+      "next_question": "What physical interpretation remains justified?"
+    }
+  ],
+  "section_logic": [
+    {
+      "section": "Introduction",
+      "question": "Why test the lateral registry landscape rather than infer a diode from Janus polarity?",
+      "why_now": "Defines the exact gap.",
+      "operation": "Literature-bounded framing.",
+      "evidence_ids": [
+        "M0",
+        "N1",
+        "N2"
+      ],
+      "answer": "A specific DFT-anchored lateral-registry mechanism is tested.",
+      "boundary": "No first-ever or polarity-law claim.",
+      "bridge": "Establish credibility."
+    },
+    {
+      "section": "Results 1",
+      "question": "Is the starting GSFE genuinely inversion asymmetric?",
+      "why_now": "All later claims depend on it.",
+      "operation": "Provenance and symmetry diagnostics.",
+      "evidence_ids": [
+        "FIG-01",
+        "M0",
+        "C1",
+        "C5"
+      ],
+      "answer": "Yes, within the declared lateral model.",
+      "boundary": "No physical polarity mapping.",
+      "bridge": "Test depinning."
+    },
+    {
+      "section": "Results 2",
+      "question": "Does the prepared family depin directionally?",
+      "why_now": "Establish phenomenon before mechanism.",
+      "operation": "Branch continuation and stability audit.",
+      "evidence_ids": [
+        "FIG-02",
+        "C2",
+        "C3"
+      ],
+      "answer": "Yes, with unequal opposite-direction thresholds.",
+      "boundary": "Prepared-state/loading-axis conditioned.",
+      "bridge": "Isolate cause."
+    },
+    {
+      "section": "Results 3",
+      "question": "Does symmetry intervention isolate the mechanism?",
+      "why_now": "Discriminate cause after phenomenon.",
+      "operation": "Matched symmetrization and exact inversion.",
+      "evidence_ids": [
+        "FIG-03",
+        "C4"
+      ],
+      "answer": "Bias/current vanishes or reverses as symmetry requires.",
+      "boundary": "Mathematical controls only.",
+      "bridge": "Test robustness."
+    },
+    {
+      "section": "Results 4",
+      "question": "Does the sign survive compact geometry and in-plane compliance?",
+      "why_now": "Rule out obvious artifacts.",
+      "operation": "Scaling + FEM + VFF.",
+      "evidence_ids": [
+        "FIG-04",
+        "C6",
+        "C7",
+        "C20",
+        "C21"
+      ],
+      "answer": "Yes within tested scopes.",
+      "boundary": "No arbitrary-edge/full-3D claim.",
+      "bridge": "Test state-selecting boundaries."
+    },
+    {
+      "section": "Results 5",
+      "question": "Can boundaries change the selected registry and sign?",
+      "why_now": "Expose a distinct geometry mechanism.",
+      "operation": "Triangular boundaries and weight sensitivity.",
+      "evidence_ids": [
+        "FIG-05",
+        "C8",
+        "C9"
+      ],
+      "answer": "Yes, with edge-sensitive switching location.",
+      "boundary": "No path/hysteresis claim.",
+      "bridge": "Move to driven dynamics."
+    },
+    {
+      "section": "Results 6",
+      "question": "Can zero-mean forcing organize vector transport?",
+      "why_now": "Dynamic implication after static validation.",
+      "operation": "Winding maps + Floquet.",
+      "evidence_ids": [
+        "FIG-06",
+        "C13",
+        "C14"
+      ],
+      "answer": "Sampled integer states occur; representative transport plateaus attract.",
+      "boundary": "Protocol-specific sampled map.",
+      "bridge": "Add thermal noise."
+    },
+    {
+      "section": "Results 7",
+      "question": "What survives thermal mixing?",
+      "why_now": "Separate exact mode identity from directed drift.",
+      "operation": "Stationary stochastic inference.",
+      "evidence_ids": [
+        "FIG-07",
+        "C15",
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "answer": "A weaker stationary mean current survives through T*=0.70.",
+      "boundary": "No critical temperature.",
+      "bridge": "Synthesize and delimit."
+    },
+    {
+      "section": "Discussion",
+      "question": "What unified mechanism and scope follow?",
+      "why_now": "All evidence branches are closed.",
+      "operation": "Synthesis.",
+      "evidence_ids": [
+        "FIG-01",
+        "FIG-03",
+        "FIG-04",
+        "FIG-05",
+        "FIG-06",
+        "FIG-07"
+      ],
+      "answer": "Symmetry, preparation, geometry and protocol jointly determine directionality.",
+      "boundary": "C22-C25 remain unestablished.",
+      "bridge": "Conclude."
+    },
+    {
+      "section": "Conclusions",
+      "question": "What is the strongest bounded take-home?",
+      "why_now": "Close the argument.",
+      "operation": "Synthesis only.",
+      "evidence_ids": [
+        "C1",
+        "C2",
+        "C4",
+        "C6",
+        "C7",
+        "C8",
+        "C13",
+        "C15",
+        "C17",
+        "C20",
+        "C21"
+      ],
+      "answer": "Prepared-state unguided rectification and protocol-specific vector transport are established within the validated reduced-model hierarchy.",
+      "boundary": "No device-calibrated or full-atomistic claim.",
+      "bridge": "None."
+    }
+  ],
+  "gates": {
+    "argument_map": "PASS",
+    "figure_storyboard": "PASS",
+    "section_logic": "PASS"
+  },
+  "handoff": {
+    "writer_ready": true,
+    "next_stage": "publication-figure-designer",
+    "writer_execution_deferred_until_figures_frozen": true
+  }
+}
