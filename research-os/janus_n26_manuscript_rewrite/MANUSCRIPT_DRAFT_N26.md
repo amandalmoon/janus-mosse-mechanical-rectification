@@ -494,3 +494,62 @@ The mechanism is identified by symmetry rather than by the Janus label alone. Re
 Under the declared \(m^*=1,\gamma^*=4\) zero-mean rocking protocol, all 91 sampled amplitude-period points repeat an integer lattice winding cycle by cycle after transients, and representative plateaus satisfy relative-periodic closure and cross-solver Floquet attraction. The winding map is nevertheless protocol specific: a joint damping-drive audit shows that changing damping can reorganize the selected lattice vector. Thermal noise then destroys exact deterministic winding identity much more rapidly than it removes directed transport. After stationarity, independent-seed, trajectory-level inference, sample-count convergence, and time-step checks, the stationary mean current remains statistically nonzero through the largest sampled \(T^*=0.70\), while the exact \((1,-1)\) cycle probability is near 1% in the high-temperature band.
 
 These results support a bounded combination claim: a DFT-anchored lateral-registry asymmetry can generate prepared-state unguided rectification and protocol-specific vector transport in a finite MoSSe contact, while compact scaling, boundary-state selection, thermal mode mixing, and in-plane compliance define distinct limits of that response. They do not establish a universal friction coefficient, a physical polarization-reversal law, full three-dimensional atomistic validation, a Kelvin-scale thermal boundary, or a material-only nonlinear phase diagram.
+
+
+## 6. Data and Code Availability
+
+The numerical materials associated with this study contain the canonical unguided rigid-contact implementation; analytic gradient and Hessian evaluation; dense prepared-branch continuation and stationary-point checkpoints; matched symmetrization and exact-inversion controls; registry-origin and odd-sector audits; compact size/shape and boundary-registry calculations; cycle-resolved vector-locking, relative-periodic, Floquet, time-step, continuation, and basin tests; stationary thermal trajectory data with block-stationarity, initialization-memory, independent-seed, bootstrap/Hotelling, time-step, and sample-count audits; and the linear-FEM and independently reconstructed nonlinear-VFF in-plane relaxation calculations. The current project repository retains the source, raw/summary data, figure-generation code, and Research OS gate records used to freeze the manuscript claims. An immutable archival DOI or equivalent repository identifier has not yet been assigned and will be added at the venue-submission stage; no archival identifier is claimed in the present draft.
+
+## References
+
+1. Wang, J.; Khosravi, A.; Vanossi, A.; Tosatti, E. Colloquium: Sliding and pinning in structurally lubric 2D material interfaces. *Rev. Mod. Phys.* **2024**, *96*, 011002. https://doi.org/10.1103/RevModPhys.96.011002.
+
+2. Koren, E.; Duerig, U. Moire scaling of the sliding force in twisted bilayer graphene. *Phys. Rev. B* **2016**, *94*, 045401. https://doi.org/10.1103/PhysRevB.94.045401.
+
+3. Yan, W.; Ouyang, W.; Liu, Z. Origin of frictional scaling law in circular twist layered interfaces: Simulations and theory. *J. Mech. Phys. Solids* **2023**, *170*, 105114. https://doi.org/10.1016/j.jmps.2022.105114.
+
+4. Verhoeven, G. S.; Dienwiebel, M.; Frenken, J. W. M. Model calculations of superlubricity of graphite. *Phys. Rev. B* **2004**, *70*, 165418. https://doi.org/10.1103/PhysRevB.70.165418.
+
+5. Yan, W.; Gao, X.; Ouyang, W.; Liu, Z.; Hod, O.; Urbakh, M. Shape-dependent friction scaling laws in twisted layered material interfaces. *J. Mech. Phys. Solids* **2024**, *185*, 105555. https://doi.org/10.1016/j.jmps.2024.105555.
+
+6. Liao, M. et al. Ultra-low friction and edge-pinning effect in large-lattice-mismatch van der Waals heterostructures. *Nat. Mater.* **2022**, *21*, 47–53. https://doi.org/10.1038/s41563-021-01058-4.
+
+7. Gao, X.; Yan, W.; Ouyang, W.; Liu, Z.; Urbakh, M.; Hod, O. Frictional Dissipation and Scaling Laws at van der Waals Interfaces: The Role of Edge and Corner Elastic Moire Pinning. *ACS Nano* **2025**, *19*, 29255–29264. https://doi.org/10.1021/acsnano.5c04617.
+
+8. Minkin, A. S.; Lebedeva, I. V.; Popov, A. M.; Vyrko, S. A.; Poklonski, N. A.; Lozovik, Y. E. Restriction of macroscopic structural superlubricity due to structure relaxation by the example of twisted graphene bilayer. *Phys. Rev. Mater.* **2025**, *9*, 024002. https://doi.org/10.1103/PhysRevMaterials.9.024002.
+
+9. Lu, A.-Y. et al. Janus monolayers of transition metal dichalcogenides. *Nat. Nanotechnol.* **2017**, *12*, 744–749. https://doi.org/10.1038/nnano.2017.100.
+
+10. Zhang, K. et al. Enhancement of van der Waals interlayer coupling through polar Janus MoSSe. *J. Am. Chem. Soc.* **2020**, *142*, 17499–17507. https://doi.org/10.1021/jacs.0c07051.
+
+11. Lin, L.; Hu, X.; Meng, R.; Li, X.; Guo, Y.; Da, H.; Jiang, Y.; Wang, D.; Yang, Y.; Yan, X. Sliding ferroelectricity and the moire effect in Janus bilayer MoSSe. *Nanoscale* **2024**, *16*, 4841–4850. https://doi.org/10.1039/D3NR05730E.
+
+12. Angeli, M.; Schleder, G. R.; Kaxiras, E. Twistronics of Janus transition metal dichalcogenide bilayers. *Phys. Rev. B* **2022**, *106*, 235159. https://doi.org/10.1103/PhysRevB.106.235159.
+
+13. Angeli, M.; Schleder, G. R.; Kaxiras, E. Erratum: Twistronics of Janus transition metal dichalcogenide bilayers [Phys. Rev. B 106, 235159 (2022)]. *Phys. Rev. B* **2024**, *109*, 199902(E). https://doi.org/10.1103/PhysRevB.109.199902.
+
+14. Li, H.; Guo, Y.; Guo, W. Electro-lubrication in Janus transition metal dichalcogenide bilayers. *Friction* **2022**, *10*, 1851–1858. https://doi.org/10.1007/s40544-021-0562-9.
+
+15. Chen, R.; Wang, S.; Jia, X.; Jiang, W.; Liu, Z.; Ouyang, W.; Gao, E. Intrinsic Friction Diodes at the Interfaces of Two-Dimensional Materials. *ACS Appl. Mater. Interfaces* **2026**, *18*, 21195–21203. https://doi.org/10.1021/acsami.6c00303.
+
+16. Torche, P. C.; Silva, A.; Kramer, D.; Polcar, T.; Hovorka, O. Multi-scale model predicting friction of crystalline materials. *Adv. Mater. Interfaces* **2022**, *9*, 2100914. https://doi.org/10.1002/admi.202100914.
+
+17. Guo, S.-D. Phonon transport in Janus monolayer MoSSe: a first-principles study. *Phys. Chem. Chem. Phys.* **2018**, *20*, 7236–7242. https://doi.org/10.1039/C8CP00350E.
+
+18. Dong, R.; Lunghi, A.; Sanvito, S. Stiffness and Atomic-Scale Friction in Superlubricant MoS2 Bilayers. *J. Phys. Chem. Lett.* **2023**, *14*, 6086–6091. https://doi.org/10.1021/acs.jpclett.3c01066.
+
+19. Hänggi, P.; Marchesoni, F. Artificial Brownian motors: Controlling transport on the nanoscale. *Rev. Mod. Phys.* **2009**, *81*, 387–442. https://doi.org/10.1103/RevModPhys.81.387.
+
+20. Barbi, M.; Salerno, M. Phase locking effect and current reversals in deterministic underdamped ratchets. *Phys. Rev. E* **2000**, *62*, 1988–1994. https://doi.org/10.1103/PhysRevE.62.1988.
+
+21. Shaidu, Y.; Naik, M. H.; Louie, S. G.; Neaton, J. B. Transferable dispersion-aware machine learning interatomic potentials for multilayer transition metal dichalcogenide heterostructures. *npj Comput. Mater.* **2025**, *11*, 273. https://doi.org/10.1038/s41524-025-01761-9.
+
+22. Lu, L.; Ying, T.; Cui, C.-X.; Yang, C.; Leng, J.; Li, J.; Jiang, J.-W.; Chang, T. Friction Dissymmetry on Hexagonal Boron Carbon Nitride. *Nano Lett.* **2025**, *25*, 7909–7915. https://doi.org/10.1021/acs.nanolett.5c01360.
+
+23. Reichhardt, C.; Olson, C. J.; Hastings, M. B. Rectification and Phase Locking for Particles on Symmetric Two-Dimensional Periodic Substrates. *Phys. Rev. Lett.* **2002**, *89*, 024101. https://doi.org/10.1103/PhysRevLett.89.024101.
+
+24. Wang, C.-L.; Tekic, J.; Duan, W.-S.; Shao, Z.-G.; Yang, L. Ratchet effect and amplitude dependence of phase locking in a two-dimensional Frenkel–Kontorova model. *J. Chem. Phys.* **2013**, *138*, 034307. https://doi.org/10.1063/1.4776226.
+
+25. Liu, Z. Edge energy fluctuation: A unified theory of friction scaling laws in twisted layered material interfaces. *arXiv* **2026**, arXiv:2609.08063v1, submitted 8 September 2026. https://arxiv.org/abs/2609.08063.
+
+26. Wang, K.; Chen, A.; Huang, J.; Zhang, Y.; Liang, Y.; Han, Q. Moire boundary dominated twisting graphene friction: Scaling laws and geometrical control. *Int. J. Solids Struct.* **2026**, *337*, 114061. https://doi.org/10.1016/j.ijsolstr.2026.114061.
