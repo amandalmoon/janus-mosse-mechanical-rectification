@@ -103,7 +103,7 @@ panel_label(ax_a, 'a', x=-0.015, y=0.93)
 panel_title(ax_a, 'Symmetry controls', x=0.055)
 
 # (b) Static depinning response as a paired/dumbbell comparison.
-labels = ['Original', 'Symmetrized', 'Inverted']
+labels = ['Original', 'Sym.', 'Inverted']
 rows = [o, s, i]
 y = np.arange(3)[::-1]
 for yi, row in zip(y, rows):
@@ -123,7 +123,7 @@ ax_b.legend(handles=[
            markeredgecolor=BLUE, label=r'$F_{c,+}$'),
     Line2D([0], [0], marker='s', color='none', markerfacecolor='white',
            markeredgecolor=VERM, label=r'$F_{c,-}$'),
-], loc='lower right', ncol=2, columnspacing=1.0, handletextpad=0.4)
+], loc='center right', bbox_to_anchor=(0.98, 0.52), ncol=1, columnspacing=1.0, handletextpad=0.4)
 panel_label(ax_b, 'b')
 panel_title(ax_b, 'Static depinning response')
 finish(ax_b)
@@ -162,8 +162,8 @@ ax_c.set_xticks([-1, 0, 1])
 ax_c.set_yticks([-1, 0, 1])
 ax_c.set_xlabel(r'$u$ winding per cycle')
 ax_c.set_ylabel(r'$v$ winding per cycle')
-panel_label(ax_c, 'c')
-panel_title(ax_c, 'Dynamic winding response')
+panel_label(ax_c, 'c', x=-0.17)
+panel_title(ax_c, 'Dynamic winding response', x=0.04)
 finish(ax_c)
 
 stem = 'Figure_3_same_spectrum_mechanism_N22R'
