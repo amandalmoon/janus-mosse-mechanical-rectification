@@ -51,7 +51,7 @@
       "path": "research-os/janus_n27_material_validation/N27_R01_MODEL_TRIAGE.md",
       "hash": "57ace6a611f8381607bbd84f554a0cdb53de3582",
       "depends_on": [
-        "REVIEW-N27-FIVE"
+        "REVIEW-N27-FIVE-ORIGINAL"
       ],
       "supersedes": null,
       "material_change_note": "No off-the-shelf model is admitted solely by elemental coverage; BR-A selected as preferred route."
@@ -65,7 +65,7 @@
       "path": "research-os/janus_n27_material_validation/N27_R01_3D_MATERIAL_VALIDATION_DESIGN.md",
       "hash": "ebcd7673d482e976b37fe2d67019270a8f58fb25",
       "depends_on": [
-        "REVIEW-N27-FIVE",
+        "REVIEW-N27-FIVE-ORIGINAL",
         "TRIAGE-N27-R01"
       ],
       "supersedes": null,
@@ -95,7 +95,7 @@
       "hash": "53d4569a32d6ce894d38af66462a45e79f60e0b7",
       "depends_on": [
         "DESIGN-N27-R01",
-        "REVIEW-N27-FIVE"
+        "REVIEW-N27-FIVE-ORIGINAL"
       ],
       "supersedes": null,
       "material_change_note": "Superseded by explicit boundary acceptance."
