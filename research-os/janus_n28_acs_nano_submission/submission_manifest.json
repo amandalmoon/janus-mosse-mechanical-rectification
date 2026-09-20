@@ -1,0 +1,141 @@
+{
+  "manuscript_type": "Article",
+  "submission_stage": "initial",
+  "rule_verification": {
+    "status": "CURRENT",
+    "verified_on": "2026-09-20",
+    "bundled_snapshot_date": "2026-09-19",
+    "author_guidelines_url": "https://researcher-resources.acs.org/publish/author_guidelines?coden=ancac3",
+    "checklist_url": "https://pubsapp.acs.org/paragonplus/submission/ancac3/ancac3_checklist.pdf",
+    "rule_deltas": [
+      "Official ACS Nano Author Guidelines page reports last updated August 27, 2026.",
+      "Current ACS AI policy states AI-generated images should not be used in TOC graphics; AI-assisted concept excluded from upload package."
+    ]
+  },
+  "scientific_freeze": {
+    "status": "FROZEN",
+    "dirty_artifact_ids": [],
+    "open_scientific_blockers": []
+  },
+  "file_inventory": {
+    "manuscript": "ACS_Nano_N28_Submission_Manuscript_AUTHOR_METADATA_PENDING.docx",
+    "supporting_information": [],
+    "toc_graphic": null,
+    "cover_letter": "ACS_Nano_N28_Cover_Letter_DRAFT_AUTHOR_METADATA_PENDING.docx",
+    "response_to_reviewers": null,
+    "marked_manuscript": null
+  },
+  "title": "Prepared-State Mechanical Rectification and Vector Mode Locking in a Generalized Stacking-Fault-Energy Model of Finite Janus MoSSe Contacts",
+  "abstract_words": 209,
+  "abstract_has_references": false,
+  "abstract_has_novelty_claim": false,
+  "keywords": [
+    "janus transition-metal dichalcogenides",
+    "mechanical rectification",
+    "depinning",
+    "generalized stacking-fault energy",
+    "finite-contact scaling",
+    "vector mode locking",
+    "in-plane relaxation"
+  ],
+  "introduction_words": 582,
+  "introduction_heading_present": false,
+  "sections_numbered": false,
+  "sections": [
+    "Results",
+    "Discussion",
+    "Conclusions",
+    "Methods",
+    "Data Availability Statement",
+    "Acknowledgment",
+    "References"
+  ],
+  "methods_is_last_text_section": true,
+  "supporting_information_statement_present": null,
+  "references_numbered_in_citation_order": true,
+  "figures_cited_in_order": true,
+  "tables_editable": null,
+  "figure_set_gate": "VENUE_HANDOFF_READY",
+  "toc_graphic": {
+    "present": false
+  },
+  "figures": [
+    {
+      "id": "FIG-01",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-02",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-03",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-04",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-05",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-06",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-07",
+      "benchmark_gate": "VENUE_HANDOFF_READY",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    }
+  ]
+}

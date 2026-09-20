@@ -1,0 +1,28 @@
+{
+  "decision_id": "DEC-N27-FINAL-CLAIMS-FREEZE",
+  "decision_type": "FINAL_CLAIM_SET",
+  "status": "APPROVED",
+  "choice": "Freeze the N27 scientific claim set and manuscript content at the GSFE-anchored finite-contact model scope and advance only to document, archive, and venue-submission layers.",
+  "rationale": "The boundary-corrected manuscript passed independent Five Reviewer re-audit with 0 BLOCKER and 0 unresolved MAJOR; all remaining scientific limitations are explicitly bounded and the only open issue is submission-layer archival metadata.",
+  "affected_ids": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C-MATERIAL-INTEGRATED",
+    "MANUSCRIPT-N27-PREFLIGHT",
+    "FIGSET-N25",
+    "REVIEW-N27-REAUDIT"
+  ],
+  "supersedes": null,
+  "evidence_ids": [
+    "REVIEW-N27-REAUDIT",
+    "DEC-N27-R01-BOUNDARY",
+    "FIGSET-N25",
+    "MANUSCRIPT-N27-PREFLIGHT"
+  ],
+  "boundary": "Any material scientific change reopens GATE-SCIENTIFIC-FREEZE. Venue formatting and archive packaging may proceed without altering scientific meaning."
+}

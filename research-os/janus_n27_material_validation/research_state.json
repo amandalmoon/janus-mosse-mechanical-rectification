@@ -1,0 +1,295 @@
+{
+  "research_id": "JANUS-MOSSE-N27-R01",
+  "current_stage": "ACS Nano author-input / TOC gate",
+  "last_valid_gate": "GATE-SCIENTIFIC-FREEZE",
+  "gate_status": "BLOCKED",
+  "target_venue": "ACS Nano",
+  "claims": [
+    {
+      "id": "C1",
+      "status": "VERIFIED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C2",
+      "status": "VERIFIED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C3",
+      "status": "VERIFIED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C4",
+      "status": "VERIFIED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C5",
+      "status": "SUPPORTED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C6",
+      "status": "VERIFIED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C7",
+      "status": "VERIFIED",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "C-MATERIAL-INTEGRATED",
+      "status": "SUPPORTED",
+      "version": 2,
+      "supersedes": null
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "FIGSET-N25",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "MANUSCRIPT-N27-PREFLIGHT",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "TRIAGE-N27-R01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DESIGN-N27-R01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "CONTRACT-N27-R01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "REVIEW-N27-FIVE-ORIGINAL",
+      "status": "SUPERSEDED"
+    },
+    {
+      "id": "REVIEW-N27-REAUDIT",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DEC-N27-R01",
+      "status": "SUPERSEDED"
+    },
+    {
+      "id": "DEC-N27-R01-BOUNDARY",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "EXP-N27-R01-DATA",
+      "status": "SUPERSEDED"
+    },
+    {
+      "id": "SCI-FREEZE-N27",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DEC-N27-FINAL-CLAIMS-FREEZE",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DOCX-N27-FINAL",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "RELEASE-N27",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-AUDIT-N28",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N28",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-FIGSET-N28",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-COVER-N28",
+      "status": "TENTATIVE"
+    },
+    {
+      "id": "ACS-TOC-N28",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N28",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N29-REPAIRED",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N29-VISUAL-MATH-QA",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-FIGSET-N29",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-SUBMISSION-MANIFEST-N29",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-COVER-N29",
+      "status": "TENTATIVE"
+    },
+    {
+      "id": "ACS-TOC-N29",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N29",
+      "status": "BLOCKED"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "N27-R01",
+      "type": "material-model external validity",
+      "owner": "claim-evidence",
+      "status": "ACCEPTED_WITH_BOUNDARY",
+      "affected_ids": [
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C-MATERIAL-INTEGRATED"
+      ]
+    },
+    {
+      "id": "N29-V01",
+      "type": "VENUE_FORMAT / author-controlled submission metadata",
+      "owner": "human",
+      "status": "OPEN",
+      "affected_ids": [
+        "ACS-MANUSCRIPT-N29-REPAIRED",
+        "ACS-COVER-N29",
+        "ACS-SUBMISSION-PACKAGE-N29"
+      ]
+    },
+    {
+      "id": "N29-V02",
+      "type": "VENUE_FORMAT / final human-created non-AI TOC graphic",
+      "owner": "human + publication-figure-designer",
+      "status": "OPEN",
+      "affected_ids": [
+        "ACS-TOC-N29",
+        "ACS-SUBMISSION-PACKAGE-N29"
+      ]
+    }
+  ],
+  "human_gates": [
+    {
+      "gate_id": "HG-N27-R01-BRANCH",
+      "status": "NOT_REQUIRED",
+      "decision_id": "DEC-N27-R01"
+    },
+    {
+      "gate_id": "HG-N27-R01-BOUNDARY",
+      "status": "APPROVED",
+      "decision_id": "DEC-N27-R01-BOUNDARY"
+    },
+    {
+      "gate_id": "HG-N27-FINAL-CLAIMS",
+      "status": "APPROVED",
+      "decision_id": "DEC-N27-FINAL-CLAIMS-FREEZE"
+    }
+  ],
+  "dirty_artifact_ids": [],
+  "stage_history": [
+    {
+      "stage": "N26 claim-frozen manuscript",
+      "gate_status": "PASS",
+      "note": "Writing/citation/caption synchronization passed."
+    },
+    {
+      "stage": "N27 Five Reviewer preflight",
+      "gate_status": "PARTIAL",
+      "note": "0 BLOCKER; one MAJOR N27-R01 routed upstream."
+    },
+    {
+      "stage": "N27-R01 atomistic/MLIP feasibility triage",
+      "gate_status": "PASS",
+      "note": "No immediately admissible off-the-shelf Janus-MoSSe bilayer model identified; BR-A selected as preferred branch."
+    },
+    {
+      "stage": "N27-R01 3D validation design",
+      "gate_status": "PASS",
+      "note": "Bounded cases, model-admission gate, failure rules, provenance, and branch budget frozen."
+    },
+    {
+      "stage": "Material new-branch human gate",
+      "gate_status": "BLOCKED",
+      "note": "Scientific execution requires explicit approval."
+    },
+    {
+      "stage": "N27-R01 claim-boundary decision",
+      "gate_status": "PASS",
+      "note": "Full 3D atomistics accepted as outside the retained GSFE-anchored headline scope."
+    },
+    {
+      "stage": "N27 Five Reviewer re-audit",
+      "gate_status": "PASS",
+      "note": "0 BLOCKER; 0 unresolved MAJOR; N27-R01 reclassified MINOR / ACCEPTED_WITH_BOUNDARY."
+    },
+    {
+      "stage": "N27 scientific freeze",
+      "gate_status": "PASS",
+      "note": "Claims, manuscript, figures, statistics, references, and review state synchronized; scientific content is read-only for venue handoff."
+    },
+    {
+      "stage": "N27 final DOCX assembly/render QA",
+      "gate_status": "PASS",
+      "note": "20 pages, 7 figures, 356 OMML objects, accessibility 0/0/0; all pages visually inspected."
+    },
+    {
+      "stage": "N27 immutable reproducibility release",
+      "gate_status": "PASS",
+      "note": "Frozen public source identifier 327c58e2684398ba7bc11205865f8222066c3539; bundle SHA-256 7436e985937e7cc9e2a5cac1f58affbd3e955dd2763eca9d69324c1fd0af34a8; N27-R02 resolved."
+    },
+    {
+      "stage": "ACS Nano submission audit",
+      "gate_status": "BLOCKED",
+      "note": "Current official 2026 ACS Nano rules verified. Scientific freeze passes, but venue package is NOT_READY due title acronym, missing author metadata/cover letter/TOC, keyword count, section structure/Methods placement, and FIG-01 0.45 pt line width."
+    },
+    {
+      "stage": "ACS Nano N28 venue repair",
+      "gate_status": "PARTIAL",
+      "note": "All machine-editable manuscript/figure venue issues repaired. Structured ACS audit now has 1 blocker only (TOC missing), 0 major. Actual upload also awaits author-controlled metadata/funding/COI/cover-letter confirmations."
+    },
+    {
+      "stage": "N29 priority visual/math repair",
+      "gate_status": "PASS",
+      "note": "24 display equations re-rendered from frozen source; 57 problematic inline math objects converted to editable rich text; Figure 1/3/6 prioritized; captions shortened; AI-repeat prose removed; all 19 pages visually inspected."
+    },
+    {
+      "stage": "N29 polished ACS package re-audit",
+      "gate_status": "PARTIAL",
+      "note": "Equation-context mapping verified, page-break polish applied, 19-page render QA PASS, figure-set audit PASS (0 warnings), accessibility 0/0/0, PDF preflight PASS. Deterministic ACS audit has 1 blocker only (TOC_MISSING), 0 major, 0 scientific handoffs."
+    }
+  ]
+}

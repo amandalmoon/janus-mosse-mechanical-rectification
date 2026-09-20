@@ -1,0 +1,21 @@
+{
+  "decision_id": "DEC-N27-R01",
+  "decision_type": "EXPERIMENT_BRANCH",
+  "status": "SUPERSEDED",
+  "choice": "Do not execute the N27-R01 three-dimensional material-validation branch as a prerequisite for the present manuscript; preserve the design as a future validation path.",
+  "rationale": "The manuscript headline has been narrowed to a published-GSFE-anchored finite-contact model claim. Under that scope, full 3D atomistic validation is no longer required to support the retained headline claim, and the user explicitly chose boundary acceptance rather than opening a new material-simulation project.",
+  "affected_ids": [
+    "N27-R01",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7"
+  ],
+  "evidence_ids": [
+    "REVIEW-N27-FIVE",
+    "EXP-N27-R01-DESIGN-v1"
+  ],
+  "boundary": "Superseded by DEC-N27-R01-BOUNDARY. No 3D scientific execution is authorized by this record."
+}

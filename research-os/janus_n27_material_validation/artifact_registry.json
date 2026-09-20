@@ -1,0 +1,435 @@
+{
+  "research_id": "JANUS-MOSSE-N27-R01",
+  "artifacts": [
+    {
+      "id": "FIGSET-N25",
+      "type": "publication figure set",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "publication-figure-designer",
+      "path": "figures/publication/n22r",
+      "hash": "4060d017a50c6387de45377621d9232529e7e4ad",
+      "depends_on": [],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "MANUSCRIPT-N27-PREFLIGHT",
+      "type": "scientific manuscript",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "research-os-manuscript-writer",
+      "path": "research-os/janus_n26_manuscript_rewrite/MANUSCRIPT_DRAFT_N26.md",
+      "hash": "2ee160a40e07bb2d51be6845e780c7f349bc4386",
+      "depends_on": [
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Headline scope narrowed to a published-GSFE-anchored finite-contact model; Five Reviewer re-audit passed with 0 unresolved MAJOR."
+    },
+    {
+      "id": "REVIEW-N27-FIVE-ORIGINAL",
+      "type": "independent five-reviewer audit",
+      "version": 1,
+      "status": "SUPERSEDED",
+      "owner": "five-reviewer-paper-audit",
+      "path": "research-os/janus_n27_five_reviewer_preflight/N27_FIVE_REVIEWER_PREFLIGHT.md",
+      "hash": "4d58c10dfe495ce5dc6c99946584e1d385020c61",
+      "depends_on": [
+        "MANUSCRIPT-N27-PREFLIGHT",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Opened N27-R01 as the single MAJOR scientific issue."
+    },
+    {
+      "id": "TRIAGE-N27-R01",
+      "type": "atomistic and MLIP feasibility triage",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "literature / experiment-simulation design",
+      "path": "research-os/janus_n27_material_validation/N27_R01_MODEL_TRIAGE.md",
+      "hash": "57ace6a611f8381607bbd84f554a0cdb53de3582",
+      "depends_on": [
+        "REVIEW-N27-FIVE-ORIGINAL"
+      ],
+      "supersedes": null,
+      "material_change_note": "No off-the-shelf model is admitted solely by elemental coverage; BR-A selected as preferred route."
+    },
+    {
+      "id": "DESIGN-N27-R01",
+      "type": "simulation design",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "experiment/simulation",
+      "path": "research-os/janus_n27_material_validation/N27_R01_3D_MATERIAL_VALIDATION_DESIGN.md",
+      "hash": "ebcd7673d482e976b37fe2d67019270a8f58fb25",
+      "depends_on": [
+        "REVIEW-N27-FIVE-ORIGINAL",
+        "TRIAGE-N27-R01"
+      ],
+      "supersedes": null,
+      "material_change_note": "Pre-registers potential admission, two physical cases, inversion control, decision rules, and negative-result preservation."
+    },
+    {
+      "id": "CONTRACT-N27-R01",
+      "type": "machine-readable execution contract",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "experiment/simulation",
+      "path": "research-os/janus_n27_material_validation/N27_R01_EXECUTION_CONTRACT.json",
+      "hash": "6178f616d57c883c730291a985867a2fc7ca23ff",
+      "depends_on": [
+        "DESIGN-N27-R01"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "DEC-N27-R01",
+      "type": "human decision record",
+      "version": 1,
+      "status": "SUPERSEDED",
+      "owner": "human",
+      "path": "research-os/janus_n27_material_validation/DEC-N27-R01.json",
+      "hash": "53d4569a32d6ce894d38af66462a45e79f60e0b7",
+      "depends_on": [
+        "DESIGN-N27-R01",
+        "REVIEW-N27-FIVE-ORIGINAL"
+      ],
+      "supersedes": null,
+      "material_change_note": "Superseded by explicit boundary acceptance."
+    },
+    {
+      "id": "EXP-N27-R01-DATA",
+      "type": "3D material-validation raw/processed data",
+      "version": 1,
+      "status": "SUPERSEDED",
+      "owner": "experiment/simulation",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "CONTRACT-N27-R01",
+        "DEC-N27-R01"
+      ],
+      "supersedes": null,
+      "material_change_note": "3D branch intentionally not executed for the present manuscript after boundary decision."
+    },
+    {
+      "id": "DEC-N27-R01-BOUNDARY",
+      "type": "human limitation decision",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "human",
+      "path": "research-os/janus_n27_material_validation/DEC-N27-R01-BOUNDARY.json",
+      "hash": "dd9a1e44b703385c42f5d8d011c9d368d0e1b895",
+      "depends_on": [
+        "REVIEW-N27-FIVE-ORIGINAL",
+        "DESIGN-N27-R01"
+      ],
+      "supersedes": "DEC-N27-R01",
+      "material_change_note": "Approves GSFE-anchored claim boundary; full 3D validation is future work."
+    },
+    {
+      "id": "REVIEW-N27-REAUDIT",
+      "type": "independent five-reviewer re-audit",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "five-reviewer-paper-audit",
+      "path": "research-os/janus_n27_five_reviewer_preflight/N27_FIVE_REVIEWER_REAUDIT_BOUNDARY.md",
+      "hash": "b75fde40625ceb79fde3ea9a7ce41da8260d8218",
+      "depends_on": [
+        "MANUSCRIPT-N27-PREFLIGHT",
+        "FIGSET-N25",
+        "DEC-N27-R01-BOUNDARY"
+      ],
+      "supersedes": "REVIEW-N27-FIVE-ORIGINAL",
+      "material_change_note": "Re-audit result: 0 BLOCKER, 0 unresolved MAJOR."
+    },
+    {
+      "id": "SCI-FREEZE-N27",
+      "type": "scientific freeze record",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "research-os-orchestrator",
+      "path": "research-os/janus_n27_scientific_freeze/N27_SCIENTIFIC_FREEZE.md",
+      "hash": "e43e30d448d26b346a419b877daff2c3120113fd",
+      "depends_on": [
+        "MANUSCRIPT-N27-PREFLIGHT",
+        "FIGSET-N25",
+        "REVIEW-N27-REAUDIT",
+        "DEC-N27-R01-BOUNDARY"
+      ],
+      "supersedes": null,
+      "material_change_note": "Scientific content frozen after zero-major Five Reviewer re-audit."
+    },
+    {
+      "id": "DEC-N27-FINAL-CLAIMS-FREEZE",
+      "type": "human final claim-set decision",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "human",
+      "path": "research-os/janus_n27_scientific_freeze/DEC-N27-FINAL-CLAIMS-FREEZE.json",
+      "hash": "dcd70e24d7158de4220baf278e1b591ab2cef24c",
+      "depends_on": [
+        "SCI-FREEZE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Approves read-only scientific handoff to venue layer."
+    },
+    {
+      "id": "DOCX-N27-FINAL",
+      "type": "final frozen manuscript DOCX",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx",
+      "path": "external-release:Janus_MoSSe_N27_ScientificFreeze_Final.docx",
+      "hash": "ce16d631ff481b0095131c7a5c448ba27b4002ad7f47a0fa0822037454296829",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "DOCX assembled from exact frozen manuscript; 20-page render and accessibility QA passed."
+    },
+    {
+      "id": "DOCX-QA-N27",
+      "type": "DOCX render and accessibility QA",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx",
+      "path": "research-os/janus_n27_scientific_freeze/N27_FINAL_DOCX_QA.md",
+      "hash": "f1ab0f296b21755017235380c7c1e1fc9679fdb6",
+      "depends_on": [
+        "DOCX-N27-FINAL"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "RELEASE-N27",
+      "type": "immutable reproducibility release",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "research-os-orchestrator",
+      "path": "research-os/janus_n27_release/N27_IMMUTABLE_RELEASE_RECORD.md",
+      "hash": "1146c1495363336237fcde5c01845737913de9d7",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "DOCX-N27-FINAL",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Public content-addressed Git commit 327c58e2684398ba7bc11205865f8222066c3539 is the immutable source identifier; bundle SHA-256 is recorded."
+    },
+    {
+      "id": "ACS-AUDIT-N28",
+      "type": "ACS Nano submission audit",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "research-os/janus_n28_acs_nano_submission/ACS_NANO_SUBMISSION_AUDIT.md",
+      "hash": "9e44ec6cce0be327fcf215fdc2c2bab1d3e64b8a",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "DOCX-N27-FINAL",
+        "RELEASE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Current official ACS Nano guidance verified on 2026-09-20; venue package status NOT_READY."
+    },
+    {
+      "id": "ACS-SUBMISSION-MANIFEST-N28",
+      "type": "ACS Nano submission manifest",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "research-os/janus_n28_acs_nano_submission/submission_manifest.json",
+      "hash": "223acd6cd674492fc3b7c6f7adaa8b8e70ebbe63",
+      "depends_on": [
+        "ACS-AUDIT-N28"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N28",
+      "type": "ACS Nano initial submission package",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "acs-nano-submission",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "ACS-AUDIT-N28",
+        "DOCX-N27-FINAL",
+        "RELEASE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Machine-editable venue repairs completed; package remains blocked only by author-controlled metadata and final human-created non-AI TOC."
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N28",
+      "type": "ACS Nano venue-formatted manuscript derivative",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N28_Submission_Manuscript_AUTHOR_METADATA_PENDING.docx",
+      "hash": "56b1aba8a8a27cfc2892dc17652cecd8abbe9dd689192e55697cd853c8e97047",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Venue-only derivative; scientific freeze unchanged."
+    },
+    {
+      "id": "ACS-FIGSET-N28",
+      "type": "ACS Nano venue figure set",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "publication-figure-designer",
+      "path": "external-deliverable:ACS_Nano_N28_Submission_Package_AUTHOR_INPUT_PENDING/figures",
+      "hash": null,
+      "depends_on": [
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Figure 1 background line raised 0.45 -> 0.50 pt; Figures 2-7 unchanged; all data/semantics preserved."
+    },
+    {
+      "id": "ACS-COVER-N28",
+      "type": "ACS Nano cover-letter draft",
+      "version": 1,
+      "status": "TENTATIVE",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N28_Cover_Letter_DRAFT_AUTHOR_METADATA_PENDING.docx",
+      "hash": "cab1280b2e13a96fa973f669e69d155fcd2bcae843ac1da89a61cd71c40a911c",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N28"
+      ],
+      "supersedes": null,
+      "material_change_note": "Requires author/contact/preprint/editor/review-only-material confirmations."
+    },
+    {
+      "id": "ACS-TOC-N28",
+      "type": "ACS Nano TOC graphic",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "human + publication-figure-designer",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "SCI-FREEZE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Final TOC must be human-created; AI-assisted concept excluded under current ACS AI policy."
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N29-REPAIRED",
+      "type": "ACS Nano venue manuscript visual/math repair derivative",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx + publication-figure-designer",
+      "path": "external-deliverable:ACS_Nano_N29_Priority_Repaired_Manuscript_AUTHOR_METADATA_PENDING.docx",
+      "hash": "79dd95856a19285ceba00d097795df6a21627001123a57962a89023796000aa8",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "ACS-MANUSCRIPT-N28",
+        "ACS-FIGSET-N28"
+      ],
+      "supersedes": "ACS-MANUSCRIPT-N28",
+      "material_change_note": "Presentation-only polished repair: exact equation-context remapping, inline-math renderer fallbacks, page-break polish, caption cleanup, and figure whitespace/line-floor fixes; scientific content unchanged."
+    },
+    {
+      "id": "N29-VISUAL-MATH-QA",
+      "type": "visual/math render QA",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx + publication-figure-designer",
+      "path": "research-os/janus_n29_visual_math_repair/N29_VISUAL_MATH_REPAIR_REPORT.md",
+      "hash": "7aba6accca764a0ef07b1864c978ab77a56d919d",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED"
+      ],
+      "supersedes": null,
+      "material_change_note": "19-page visual inspection after equation-context repair and page-break polish; figure-set PASS 0 warnings; accessibility 0/0/0; PDF preflight PASS."
+    },
+    {
+      "id": "ACS-FIGSET-N29",
+      "type": "ACS Nano polished venue figure set",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "publication-figure-designer",
+      "path": "external-deliverable:ACS_Nano_N29_Submission_Package_AUTHOR_INPUT_PENDING/figures",
+      "hash": null,
+      "depends_on": [
+        "ACS-FIGSET-N28",
+        "N29-VISUAL-MATH-QA"
+      ],
+      "supersedes": "ACS-FIGSET-N28",
+      "material_change_note": "Figure-set audit PASS (0 warnings); Figure 1 line floor fixed to 0.50 pt; other changes are presentation-only crops."
+    },
+    {
+      "id": "ACS-SUBMISSION-MANIFEST-N29",
+      "type": "ACS Nano polished submission manifest",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "research-os/janus_n29_visual_math_repair/N29_ACS_SUBMISSION_MANIFEST.json",
+      "hash": "668a2fb7253a97351c695d13c1760e6f54afc149",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED",
+        "ACS-FIGSET-N29"
+      ],
+      "supersedes": "ACS-SUBMISSION-MANIFEST-N28",
+      "material_change_note": "Deterministic audit: NOT_READY only because TOC_MISSING; major 0; upstream scientific handoff 0."
+    },
+    {
+      "id": "ACS-COVER-N29",
+      "type": "ACS Nano cover-letter draft",
+      "version": 1,
+      "status": "TENTATIVE",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N29_Cover_Letter_DRAFT_AUTHOR_METADATA_PENDING.docx",
+      "hash": "cab1280b2e13a96fa973f669e69d155fcd2bcae843ac1da89a61cd71c40a911c",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED"
+      ],
+      "supersedes": "ACS-COVER-N28",
+      "material_change_note": "Scientific fit text complete; author/contact/preprint/editor/Review-Only-Material confirmations remain."
+    },
+    {
+      "id": "ACS-TOC-N29",
+      "type": "ACS Nano TOC graphic",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "human + publication-figure-designer",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "SCI-FREEZE-N27"
+      ],
+      "supersedes": "ACS-TOC-N28",
+      "material_change_note": "Final upload artwork remains a human-created non-AI asset."
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N29",
+      "type": "ACS Nano author-input-pending package",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N29_Submission_Package_AUTHOR_INPUT_PENDING.zip",
+      "hash": "02d509c869d9f961238cebe8eb7f9be3cab1315a3353958a2ca3183900a7e2e3",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED",
+        "ACS-FIGSET-N29",
+        "ACS-SUBMISSION-MANIFEST-N29",
+        "ACS-COVER-N29",
+        "RELEASE-N27"
+      ],
+      "supersedes": "ACS-SUBMISSION-PACKAGE-N28",
+      "material_change_note": "Machine-complete package; blocked only by author-controlled metadata and final human-created TOC."
+    }
+  ]
+}

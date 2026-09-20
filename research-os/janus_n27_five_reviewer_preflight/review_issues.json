@@ -1,0 +1,119 @@
+{
+  "issues": [
+    {
+      "issue_id": "N27-R01",
+      "severity": "MINOR",
+      "type": "material-model external validity",
+      "claim_ids": [
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7"
+      ],
+      "figure_ids": [
+        "FIG-02",
+        "FIG-03",
+        "FIG-04",
+        "FIG-05",
+        "FIG-06",
+        "FIG-07"
+      ],
+      "equation_ids": [
+        "Eq. 2",
+        "Eq. 13",
+        "Eq. 15"
+      ],
+      "source_locator": "Methods 2.10; Discussion 4.4; Conclusions",
+      "finding": "Full three-dimensional finite-contact Janus MoSSe validation is absent, but the revised title, abstract, introduction, Discussion 4.4, and Conclusions now restrict the retained headline to a published-GSFE-anchored finite-contact model. The missing 3D layer therefore limits external material generalization rather than weakening the stated computational claim.",
+      "evidence": "The manuscript explicitly states that it does not supply a full three-dimensional atomistically relaxed finite MoSSe interface and lists collective buckling/corrugation, reconstructed edges, defects, load-dependent energetics, and the lack of a validated Janus-specific 3D interatomic potential as unresolved. The same-spectrum controls, FEM/VFF checks, deterministic dynamics, and thermal statistics do not test those missing degrees of freedom.",
+      "required_fix": "Maintain the explicit GSFE-anchored model boundary. Reopen this issue only if the manuscript later adds claims about arbitrary fully three-dimensional MoSSe contacts, collective out-of-plane reconstruction, atomistic edge chemistry, or quantitatively calibrated material/device behavior.",
+      "route_owner": "claim-evidence",
+      "rerun_gate": "Five Reviewer re-audit if material-level wording expands",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    },
+    {
+      "issue_id": "N27-R02",
+      "severity": "MINOR",
+      "type": "reproducibility archive metadata",
+      "claim_ids": [],
+      "figure_ids": [],
+      "equation_ids": [],
+      "source_locator": "Data and Code Availability",
+      "finding": "The reproducibility package is now frozen to public content-addressed Git commit 327c58e2684398ba7bc11205865f8222066c3539, with the final manuscript, figure artifact, and bundle bytes identified by SHA-256. A DOI has not been minted.",
+      "evidence": "N27_IMMUTABLE_RELEASE_MANIFEST.md defines the release contents and identifier policy; N27_IMMUTABLE_RELEASE_RECORD.md records the immutable Git commit and bundle SHA-256 7436e985937e7cc9e2a5cac1f58affbd3e955dd2763eca9d69324c1fd0af34a8.",
+      "required_fix": "Resolved for the present submission by the equivalent frozen Git identifier. If a DOI-backed repository is connected later, add the DOI as an additional identifier without changing the scientific release.",
+      "route_owner": "acs-nano-submission",
+      "rerun_gate": "ACS Nano data/code availability audit",
+      "status": "RESOLVED"
+    },
+    {
+      "issue_id": "N27-R03",
+      "severity": "MINOR",
+      "type": "preparation and switching kinetics boundary",
+      "claim_ids": [
+        "C2",
+        "C5"
+      ],
+      "figure_ids": [
+        "FIG-02",
+        "FIG-05"
+      ],
+      "equation_ids": [],
+      "source_locator": "Methods 2.4-2.5; Results 3.2 and 3.5; Discussion 4.2",
+      "finding": "The prepared-state and boundary-switching results are equilibrium/branch-following statements. They do not establish a realizable kinetic preparation path, activation barrier, switching rate, or hysteresis law.",
+      "evidence": "The manuscript explicitly states that no transition path, activation barrier, continuous twist-sweep protocol, or hysteresis calculation is used to infer kinetic switching and repeatedly labels the response preparation-conditioned.",
+      "required_fix": "Keep the current equilibrium/prepared-state scope boundary. Any stronger experimental switching claim requires a kinetic pathway calculation such as barrier/path analysis or a physically defined loading/twist protocol.",
+      "route_owner": "claim-evidence",
+      "rerun_gate": "claim-language audit if preparation/switching wording changes",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    },
+    {
+      "issue_id": "N27-R04",
+      "severity": "MINOR",
+      "type": "thermal transport mechanism decomposition",
+      "claim_ids": [
+        "C7"
+      ],
+      "figure_ids": [
+        "FIG-07"
+      ],
+      "equation_ids": [
+        "Eq. 15",
+        "Eq. 16"
+      ],
+      "source_locator": "Results 3.7; Discussion 4.3",
+      "finding": "The trajectory-level statistics establish a nonzero stationary mean current through T*=0.70 while exact target-winding identity is strongly mixed, but they do not identify which features of the cycle-displacement distribution generate the residual mean drift.",
+      "evidence": "The source audit shows P(v_cycle<0) approaches one-half while the mean vector remains nonzero. A persistent mean can arise from sign-probability imbalance, unequal conditional displacement magnitudes, tail asymmetry, or combinations thereof; the manuscript does not claim to distinguish them.",
+      "required_fix": "Retain the current observable-level wording. If a microscopic high-temperature transport mechanism is claimed later, add conditional-magnitude and tail/distribution decomposition at the trajectory level.",
+      "route_owner": "statistics/robustness",
+      "rerun_gate": "thermal mechanism claim audit",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    },
+    {
+      "issue_id": "N27-R05",
+      "severity": "MINOR",
+      "type": "dimensional and experimental calibration",
+      "claim_ids": [
+        "C6",
+        "C7"
+      ],
+      "figure_ids": [
+        "FIG-06",
+        "FIG-07"
+      ],
+      "equation_ids": [
+        "Eq. 13",
+        "Eq. 15"
+      ],
+      "source_locator": "Methods 2.7-2.10; Discussion 4.4",
+      "finding": "The dynamical and thermal results are expressed in reduced mass, damping, force, time, and temperature units, so the sampled protocol is not yet tied to experimental force, frequency, damping, or kelvin scales.",
+      "evidence": "The manuscript explicitly states that m*, gamma*, F0*, tau*, and T* are not supplied by the GSFE and cannot be converted to physical units without independent atomistic or experimental inputs.",
+      "required_fix": "Maintain the reduced-protocol wording. For device-level or experimental claims, derive and document a physical calibration from independently justified mass/damping/energy/time scales before submission of those stronger claims.",
+      "route_owner": "experiment/simulation",
+      "rerun_gate": "experimental-translatability audit",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    }
+  ]
+}

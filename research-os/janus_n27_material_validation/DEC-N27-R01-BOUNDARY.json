@@ -1,0 +1,26 @@
+{
+  "decision_id": "DEC-N27-R01-BOUNDARY",
+  "decision_type": "LIMITATION_WAIVER",
+  "status": "APPROVED",
+  "choice": "Accept the absence of full three-dimensional finite-contact atomistic validation as an explicit scope boundary for the present paper, provided all headline wording remains restricted to the published-GSFE-anchored finite-contact model hierarchy.",
+  "rationale": "The retained scientific claims are computational claims about a DFT/GSFE-anchored reduced finite-contact model, supported by symmetry controls, dense continuation, compact-contact scaling, two independent in-plane relaxation representations, deterministic numerical audits, and stationary trajectory-level statistics. Full 3D atomistics would constitute a higher model layer and a separate research branch rather than evidence required by the narrowed headline claim.",
+  "affected_ids": [
+    "N27-R01",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C-MATERIAL-INTEGRATED",
+    "MANUSCRIPT-N27-PREFLIGHT"
+  ],
+  "supersedes": "DEC-N27-R01",
+  "evidence_ids": [
+    "REVIEW-N27-FIVE",
+    "DESIGN-N27-R01",
+    "TRIAGE-N27-R01",
+    "MANUSCRIPT-N27-PREFLIGHT"
+  ],
+  "boundary": "No claim may state or imply validation for arbitrary fully three-dimensional Janus MoSSe contacts, collective out-of-plane reconstruction, atomistically reconstructed edges, device-scale calibration, or a physical polarity-reversal law. Any future addition of such material-level claims reopens N27-R01."
+}
