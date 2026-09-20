@@ -126,10 +126,19 @@ def main() -> None:
     a.set_xlim(2.825, 2.945)
     a.set_xlabel(r'twist $\theta$ (deg)')
     a.set_ylabel(r'$U_B-U_A$')
-    a.legend(loc='upper left', handlelength=2.0, borderaxespad=0.25)
     panel_label(a, 'a')
     panel_title(a, 'registry-energy crossings')
     finish(a)
+
+    orientation_handles = [
+        Line2D([0], [0], color=ORIENT_20, ls='-', lw=1.3, label=r'$\\phi_e=20$°'),
+        Line2D([0], [0], color=ORIENT_25, ls=(0, (4, 2)), lw=1.3, label=r'$\\phi_e=25$°'),
+    ]
+    fig.legend(
+        handles=orientation_handles, loc='upper center',
+        bbox_to_anchor=(0.50, 0.988), ncol=2,
+        handlelength=2.1, columnspacing=1.6, frameon=False,
+    )
 
     # (b) Family is encoded independently by marker/line grammar.
     for phi in (20, 25):
