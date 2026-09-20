@@ -8,7 +8,11 @@
   "package_audit": "7/7 PASS",
   "final_size_visual_qa": "7/7 PASS",
   "local_font_status": "fallback sans-serif benchmark only",
-  "literal_arial_preflight": "PENDING_CI",
+  "literal_arial_preflight": "PASS",
   "venue_final_status": "DEFERRED_TO_ACS_NANO_SUBMISSION_STAGE",
-  "next_stage": "research-os-manuscript-writer after exact-head CI"
+  "next_stage": "research-os-manuscript-writer",
+  "literal_arial_ci_run_id": 35486368648,
+  "literal_arial_artifact_id": 10597586247,
+  "literal_arial_artifact_digest": "sha256:db358a3f76c2ad62a9f2416f95e505911a00f19d251004d7870dca05e7636b93",
+  "literal_arial_final_size_visual_qa": "7/7 PASS"
 }
