@@ -134,6 +134,14 @@
     {
       "id": "ACS-SUBMISSION-PACKAGE-N28",
       "status": "BLOCKED"
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N29-REPAIRED",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N29-VISUAL-MATH-QA",
+      "status": "VERIFIED"
     }
   ],
   "blockers": [
@@ -252,6 +260,11 @@
       "stage": "ACS Nano N28 venue repair",
       "gate_status": "PARTIAL",
       "note": "All machine-editable manuscript/figure venue issues repaired. Structured ACS audit now has 1 blocker only (TOC missing), 0 major. Actual upload also awaits author-controlled metadata/funding/COI/cover-letter confirmations."
+    },
+    {
+      "stage": "N29 priority visual/math repair",
+      "gate_status": "PASS",
+      "note": "24 display equations re-rendered from frozen source; 57 problematic inline math objects converted to editable rich text; Figure 1/3/6 prioritized; captions shortened; AI-repeat prose removed; all 19 pages visually inspected."
     }
   ]
 }
