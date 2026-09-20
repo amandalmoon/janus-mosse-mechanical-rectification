@@ -22,7 +22,7 @@ def figure1(root: Path, out: Path) -> None:
     levels = np.linspace(-vmax, vmax, 25)
 
     fig = plt.figure(figsize=(inch(177.8), inch(132.0)))
-    gs = fig.add_gridspec(2, 2, left=0.085, right=0.985, bottom=0.085, top=0.96,
+    gs = fig.add_gridspec(2, 2, left=0.085, right=0.925, bottom=0.085, top=0.96,
                           wspace=0.30, hspace=0.38)
     a = fig.add_subplot(gs[0, 0]); b = fig.add_subplot(gs[0, 1])
     c = fig.add_subplot(gs[1, 0]); d = fig.add_subplot(gs[1, 1])
