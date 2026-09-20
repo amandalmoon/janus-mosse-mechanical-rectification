@@ -1,0 +1,14 @@
+{
+  "status": "NOT_READY",
+  "blockers": 1,
+  "major": 0,
+  "issues": [
+    {
+      "severity": "BLOCKER",
+      "code": "TOC_MISSING",
+      "message": "ACS Nano Article requires a TOC graphic.",
+      "owner": "acs-nano-submission"
+    }
+  ],
+  "upstream_handoffs": []
+}
