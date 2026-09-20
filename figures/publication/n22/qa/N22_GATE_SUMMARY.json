@@ -1,0 +1,14 @@
+{
+  "gate": "N22_PUBLICATION_FIGURE_DESIGN",
+  "status": "BENCHMARK_PASS",
+  "architecture_source": "N21_SCIENTIFIC_ARGUMENT_ARCHITECTURE",
+  "main_figure_count": 7,
+  "no_new_simulation": true,
+  "source_audit": "3/3 plotting modules PASS",
+  "package_audit": "7/7 PASS",
+  "final_size_visual_qa": "7/7 PASS",
+  "local_font_status": "fallback sans-serif benchmark only",
+  "literal_arial_preflight": "PENDING_CI",
+  "venue_final_status": "DEFERRED_TO_ACS_NANO_SUBMISSION_STAGE",
+  "next_stage": "research-os-manuscript-writer after exact-head CI"
+}
