@@ -1,8 +1,8 @@
 {
   "research_id": "JANUS-MOSSE-N27-R01",
-  "current_stage": "HUMAN GATE: material new branch",
-  "last_valid_gate": "GATE-DESIGN",
-  "gate_status": "BLOCKED",
+  "current_stage": "post-review scientific-freeze preparation",
+  "last_valid_gate": "GATE-REVIEW",
+  "gate_status": "PASS",
   "target_venue": "ACS Nano",
   "claims": [
     {
@@ -49,8 +49,8 @@
     },
     {
       "id": "C-MATERIAL-INTEGRATED",
-      "status": "TENTATIVE",
-      "version": 1,
+      "status": "SUPPORTED",
+      "version": 2,
       "supersedes": null
     }
   ],
@@ -62,10 +62,6 @@
     {
       "id": "MANUSCRIPT-N27-PREFLIGHT",
       "status": "TENTATIVE"
-    },
-    {
-      "id": "REVIEW-N27-FIVE",
-      "status": "VERIFIED"
     },
     {
       "id": "TRIAGE-N27-R01",
@@ -80,20 +76,32 @@
       "status": "VERIFIED"
     },
     {
+      "id": "REVIEW-N27-FIVE-ORIGINAL",
+      "status": "SUPERSEDED"
+    },
+    {
+      "id": "REVIEW-N27-REAUDIT",
+      "status": "VERIFIED"
+    },
+    {
       "id": "DEC-N27-R01",
-      "status": "BLOCKED"
+      "status": "SUPERSEDED"
+    },
+    {
+      "id": "DEC-N27-R01-BOUNDARY",
+      "status": "VERIFIED"
     },
     {
       "id": "EXP-N27-R01-DATA",
-      "status": "BLOCKED"
+      "status": "SUPERSEDED"
     }
   ],
   "blockers": [
     {
       "id": "N27-R01",
-      "type": "ROBUSTNESS_GAP / material-model external validity",
-      "owner": "experiment/simulation",
-      "status": "OPEN",
+      "type": "material-model external validity",
+      "owner": "claim-evidence",
+      "status": "ACCEPTED_WITH_BOUNDARY",
       "affected_ids": [
         "C2",
         "C3",
@@ -108,8 +116,13 @@
   "human_gates": [
     {
       "gate_id": "HG-N27-R01-BRANCH",
-      "status": "PENDING",
+      "status": "NOT_REQUIRED",
       "decision_id": "DEC-N27-R01"
+    },
+    {
+      "gate_id": "HG-N27-R01-BOUNDARY",
+      "status": "APPROVED",
+      "decision_id": "DEC-N27-R01-BOUNDARY"
     }
   ],
   "dirty_artifact_ids": [],
@@ -138,6 +151,16 @@
       "stage": "Material new-branch human gate",
       "gate_status": "BLOCKED",
       "note": "Scientific execution requires explicit approval."
+    },
+    {
+      "stage": "N27-R01 claim-boundary decision",
+      "gate_status": "PASS",
+      "note": "Full 3D atomistics accepted as outside the retained GSFE-anchored headline scope."
+    },
+    {
+      "stage": "N27 Five Reviewer re-audit",
+      "gate_status": "PASS",
+      "note": "0 BLOCKER; 0 unresolved MAJOR; N27-R01 reclassified MINOR / ACCEPTED_WITH_BOUNDARY."
     }
   ]
 }
