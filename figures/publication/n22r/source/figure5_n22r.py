@@ -101,7 +101,7 @@ def main() -> None:
     fig = plt.figure(figsize=(inch(177.8), inch(116.0)))
     gs = fig.add_gridspec(
         2, 2,
-        left=0.083, right=0.982, bottom=0.105, top=0.925,
+        left=0.083, right=0.982, bottom=0.105, top=0.895,
         wspace=0.30, hspace=0.48,
     )
     a = fig.add_subplot(gs[0, 0])
@@ -136,7 +136,7 @@ def main() -> None:
     ]
     fig.legend(
         handles=orientation_handles, loc='upper center',
-        bbox_to_anchor=(0.50, 0.988), ncol=2,
+        bbox_to_anchor=(0.50, 0.985), ncol=2,
         handlelength=2.1, columnspacing=1.6, frameon=False,
     )
 
