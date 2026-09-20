@@ -115,12 +115,12 @@ def make_figure(release: Path, out: Path) -> None:
     ax_d1 = fig.add_subplot(sub[0, 0]); ax_d2 = fig.add_subplot(sub[1, 0], sharex=ax_d1)
 
     specs = [
-        (ax_a, m_values, 'a', r'sampled winding $m$ along $\mathbf{a}_1$', m_min, m_max, False),
-        (ax_b, n_values, 'b', r'sampled winding $n$ along $\mathbf{a}_2$', n_min, n_max, True),
+        (ax_a, m_values, 'a', r'sampled winding $m$ along $\mathbf{a}_1$', m_min, m_max, BLUE, False),
+        (ax_b, n_values, 'b', r'sampled winding $n$ along $\mathbf{a}_2$', n_min, n_max, VERM, True),
     ]
-    for ax, Z, letter, title, vmin, vmax, reverse in specs:
+    for ax, Z, letter, title, vmin, vmax, semantic_color, reverse in specs:
         levels = np.arange(vmin - 0.5, vmax + 1.5, 1.0)
-        cmap = discrete_gray(len(levels) - 1, reverse=reverse)
+        cmap = discrete_semantic(len(levels) - 1, semantic_color, reverse=reverse)
         norm = BoundaryNorm(levels, cmap.N)
         mesh = ax.pcolormesh(f_edges, p_edges, Z, cmap=cmap, norm=norm, shading='flat',
                              edgecolors='white', linewidth=0.50, rasterized=False)
@@ -135,8 +135,9 @@ def make_figure(release: Path, out: Path) -> None:
         cb.ax.tick_params(labelsize=7.0, width=0.5, length=2.0)
         panel_label(ax, letter); panel_title(ax, title); finish(ax)
     ax_b.tick_params(labelleft=False); ax_b.set_ylabel('')
-    ax_a.text(0.03, 0.955, r'$\times$ pinned $(0,0)$: 21/91', transform=ax_a.transAxes,
-              ha='left', va='top', fontsize=7.0, color=DARK)
+    ax_a.text(0.97, 0.945, r'$\times$ pinned $(0,0)$: 21/91', transform=ax_a.transAxes,
+              ha='right', va='top', fontsize=7.0, color=DARK,
+              bbox=dict(facecolor='white', edgecolor='none', pad=0.8, alpha=0.92))
 
     q = vm[np.isclose(vm.period, 40.0)].sort_values('F0')
     ax_c.plot(q.F0, q.m, marker='o', ms=4.0, mfc=BLUE, mec=BLUE, color=BLUE, lw=1.10, label=r'$m$')
