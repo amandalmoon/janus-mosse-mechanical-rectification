@@ -163,16 +163,16 @@ for yi, value, xv, color, marker in zip(yvals, vals, xvals, colors, markers):
     ax_c.plot([-18.0, xv], [yi, yi], color=LIGHT, lw=0.9, zorder=1)
     ax_c.plot(xv, yi, marker=marker, ms=5.0, color=color, linestyle='none', zorder=3)
     if value >= 1e-12:
-        ax_c.annotate(f'{value:.3f}', (xv, yi), xytext=(5, 0), textcoords='offset points',
-                      va='center', fontsize=6.8, color=DARK)
+        ax_c.annotate(f'{value:.3f}', (xv, yi), xytext=(-5, 0), textcoords='offset points',
+                      ha='right', va='center', fontsize=6.8, color=DARK)
 
 ax_c.set_yticks(yvals, [labels[k] for k in order])
 ax_c.set_xlim(-18.7, 0.8)
 ax_c.set_xticks([-18, -12, -6, 0])
 ax_c.set_xlabel(r'$\log_{10}$ odd RMS')
 ax_c.grid(axis='x', color=GRID, lw=0.5)
-ax_c.text(-18.02, -0.47, 'numerical floor', fontsize=6.3, color=MID,
-          ha='center', va='top', clip_on=False)
+ax_c.text(0.03, 0.04, 'numerical floor', transform=ax_c.transAxes,
+          fontsize=6.3, color=MID, ha='left', va='bottom')
 panel_label(ax_c, 'c', x=-0.13)
 panel_title(ax_c, 'Inversion-odd content', x=0.03)
 finish(ax_c)
