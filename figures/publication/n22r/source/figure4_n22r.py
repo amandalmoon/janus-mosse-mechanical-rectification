@@ -32,10 +32,10 @@ BLUE='#0072B2'; VERM='#D55E00'; DARK='#222222'; MID='#666666'; LIGHT='#C8C8C8'; 
 
 def inch(mm): return mm/MM
 
-def panel_label(ax,letter,x=-0.055,y=1.045):
+def panel_label(ax,letter,x=-0.055,y=1.030):
     ax.text(x,y,f'({letter})',transform=ax.transAxes,ha='left',va='bottom',fontsize=9.3,fontweight='bold',color=DARK,clip_on=False)
 
-def panel_title(ax,title,x=0.055,y=1.025):
+def panel_title(ax,title,x=0.060,y=1.015):
     ax.text(x,y,title,transform=ax.transAxes,ha='left',va='bottom',fontsize=8.4,color=DARK,clip_on=False)
 
 def finish(ax):
@@ -110,10 +110,10 @@ for _,r in vff.iterrows():
 c.axhline(1.0,color=LIGHT,lw=0.75,zorder=0)
 c.set_xticks(x,xlabels); c.set_xlim(-0.35,4.35); c.set_ylim(0.895,1.006)
 c.set_xlabel(r'in-plane stiffness condition, $\theta=1.5$°'); c.set_ylabel(r'$F_c/F_c^{\mathrm{rigid}}$')
-legc1=c.legend(handles=dir_handles,loc='upper left',ncol=2,handlelength=1.4,columnspacing=0.8,borderaxespad=0.25)
+legc1=c.legend(handles=dir_handles,loc='lower right',ncol=2,handlelength=1.4,columnspacing=0.8,borderaxespad=0.25)
 c.add_artist(legc1)
 model_handles=[Line2D([0],[0],color=DARK,marker='o',linestyle='none',mfc=DARK,mec=DARK,ms=4.0,label='FEM'),Line2D([0],[0],color=MID,marker='o',linestyle='none',mfc='white',mec=MID,ms=4.0,label='VFF')]
-c.legend(handles=model_handles,loc='lower right',ncol=2,handletextpad=0.35,columnspacing=0.8,borderaxespad=0.25)
+c.legend(handles=model_handles,loc='upper left',ncol=2,handletextpad=0.35,columnspacing=0.8,borderaxespad=0.25)
 panel_label(c,'c'); panel_title(c,'compliance renormalizes force scale'); finish(c)
 
 # (d) Directional-split stability. Numerical cross-model differences remain caption-level detail.
