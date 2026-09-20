@@ -5,7 +5,7 @@ import pymupdf as fitz
 from PIL import Image
 
 EXPECTED_MM={
- 'Figure_1_credibility_registry_asymmetry_N22R':(177.8,72.0),
+ 'Figure_1_credibility_registry_asymmetry_N22R':(177.8,80.0),
  'Figure_2_prepared_state_directional_depinning_N22R':(177.8,116.0),
  'Figure_3_same_spectrum_mechanism_N22R':(177.8,108.0),
  'Figure_4_compact_elastic_robustness_N22R':(177.8,116.0),
