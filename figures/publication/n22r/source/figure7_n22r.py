@@ -50,12 +50,12 @@ def inch(mm: float) -> float:
     return mm / MM_PER_IN
 
 
-def panel_label(ax, letter: str, x: float = -0.055, y: float = 1.045) -> None:
+def panel_label(ax, letter: str, x: float = -0.055, y: float = 1.030) -> None:
     ax.text(x, y, f'({letter})', transform=ax.transAxes, ha='left', va='bottom',
             fontsize=9.3, fontweight='bold', color=DARK, clip_on=False)
 
 
-def panel_title(ax, title: str, x: float = 0.055, y: float = 1.025) -> None:
+def panel_title(ax, title: str, x: float = 0.060, y: float = 1.015) -> None:
     ax.text(x, y, title, transform=ax.transAxes, ha='left', va='bottom',
             fontsize=8.4, color=DARK, clip_on=False)
 
