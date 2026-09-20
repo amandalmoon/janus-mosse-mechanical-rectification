@@ -48,11 +48,11 @@ MM = 25.4
 def inch(mm: float) -> float:
     return mm / MM
 
-def panel_label(ax, letter: str, x=-0.09, y=1.04):
+def panel_label(ax, letter: str, x=-0.09, y=1.030):
     ax.text(x, y, f'({letter})', transform=ax.transAxes, ha='left', va='bottom',
             fontsize=9.2, fontweight='bold', color=DARK, clip_on=False)
 
-def panel_title(ax, title: str, x=0.02, y=1.025):
+def panel_title(ax, title: str, x=0.03, y=1.015):
     ax.text(x, y, title, transform=ax.transAxes, ha='left', va='bottom',
             fontsize=8.4, color=DARK)
 
@@ -124,7 +124,7 @@ outer = fig.add_gridspec(
 agt = outer[0].subgridspec(1, 4, wspace=0.11, width_ratios=[1, 1, 1, 0.055])
 axs = [fig.add_subplot(agt[0, j]) for j in range(3)]
 cax = fig.add_subplot(agt[0, 3])
-bot = outer[1].subgridspec(1, 3, wspace=0.47, width_ratios=[1.08, 0.92, 1.12])
+bot = outer[1].subgridspec(1, 3, wspace=0.54, width_ratios=[1.06, 0.90, 1.18])
 b = fig.add_subplot(bot[0, 0])
 c = fig.add_subplot(bot[0, 1])
 d = fig.add_subplot(bot[0, 2])
@@ -189,8 +189,8 @@ handles = [
     Line2D([0], [0], marker='s', color='none', markerfacecolor=VERM,
            markeredgecolor=VERM, label='-y', markersize=4.4),
 ]
-b.legend(handles=handles, loc='lower right', ncol=2, handletextpad=0.35,
-         columnspacing=0.8, borderaxespad=0.25)
+b.legend(handles=handles, loc='lower center', bbox_to_anchor=(0.50, 0.025),
+         ncol=2, handletextpad=0.35, columnspacing=0.8, borderaxespad=0.0)
 panel_label(b, 'b', x=-0.13)
 panel_title(b, 'static thresholds', x=0.02)
 finish(b)
