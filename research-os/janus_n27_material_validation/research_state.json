@@ -1,0 +1,49 @@
+{
+  "research_id": "JANUS-MOSSE-N27-R01",
+  "current_stage": "HUMAN GATE: material new branch",
+  "last_valid_gate": "GATE-DESIGN",
+  "gate_status": "BLOCKED",
+  "target_venue": "ACS Nano",
+  "claims": [
+    {"id": "C1", "status": "VERIFIED", "version": 1, "supersedes": null},
+    {"id": "C2", "status": "VERIFIED", "version": 1, "supersedes": null},
+    {"id": "C3", "status": "VERIFIED", "version": 1, "supersedes": null},
+    {"id": "C4", "status": "VERIFIED", "version": 1, "supersedes": null},
+    {"id": "C5", "status": "SUPPORTED", "version": 1, "supersedes": null},
+    {"id": "C6", "status": "VERIFIED", "version": 1, "supersedes": null},
+    {"id": "C7", "status": "VERIFIED", "version": 1, "supersedes": null},
+    {"id": "C-MATERIAL-INTEGRATED", "status": "TENTATIVE", "version": 1, "supersedes": null}
+  ],
+  "artifacts": [
+    {"id": "FIGSET-N25", "status": "VERIFIED"},
+    {"id": "MANUSCRIPT-N27-PREFLIGHT", "status": "TENTATIVE"},
+    {"id": "REVIEW-N27-FIVE", "status": "VERIFIED"},
+    {"id": "DESIGN-N27-R01", "status": "VERIFIED"},
+    {"id": "CONTRACT-N27-R01", "status": "VERIFIED"},
+    {"id": "DEC-N27-R01", "status": "BLOCKED"},
+    {"id": "EXP-N27-R01-DATA", "status": "BLOCKED"}
+  ],
+  "blockers": [
+    {
+      "id": "N27-R01",
+      "type": "ROBUSTNESS_GAP / material-model external validity",
+      "owner": "experiment/simulation",
+      "status": "OPEN",
+      "affected_ids": ["C2", "C3", "C4", "C5", "C6", "C7", "C-MATERIAL-INTEGRATED"]
+    }
+  ],
+  "human_gates": [
+    {
+      "gate_id": "HG-N27-R01-BRANCH",
+      "status": "PENDING",
+      "decision_id": "DEC-N27-R01"
+    }
+  ],
+  "dirty_artifact_ids": [],
+  "stage_history": [
+    {"stage": "N26 claim-frozen manuscript", "gate_status": "PASS", "note": "Writing/citation/caption synchronization passed."},
+    {"stage": "N27 Five Reviewer preflight", "gate_status": "PARTIAL", "note": "0 BLOCKER; one MAJOR N27-R01 routed upstream."},
+    {"stage": "N27-R01 3D validation design", "gate_status": "PASS", "note": "Bounded cases, model-admission gate, failure rules, provenance, and branch budget frozen."},
+    {"stage": "Material new-branch human gate", "gate_status": "BLOCKED", "note": "Scientific execution requires explicit approval."}
+  ]
+}
