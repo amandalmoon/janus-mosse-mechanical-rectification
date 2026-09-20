@@ -1,0 +1,89 @@
+{
+  "research_id": "JANUS-MOSSE-N27-R01",
+  "artifacts": [
+    {
+      "id": "FIGSET-N25",
+      "type": "publication figure set",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "publication-figure-designer",
+      "path": "figures/publication/n22r",
+      "hash": "4060d017a50c6387de45377621d9232529e7e4ad",
+      "depends_on": [],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "MANUSCRIPT-N27-PREFLIGHT",
+      "type": "scientific manuscript",
+      "version": 1,
+      "status": "TENTATIVE",
+      "owner": "research-os-manuscript-writer",
+      "path": "research-os/janus_n26_manuscript_rewrite/MANUSCRIPT_DRAFT_N26.md",
+      "hash": "fe0fee85cf27aae8a9153d91cb45e4c55e871299",
+      "depends_on": ["FIGSET-N25"],
+      "supersedes": null,
+      "material_change_note": "N27 Five Reviewer preflight repairs are present, but scientific freeze is withheld while N27-R01 is open."
+    },
+    {
+      "id": "REVIEW-N27-FIVE",
+      "type": "independent five-reviewer audit",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "five-reviewer-paper-audit",
+      "path": "research-os/janus_n27_five_reviewer_preflight/N27_FIVE_REVIEWER_PREFLIGHT.md",
+      "hash": "4d58c10dfe495ce5dc6c99946584e1d385020c61",
+      "depends_on": ["MANUSCRIPT-N27-PREFLIGHT", "FIGSET-N25"],
+      "supersedes": null,
+      "material_change_note": "Opened N27-R01 as the single MAJOR scientific issue."
+    },
+    {
+      "id": "DESIGN-N27-R01",
+      "type": "simulation design",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "experiment/simulation",
+      "path": "research-os/janus_n27_material_validation/N27_R01_3D_MATERIAL_VALIDATION_DESIGN.md",
+      "hash": "ebcd7673d482e976b37fe2d67019270a8f58fb25",
+      "depends_on": ["REVIEW-N27-FIVE"],
+      "supersedes": null,
+      "material_change_note": "Pre-registers potential admission, two physical cases, inversion control, decision rules, and negative-result preservation."
+    },
+    {
+      "id": "CONTRACT-N27-R01",
+      "type": "machine-readable execution contract",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "experiment/simulation",
+      "path": "research-os/janus_n27_material_validation/N27_R01_EXECUTION_CONTRACT.json",
+      "hash": "6178f616d57c883c730291a985867a2fc7ca23ff",
+      "depends_on": ["DESIGN-N27-R01"],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "DEC-N27-R01",
+      "type": "human decision record",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "human",
+      "path": "research-os/janus_n27_material_validation/DEC-N27-R01.json",
+      "hash": "1b4e771d38a1ccf33c9fa0a89cf060409a1c6103",
+      "depends_on": ["DESIGN-N27-R01", "REVIEW-N27-FIVE"],
+      "supersedes": null,
+      "material_change_note": "PENDING explicit approval."
+    },
+    {
+      "id": "EXP-N27-R01-DATA",
+      "type": "3D material-validation raw/processed data",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "experiment/simulation",
+      "path": null,
+      "hash": null,
+      "depends_on": ["CONTRACT-N27-R01", "DEC-N27-R01"],
+      "supersedes": null,
+      "material_change_note": "No scientific execution has occurred."
+    }
+  ]
+}
