@@ -58,8 +58,8 @@ import janus_fourier_landscapes_v12 as J
 L=J.dft_landscape('2H_MoSSe_Se-S-Se-S')
 ad=pd.read_csv(ROOT/'data'/'canonical'/'asymmetry_global_check.csv')
 
-fig=plt.figure(figsize=(inch(177.8),inch(78.0)))
-gs=fig.add_gridspec(1,3,left=0.048,right=0.968,bottom=0.19,top=0.86,wspace=0.46,width_ratios=[1.08,1.16,1.30])
+fig=plt.figure(figsize=(inch(177.8),inch(72.0)))
+gs=fig.add_gridspec(1,3,left=0.048,right=0.968,bottom=0.18,top=0.88,wspace=0.46,width_ratios=[1.08,1.16,1.30])
 a=fig.add_subplot(gs[0,0]); b=fig.add_subplot(gs[0,1]); c=fig.add_subplot(gs[0,2])
 
 # Panel A: actual model geometry from the canonical shell-6 N=127 contact.
