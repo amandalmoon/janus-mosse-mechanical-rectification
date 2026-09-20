@@ -41,12 +41,12 @@
       "figure_ids": [],
       "equation_ids": [],
       "source_locator": "Data and Code Availability",
-      "finding": "The draft points to the project repository and reproducibility materials but has no immutable archival DOI or equivalent frozen release identifier.",
-      "evidence": "Section 6 explicitly says an archival DOI has not yet been assigned and will be added at venue submission.",
-      "required_fix": "Create a frozen archival release with an immutable identifier and cite the exact release/version in the final submission package.",
+      "finding": "The reproducibility package is now frozen to public content-addressed Git commit 327c58e2684398ba7bc11205865f8222066c3539, with the final manuscript, figure artifact, and bundle bytes identified by SHA-256. A DOI has not been minted.",
+      "evidence": "N27_IMMUTABLE_RELEASE_MANIFEST.md defines the release contents and identifier policy; N27_IMMUTABLE_RELEASE_RECORD.md records the immutable Git commit and bundle SHA-256 7436e985937e7cc9e2a5cac1f58affbd3e955dd2763eca9d69324c1fd0af34a8.",
+      "required_fix": "Resolved for the present submission by the equivalent frozen Git identifier. If a DOI-backed repository is connected later, add the DOI as an additional identifier without changing the scientific release.",
       "route_owner": "acs-nano-submission",
-      "rerun_gate": "submission reproducibility audit",
-      "status": "OPEN"
+      "rerun_gate": "ACS Nano data/code availability audit",
+      "status": "RESOLVED"
     },
     {
       "issue_id": "N27-R03",
