@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.lines import Line2D
+from matplotlib.patches import Rectangle
 
 ROOT = Path(os.environ['N22R_RELEASE_ROOT'])
 OUT = Path(os.environ['N22R_OUT'])
@@ -92,7 +93,7 @@ cards = [
     (0.67, 0.31, 'Inverted', r'$U_e-U_o$', PALE),
 ]
 for x0, width, name, formula, color in cards:
-    ax_a.add_patch(plt.Rectangle((x0, 0.17), width, 0.58, facecolor='white',
+    ax_a.add_patch(Rectangle((x0, 0.17), width, 0.58, facecolor='white',
                                  edgecolor=LIGHT, linewidth=0.75))
     ax_a.text(x0 + 0.03, 0.59, name, ha='left', va='center',
               fontsize=7.7, fontweight='bold', color=color)
