@@ -1,0 +1,17 @@
+name: N21 Argument Architecture Gate
+on:
+  pull_request:
+    paths:
+      - "research-os/janus_n21_argument_architecture/**"
+      - ".github/workflows/n21-argument-architecture.yml"
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Deterministic argument audit
+        run: python research-os/janus_n21_argument_architecture/audit_argument_plan.py research-os/janus_n21_argument_architecture/argument_plan.json
