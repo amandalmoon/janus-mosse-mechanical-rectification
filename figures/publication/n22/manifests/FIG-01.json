@@ -1,0 +1,123 @@
+{
+  "figure_id": "FIG-01",
+  "manuscript_role": "main",
+  "core_conclusion": "The declared unguided finite-contact model is anchored to the published 2H MoSSe GSFE, whose lateral registry landscape contains a non-removable inversion-odd component.",
+  "claim_ids": [
+    "M0",
+    "C1",
+    "C5"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 68,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v3-argument-aligned",
+    "font_family": "Local benchmark: DejaVu Sans fallback; literal Arial required at later venue handoff",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.65,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Evidence-bearing numerical panels use executed simulation outputs. Color and marker/line semantics are redundant where series are compared. Illustrative schematic elements are explicitly non-evidentiary.",
+    "scale_policy": "Shared scales for direct comparisons; transformed/log scales only when explicitly labeled and scientifically necessary.",
+    "legend_policy": "Compact legends or direct labels placed in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "All quantitative evidence panels derive from verified executed simulations. Explicit schematic panels are illustrative only and are not used as numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "What is the declared finite-contact preparation and loading geometry?",
+      "role": "context",
+      "visual_type": "schematic",
+      "evidence_ids": [
+        "C5"
+      ],
+      "source_paths": [
+        "figures/publication/n22/source/n22_figures_1_2.py"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "ILLUSTRATIVE schematic only; not numerical evidence.",
+        "COM is free in the full 2D registry plane; preparation is the lowest-energy zero-force stable state."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "What lateral registry landscape is used as the conservative material input?",
+      "role": "context",
+      "visual_type": "contour",
+      "evidence_ids": [
+        "M0"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/source/janus_fourier_landscapes_v12.py"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Published three-shell 2H MoSSe GSFE; dimensionless energy U/E0."
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "Is the 2H registry-space inversion asymmetry removable by translation, and how does it compare with 3R controls?",
+      "role": "hero",
+      "visual_type": "dot-log10",
+      "evidence_ids": [
+        "C1"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/asymmetry_global_check.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Exact-zero symmetric control is displayed at a 1e-18 plotting floor and labeled 0.",
+        "A_min and chi1 are direct diagnostics from the same audit."
+      ],
+      "scale": "log10 transform"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_1_credibility_registry_asymmetry_N22.pdf",
+    "svg": "../figures/Figure_1_credibility_registry_asymmetry_N22.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_1_credibility_registry_asymmetry_N22.png",
+    "source": "../source/n22_figures_1_2.py"
+  },
+  "caption": "Figure 1. Credible model input and registry-space inversion asymmetry. (a) Schematic of the unguided finite contact: the center of mass is free in the full two-dimensional registry plane, loading is applied along the declared ±y crystallographic axis, and the prepared state is the lowest-energy zero-force stable minimum. This schematic is illustrative and is not numerical evidence. (b) Published three-shell 2H MoSSe generalized stacking-fault-energy landscape used as the conservative input, shown in lattice coordinates. (c) Translation-minimized odd-RMS fraction for the 2H landscape and 3R controls; the exact-zero symmetric control is placed at 10^-18 only as a plotting floor and is labeled 0. The displayed A_min and chi1 quantify the same coordinate-independent asymmetry audit. Lateral registry inversion asymmetry is not identified with physical Janus-polarity reversal.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "300 dpi final-physical-size benchmark render opened and visually inspected after the final rendering iteration. Literal Arial is deferred to the later ACS Nano venue handoff."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "NOT_RUN"
+  },
+  "publication_gate": "BENCHMARK_PASS"
+}
