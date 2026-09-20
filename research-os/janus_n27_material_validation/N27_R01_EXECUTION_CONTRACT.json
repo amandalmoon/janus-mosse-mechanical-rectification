@@ -1,0 +1,107 @@
+{
+  "contract_id": "EXP-N27-R01-DESIGN-v1",
+  "issue_id": "N27-R01",
+  "status": "DESIGN_FROZEN_EXECUTION_NOT_AUTHORIZED",
+  "primary_endpoint": {
+    "name": "delta_Fc_3D",
+    "definition": "Fc_plus_3D - Fc_minus_3D",
+    "primary_case": "CASE-3D-01",
+    "decision_variable": "sign"
+  },
+  "branches": [
+    {
+      "id": "BR-A",
+      "role": "preferred",
+      "model": "validated split 3D Janus MoSSe model",
+      "max_repairs": 2
+    },
+    {
+      "id": "BR-B",
+      "role": "conditional",
+      "model": "published transferable multilayer-TMD NNP admitted only after Janus-specific validation",
+      "max_repairs": 2
+    },
+    {
+      "id": "BR-C",
+      "role": "escalation",
+      "model": "direct first-principles spot check",
+      "max_repairs": 1
+    }
+  ],
+  "model_admission": {
+    "intralayer": {
+      "max_relative_error_lattice_and_C11_C12": 0.05,
+      "stable_2H_topology_required": true
+    },
+    "interlayer": {
+      "registry_order_required": true,
+      "odd_invariant_sign_required": true,
+      "max_normalized_rmse_fraction_of_corrugation": 0.10,
+      "compression_barrier_trend_required": true,
+      "stable_equilibrium_separation_required": true,
+      "held_out_validation_required": true
+    }
+  },
+  "cases": [
+    {
+      "id": "CASE-3D-01",
+      "N": 127,
+      "theta_deg": 1.5,
+      "guide": 0,
+      "preparation": "lowest-energy stable zero-force state",
+      "loads": ["+y", "-y"],
+      "primary": true
+    },
+    {
+      "id": "CASE-3D-02",
+      "N": 127,
+      "theta_deg": 2.0,
+      "guide": 0,
+      "preparation": "lowest-energy stable zero-force state",
+      "loads": ["+y", "-y"],
+      "primary": false
+    },
+    {
+      "id": "CASE-3D-CTRL",
+      "N": 127,
+      "theta_deg": 1.5,
+      "transform": "exact lateral registry inversion",
+      "purpose": "implementation/symmetry control"
+    }
+  ],
+  "numerical_convergence": {
+    "repeat_with_factor_two_tighter_force_refinement": true,
+    "max_relative_threshold_change": 0.01,
+    "directional_sign_must_be_unchanged": true
+  },
+  "decision_rules": {
+    "MATERIAL_SIGN_SURVIVES": [
+      "model_admission_pass",
+      "inversion_control_pass",
+      "Fc_plus_gt_Fc_minus_CASE-3D-01",
+      "split_exceeds_numerical_uncertainty",
+      "same_sign_CASE-3D-02",
+      "prepared_state_stable"
+    ],
+    "MATERIAL_SIGN_FAILS": [
+      "admitted_model_converged_sign_reversal_CASE-3D-01",
+      "or_split_unresolved_against_numerical_uncertainty_CASE-3D-01"
+    ],
+    "MATERIAL_VALIDATION_INCONCLUSIVE": [
+      "no_candidate_model_admitted",
+      "admitted_models_disagree",
+      "qualitative_boundary_or_substrate_dependence_unresolved",
+      "numerical_convergence_cannot_resolve_sign"
+    ]
+  },
+  "deferred": [
+    "triangular_boundary_switch",
+    "thermal_dynamics",
+    "full_91_point_rocking_map"
+  ],
+  "human_gate": {
+    "id": "HG-N27-R01-BRANCH",
+    "status": "PENDING",
+    "required_before_execution": true
+  }
+}
