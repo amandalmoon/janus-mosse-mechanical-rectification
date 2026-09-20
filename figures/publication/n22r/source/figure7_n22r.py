@@ -132,7 +132,7 @@ def make_figure(release: Path, out: Path) -> None:
     ax_a.legend(loc='lower left', ncol=2, columnspacing=1.0, handlelength=1.8,
                 borderaxespad=0.25)
     panel_label(ax_a, 'a', x=-0.045)
-    panel_title(ax_a, 'Thermal current hierarchy')
+    panel_title(ax_a, 'Thermal current hierarchy', x=0.07)
     finish(ax_a)
 
     ax_az = inset_axes(ax_a, width='39%', height='48%', loc='upper right', borderpad=0.95)
