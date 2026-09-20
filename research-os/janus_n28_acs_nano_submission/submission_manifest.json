@@ -1,0 +1,140 @@
+{
+  "manuscript_type": "Article",
+  "submission_stage": "initial",
+  "rule_verification": {
+    "status": "CURRENT",
+    "verified_on": "2026-09-20",
+    "bundled_snapshot_date": "2026-09-19",
+    "author_guidelines_url": "https://researcher-resources.acs.org/publish/author_guidelines?coden=ancac3",
+    "checklist_url": "https://pubsapp.acs.org/paragonplus/submission/ancac3/ancac3_checklist.pdf",
+    "rule_deltas": []
+  },
+  "scientific_freeze": {
+    "status": "FROZEN",
+    "dirty_artifact_ids": [],
+    "open_scientific_blockers": []
+  },
+  "file_inventory": {
+    "manuscript": "Janus_MoSSe_N27_ScientificFreeze_Final.docx",
+    "supporting_information": [],
+    "toc_graphic": null,
+    "cover_letter": null,
+    "response_to_reviewers": null,
+    "marked_manuscript": null
+  },
+  "title": "GSFE-Anchored Prepared-State Mechanical Rectification and Vector Mode Locking in Finite Janus MoSSe Contacts",
+  "abstract_words": 208,
+  "abstract_has_references": false,
+  "abstract_has_novelty_claim": false,
+  "keywords": [
+    "Janus MoSSe",
+    "mechanical rectification",
+    "depinning",
+    "generalized stacking-fault energy",
+    "finite-contact scaling",
+    "vector mode locking",
+    "thermal transport",
+    "in-plane relaxation"
+  ],
+  "introduction_words": 587,
+  "introduction_heading_present": true,
+  "sections_numbered": true,
+  "sections": [
+    "Abstract",
+    "Introduction",
+    "Model and Computational Methods",
+    "Results",
+    "Discussion",
+    "Conclusions",
+    "Data and Code Availability",
+    "References"
+  ],
+  "methods_is_last_text_section": false,
+  "supporting_information_statement_present": null,
+  "references_numbered_in_citation_order": true,
+  "figures_cited_in_order": true,
+  "tables_editable": null,
+  "figure_set_gate": "BENCHMARK_PASS",
+  "toc_graphic": {
+    "present": false
+  },
+  "figures": [
+    {
+      "id": "FIG-01",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7,
+      "min_line_pt": 0.45,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-02",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-03",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-04",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-05",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-06",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.5,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "FIG-07",
+      "benchmark_gate": "BENCHMARK_PASS",
+      "font_family": "Arial",
+      "min_font_pt": 7.2,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    }
+  ]
+}
