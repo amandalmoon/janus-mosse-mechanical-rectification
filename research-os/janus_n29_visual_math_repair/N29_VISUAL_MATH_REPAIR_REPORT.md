@@ -1,66 +1,64 @@
-# N29 Visual / Math Repair Report
+# N29 Visual / Math Repair Report - Final Polished Build
 
 **Date:** 2026-09-20  
-**Scope:** presentation-only venue derivative; N27 scientific freeze remains unchanged.
+**Scope:** presentation-only venue derivative. N27 scientific freeze remains unchanged.
 
-## Priority repair result
+## Repair outcome
 
-1. **Display equations — PASS**
-   - all 24 display equations re-rendered from the exact frozen LaTeX/Markdown source;
-   - equation placement remapped for the ACS ordering: Results frozen blocks 19–24, then Methods blocks 1–18;
-   - no display-equation clipping or detached numerical fragments remain.
+1. **Display equations: PASS**
+   - 24 display equations were re-rendered from the exact frozen LaTeX/Markdown source.
+   - The ACS Methods-last derivative is explicitly mapped as Results frozen blocks 19-24 followed by Methods blocks 1-18.
+   - A final equation-context audit confirmed that the Results values and Methods equations occur in the correct scientific locations.
 
-2. **Broken inline math / renderer artifacts — PASS**
-   - 57 inline OMML expressions that produced red star/subscript artifacts in LibreOffice were converted to editable rich-text math;
-   - no red placeholder/glyph artifacts were observed in the final render.
+2. **Inline math / detached values / clipping: PASS**
+   - 57 problematic inline OMML expressions were converted to editable rich-text math to eliminate renderer-specific red star/subscript artifacts.
+   - detached numerical fragments: **0**.
+   - clipped display equations: **0**.
+   - the deterministic-dynamics operating-point paragraph is kept together so the starred force value no longer breaks across pages 15-16.
 
-3. **Captions / AI-repeat prose — PASS**
-   - Figure 1–7 captions shortened and rebuilt as plain text;
-   - repeated OpenAI/ChatGPT/AI-assistance prose removed from captions and manuscript acknowledgment;
-   - funding placeholder remains pending author input.
+3. **Captions and repeated AI prose: PASS**
+   - Figure 1-7 captions were shortened and normalized.
+   - repeated OpenAI/ChatGPT/AI-assistance prose was removed from captions and the manuscript acknowledgment.
+   - funding metadata remains intentionally pending author input.
 
-4. **Figure 1 — PASS**
-   - restored the complete N25 vector-master labels/axes;
-   - the single 0.45 pt background line was raised to 0.50 pt;
-   - only outer whitespace was trimmed in the DOCX raster derivative;
-   - no data or scientific semantics changed.
+4. **Figure priorities: PASS**
+   - Figure 1: complete vector-master labels/axes restored; the single 0.45 pt background line was raised to 0.50 pt; no data change.
+   - Figures 3 and 6: whitespace-only tighter crop for improved effective panel size.
+   - Figures 4, 2, 7, and 5: conservative crop/caption cleanup only.
 
-5. **Figure 3 — PASS**
-   - tight vector-master crop enlarges the landscape/control panels at fixed manuscript width.
+## Figure-set QA
 
-6. **Figure 6 — PASS**
-   - tight vector-master crop enlarges winding maps, staircase, and Floquet consistency panel.
-
-7. **Figures 4, 2, 7, 5 — PASS**
-   - conservative whitespace crop and caption cleanup only.
-
-## Figure-set integrity
-
-- +y / -y blue-orange semantics unchanged.
-- Ground/metastable and filled/open-marker semantics unchanged.
-- Figure order remains 1→7.
-- No panel, uncertainty representation, numerical evidence, or null result was removed.
+- paper-wide figure-set audit: **PASS (0 warnings)**;
+- +y/-y semantic colors and non-color marker/line redundancy are preserved;
+- color and grayscale set views were inspected;
+- no panel, uncertainty representation, numerical evidence, or null result was removed.
 
 ## Final document QA
 
-- pages: **19**
-- scientific figures: **7**
-- display-equation graphics: **24**
-- total drawings: **31**
-- accessibility: **0 high / 0 medium / 0 low**
-- PDF preflight: openable, unencrypted, text-based
-- pages 1–19 visually inspected individually after the final equation-order repair
-- observed clipping: **0**
-- observed overlaps: **0**
-- observed broken-glyph/red-OMML artifacts: **0**
-- observed detached numerical fragments: **0**
+- pages: **19**;
+- scientific figures: **7**;
+- display-equation graphics: **24**;
+- accessibility: **0 high / 0 medium / 0 low**;
+- PDF preflight: openable, unencrypted, text-based;
+- pages 1-19 were visually inspected after the final equation-order repair and page-break polish;
+- clipping: **0**;
+- overlap: **0**;
+- broken red/glyph artifacts: **0**;
+- detached numerical fragments: **0**.
 
-## Exact artifacts
+## Exact final artifacts
 
-- repaired DOCX SHA-256: `eb4b063285733a61295f7dc89ef425d85aa7fff90ba46127aec0f5363f067fb5`
-- QA PDF SHA-256: `2771a10978890ba45f3060b802188bcda0358081739b0c57bd9c8c6bd6e266f9`
-- local repair package SHA-256: `fbcce7f7e5d4d777aa10e01ff721af16314f5a76c8c1cc95bf5df2d5fa28dc1b`
+- repaired DOCX SHA-256: `79dd95856a19285ceba00d097795df6a21627001123a57962a89023796000aa8`
+- QA PDF SHA-256: `5df51bd286c24e757b7a4a75c5d7d577303365025d4a406565c86bcb00a69943`
+- current ACS author-input-pending package SHA-256: `02d509c869d9f961238cebe8eb7f9be3cab1315a3353958a2ca3183900a7e2e3`
 
-## Remaining human-only venue gate
+## ACS structured status
 
-The visual/math repair is complete. Actual ACS upload still requires author metadata/funding/COI/preprint/editor confirmations and the final human-created non-AI TOC artwork.
+The N29 deterministic ACS submission audit reports:
+- BLOCKER: **1** — `TOC_MISSING`
+- MAJOR: **0**
+- scientific upstream handoffs: **0**
+
+## Remaining venue gate
+
+Machine-editable visual/math/figure work is complete. Actual ACS upload still requires author-controlled author/affiliation/contact metadata, funding/COI/preprint/editor/all-author confirmations, Review-Only Material status, and the final human-created non-AI TOC artwork.
