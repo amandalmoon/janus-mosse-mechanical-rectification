@@ -1,0 +1,29 @@
+{
+  "gate": "N18R_STRICT_FIGURE_REDESIGN",
+  "status": "BENCHMARK_PASS",
+  "scientific_result_regression": false,
+  "figures": {
+    "FIG-01": "BENCHMARK_PASS",
+    "FIG-02": "BENCHMARK_PASS",
+    "FIG-03": "BENCHMARK_PASS",
+    "FIG-04": "BENCHMARK_PASS",
+    "FIG-05": "BENCHMARK_PASS",
+    "FIG-06": "BENCHMARK_PASS"
+  },
+  "final_width_pt": 504,
+  "minimum_text_pt": 7,
+  "minimum_line_pt": 0.55,
+  "plot_source_audit": "PASS",
+  "manifest_package_audits": "6/6 PASS",
+  "final_size_visual_qa": "6/6 PASS",
+  "local_font": "Arimo",
+  "venue_font_requirement": "literal Arial",
+  "venue_status": "WARN_PENDING_ARIAL_RENDER",
+  "official_guidelines_verified": "2026-09-20",
+  "official_guidelines_last_updated": "2026-08-27",
+  "manuscript_followup": [
+    "Replace overstrong all-91-point transport wording with integer winding states including pinned and transporting states",
+    "Update figure captions to N18R captions after venue render is frozen"
+  ],
+  "next_gate": "ACS Nano figure venue handoff"
+}
