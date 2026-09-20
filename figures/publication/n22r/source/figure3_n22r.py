@@ -217,9 +217,9 @@ for name, row, col, mk, ls in vecs:
             )
         )
         c.plot(x, yy, marker=mk, ms=4.4, mfc=col, mec=col, zorder=4)
-c.text(0.98, 0.07, 'original', transform=c.transAxes, ha='right',
+c.text(0.985, 0.025, 'original', transform=c.transAxes, ha='right',
        va='bottom', fontsize=7.2, color=DARK)
-c.text(0.04, 0.91, 'inverted', transform=c.transAxes, ha='left',
+c.text(0.025, 0.985, 'inverted', transform=c.transAxes, ha='left',
        va='top', fontsize=7.2, color=INV)
 c.text(0.54, 0.54, 'sym.', transform=c.transAxes, ha='left',
        va='bottom', fontsize=7.2, color=SYM)
