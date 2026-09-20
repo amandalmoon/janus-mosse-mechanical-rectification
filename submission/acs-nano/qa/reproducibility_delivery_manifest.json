@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "workflow_name": "Submission Evidence Package",
+  "verified_run_id": 35480708622,
+  "verified_source_head": "b9d5022596fd70f882616935bcf7d5667dca03b1",
+  "artifact_id": 10594974375,
+  "artifact_name": "Janus_MoSSe_Current_ReproducibilityRelease_v2",
+  "artifact_size_bytes": 27441222,
+  "artifact_wrapper_sha256": "232e54e7382aae4598216157887ec8274185f99f144001de8f30023799d8c9bd",
+  "inner_zip_filename": "Janus_MoSSe_Current_ReproducibilityRelease_v2.zip",
+  "inner_zip_sha256": "4e4eabe2f1b171b620a97a42790fffb590adc609396bdb1b5f29f9ff1b7a2ec5",
+  "sha256_sidecar": "Janus_MoSSe_Current_ReproducibilityRelease_v2.zip.sha256",
+  "source_release_path": "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2",
+  "release_manifest_entries": 111,
+  "git_lfs_payload_check": "PASS",
+  "source_tree_validation": "PASS",
+  "fresh_extraction_replay": "PASS",
+  "release_sha256_manifest": "PASS",
+  "deterministic_zip": true,
+  "generated_artifacts_excluded": [
+    "__pycache__/",
+    "*.pyc"
+  ],
+  "artifact_expires_at": "2026-12-19T01:10:41Z",
+  "note": "The expanded release is the version-controlled authority; the ZIP is generated and clean-replayed for submission delivery."
+}

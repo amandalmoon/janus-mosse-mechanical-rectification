@@ -29,8 +29,8 @@
   "methods_is_last_text_section": true,
   "toc_graphic": {
     "present": true,
-    "width_cm": 9.0,
-    "height_cm": 4.0,
+    "width_cm": 9,
+    "height_cm": 4,
     "format": "tif",
     "dpi": 600,
     "original_author_created": null,
@@ -40,7 +40,7 @@
     {
       "id": "Figure 1",
       "font_family": "Arimo",
-      "min_font_pt": 7.0,
+      "min_font_pt": 7,
       "min_line_pt": 0.6,
       "format": "eps",
       "dpi": 1200,
@@ -50,7 +50,7 @@
     {
       "id": "Figure 2",
       "font_family": "Arimo",
-      "min_font_pt": 7.0,
+      "min_font_pt": 7,
       "min_line_pt": 0.6,
       "format": "eps",
       "dpi": 1200,
@@ -60,7 +60,7 @@
     {
       "id": "Figure 3",
       "font_family": "Arimo",
-      "min_font_pt": 7.0,
+      "min_font_pt": 7,
       "min_line_pt": 0.6,
       "format": "eps",
       "dpi": 1200,
@@ -70,7 +70,7 @@
     {
       "id": "Figure 4",
       "font_family": "Arimo",
-      "min_font_pt": 7.0,
+      "min_font_pt": 7,
       "min_line_pt": 0.6,
       "format": "eps",
       "dpi": 1200,
@@ -80,7 +80,7 @@
     {
       "id": "Figure 5",
       "font_family": "Arimo",
-      "min_font_pt": 7.0,
+      "min_font_pt": 7,
       "min_line_pt": 0.6,
       "format": "eps",
       "dpi": 1200,
@@ -90,12 +90,23 @@
     {
       "id": "Figure 6",
       "font_family": "Arimo",
-      "min_font_pt": 7.0,
+      "min_font_pt": 7,
       "min_line_pt": 0.6,
       "format": "eps",
       "dpi": 1200,
       "is_photographic": false,
       "caption_present": true
     }
-  ]
+  ],
+  "reproducibility_delivery": {
+    "status": "PASS",
+    "source_release": "../../reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2",
+    "workflow": "Submission Evidence Package",
+    "verified_run_id": 35480708622,
+    "artifact_id": 10594974375,
+    "package_sha256": "4e4eabe2f1b171b620a97a42790fffb590adc609396bdb1b5f29f9ff1b7a2ec5",
+    "fresh_extraction_replay": "PASS",
+    "manifest_entries": 111,
+    "deterministic_zip": true
+  }
 }
