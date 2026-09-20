@@ -172,7 +172,7 @@ def main() -> None:
         ),
     ]
     b.legend(
-        handles=family_handles, loc='center',
+        handles=family_handles, loc='center', bbox_to_anchor=(0.50, 0.64),
         ncol=2, columnspacing=1.0, handlelength=1.7,
     )
     panel_label(b, 'b')
