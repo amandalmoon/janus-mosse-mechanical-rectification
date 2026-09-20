@@ -1,0 +1,18 @@
+{
+  "gate": "N19R_N18R_MANUSCRIPT_INTEGRATION",
+  "status": "LOCAL_ARTIFACT_PASS_REPOSITORY_LFS_HANDOFF_PENDING",
+  "input_manuscript_sha256": "b33049e120895ac4368c291fbfac3e3f3eb28f8b280728e2f8f7bc86d6e7862f",
+  "integrated_manuscript_sha256": "c93a3db7bd31c18e4ff0ffdb45d65e0ff39a225c924572a400a17f696967343b",
+  "pages": 16,
+  "visual_qa": "16/16 PASS",
+  "figure_gate": "N18R PUBLICATION_READY",
+  "figures_integrated": 6,
+  "figure5_wording_correction": true,
+  "refreshed_reproducibility_release": "PASS",
+  "refreshed_release_fresh_extraction_replay": "PASS",
+  "refreshed_release_manifest_entries": 111,
+  "refreshed_release_zip_sha256": "0fe30e220810eb31790db189d9144457d9c79a5e720ecff7f0345698d617644b",
+  "scientific_result_regression": false,
+  "blocker": "repository Git LFS / submission binary synchronization",
+  "next_gate": "binary handoff -> deterministic submission audit -> author metadata -> final ACS Nano audit"
+}
