@@ -113,7 +113,7 @@
     "svg": "../figures/Figure_4_boundary_registry_switching_N18R.svg",
     "tiff": null,
     "png_preview": "../figures/Figure_4_boundary_registry_switching_N18R.png",
-    "source": "../source/make_publication_figures_n18r.py"
+    "source": "../source/n18r_figures_3_4.py"
   },
   "caption": "Figure 4. Boundary-induced competition between registry minima. (a) Zero-force energy differences locate equilibrium registry crossings for 20 and 25 deg triangular cuts. (b) The competing families carry opposite branch-followed directional splittings. (c) Equilibrium re-preparation on the lower-energy family reverses the prepared-state sign at the crossing; no trajectory across the discontinuous family change is implied. (d) Outer-site energy weighting shifts the equilibrium crossing substantially, demonstrating edge-model sensitivity of the exact switch angle.",
   "visual_qa": {
@@ -125,7 +125,7 @@
     "redundant_series_encoding": true,
     "caption_parameter_complete": true,
     "not_default_matplotlib": true,
-    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+    "notes": "Final-size literal-Arial venue render was opened and visually inspected; current Publication Figure Designer manifest/package audits are required before downstream freeze."
   },
   "qa": {
     "scientific": "PASS",
