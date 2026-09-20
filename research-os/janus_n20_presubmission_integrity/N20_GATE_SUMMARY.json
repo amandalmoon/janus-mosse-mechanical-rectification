@@ -1,0 +1,14 @@
+{
+  "gate": "N20_PRE_SUBMISSION_REPRODUCIBILITY_INTEGRITY",
+  "status": "PENDING_EXECUTION",
+  "scientific_result_regression": false,
+  "issues_found": 4,
+  "repairs_staged": true,
+  "required_checks": [
+    "validate_release.py",
+    "validate_canonical_baseline.py",
+    "recompute_stationary_thermal.py",
+    "pre_submission_integrity_check.py"
+  ],
+  "next_gate_on_pass": "N19 author metadata completion"
+}
