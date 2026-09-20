@@ -266,7 +266,64 @@
         "RELEASE-N27"
       ],
       "supersedes": null,
-      "material_change_note": "Blocked by venue/package requirements only; scientific freeze remains valid."
+      "material_change_note": "Machine-editable venue repairs completed; package remains blocked only by author-controlled metadata and final human-created non-AI TOC."
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N28",
+      "type": "ACS Nano venue-formatted manuscript derivative",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N28_Submission_Manuscript_AUTHOR_METADATA_PENDING.docx",
+      "hash": "56b1aba8a8a27cfc2892dc17652cecd8abbe9dd689192e55697cd853c8e97047",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Venue-only derivative; scientific freeze unchanged."
+    },
+    {
+      "id": "ACS-FIGSET-N28",
+      "type": "ACS Nano venue figure set",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "publication-figure-designer",
+      "path": "external-deliverable:ACS_Nano_N28_Submission_Package_AUTHOR_INPUT_PENDING/figures",
+      "hash": null,
+      "depends_on": [
+        "FIGSET-N25"
+      ],
+      "supersedes": null,
+      "material_change_note": "Figure 1 background line raised 0.45 -> 0.50 pt; Figures 2-7 unchanged; all data/semantics preserved."
+    },
+    {
+      "id": "ACS-COVER-N28",
+      "type": "ACS Nano cover-letter draft",
+      "version": 1,
+      "status": "TENTATIVE",
+      "owner": "acs-nano-submission",
+      "path": "external-deliverable:ACS_Nano_N28_Cover_Letter_DRAFT_AUTHOR_METADATA_PENDING.docx",
+      "hash": "cab1280b2e13a96fa973f669e69d155fcd2bcae843ac1da89a61cd71c40a911c",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N28"
+      ],
+      "supersedes": null,
+      "material_change_note": "Requires author/contact/preprint/editor/review-only-material confirmations."
+    },
+    {
+      "id": "ACS-TOC-N28",
+      "type": "ACS Nano TOC graphic",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "human + publication-figure-designer",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "SCI-FREEZE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Final TOC must be human-created; AI-assisted concept excluded under current ACS AI policy."
     }
   ]
 }
