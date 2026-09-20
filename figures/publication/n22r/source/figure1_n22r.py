@@ -1,13 +1,12 @@
 from __future__ import annotations
-import os
-import sys
+import os, sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyArrowPatch, Arc
+from matplotlib.patches import FancyArrowPatch
 from scipy.spatial import ConvexHull
 
 ROOT = Path(os.environ['N22R_RELEASE_ROOT'])
@@ -17,14 +16,13 @@ plt.style.use(STYLE)
 plt.rcParams.update({
     'font.size': 8.0,
     'axes.labelsize': 8.2,
-    'axes.titlesize': 8.2,
+    'axes.titlesize': 8.4,
     'xtick.labelsize': 7.3,
     'ytick.labelsize': 7.3,
     'legend.fontsize': 7.0,
     'axes.linewidth': 0.65,
-    'lines.linewidth': 1.2,
-    'lines.markersize': 3.7,
-    'legend.frameon': False,
+    'lines.linewidth': 1.15,
+    'lines.markersize': 4.0,
     'pdf.fonttype': 42,
     'ps.fonttype': 42,
     'svg.fonttype': 'none',
@@ -37,16 +35,16 @@ plt.rcParams['font.family'] = FONT_FAMILY
 if FONT_FAMILY.lower() == 'arial':
     plt.rcParams['font.sans-serif'] = ['Arial']
 
-BLUE='#0072B2'; VERM='#D55E00'; DARK='#222222'; MID='#6F6F6F'; LIGHT='#C8C8C8'; GRID='#D8D8D8'; PALE='#DDECF4'
+BLUE='#0072B2'; VERM='#D55E00'; DARK='#222222'; MID='#666666'; LIGHT='#C9C9C9'; GRID='#DDDDDD'; PALE='#F2F2F2'
 MM=25.4
 
 def inch(mm): return mm/MM
 
-def panel_label(ax, letter, x=-0.10, y=1.03):
+def panel_label(ax, letter, x=-0.08, y=1.035):
     ax.text(x,y,f'({letter})',transform=ax.transAxes,ha='left',va='bottom',fontsize=9.2,fontweight='bold',color=DARK,clip_on=False)
 
-def panel_title(ax,title,x=0.0):
-    ax.text(x,1.015,title,transform=ax.transAxes,ha='left',va='bottom',fontsize=8.2,color=DARK)
+def panel_title(ax,title,x=0.03,y=1.02):
+    ax.text(x,y,title,transform=ax.transAxes,ha='left',va='bottom',fontsize=8.5,color=DARK)
 
 def finish(ax):
     ax.tick_params(direction='out',length=2.5,width=0.6,pad=2)
@@ -58,72 +56,78 @@ import janus_fourier_landscapes_v12 as J
 L=J.dft_landscape('2H_MoSSe_Se-S-Se-S')
 ad=pd.read_csv(ROOT/'data'/'canonical'/'asymmetry_global_check.csv')
 
-fig=plt.figure(figsize=(inch(177.8),inch(72.0)))
-gs=fig.add_gridspec(1,3,left=0.048,right=0.974,bottom=0.18,top=0.88,wspace=0.46,width_ratios=[1.08,1.16,1.30])
+fig=plt.figure(figsize=(inch(177.8),inch(80.0)))
+gs=fig.add_gridspec(1,3,left=0.045,right=0.985,bottom=0.20,top=0.88,wspace=0.52,width_ratios=[1.02,1.02,1.26])
 a=fig.add_subplot(gs[0,0]); b=fig.add_subplot(gs[0,1]); c=fig.add_subplot(gs[0,2])
 
-# Panel A: actual model geometry from the canonical shell-6 N=127 contact.
+# (a) Actual shell-6 finite contact. Protocol details remain in the caption.
 pos=J.make_hexagonal_flake(6)
 theta=1.5
 R=J.rotation_matrix(theta)
 posr=pos@R.T
-# faint substrate triangular lattice directions
-extent=6.5
+extent=6.4
 for k in np.arange(-7,8,1):
     y=k*np.sqrt(3)/2
-    a.plot([-extent,extent],[y,y],color='#EEEEEE',lw=0.55,zorder=0)
-    # families at +/-60 degrees
+    a.plot([-extent,extent],[y,y],color='#EFEFEF',lw=0.45,zorder=0)
     xx=np.array([-extent,extent])
-    a.plot(xx, np.sqrt(3)*xx + k*np.sqrt(3), color='#F1F1F1',lw=0.55,zorder=0)
-    a.plot(xx,-np.sqrt(3)*xx + k*np.sqrt(3), color='#F1F1F1',lw=0.55,zorder=0)
-# actual sites and hull
-h=ConvexHull(posr)
-cycle=np.r_[h.vertices,h.vertices[0]]
-a.scatter(posr[:,0],posr[:,1],s=5.0,facecolor=PALE,edgecolor=BLUE,linewidth=0.50,zorder=2)
-a.plot(posr[cycle,0],posr[cycle,1],color=BLUE,lw=1.15,zorder=3)
-a.scatter([0],[0],s=18,color=DARK,zorder=5)
-# loading direction +/-y uses the paper-wide directional color registry
-for y2, col, lab in ((4.25, BLUE, r'$+y$'), (-4.25, VERM, r'$-y$')):
-    a.add_patch(FancyArrowPatch((0,0),(0,y2),arrowstyle='-|>',mutation_scale=10,color=col,lw=1.15,zorder=5))
-    a.text(0.28, y2 - 0.10*np.sign(y2), lab, color=col, fontsize=7.2, va='center')
-# COM freedom shown as orthogonal double arrows near center-right
-a.annotate('',xy=(3.20,0.65),xytext=(1.65,0.65),arrowprops=dict(arrowstyle='<->',color=DARK,lw=0.75))
-a.annotate('',xy=(2.42,1.42),xytext=(2.42,-0.12),arrowprops=dict(arrowstyle='<->',color=DARK,lw=0.75))
-a.text(2.42,-0.55,'COM free $(x,y)$',fontsize=6.7,color=DARK,ha='center',va='top',bbox=dict(facecolor='white',edgecolor='none',pad=0.8))
-# model contract text
-a.text(0.97,0.91,r'$N=127$'+'\n'+'k_perp = 0'+'\n'+r'$\theta=1.5$° reference',transform=a.transAxes,ha='right',va='top',fontsize=6.7,color=DARK,bbox=dict(facecolor='white',edgecolor='none',pad=1.2))
-a.text(0.50,0.018,'prepared state:\nlowest-energy zero-force minimum',transform=a.transAxes,ha='center',va='bottom',fontsize=6.3,color=MID,bbox=dict(facecolor='white',edgecolor='none',pad=0.5))
-a.set_aspect('equal'); a.set_xlim(-6.45,6.45); a.set_ylim(-5.85,5.85); a.axis('off')
-panel_label(a,'a',x=-0.035); panel_title(a,'unguided $N=127$ contact',x=0.12)
+    a.plot(xx, np.sqrt(3)*xx+k*np.sqrt(3),color='#F3F3F3',lw=0.45,zorder=0)
+    a.plot(xx,-np.sqrt(3)*xx+k*np.sqrt(3),color='#F3F3F3',lw=0.45,zorder=0)
+h=ConvexHull(posr); cyc=np.r_[h.vertices,h.vertices[0]]
+a.scatter(posr[:,0],posr[:,1],s=5.0,facecolor='white',edgecolor='#6E6E6E',linewidth=0.45,zorder=2)
+a.plot(posr[cyc,0],posr[cyc,1],color='#4B4B4B',lw=1.2,zorder=3)
+a.scatter([0],[0],s=17,color=DARK,zorder=5)
+a.text(0.30,0.18,'COM',fontsize=7.1,color=DARK,ha='left',va='bottom')
+for y2,col,lab,va,dy in [(4.35,BLUE,r'$+y$','bottom',0.05),(-4.35,VERM,r'$-y$','top',-0.05)]:
+    a.add_patch(FancyArrowPatch((0,0),(0,y2),arrowstyle='-|>',mutation_scale=10.5,color=col,lw=1.25,zorder=5))
+    a.text(0.24,y2+dy,lab,color=col,fontsize=7.5,ha='left',va=va)
+a.set_aspect('equal'); a.set_xlim(-6.55,6.55); a.set_ylim(-5.65,5.65); a.axis('off')
+panel_label(a,'a',x=-0.015); panel_title(a,'finite unguided contact',x=0.12)
 
-# Panel B: published 2H GSFE from canonical Fourier coefficients.
+# (b) DFT-anchored 2H GSFE. BrBG is used only as a continuous scalar map,
+# separate from the paper-wide categorical direction colors.
 u=np.linspace(0,1,241); v=np.linspace(0,1,241); U,V=np.meshgrid(u,v,indexing='xy')
 XY=np.stack([U+0.5*V,(np.sqrt(3)/2)*V],axis=-1)
 Z=L.potential(XY[...,0],XY[...,1]); vmax=float(np.max(np.abs(Z)))
-im=b.contourf(U,V,Z,levels=np.linspace(-vmax,vmax,25),cmap='RdBu_r',extend='both')
+levels=np.linspace(-vmax,vmax,25)
+im=b.contourf(U,V,Z,levels=levels,cmap='BrBG',extend='both')
 b.contour(U,V,Z,levels=[0.0],colors=[DARK],linewidths=0.75)
-b.text(0.66,0.69,'+',transform=b.transAxes,ha='center',va='center',fontsize=8.0,color='white',fontweight='bold')
+b.text(0.66,0.70,'+',transform=b.transAxes,ha='center',va='center',fontsize=8.2,color='white',fontweight='bold')
 b.text(0.10,0.90,'−',transform=b.transAxes,ha='center',va='center',fontsize=8.6,color=DARK,fontweight='bold')
 b.text(0.92,0.11,'−',transform=b.transAxes,ha='center',va='center',fontsize=8.6,color=DARK,fontweight='bold')
 b.set_xlabel(r'$u$ along $\mathbf{a}_1$'); b.set_ylabel(r'$v$ along $\mathbf{a}_2$'); b.set_aspect('equal',adjustable='box')
-cb=fig.colorbar(im,ax=b,fraction=0.046,pad=0.035); cb.set_label(r'$U/E_0$'); cb.ax.tick_params(labelsize=7.0,width=0.5,length=2)
-b.text(0.03,0.04,r'$E_0=6W_1$'+'\n'+r'$W=(7.9,0.1,0.1)$ meV',transform=b.transAxes,fontsize=6.6,color=DARK,ha='left',va='bottom',bbox=dict(facecolor='white',edgecolor='none',pad=1.2))
-panel_label(b,'b',x=-0.10); panel_title(b,'published 2H MoSSe GSFE',x=0.07); finish(b)
+cb=fig.colorbar(im,ax=b,fraction=0.042,pad=0.024,ticks=[-vmax,0,vmax])
+cb.set_label(r'$U/E_0$',labelpad=2); cb.ax.tick_params(labelsize=7.0,width=0.5,length=2)
+cb.ax.set_yticklabels([f'{-vmax:.2f}','0',f'{vmax:.2f}'])
+panel_label(b,'b',x=-0.09,y=1.06); panel_title(b,'2H MoSSe GSFE input',x=0.06,y=1.045); finish(b)
 
-# Panel C: translation-minimized inversion-odd content.
+# (c) Translation-minimized inversion-odd diagnostics on a true log axis.
 order=['2H_MoSSe_Se-S-Se-S','3R_MoSSe_Se-S-Se-S','3R_MoSSe_S-Se-Se-S','3R_MoSSe_Se-S-S-Se']
 lab={'2H_MoSSe_Se-S-Se-S':'2H asym.','3R_MoSSe_Se-S-Se-S':'3R asym.','3R_MoSSe_S-Se-Se-S':'3R sym. I','3R_MoSSe_Se-S-S-Se':'3R sym. II'}
-q=ad.set_index('key').loc[order]; y=np.arange(len(q))[::-1]
-vals=q.rms.to_numpy(float); floor=1e-18; lv=np.log10(np.where(vals>0,vals,floor))
-cols=[DARK,'#444444',MID,'#8A8A8A']; marks=['o','s','^','v']
-for yi,val,x,col,mk in zip(y,vals,lv,cols,marks):
-    c.plot(x,yi,marker=mk,ms=5.1,color=col,linestyle='none')
-    txt='0' if val==0 else (f'{val:.1e}' if val<1e-12 else f'{val:.3f}')
-    c.annotate(txt,(x,yi),xytext=(5,0),textcoords='offset points',va='center',fontsize=7.0,color=DARK)
-c.set_yticks(y,[lab[k] for k in order]); c.set_xlim(-18.7,0.8); c.set_xticks([-18,-12,-6,0])
-c.set_xlabel(r'$\log_{10}$ translation-minimized odd RMS'); c.grid(axis='x',color=GRID,lw=0.55)
-row=q.loc['2H_MoSSe_Se-S-Se-S']; c.text(0.98,0.04,fr'$A_{{min}}={row.opt_min:.5f}$'+'\n'+fr'$\chi_1={row.chi1:.3f}$',transform=c.transAxes,fontsize=7.0,color=DARK,ha='right',va='bottom')
-panel_label(c,'c',x=-0.11); panel_title(c,'non-removable odd sector',x=0.06); finish(c)
+q=ad.set_index('key').loc[order]
+vals=q.rms.to_numpy(float)
+zero_plot=1.25e-18
+plotvals=np.where(vals>0,vals,zero_plot)
+y=np.arange(4)[::-1]
+c.axvspan(1e-18,1e-15,color=PALE,zorder=0)
+c.text(2.8e-17,3.42,'numerical floor',ha='center',va='center',fontsize=7.0,color=MID)
+marks=['o','s','^','v']; faces=[DARK,'#555555','white','white']; edges=[DARK,'#555555','#777777','#999999']
+for yi,val,pv,mk,fc,ec in zip(y,vals,plotvals,marks,faces,edges):
+    c.plot(pv,yi,marker=mk,ms=5.4,mfc=fc,mec=ec,mew=0.9,linestyle='none',zorder=3)
+    if val==0:
+        txt='0'; xtext=1.8e-18; ha='left'
+    elif val < 1e-12:
+        txt=f'{val:.1e}'; xtext=pv*2.1; ha='left'
+    else:
+        txt=f'{val:.3f}'; xtext=pv/1.55; ha='right'
+    c.text(xtext,yi,txt,fontsize=7.0,color=DARK,ha=ha,va='center')
+c.set_xscale('log'); c.set_xlim(5e-19,1)
+c.set_yticks(y,[lab[k] for k in order])
+c.set_xticks([1e-18,1e-12,1e-6,1])
+c.set_xticklabels([r'$10^{-18}$',r'$10^{-12}$',r'$10^{-6}$',r'$10^{0}$'])
+c.set_xlabel('translation-minimized odd RMS')
+c.grid(axis='x',which='major',color=GRID,lw=0.55)
+c.set_ylim(-0.35,3.55)
+panel_label(c,'c',x=-0.065); panel_title(c,'inversion-odd content',x=0.05); finish(c)
 
 stem='Figure_1_credibility_registry_asymmetry_N22R'
 for ext in ['pdf','svg','eps']:
