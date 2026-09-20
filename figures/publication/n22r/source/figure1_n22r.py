@@ -91,7 +91,7 @@ a.annotate('',xy=(3.20,0.65),xytext=(1.65,0.65),arrowprops=dict(arrowstyle='<->'
 a.annotate('',xy=(2.42,1.42),xytext=(2.42,-0.12),arrowprops=dict(arrowstyle='<->',color=DARK,lw=0.75))
 a.text(2.42,-0.55,'COM free $(x,y)$',fontsize=6.7,color=DARK,ha='center',va='top',bbox=dict(facecolor='white',edgecolor='none',pad=0.8))
 # model contract text
-a.text(0.97,0.91,r'$N=127$'+'\n'+r'$k_\perp=0$'+'\n'+r'$\theta=1.5^\circ$ reference',transform=a.transAxes,ha='right',va='top',fontsize=6.7,color=DARK,bbox=dict(facecolor='white',edgecolor='none',pad=1.2))
+a.text(0.97,0.91,r'$N=127$'+'\n'+'k_perp = 0'+'\n'+r'$\theta=1.5$° reference',transform=a.transAxes,ha='right',va='top',fontsize=6.7,color=DARK,bbox=dict(facecolor='white',edgecolor='none',pad=1.2))
 a.text(0.50,0.018,'prepared state:\nlowest-energy zero-force minimum',transform=a.transAxes,ha='center',va='bottom',fontsize=6.3,color=MID,bbox=dict(facecolor='white',edgecolor='none',pad=0.5))
 a.set_aspect('equal'); a.set_xlim(-6.45,6.45); a.set_ylim(-5.85,5.85); a.axis('off')
 panel_label(a,'a',x=-0.035); panel_title(a,'unguided $N=127$ contact',x=0.12)
