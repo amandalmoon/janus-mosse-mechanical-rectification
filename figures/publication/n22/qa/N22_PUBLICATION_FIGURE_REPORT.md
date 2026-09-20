@@ -39,14 +39,26 @@ None.
 | FIG-06 | deterministic dynamic implication | PASS | PASS | PASS |
 | FIG-07 | thermal robustness | PASS | PASS | PASS |
 
+## Exact-head technical preflight
+
+Windows GitHub Actions run **35486368648** on N22 head `a1fd144bfecd13e5bbe13e7a92bab40d680e5c4f` completed successfully.
+
+- literal Arial path: `C:\\Windows\\Fonts\\arial.ttf`;
+- N22 manifest contract: PASS;
+- architecture-aligned render: PASS;
+- exact physical dimensions and exports: 7/7 PASS;
+- Arial presence / no Arimo-Liberation fallback: 7/7 PASS;
+- artifact ID: **10597586247**;
+- artifact digest: `sha256:db358a3f76c2ad62a9f2416f95e505911a00f19d251004d7870dca05e7636b93`.
+
+The resulting final-size Arial PNGs were opened and inspected after CI. All seven pass visual readability and integrity checks.
+
 ## Gate
 
-**BENCHMARK_PASS**
+**BENCHMARK_PASS + TECHNICAL_ARIAL_PREFLIGHT_PASS**
 
-Literal-Arial rendering is a technical preflight, not the final ACS Nano submission gate. The user-defined workflow therefore proceeds to research-os-manuscript-writer only after exact-head figure CI is green.
+Final ACS Nano venue acceptance remains intentionally deferred to the later `acs-nano-submission` stage.
 
 ## Next action
 
-1. exact-head Windows render and output verification;
-2. freeze N22 source/manifests;
-3. hand the N21 architecture plus N22 captions/figures to research-os-manuscript-writer.
+Freeze N22 and hand the N21 architecture plus N22 figure contracts/captions to `research-os-manuscript-writer`.
