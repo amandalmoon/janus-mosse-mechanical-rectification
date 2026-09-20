@@ -25,7 +25,7 @@ The scientific results are not invalidated by these findings: the corrected GSFE
 
 None.
 
-## Repairs on this branch
+## Repairs applied
 
 - replaced the stale GSFE source commentary with the previously audited provenance-corrected N11 source;
 - corrected the canonical config provenance string;
@@ -33,19 +33,29 @@ None.
 - explicitly labeled the old 10/10 thermal scripts as retired and redirected the active-folder copy to `data/legacy_thermal_10x10/`;
 - documented the distinction between current clean checks and original-path provenance scripts;
 - added `pre_submission_integrity_check.py`;
-- regenerated the release SHA-256 manifest.
+- restored `manuscript/Janus_MoSSe_Current_SupplementaryInformation.docx` as the exact Git LFS object already referenced by the release manifest (SHA-256 `04a5753b71bad758080496410969da740673a50b442fb50ed268a9257ad52f91`);
+- removed generated `__pycache__` entries and accidental duplicate path forms from the release manifest;
+- regenerated the release SHA-256 manifest;
+- added the GitHub Actions `Reproducibility Gate` workflow.
+
+## Clean execution evidence
+
+The first CI execution (run 35480243674) established that all scientific validators passed but exposed a manifest/package defect: the SI file was absent, generated `__pycache__` files were incorrectly listed, and changed text files had stale/duplicate checksum entries.
+
+After repairing those packaging defects, GitHub Actions run **35480474546** at exact branch head `155535d60b8981853c0b76561b0d19ddf6722112` completed successfully:
+
+- `validate_release.py` → **CURRENT RELEASE VALIDATION: PASS**
+- `validate_canonical_baseline.py` → **CANONICAL UNGUIDED BASELINE VALIDATION: PASS**
+- `recompute_stationary_thermal.py` → completed successfully from the shipped raw trajectory aggregates
+- `pre_submission_integrity_check.py` → **PRE-SUBMISSION INTEGRITY CHECK: PASS**
+- `sha256sum -c SHA256SUMS.txt` → **PASS** for the full 111-entry release manifest
+
+The successful clean run uses the repository checkout with Git LFS materialization and the pinned scientific Python requirements.
 
 ## Gate
 
-**PENDING EXECUTION**
+**PASS**
 
-The branch must not be merged until the clean checks pass from the branch contents:
+N20 is closed. No scientific-result regression was detected. The current reproducibility release is internally consistent, the canonical unguided evidence is protected from the legacy guided pipeline, the current stationary thermal contract is machine-checked, the SI is present, and the release checksum manifest verifies cleanly.
 
-```
-python validate_release.py
-python validate_canonical_baseline.py
-python recompute_stationary_thermal.py
-python pre_submission_integrity_check.py
-```
-
-Only after those pass does the workflow return to the N19 author-metadata completion gate.
+The workflow therefore returns to the **N19 author-metadata completion gate**, followed by the final ACS Nano submission audit and package freeze.
