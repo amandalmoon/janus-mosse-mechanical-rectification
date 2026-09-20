@@ -4,7 +4,7 @@ import hashlib
 from pathlib import Path
 import sys
 
-import fitz
+import pymupdf as fitz
 from PIL import Image
 from matplotlib import font_manager
 
@@ -49,8 +49,10 @@ def main() -> int:
 
         png = Image.open(out / f'{stem}.png')
         expected_px = (round(wmm / 25.4 * 300), round(hmm / 25.4 * 300))
-        if tuple(png.size) != expected_px:
-            raise AssertionError(f'{stem}: wrong PNG canvas {png.size}, expected {expected_px}')
+        # Matplotlib rasterization can differ by one pixel across backends because the
+        # physical canvas is converted from floating-point inches to integer pixels.
+        if any(abs(a-b) > 1 for a,b in zip(png.size, expected_px)):
+            raise AssertionError(f'{stem}: wrong PNG canvas {png.size}, expected {expected_px} +/- 1 px')
         print(stem, 'PASS', sorted(font_names), png.size)
 
     manifest = out / 'N18R_FIGURE_SHA256SUMS.txt'
