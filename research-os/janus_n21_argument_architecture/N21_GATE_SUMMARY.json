@@ -1,0 +1,25 @@
+{
+  "gate": "N21_SCIENTIFIC_ARGUMENT_ARCHITECTURE",
+  "status": "PASS",
+  "architecture_status": "READY",
+  "deterministic_argument_audit": "PASS_0_WARNINGS",
+  "gate_A_argument_integrity": "PASS",
+  "gate_B_figure_story_integrity": "PASS",
+  "gate_C_section_logic_integrity": "PASS",
+  "previous_manuscript_integration_pr": 5,
+  "previous_pr_disposition": "CLOSED_SUPERSEDED_BY_ARCHITECTURE_REBASE",
+  "new_main_figure_count": 7,
+  "no_new_simulation_required": true,
+  "publication_figure_designer_ready": true,
+  "manuscript_writer_execution_deferred": true,
+  "next_stage": "publication-figure-designer",
+  "frozen_figure_order": [
+    "FIG-01 credibility/setup",
+    "FIG-02 prepared-state depinning",
+    "FIG-03 same-spectrum mechanism validation",
+    "FIG-04 compact geometry + in-plane robustness",
+    "FIG-05 boundary registry competition",
+    "FIG-06 vector mode locking",
+    "FIG-07 thermal hierarchy"
+  ]
+}
