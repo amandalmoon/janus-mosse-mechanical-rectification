@@ -105,7 +105,7 @@ order=['2H_MoSSe_Se-S-Se-S','3R_MoSSe_Se-S-Se-S','3R_MoSSe_S-Se-Se-S','3R_MoSSe_
 lab={'2H_MoSSe_Se-S-Se-S':'2H asym.','3R_MoSSe_Se-S-Se-S':'3R asym.','3R_MoSSe_S-Se-Se-S':'3R sym. I','3R_MoSSe_Se-S-S-Se':'3R sym. II'}
 q=ad.set_index('key').loc[order]
 vals=q.rms.to_numpy(float)
-zero_plot=1.25e-18
+zero_plot=3.0e-18
 plotvals=np.where(vals>0,vals,zero_plot)
 y=np.arange(4)[::-1]
 c.axvspan(1e-18,1e-15,color=PALE,zorder=0)
@@ -114,7 +114,7 @@ marks=['o','s','^','v']; faces=[DARK,'#555555','white','white']; edges=[DARK,'#5
 for yi,val,pv,mk,fc,ec in zip(y,vals,plotvals,marks,faces,edges):
     c.plot(pv,yi,marker=mk,ms=5.4,mfc=fc,mec=ec,mew=0.9,linestyle='none',zorder=3)
     if val==0:
-        txt='0'; xtext=1.8e-18; ha='left'
+        txt='0'; xtext=6.0e-18; ha='left'
     elif val < 1e-12:
         txt=f'{val:.1e}'; xtext=pv*2.1; ha='left'
     else:
