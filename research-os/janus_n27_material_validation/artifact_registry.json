@@ -21,7 +21,9 @@
       "owner": "research-os-manuscript-writer",
       "path": "research-os/janus_n26_manuscript_rewrite/MANUSCRIPT_DRAFT_N26.md",
       "hash": "fe0fee85cf27aae8a9153d91cb45e4c55e871299",
-      "depends_on": ["FIGSET-N25"],
+      "depends_on": [
+        "FIGSET-N25"
+      ],
       "supersedes": null,
       "material_change_note": "N27 Five Reviewer preflight repairs are present, but scientific freeze is withheld while N27-R01 is open."
     },
@@ -33,9 +35,26 @@
       "owner": "five-reviewer-paper-audit",
       "path": "research-os/janus_n27_five_reviewer_preflight/N27_FIVE_REVIEWER_PREFLIGHT.md",
       "hash": "4d58c10dfe495ce5dc6c99946584e1d385020c61",
-      "depends_on": ["MANUSCRIPT-N27-PREFLIGHT", "FIGSET-N25"],
+      "depends_on": [
+        "MANUSCRIPT-N27-PREFLIGHT",
+        "FIGSET-N25"
+      ],
       "supersedes": null,
       "material_change_note": "Opened N27-R01 as the single MAJOR scientific issue."
+    },
+    {
+      "id": "TRIAGE-N27-R01",
+      "type": "atomistic and MLIP feasibility triage",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "literature / experiment-simulation design",
+      "path": "research-os/janus_n27_material_validation/N27_R01_MODEL_TRIAGE.md",
+      "hash": "57ace6a611f8381607bbd84f554a0cdb53de3582",
+      "depends_on": [
+        "REVIEW-N27-FIVE"
+      ],
+      "supersedes": null,
+      "material_change_note": "No off-the-shelf model is admitted solely by elemental coverage; BR-A selected as preferred route."
     },
     {
       "id": "DESIGN-N27-R01",
@@ -45,7 +64,10 @@
       "owner": "experiment/simulation",
       "path": "research-os/janus_n27_material_validation/N27_R01_3D_MATERIAL_VALIDATION_DESIGN.md",
       "hash": "ebcd7673d482e976b37fe2d67019270a8f58fb25",
-      "depends_on": ["REVIEW-N27-FIVE"],
+      "depends_on": [
+        "REVIEW-N27-FIVE",
+        "TRIAGE-N27-R01"
+      ],
       "supersedes": null,
       "material_change_note": "Pre-registers potential admission, two physical cases, inversion control, decision rules, and negative-result preservation."
     },
@@ -57,7 +79,9 @@
       "owner": "experiment/simulation",
       "path": "research-os/janus_n27_material_validation/N27_R01_EXECUTION_CONTRACT.json",
       "hash": "6178f616d57c883c730291a985867a2fc7ca23ff",
-      "depends_on": ["DESIGN-N27-R01"],
+      "depends_on": [
+        "DESIGN-N27-R01"
+      ],
       "supersedes": null,
       "material_change_note": null
     },
@@ -69,7 +93,10 @@
       "owner": "human",
       "path": "research-os/janus_n27_material_validation/DEC-N27-R01.json",
       "hash": "1b4e771d38a1ccf33c9fa0a89cf060409a1c6103",
-      "depends_on": ["DESIGN-N27-R01", "REVIEW-N27-FIVE"],
+      "depends_on": [
+        "DESIGN-N27-R01",
+        "REVIEW-N27-FIVE"
+      ],
       "supersedes": null,
       "material_change_note": "PENDING explicit approval."
     },
@@ -81,7 +108,10 @@
       "owner": "experiment/simulation",
       "path": null,
       "hash": null,
-      "depends_on": ["CONTRACT-N27-R01", "DEC-N27-R01"],
+      "depends_on": [
+        "CONTRACT-N27-R01",
+        "DEC-N27-R01"
+      ],
       "supersedes": null,
       "material_change_note": "No scientific execution has occurred."
     }
