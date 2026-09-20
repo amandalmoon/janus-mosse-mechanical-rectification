@@ -40,10 +40,10 @@ MM=25.4
 
 def inch(mm): return mm/MM
 
-def panel_label(ax, letter, x=-0.08, y=1.035):
+def panel_label(ax, letter, x=-0.08, y=1.025):
     ax.text(x,y,f'({letter})',transform=ax.transAxes,ha='left',va='bottom',fontsize=9.2,fontweight='bold',color=DARK,clip_on=False)
 
-def panel_title(ax,title,x=0.03,y=1.02):
+def panel_title(ax,title,x=0.03,y=1.012):
     ax.text(x,y,title,transform=ax.transAxes,ha='left',va='bottom',fontsize=8.5,color=DARK)
 
 def finish(ax):
@@ -57,7 +57,7 @@ L=J.dft_landscape('2H_MoSSe_Se-S-Se-S')
 ad=pd.read_csv(ROOT/'data'/'canonical'/'asymmetry_global_check.csv')
 
 fig=plt.figure(figsize=(inch(177.8),inch(80.0)))
-gs=fig.add_gridspec(1,3,left=0.045,right=0.985,bottom=0.20,top=0.88,wspace=0.52,width_ratios=[1.02,1.02,1.26])
+gs=fig.add_gridspec(1,3,left=0.045,right=0.985,bottom=0.20,top=0.88,wspace=0.66,width_ratios=[1.00,1.00,1.30])
 a=fig.add_subplot(gs[0,0]); b=fig.add_subplot(gs[0,1]); c=fig.add_subplot(gs[0,2])
 
 # (a) Actual shell-6 finite contact. Protocol details remain in the caption.
@@ -95,8 +95,47 @@ b.text(0.66,0.70,'+',transform=b.transAxes,ha='center',va='center',fontsize=8.2,
 b.text(0.10,0.90,'−',transform=b.transAxes,ha='center',va='center',fontsize=8.6,color=DARK,fontweight='bold')
 b.text(0.92,0.11,'−',transform=b.transAxes,ha='center',va='center',fontsize=8.6,color=DARK,fontweight='bold')
 b.set_xlabel(r'$u$ along $\mathbf{a}_1$'); b.set_ylabel(r'$v$ along $\mathbf{a}_2$'); b.set_aspect('equal',adjustable='box')
-cb=fig.colorbar(im,ax=b,fraction=0.042,pad=0.024,ticks=[-vmax,0,vmax])
-cb.set_label(r'$U/E_0$',labelpad=2); cb.ax.tick_params(labelsize=7.0,width=0.5,length=2)
+cb=fig.colorbar(im,ax=b,fraction=0.040,pad=0.014,ticks=[-vmax,0,vmax])
+cb.ax.set_title(r'$U/E_0
+cb.ax.set_yticklabels([f'{-vmax:.2f}','0',f'{vmax:.2f}'])
+panel_label(b,'b',x=-0.08,y=1.03); panel_title(b,'2H MoSSe GSFE input',x=0.07,y=1.015); finish(b)
+
+# (c) Translation-minimized inversion-odd diagnostics on a true log axis.
+order=['2H_MoSSe_Se-S-Se-S','3R_MoSSe_Se-S-Se-S','3R_MoSSe_S-Se-Se-S','3R_MoSSe_Se-S-S-Se']
+lab={'2H_MoSSe_Se-S-Se-S':'2H asym.','3R_MoSSe_Se-S-Se-S':'3R asym.','3R_MoSSe_S-Se-Se-S':'3R sym. I','3R_MoSSe_Se-S-S-Se':'3R sym. II'}
+q=ad.set_index('key').loc[order]
+vals=q.rms.to_numpy(float)
+zero_plot=1.25e-18
+plotvals=np.where(vals>0,vals,zero_plot)
+y=np.arange(4)[::-1]
+c.axvspan(1e-18,1e-15,color=PALE,zorder=0)
+c.text(2.8e-17,3.38,'numerical floor',ha='center',va='center',fontsize=7.0,color=MID)
+marks=['o','s','^','v']; faces=[DARK,'#555555','white','white']; edges=[DARK,'#555555','#777777','#999999']
+for yi,val,pv,mk,fc,ec in zip(y,vals,plotvals,marks,faces,edges):
+    c.plot(pv,yi,marker=mk,ms=5.4,mfc=fc,mec=ec,mew=0.9,linestyle='none',zorder=3)
+    if val==0:
+        txt='0'; xtext=1.8e-18; ha='left'
+    elif val < 1e-12:
+        txt=f'{val:.1e}'; xtext=pv*2.1; ha='left'
+    else:
+        txt=f'{val:.3f}'; xtext=pv/1.55; ha='right'
+    c.text(xtext,yi,txt,fontsize=7.0,color=DARK,ha=ha,va='center')
+c.set_xscale('log'); c.set_xlim(5e-19,1)
+c.set_yticks(y,[lab[k] for k in order])
+c.set_xticks([1e-18,1e-12,1e-6,1])
+c.set_xticklabels([r'$10^{-18}$',r'$10^{-12}$',r'$10^{-6}$',r'$10^{0}$'])
+c.set_xlabel('translation-minimized odd RMS')
+c.grid(axis='x',which='major',color=GRID,lw=0.55)
+c.set_ylim(-0.35,3.55)
+panel_label(c,'c',x=-0.055,y=1.025); panel_title(c,'inversion-odd content',x=0.07,y=1.012); finish(c)
+
+stem='Figure_1_credibility_registry_asymmetry_N22R'
+for ext in ['pdf','svg','eps']:
+    fig.savefig(OUT/f'{stem}.{ext}',format=ext,bbox_inches=None,pad_inches=0)
+fig.savefig(OUT/f'{stem}.png',format='png',dpi=300,bbox_inches=None,pad_inches=0)
+plt.close(fig)
+print(stem)
+, fontsize=7.2, pad=2.5, color=DARK); cb.ax.tick_params(labelsize=7.0,width=0.5,length=2)
 cb.ax.set_yticklabels([f'{-vmax:.2f}','0',f'{vmax:.2f}'])
 panel_label(b,'b',x=-0.09,y=1.06); panel_title(b,'2H MoSSe GSFE input',x=0.06,y=1.045); finish(b)
 
