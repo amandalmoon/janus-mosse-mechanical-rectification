@@ -1,3 +1,11 @@
+"""RETIRED HISTORICAL THERMAL AUDIT.
+
+This script preserves the superseded 10-burn/10-measure calculation for
+provenance only. It is not manuscript evidence and must not be used for the
+current thermal claim. Current evidence uses dt=0.02, 60 burn cycles and
+100 measured cycles with the stationary long-window pipeline.
+Outputs from this historical script are redirected to data/legacy_thermal_10x10.
+"""
 from pathlib import Path
 _RELEASE_ROOT = Path(__file__).resolve().parents[1]
 import sys, math, time
@@ -101,6 +109,7 @@ SET=os.environ.get('TSET','A')
 ONE=os.environ.get('TEMP_SINGLE'); TL=os.environ.get('TEMP_LIST')
 TEMPS=([float(x) for x in TL.split(',')] if TL else ([float(ONE)] if ONE else ([0.02,0.06,0.16,0.32] if SET=='A' else [0.04,0.10,0.24,0.50])))
 N=1000; DT=.02; BURN=10; MEAS=10
+LEGACY_DATA=_RELEASE_ROOT/'data'/'legacy_thermal_10x10'; LEGACY_DATA.mkdir(parents=True,exist_ok=True)
 rows=[]; allraw=[]
 for ti,T in enumerate(TEMPS):
     t0=time.time()
@@ -124,9 +133,9 @@ for ti,T in enumerate(TEMPS):
              P_target_ci_lo=np.quantile(boot_targ,.025),P_target_ci_hi=np.quantile(boot_targ,.975))
     rows.append(row)
     for i in range(N): allraw.append(dict(T=T,traj=i,mean_u=mu[i],mean_v=mv[i],mean_dy=mdy[i],frac_neg_y=pneg[i],frac_target=ptarg[i],mean_round_residual=mres[i]))
-    pd.DataFrame(rows).to_csv(str(_RELEASE_ROOT/'data'/'canonical'/f'free_thermal_cluster_ci_{SET}.csv'),index=False)
-    pd.DataFrame(allraw).to_csv(str(_RELEASE_ROOT/'data'/'raw_thermal'/f'free_thermal_trajectory_raw_{SET}.csv'),index=False)
+    pd.DataFrame(rows).to_csv(str(LEGACY_DATA/f'free_thermal_cluster_ci_{SET}.csv'),index=False)
+    pd.DataFrame(allraw).to_csv(str(LEGACY_DATA/f'free_thermal_trajectory_raw_{SET}.csv'),index=False)
 
-pd.DataFrame(rows).to_csv(str(_RELEASE_ROOT/'data'/'canonical'/f'free_thermal_cluster_ci_{SET}.csv'),index=False)
-pd.DataFrame(allraw).to_csv(str(_RELEASE_ROOT/'data'/'raw_thermal'/f'free_thermal_trajectory_raw_{SET}.csv'),index=False)
+pd.DataFrame(rows).to_csv(str(LEGACY_DATA/f'free_thermal_cluster_ci_{SET}.csv'),index=False)
+pd.DataFrame(allraw).to_csv(str(LEGACY_DATA/f'free_thermal_trajectory_raw_{SET}.csv'),index=False)
 print(pd.DataFrame(rows).to_string(index=False))
