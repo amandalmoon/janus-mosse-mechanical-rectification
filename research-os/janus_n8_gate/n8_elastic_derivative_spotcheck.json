@@ -1,0 +1,9 @@
+{
+  "ndof": 253,
+  "constraint_residual": 4.145989107584569e-15,
+  "Kred_eig_min": 0.6701085007865198,
+  "energy_gradient_fd_max": 1.0824681308787868e-09,
+  "gradient_hessian_col_fd_max": 8.601235279570574e-09,
+  "zero_grad_norm": 3.316926827180174e-07,
+  "zero_hessian_min_eig": 0.752225840382247
+}

@@ -1,0 +1,63 @@
+           cut angle                      outer-site weight                  outer sites / N                 ground-state switch theta
+20                                              1.50                               48                               2.777914
+25                                              0.50                               48                               3.083165
+25                                              0.75                               48                               2.947202
+25                                              1.00                               48                               2.847233
+25                                              1.25                               48                               2.770909
+25                                              1.50                               48                               2.710829
+
+The edge-weight test is intentionally not an atomistic edge-relaxation model. Across all ten tested cut/weight combinations the A/B
+energy crossing persists, both candidate registries are stable zero-force minima at the crossing, and the two families retain opposite
+directional biases. What is not robust is the numerical switch angle or its placement inside a chosen finite twist window: for example,
+at weight 0.5 the 20 and 25 deg crossings move to 3.1701 and 3.0832 deg, outside the nominal 0-3 deg interval. The crossing is an
+equilibrium family-selection result obtained by re-preparing the lower-energy zero-force state at each fixed twist; no A-to-B transition
+barrier, continuous twist sweep, or hysteresis was calculated. The reduced-model claim is therefore competing-registry switching with
+edge-sensitive equilibrium location, not a universal kinetic reversal twist.
+
+S7. Drive-period map and Floquet conditioning
+The deterministic map contains 91 amplitude-period points. The original mean-displacement classification gives an integer pair at all
+91 points with maximum mean lattice-rounding residual 3.916e-12. A stricter rerun resolves all 40 measured cycles separately and
+finds that every sampled point repeats one and the same winding pair cycle-by-cycle after transients; the maximum single-cycle
+rounding residual is below 1e-9. The sampled map contains 23 distinct winding pairs. A dense tau*=40 amplitude scan further
+resolves finite-width plateaus including (0,0), (1,-1), (1,-2), (2,-3), (3,-4) and higher windings.
+Table S7. Independent monodromy integrations for the representative (1,-1) orbit.
+      solver                   rtol                    atol                steps               spectral radius           state closure
+DOP853                        1e-09                   1e-11                 803                6.31108126e-22              1.786e-11
+DOP853                        1e-11                   1e-13                1603                6.31108124e-22              1.803e-11
+Radau                         1e-09                   1e-11                3108                6.31109869e-22              1.915e-11
+Table S7b. Cross-solver Floquet stability of representative plateaus.
+       state                  F0*                     tau*                winding                  rho_F                    closure
+pinned                       1.2875                    40                  (0,0)                 1.389e-31                 6.060e-12
+w11                          1.9625                    40                  (1,-1)                4.620e-24                 1.677e-12
+w12                          2.5625                    40                  (1,-2)                5.687e-20                 2.846e-11
+w23                          3.0250                    40                  (2,-3)                9.467e-17                 2.050e-12
+w34                          3.4000                    40                  (3,-4)                5.215e-13                 5.044e-12
+w27_high                     3.6750                    70                  (2,-7)                1.618e-15                 9.244e-11
+
+The canonical (1,-1) leading multiplier agrees across explicit high-order and implicit stiff solvers, so only rho_F<1 is interpreted
+physically. The same test was extended to five additional plateau representatives. Using the tighter DOP853 solve, the leading
+spectral radii are approximately 1.39e-31 for (0,0), 4.62e-24 for (1,-1) at F0*=1.9625, 5.69e-20 for (1,-2), 9.47e-17 for (2,-3),
+5.21e-13 for (3,-4), and 1.62e-15 for the high-winding (2,-7) state at tau*=70; Radau confirms rho_F<1 in every case. Across these
+six states, 24/24 time-step tests and 162/162 local basin perturbations recover the expected winding. Increasing and decreasing
+amplitude continuation at tau*=40 agree at all 61 sampled amplitudes. A targeted damping sweep at theta=1.5 deg, F0*=2.0 and
+tau*=40 changes the asymptotic winding from (1,-10), (1,-3) and (2,-2) at gamma*=1, 2 and 3 to (1,-1) for gamma*=4-6 and (0,0) for
+gamma*=8-10. The sampled mode-locking map is therefore conditional on the declared m*=1, gamma*=4 protocol. These checks
+establish representative local attraction, not global attractor uniqueness or damping-independent material dynamics.
+
+S8. Thermal trajectory-cluster inference
+Table S8a. Stationary free-contact thermal component and directional statistics (60 burn + 100 measured cycles; N=500 per T*).
+T*                    mean u                 mean v               95% CI v                P(v_cycle<0)         P target (1,-1)
+0.02                  1.2034                 -2.4077              [-2.4137,-2.4015]       0.9979               0.0393
+0.04                  1.0705                 -2.1465              [-2.1551,-2.1379]       0.9747               0.0686
+0.06                  0.9149                 -1.8446              [-1.8547,-1.8347]       0.9281               0.0818
+0.10                  0.6639                 -1.3463              [-1.3589,-1.3339]       0.8178               0.0734
+0.16                  0.4362                 -0.8848              [-0.9003,-0.8696]       0.6882               0.0533
+0.24                  0.2619                 -0.5369              [-0.5558,-0.5179]       0.5973               0.0371
+0.32                  0.1647                 -0.3467              [-0.3685,-0.3251]       0.5534               0.0255
+0.50                  0.0696                 -0.1501              [-0.1780,-0.1223]       0.5199               0.0156
+0.55                  0.0548                 -0.1186              [-0.1491,-0.0891]       0.5134               0.0138
+0.60                  0.0433                 -0.1039              [-0.1350,-0.0725]       0.5128               0.0132
+0.65                  0.0276                 -0.0752              [-0.1065,-0.0437]       0.5090               0.0114
+0.70                  0.0229                 -0.0658              [-0.0996,-0.0319]       0.5078               0.0114
+
+                                                                    3

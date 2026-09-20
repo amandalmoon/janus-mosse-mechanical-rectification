@@ -1,0 +1,8 @@
+issue_id,severity,status,topic,closure_basis
+RTC-MIN01,MINOR,CLOSED,Legacy thermal boundary wording,Historical 0.60/0.65/0.70 pilot-boundary language removed from publication-facing main/SI; only current stationary finite-protocol statements remain.
+RT-M01,MAJOR,CLOSED,Damping dependence,"Main Methods/Discussion and SI now state the map is conditional on m*=1,gamma*=4 and report the verified gamma sweep."
+RT-M02,MAJOR,CLOSED,Loading-axis dependence,"Main Methods/Results/Conclusion now state the +/-y result is a chosen crystallographic loading axis, not a rotationally invariant material scalar."
+RT-M03,MAJOR,CLOSED,Preparation dependence,Main Results/Conclusion explicitly report the competing metastable basin carries the opposite signed split (about -0.40064 at theta=1.5 deg).
+RT-M04,MAJOR,CLOSED,Boundary-switch dynamics,Main Results/Discussion and SI scope the crossing to fixed-twist equilibrium re-preparation and exclude kinetic twist-sweep switching/hysteresis.
+RT-M05,MAJOR,CLOSED,Mechanical loading constraints,"Main Methods/Limitations and SI explicitly state fixed twist, uniform COM/body-force loading, and exclude rotational relaxation/torque/spring/edge/center pulling."
+RT-M06,MAJOR,CLOSED,Elasticity independence,Existing shared-GSFE/shared-elastic-constant limitation remains explicit; no full 3D atomistic validation is claimed.

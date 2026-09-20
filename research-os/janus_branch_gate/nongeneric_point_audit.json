@@ -1,0 +1,56 @@
+{
+  "root_success": true,
+  "root_residual": 7.103816094581085e-15,
+  "theta_deg": 2.9733856558252625,
+  "x": 1.0000000000000002,
+  "y": 0.20464121308819838,
+  "F_plus": 1.9100735314967028,
+  "Hxx": 2.2343238370581275e-15,
+  "Hxy": -6.6682770416548465e-15,
+  "Hyy": 6.913808212665852,
+  "eig_soft": 2.2343238370581212e-15,
+  "eig_hard": 6.913808212665852,
+  "soft_vector": [
+    -1.0,
+    -9.644868409046698e-16
+  ],
+  "force_coupling_abs_vy": 9.644868409046698e-16,
+  "cubic_estimates": {
+    "0.001": 2.021494950599223e-13,
+    "0.0003": 1.0857007149413552e-12,
+    "0.0001": 9.112618674578178e-14,
+    "3e-05": 9.112629703653012e-14,
+    "1e-05": 8.266396376731888e-11
+  },
+  "quartic_along_fixed_soft_direction": -17.066138929822117,
+  "stationary_checks": [
+    {
+      "deltaF": -0.0001,
+      "force": 1.9099735314967028,
+      "n_stationary": 4,
+      "n_stable": 1,
+      "stable_min_soft": 0.0006832443540805977
+    },
+    {
+      "deltaF": -1e-05,
+      "force": 1.9100635314967027,
+      "n_stationary": 4,
+      "n_stable": 1,
+      "stable_min_soft": 6.832785155953813e-05
+    },
+    {
+      "deltaF": 1e-05,
+      "force": 1.9100835314967028,
+      "n_stationary": 2,
+      "n_stable": 0,
+      "stable_min_soft": null
+    },
+    {
+      "deltaF": 0.0001,
+      "force": 1.9101735314967028,
+      "n_stationary": 2,
+      "n_stable": 0,
+      "stable_min_soft": null
+    }
+  ]
+}

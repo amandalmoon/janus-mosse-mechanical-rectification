@@ -1,0 +1,67 @@
+                                          Supplementary Information
+      Audit-Resolved Numerical Validation for Unguided Full-2D Mechanical Rectification and Vector Mode
+                                   Locking in Finite Janus MoSSe Contacts
+     This Supplementary Information records the numerical falsification and robustness calculations supporting the claim-frozen
+manuscript. It distinguishes prepared-state branch-followed observables from global diagnostic envelopes; documents same-spectrum
+   symmetry controls and registry-origin gauge tests; extends size and shape checks; resolves the triangular-boundary reversal as a
+     competing-registry ground-state switch; strengthens deterministic rocking from mean locking to cycle-resolved winding and
+representative multi-plateau Floquet tests; treats thermal trajectories with trajectory-level component and joint-vector inference; and
+ compares a linear finite-element membrane with an independently reconstructed nonlinear bond-angle relaxation model. A separate
+       Tier-2 empirical interlayer-potential prescreen is retained as a no-go record rather than quantitative atomistic validation.
+
+S1. Scope, model, and numerical conventions
+The conservative material input is the published three-shell Fourier GSFE coefficient set for 2H MoSSe used in the main text. The
+real three-vector-per-shell implementation is obtained by pairing the two C3-related reciprocal triads required to be complex
+conjugates by the reality of the scalar energy; choosing the conjugate triad corresponds to spatial inversion. The 2024 Angeli Erratum
+does not modify these GSFE coefficients or this phase pairing; it corrects effective-mass labeling, band-path information, and one
+Supplemental interface label. A rigid finite contact is formed by summing the local GSFE over lattice sites after twist. Unless
+otherwise stated, the reference contact is the N=127 compact hexagon, and all static headline results use the lowest-energy zero-force
+minimum as the prepared state. The equations of motion use m*=1 and gamma*=4. Angles are in degrees and forces, energies,
+temperature, and time are reduced quantities unless an explicit unit is shown.
+Stationary points are solved with analytic gradients and Hessians. Representative primitive-cell completeness audits use a 21 x 21
+seed mesh; periodic duplicates are clustered in lattice coordinates. Continued equilibria require residual norms below 1e-7 and
+positive Hessian eigenvalues. Fold candidates solve g_x=g_y=det(H)=0 with the hard eigenvalue >1e-6. Generic-fold classification
+additionally checks the soft-mode cubic derivative and force transversality. The isolated high-twist nongeneric point is reported
+separately rather than relabeled as an ordinary fold.
+
+S2. Prepared-state branch audit
+The original concern was that a threshold defined by the last stable minimum anywhere in the registry cell could select different
+metastable basins under opposite loading. We therefore enumerate the zero-force minima and continue each family separately. At
+theta=0, 1.5 and 3 deg the primitive cell contains six stationary points, including two stable minima. The lower-energy family is the
+prepared ground state and the higher-energy family is retained as a competing metastable control. After the initial coarse survey, both
+families and their positive/negative stability boundaries are tracked over a 491-point dense/adaptive theta grid from 0 to 3 deg, with
+16 independent 21 x 21 stationary-point checkpoints.
+Table S1. Branch-resolved thresholds at representative twists.
+         theta                 force               U_ground                U_meta                F_c ground         F_c metastable
+0.0                             +y                 -0.654162              -0.287602               3.485120             0.195673
+0.0                              -y                -0.654162              -0.287602               1.422236             0.567897
+1.5                             +y                 -0.559658              -0.251474               3.071135             0.211059
+1.5                              -y                -0.559658              -0.251474               1.258672             0.611697
+3.0                             +y                 -0.325909              -0.152779               1.883315             0.180567
+3.0                              -y                -0.325909              -0.152779               0.782412             0.521548
+
+Across all 491 continuation points, U_meta-U_ground, F_c,+^ground-F_c,+^meta and F_c,-^ground-F_c,-^meta remain positive.
+Their minimum values are 0.173130, 1.702747 and 0.260865, respectively, all at the high-twist end of the interval. The 16
+independent checkpoints each recover exactly two stable zero-force minima. The maximum zero-force root residual is 1.33e-15, the
+maximum fold residual is 5.41e-8 and the minimum hard fold eigenvalue is 6.806. This numerically resolves the 0-3 deg prepared-
+state interval at high density; it is not an interval-arithmetic proof over every real theta.
+
+S3. Same-spectrum matched symmetry contracts
+The original 2H GSFE is translated to the globally optimized inversion center. Two mathematical controls are then formed from the
+same Fourier spectrum: (i) a matched symmetrized surface obtained by setting the centered odd coefficients to zero, and (ii) an exact
+spatial inversion obtained by reversing those odd coefficients. These controls isolate registry inversion without replacing the 2H
+spectrum by a different stacking chemistry.
+Table S2. Static and deterministic matched-control audit at theta=1.5 deg.
+     surface           minimum                 U0                F_c,+                  F_c,-         Delta F_c          winding
+2H_centered                0               -0.559658           3.071135               1.258672         1.81246
+2H_centered               1                -0.251474           0.211059               0.611697        -0.400639
+2H_centered            GLOBAL              -0.559658           3.071135               1.258672         1.81246            (1,-1)
+2H_matched_symm
+                           0               -0.405566           1.767700               0.643470         1.12423
+etrized
+2H_matched_symm
+                           1               -0.405566           0.643470               1.767700         -1.12423
+etrized
+2H_matched_symm        GLOBAL              -0.405566           1.767700               1.767700       6.57411e-10          (0,0)
+
+                                                                    1

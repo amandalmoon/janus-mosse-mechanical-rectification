@@ -1,0 +1,135 @@
+--- /mnt/data/janus_baseline_gate/release/Janus_MoSSe_AuditResolved_ReproducibilityRelease/README.md	2026-09-17 10:58:10.000000000 +0000
++++ /mnt/data/janus_baseline_gate/Janus_MoSSe_CanonicalUnguided_BaselineRelease/README.md	2026-09-19 07:42:02.096400253 +0000
+@@ -26,7 +26,10 @@
+ - `figures/` — manuscript Figures 1-6.
+ - `validate_release.py` — path-independent validation of the shipped numerical contracts.
+ - `recompute_thermal_summary.py` — path-independent trajectory-cluster bootstrap reconstruction from the canonical raw thermal table.
+-- `config/production.json` and `requirements.txt` — inherited numerical environment/configuration context.
++- `config/canonical_unguided.json` — authoritative headline-model contract: corrected 2H GSFE, N=127 rigid contact, lowest-energy zero-force preparation, and `k_perp=0`.
++- `config/production.json` — legacy guided v17/v18 provenance (`k_perp=25`); it is **not** the headline baseline.
++- `validate_canonical_baseline.py` — checks that headline stages remain connected to the unguided prepared-state baseline.
++- `requirements.txt` — numerical environment context.
+ - `reports/AUDIT_RESOLUTION_REPORT.md` — reviewer-issue resolution ledger.
+ 
+ ## Quick validation
+@@ -42,6 +45,12 @@
+ AUDIT-RESOLVED RELEASE VALIDATION: PASS
+ ```
+ 
++To validate the headline model contract and ensure that size/shape, boundary, vector, and thermal analyses remain attached to the unguided prepared-state baseline:
++
++```bash
++python validate_canonical_baseline.py
++```
++
+ To reconstruct the thermal confidence intervals from trajectory-level data:
+ 
+ ```bash
+--- /dev/null	2026-09-19 06:21:43.153827172 +0000
++++ /mnt/data/janus_baseline_gate/Janus_MoSSe_CanonicalUnguided_BaselineRelease/config/canonical_unguided.json	2026-09-19 07:42:01.662765104 +0000
+@@ -0,0 +1,51 @@
++{
++  "schema_version": "1.0",
++  "status": "canonical_headline_baseline",
++  "model_scope": "rigid local-GSFE finite contact",
++  "material": {
++    "key": "2H_MoSSe_Se-S-Se-S",
++    "source": "Angeli 2022 coefficients with 2024 Erratum phase convention",
++    "energy_normalization": "6 W1",
++    "spectrum_policy": "full three-shell spectrum"
++  },
++  "contact": {
++    "family": "compact_hexagon",
++    "shell": 6,
++    "N": 127,
++    "rigid": true,
++    "k_perp": 0.0
++  },
++  "preparation": {
++    "zero_force_state": "lowest-energy stable minimum in one primitive registry cell",
++    "stationary_search": "multistart periodic-cell enumeration",
++    "loading_protocol": "adiabatic continuation of that same minimum",
++    "global_last_surviving_envelope": "diagnostic_only"
++  },
++  "static": {
++    "force_axis": "+/- y",
++    "theta_interval_deg": [0.0, 3.0],
++    "depinning_definition": "loss of positive-definite Hessian on the prepared branch",
++    "generic_label_policy": "use fold/saddle-node only where nondegeneracy conditions hold; otherwise stability/depinning boundary"
++  },
++  "dynamics": {
++    "theta_reference_deg": 1.5,
++    "mass": 1.0,
++    "gamma": 4.0,
++    "drive": "F_y(t)=F0 sin(2 pi t / tau)",
++    "initial_condition": "prepared zero-force ground minimum",
++    "reference_F0": 2.0,
++    "reference_period": 40.0
++  },
++  "stage_variations": {
++    "same_spectrum_symmetry": "change only centered odd Fourier sector; preserve geometry and dynamics",
++    "finite_size_shape": "change compact contact geometry/N; re-identify prepared zero-force ground state for each geometry",
++    "boundary": "change triangular boundary orientation; enumerate competing registry minima and select lowest-energy prepared state",
++    "vector_mode_map": "change F0 and period only; keep unguided prepared baseline",
++    "thermal": "add Langevin noise to the same unguided deterministic model",
++    "elasticity": "secondary model-form extension adding internal in-plane degrees of freedom",
++    "guided_comparison": "secondary device-control branch only; k_perp > 0 is never part of the headline baseline"
++  },
++  "legacy_config_policy": {
++    "config/production.json": "legacy guided v17/v18 settings; provenance only, not canonical headline baseline"
++  }
++}
+--- /dev/null	2026-09-19 06:21:43.153827172 +0000
++++ /mnt/data/janus_baseline_gate/Janus_MoSSe_CanonicalUnguided_BaselineRelease/validate_canonical_baseline.py	2026-09-19 07:42:01.666546440 +0000
+@@ -0,0 +1,51 @@
++from pathlib import Path
++import json, csv, math, re, subprocess, sys
++ROOT=Path(__file__).resolve().parent
++D=ROOT/'data'/'canonical'
++BASE=json.loads((ROOT/'config'/'canonical_unguided.json').read_text())
++
++def check(c,msg):
++    if not c: raise AssertionError(msg)
++def f(x): return float(x)
++def rows(name):
++    with open(D/name,newline='',encoding='utf-8') as fh: return list(csv.DictReader(fh))
++
++check(BASE['material']['key']=='2H_MoSSe_Se-S-Se-S','wrong material')
++check(BASE['contact']['N']==127 and BASE['contact']['shell']==6,'wrong reference contact')
++check(float(BASE['contact']['k_perp'])==0.0,'headline baseline must be unguided')
++check(BASE['preparation']['global_last_surviving_envelope']=='diagnostic_only','global envelope policy')
++
++headline=['branch_audit.py','shape_scaling_audit.py','triangle_ground_switch.py','vector_mode_map.py','thermal_cluster_audit.py','matched_symmetry_final.py','matched_symmetry_audit.py']
++for name in headline:
++    txt=(ROOT/'audit_scripts'/name).read_text()
++    check('dft_guided_material' not in txt,f'{name}: guided engine imported in headline analysis')
++
++legacy=json.loads((ROOT/'config'/'production.json').read_text())
++check(float(legacy['k_perp'])==25.0,'legacy guided-config fingerprint changed')
++
++# Shape prepared-branch endpoint checks (independent fold solves at Theta=0 and 20).
++ep=rows('baseline_shape_prepared_endpoint_check.csv')
++check(len(ep)==28,'endpoint shape audit should contain 14 shapes x 2 scaled angles')
++check(max(abs(f(r['dFp'])) for r in ep)<1e-10,'shape + threshold not prepared branch')
++check(max(abs(f(r['dFm'])) for r in ep)<1e-10,'shape - threshold not prepared branch')
++check(all(int(f(r['n_minima']))==2 for r in ep),'unexpected zero-force minima count')
++
++# Full 14-shape x 4-Theta x 2-sign connectivity audit.
++cn=rows('baseline_shape_branch_connectivity.csv')
++check(len(cn)==112,'connectivity audit should contain 112 cases')
++check(all(r['connected']=='True' for r in cn),'a shipped size/shape fold is not connected to prepared ground state')
++check(max(f(r['maxres']) for r in cn)<1e-9,'shape equilibrium continuation residual too large')
++check(min(f(r['mineig']) for r in cn)>0,'shape branch lost stability before shipped fold')
++
++# Boundary A/B are actual stable zero-force stationary states around both ground-state switches.
++tr=rows('baseline_triangle_stationary_check.csv')
++check(len(tr)==12,'triangle stationary audit incomplete')
++check(all(r['stable']=='True' for r in tr),'triangle A/B preparation is not stationary/stable')
++check(max(f(r['grad_norm']) for r in tr)<1e-12,'triangle stationary residual')
++
++# Existing release contract must still pass.
++p=subprocess.run([sys.executable,str(ROOT/'validate_release.py')],cwd=ROOT,capture_output=True,text=True)
++check(p.returncode==0,'base release validation failed: '+p.stdout+p.stderr)
++print('CANONICAL UNGUIDED BASELINE VALIDATION: PASS')
++print('config/canonical_unguided.json is authoritative for headline physics')
++print('config/production.json is legacy guided provenance only (k_perp=25)')

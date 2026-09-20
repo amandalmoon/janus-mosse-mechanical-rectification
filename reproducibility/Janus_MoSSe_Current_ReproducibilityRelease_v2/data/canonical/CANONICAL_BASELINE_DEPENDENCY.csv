@@ -1,0 +1,9 @@
+stage,baseline_inherited,only_varied,preparation_rule,k_perp,status
+N1_static,"2H full three-shell GSFE; N=127 compact hexagon; rigid","theta and +/- longitudinal force","lowest-energy zero-force minimum; same branch continued to loss of stability",0,"CANONICAL"
+Same2H_symmetry,"N=127 geometry; unguided dynamics; preparation protocol","centered odd Fourier sector: original / zero / sign reversed","ground state for original/inverted; inversion-paired balanced/global observable for symmetrized degeneracy",0,"CONTROL"
+Finite_size_shape,"same 2H GSFE; rigid unguided equations","compact geometry and N; scaled twist Theta","lowest-energy zero-force minimum re-identified per geometry; shipped fold must remain connected to it",0,"CANONICAL_EXTENSION"
+Boundary_registry,"same 2H GSFE; rigid unguided equations; N=127","triangular cut orientation and edge sensitivity","enumerate A/B zero-force minima and select lower-energy prepared state at each theta",0,"CANONICAL_EXTENSION"
+Vector_mode_locking,"same 2H GSFE; N=127; theta=1.5; m=1; gamma=4","drive amplitude F0 and period tau","start from prepared zero-force ground minimum",0,"CANONICAL_DYNAMICS"
+Thermal,"same unguided deterministic model and representative drive","temperature/noise only","deterministic orbit obtained from the same prepared ground minimum, then Langevin ensemble",0,"ROBUSTNESS_EXTENSION"
+Elasticity,"same corrected 2H GSFE and prepared-state logic","internal in-plane degrees of freedom / stiffness model","lowest-energy relaxed zero-force state followed under load",0,"SECONDARY_MODEL_FORM_EXTENSION"
+Guided_comparison,"same material/contact where specified","transverse confinement k_perp","protocol-specific guided branch"," >0 (reference 25)","SECONDARY_ONLY_NOT_HEADLINE"

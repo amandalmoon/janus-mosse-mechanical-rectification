@@ -1,0 +1,172 @@
+P0: Supplementary Information
+P1: Audit-Resolved Numerical Validation for Unguided Full-2D Mechanical Rectification and Vector Mode Locking in Finite Janus MoSSe Contacts
+P2: This Supplementary Information records the numerical falsification and robustness calculations supporting the claim-frozen manuscript. It distinguishes prepared-state branch-followed observables from global diagnostic envelopes; documents same-spectrum symmetry controls and registry-origin gauge tests; extends size and shape checks; resolves the triangular-boundary reversal as a competing-registry ground-state switch; strengthens deterministic rocking from mean locking to cycle-resolved winding and representative multi-plateau Floquet tests; treats thermal trajectories with trajectory-level component and joint-vector inference; and compares a linear finite-element membrane with an independently reconstructed nonlinear bond-angle relaxation model. A separate Tier-2 empirical interlayer-potential prescreen is retained as a no-go record rather than quantitative atomistic validation.
+P3: S1. Scope, model, and numerical conventions
+P4: The conservative material input is the published three-shell Fourier GSFE coefficient set for 2H MoSSe used in the main text. The real three-vector-per-shell implementation is obtained by pairing the two C3-related reciprocal triads required to be complex conjugates by the reality of the scalar energy; choosing the conjugate triad corresponds to spatial inversion. The 2024 Angeli Erratum does not modify these GSFE coefficients or this phase pairing; it corrects effective-mass labeling, band-path information, and one Supplemental interface label. A rigid finite contact is formed by summing the local GSFE over lattice sites after twist. Unless otherwise stated, the reference contact is the N=127 compact hexagon, and all static headline results use the lowest-energy zero-force minimum as the prepared state. The equations of motion use m*=1 and gamma*=4. Angles are in degrees and forces, energies, temperature, and time are reduced quantities unless an explicit unit is shown.
+P5: Stationary points are solved with analytic gradients and Hessians. Representative primitive-cell completeness audits use a 21 x 21 seed mesh; periodic duplicates are clustered in lattice coordinates. Continued equilibria require residual norms below 1e-7 and positive Hessian eigenvalues. Fold candidates solve g_x=g_y=det(H)=0 with the hard eigenvalue >1e-6. Generic-fold classification additionally checks the soft-mode cubic derivative and force transversality. The isolated high-twist nongeneric point is reported separately rather than relabeled as an ordinary fold.
+P6: S2. Prepared-state branch audit
+P7: The original concern was that a threshold defined by the last stable minimum anywhere in the registry cell could select different metastable basins under opposite loading. We therefore enumerate the zero-force minima and continue each family separately. At theta=0, 1.5 and 3 deg the primitive cell contains six stationary points, including two stable minima. The lower-energy family is the prepared ground state and the higher-energy family is retained as a competing metastable control. After the initial coarse survey, both families and their positive/negative stability boundaries are tracked over a 491-point dense/adaptive theta grid from 0 to 3 deg, with 16 independent 21 x 21 stationary-point checkpoints.
+P8: Table S1. Branch-resolved thresholds at representative twists.
+P10: Across all 491 continuation points, U_meta-U_ground, F_c,+^ground-F_c,+^meta and F_c,-^ground-F_c,-^meta remain positive. Their minimum values are 0.173130, 1.702747 and 0.260865, respectively, all at the high-twist end of the interval. The 16 independent checkpoints each recover exactly two stable zero-force minima. The maximum zero-force root residual is 1.33e-15, the maximum fold residual is 5.41e-8 and the minimum hard fold eigenvalue is 6.806. This numerically resolves the 0-3 deg prepared-state interval at high density; it is not an interval-arithmetic proof over every real theta.
+P11: S3. Same-spectrum matched symmetry contracts
+P12: The original 2H GSFE is translated to the globally optimized inversion center. Two mathematical controls are then formed from the same Fourier spectrum: (i) a matched symmetrized surface obtained by setting the centered odd coefficients to zero, and (ii) an exact spatial inversion obtained by reversing those odd coefficients. These controls isolate registry inversion without replacing the 2H spectrum by a different stacking chemistry.
+P13: Table S2. Static and deterministic matched-control audit at theta=1.5 deg.
+P15: The symmetry-respecting global envelope of the matched symmetrized surface has |F_c,+-F_c,-|=6.574e-10. Exact inversion swaps the original thresholds with absolute errors 2.220e-16 and 1.776e-15. The inverted and original vector currents sum to less than 1.665e-14 in lattice coordinates, while the matched-symmetric deterministic current norm is 8.510e-18. Individual degenerate minima on the symmetric surface can have asymmetric branch thresholds, but the inversion partner carries the swapped response; this is why the global paired envelope, rather than one arbitrarily selected degenerate minimum, is the symmetry-null static observable.
+P16: S4. Global check of the inversion-asymmetry diagnostic
+P17: Table S3. Translation-minimized odd-power search.
+P19: A brute 181 x 181 translation grid followed by multiple independent local refinements yields the same 2H A_min to numerical precision. The first-shell phase diagnostic is more precisely the normalized imaginary part of the complex-amplitude triad product, chi_1=Im[(C_1 C_2 C_3)/|C_1 C_2 C_3|]; because G_1+G_2+G_3=0 it is invariant under registry translation and reduces to sin(3 phi_1) in the equal-phase representation. In 1000 random translations the maximum chi_1 variation is below 1e-15. A complementary 26-origin test shows why an arbitrary cosine/sine continuation is not a material law: the physical eta=1 threshold split changes by less than 9.8e-15 across origins, but the eta=0 ground-state topology changes (17 origins with one stable ground minimum, 9 with an inversion-degenerate pair) and the small-eta response changes with origin. At the published origin a local fit gives d(Delta F_c)/d eta approximately 2.833, whereas at the A_min center the prepared-ground observable has a finite branch-selection jump at eta=0. Therefore no eta susceptibility or intermediate eta optimum is interpreted physically. An A_min-centered eta homotopy is retained only as a coordinate-covariant mechanism-isolation path, with no mapping to experimental polarization.
+P20: S5. Extended compact-contact similarity
+P21: Table S4. Maximum normalized spread in the extended size/shape audit (%).
+P23: The hexagonal family contains N=127, 217, 331, 469, 631, 817, 1027 and 1261, and the disk-like family contains N=127, 241, 367, 517, 721 and 931. A later dense rerun evaluates every integer Theta from 0 to 20, not only the four summary values in Table S4. The worst within-family deviations still occur at Theta=20 and remain below 0.1%, while the hexagon-disk family-mean difference remains about 0.10%. Independent high-Theta prepared-state spot checks for the smallest contacts also confirm that the reported folds remain connected to the zero-force ground branch. These calculations support theta sqrt(N) similarity for the tested compact rigid families, not arbitrary boundary geometries or deformable contacts.
+P24: S6. Boundary registry competition and edge sensitivity
+P25: Table S5. Ground-state registry switches for rotated triangular contacts.
+P27: Table S6. Surrogate outer-site weighting sensitivity.
+P29: The edge-weight test is intentionally not an atomistic edge-relaxation model. Across all ten tested cut/weight combinations the A/B energy crossing persists, both candidate registries are stable zero-force minima at the crossing, and the two families retain opposite directional biases. What is not robust is the numerical switch angle or its placement inside a chosen finite twist window: for example, at weight 0.5 the 20 and 25 deg crossings move to 3.1701 and 3.0832 deg, outside the nominal 0-3 deg interval. The reduced-model claim is therefore competing-registry switching with edge-sensitive location, not a universal reversal twist.
+P30: S7. Drive-period map and Floquet conditioning
+P31: The deterministic map contains 91 amplitude-period points. The original mean-displacement classification gives an integer pair at all 91 points with maximum mean lattice-rounding residual 3.916e-12. A stricter rerun resolves all 40 measured cycles separately and finds that every sampled point repeats one and the same winding pair cycle-by-cycle after transients; the maximum single-cycle rounding residual is below 1e-9. The sampled map contains 23 distinct winding pairs. A dense tau*=40 amplitude scan further resolves finite-width plateaus including (0,0), (1,-1), (1,-2), (2,-3), (3,-4) and higher windings.
+P32: Table S7. Independent monodromy integrations for the representative (1,-1) orbit.
+P33: Table S7b. Cross-solver Floquet stability of representative plateaus.
+P35: The canonical (1,-1) leading multiplier agrees across explicit high-order and implicit stiff solvers, so only rho_F<1 is interpreted physically. The same test was extended to five additional plateau representatives. Using the tighter DOP853 solve, the leading spectral radii are approximately 1.39e-31 for (0,0), 4.62e-24 for (1,-1) at F0*=1.9625, 5.69e-20 for (1,-2), 9.47e-17 for (2,-3), 5.21e-13 for (3,-4), and 1.62e-15 for the high-winding (2,-7) state at tau*=70; Radau confirms rho_F<1 in every case. Across these six states, 24/24 time-step tests and 162/162 local basin perturbations recover the expected winding. Increasing and decreasing amplitude continuation at tau*=40 agree at all 61 sampled amplitudes. These checks establish representative local attraction, not global attractor uniqueness.
+P36: S8. Thermal trajectory-cluster inference
+P37: Table S8a. Stationary free-contact thermal component and directional statistics (60 burn + 100 measured cycles; N=500 per T*).
+P38: Table S8b. High-temperature stationary two-seed pooled joint-current audit (N=1000 per T*).
+P40: Each trajectory contains 60 burn cycles and 100 measured cycles at dt=0.02. The full T*=0.02-0.70 series uses N=500 independent trajectories per temperature, and the high-temperature band T*=0.50-0.70 is repeated with a second independent N=500 ensemble. The trajectory is the inferential unit. Late 20-cycle blocks show no resolved two-component drift in either high-temperature seed ensemble, and deterministic-orbit, zero-force ground-state and competing-metastable starts become identical to numerical precision by cycle 38 at the latest under common noise. The pooled high-temperature mean vector decreases from (0.08001,-0.15509) at T*=0.50 to (0.03700,-0.07645) at T*=0.70, but a 50,000-resample trajectory bootstrap still excludes the zero vector at every sampled high-temperature point. At T*=0.70 the component intervals are u in [0.01265,0.06132] and v in [-0.10088,-0.05195]. P(v_cycle<0) approaches one-half but remains slightly above it through 0.70, while the exact target-winding probability is only about 1.1-1.6% over T*=0.50-0.70. The earlier 10-burn + 10-measure pilot boundaries shift with observation length and are therefore retired rather than interpreted as physical thermal thresholds. Targeted dt=0.04, 0.02 and 0.01 reruns at T*=0.60, 0.65 and 0.70 agree within 1.12 combined standard errors in either mean-current component.
+P41: S9. In-plane relaxation hierarchy
+P42: The rigid-model result was challenged first by allowing all N=127 sites to relax in plane under a free-edge triangular finite-element membrane. The same published 2H GSFE is retained at each local registry. Internal x/y translations and infinitesimal rigid rotation are projected out so that global registry and imposed twist remain external coordinates. The source Angeli GSFE already includes local relaxation of the interlayer separation at each sampled aligned registry; the present extensions therefore test collective in-plane finite-contact compliance, not the local vertical separation already folded into the GSFE.
+P43: Table S9. In-plane elastic branch-followed validation for N=127.
+P44: At theta=1.5 deg a fresh nominal linear-membrane rerun gives F_c,+*=2.934302, F_c,-*=1.190210 and rho=0.422860; C/2 gives 2.807397, 1.135229 and 0.424125; 2C gives 3.001636, 1.222534 and 0.421172; the alternative elastic constants give 2.944409, 1.194897 and 0.422658; and 100C recovers 3.069751, 1.257886 and 0.418673. At theta=3 deg the nominal values are 1.573022 and 0.631274 with rho=0.427233. Thus in-plane relaxation renormalizes absolute thresholds while preserving the directional sign over the tested stiffness range. The nonlinear bond-angle model is independently reconstructed from the documented 342-bond/648-angle network and calibrated coefficients before comparison.
+P45: S10. Nonlinear discrete-relaxation cross-check
+P46: The independently reconstructed nonlinear triangular-site model reproduces the target homogeneous elastic constants to numerical precision. At theta=1.5 deg the nominal branch gives F_c,+*=2.935400, F_c,-*=1.190479 and rho=0.422921; the half-stiffness branch gives 2.810107, 1.135693 and 0.424353. At theta=3 deg the nominal nonlinear result is 1.574365, 0.631006 and 0.427755. These values remain within about 0.13% of the corresponding fresh linear-FEM thresholds. At theta=1.5 deg nominal stiffness the largest last-stable-state bond strain is below 0.40% and the largest local angle change below 0.40 deg.
+P47: Table S10. Nonlinear discrete in-plane relaxation versus the linear finite-element model.
+P48: S11. Tier-2 interlayer-potential prescreen and Janus-specific atomistic gate
+P49: A public Stillinger-Weber plus registry-dependent Kolmogorov-Crespi candidate was screened before any full finite-flake atomistic calculation. For 2H Se-S-Se-S, a 31 x 31 registry map with optimized interface spacing was fitted in the same three-shell Fourier basis and aligned under lattice D6 operations and translation. The dominant first shell is close to the published DFT reference, and the inversion-odd RMS plus the finite-contact rectification sign are preserved, but the second and third harmonic amplitudes are much too large. The candidate is therefore useful only as a qualitative mechanism stress test and is rejected as a quantitative replacement for the published DFT GSFE.
+P50: Table S11. Tier-2 empirical interlayer-potential prescreen. The higher-shell failure enforces a no-go for quantitative full-3D validation.
+P51: The hard gate for future MLIP use is predeclared before full finite-contact relaxation: 2H Se-S-Se-S; at least a 31 x 31 registry map; independent relaxation of interlayer separation at every lateral registry; D6 plus lattice-translation alignment; first-shell amplitude error <=10%; first-shell phase error <=5 deg; inversion-odd RMS error <=10%; full-GSFE correlation >=0.98; affine-normalized RMSE/range <=0.05; and preferably <=0.2 meV absolute error in W2 and W3. Recent dispersion-aware multilayer TMD neural-network potentials provide a plausible route, but Janus MoSSe must pass this contract before any result is called atomistic validation.
+P52: S12. Remaining model-input limitations
+P53: The audit resolves the computational ambiguities that can be decided with the published GSFE and shows that the headline directional split survives two in-plane compliance representations. Remaining inputs are a Janus-specific full-three-dimensional atomistic potential that passes the published 2H GSFE contract; collective finite-flake corrugation/buckling and edge reconstruction; load-dependent stacking energetics; polarity-resolved first-principles surfaces; dissipative and inertial calibration; laboratory state preparation; and experiment. The exact triangular switch angle is especially edge-model sensitive, and reduced temperature or period must not be converted into kelvin or physical frequency without independent calibration.
+P54: S13. Reproducibility release contents
+P55: The accompanying materials retain the canonical unguided rigid-model release and add the Gate-level prepared-branch, symmetry/gauge, size/shape, boundary, deterministic-locking, thermal, and elasticity audits used to freeze manuscript claims. The final package also archives the independently reconstructed nonlinear VFF source, fresh linear/VFF result tables, joint-vector thermal bootstrap tables, and the rewritten manuscript/SI sources. The Tier-2 empirical interlayer candidate remains explicitly no-go for quantitative atomistic use because its published higher-harmonic GSFE spectrum fails the predeclared Janus-specific contract.
+
+TABLE 0
+theta || force || U_ground || U_meta || F_c ground || F_c metastable
+0.0 || +y || -0.654162 || -0.287602 || 3.485120 || 0.195673
+0.0 || -y || -0.654162 || -0.287602 || 1.422236 || 0.567897
+1.5 || +y || -0.559658 || -0.251474 || 3.071135 || 0.211059
+1.5 || -y || -0.559658 || -0.251474 || 1.258672 || 0.611697
+3.0 || +y || -0.325909 || -0.152779 || 1.883315 || 0.180567
+3.0 || -y || -0.325909 || -0.152779 || 0.782412 || 0.521548
+
+TABLE 1
+surface || minimum || U0 || F_c,+ || F_c,- || Delta F_c || winding
+2H_centered || 0 || -0.559658 || 3.071135 || 1.258672 || 1.81246 || 
+2H_centered || 1 || -0.251474 || 0.211059 || 0.611697 || -0.400639 || 
+2H_centered || GLOBAL || -0.559658 || 3.071135 || 1.258672 || 1.81246 || (1,-1)
+2H_matched_symmetrized || 0 || -0.405566 || 1.767700 || 0.643470 || 1.12423 || 
+2H_matched_symmetrized || 1 || -0.405566 || 0.643470 || 1.767700 || -1.12423 || 
+2H_matched_symmetrized || GLOBAL || -0.405566 || 1.767700 || 1.767700 || 6.57411e-10 || (0,0)
+2H_exact_inverted || 0 || -0.559658 || 1.258672 || 3.071135 || -1.81246 || 
+2H_exact_inverted || 1 || -0.251474 || 0.611697 || 0.211059 || 0.400639 || 
+2H_exact_inverted || GLOBAL || -0.559658 || 1.258672 || 3.071135 || -1.81246 || (-1,1)
+
+TABLE 2
+configuration || A_min || odd RMS || triad invariant chi_1 || multistart spread
+3R_MoSSe_Se-S-Se-S || 0.00030466354 || 0.017454614 || 0.052335956 || 2.06e-18
+3R_MoSSe_S-Se-Se-S || 2.7160792e-34 || 1.6480532e-17 || 0 || 3.70e-26
+3R_MoSSe_Se-S-S-Se || 0 || 0 || 0 || 7.08e-26
+2H_MoSSe_Se-S-Se-S || 0.042536085 || 0.20624278 || 0.58354121 || 8.33e-17
+
+TABLE 3
+scope || Theta || +y spread / family diff || -y spread / family diff || rho spread / family diff
+hex || 0 || 0.0000 || 0.0000 || 0.00000
+hex || 10 || 0.0179 || 0.0174 || 0.00054
+hex || 15 || 0.0429 || 0.0417 || 0.00118
+hex || 20 || 0.0818 || 0.0800 || 0.00180
+disk || 0 || 0.0000 || 0.0000 || 0.00000
+disk || 10 || 0.0053 || 0.0051 || 0.00016
+disk || 15 || 0.0124 || 0.0121 || 0.00036
+disk || 20 || 0.0230 || 0.0222 || 0.00072
+hex_vs_disk || 0 || 0.0000 || 0.0000 || 0.00000
+hex_vs_disk || 10 || 0.0232 || 0.0225 || 0.00070
+hex_vs_disk || 15 || 0.0553 || 0.0537 || 0.00154
+hex_vs_disk || 20 || 0.1048 || 0.1022 || 0.00252
+
+TABLE 4
+cut angle || switch theta || ground below || Delta F below || ground above || Delta F above
+20 || 2.921278008 || A || +0.666122 || B || -0.669050
+25 || 2.847233122 || A || +0.700632 || B || -0.703441
+
+TABLE 5
+cut angle || outer-site weight || outer sites / N || ground-state switch theta
+20 || 0.50 || 48 || 3.170095
+20 || 0.75 || 48 || 3.026591
+20 || 1.00 || 48 || 2.921278
+20 || 1.25 || 48 || 2.841009
+20 || 1.50 || 48 || 2.777914
+25 || 0.50 || 48 || 3.083165
+25 || 0.75 || 48 || 2.947202
+25 || 1.00 || 48 || 2.847233
+25 || 1.25 || 48 || 2.770909
+25 || 1.50 || 48 || 2.710829
+
+TABLE 6
+solver || rtol || atol || steps || spectral radius || state closure
+DOP853 || 1e-09 || 1e-11 || 803 || 6.31108126e-22 || 1.786e-11
+DOP853 || 1e-11 || 1e-13 || 1603 || 6.31108124e-22 || 1.803e-11
+Radau || 1e-09 || 1e-11 || 3108 || 6.31109869e-22 || 1.915e-11
+
+TABLE 7
+state || F0* || tau* || winding || rho_F || closure
+pinned || 1.2875 || 40 || (0,0) || 1.389e-31 || 6.060e-12
+w11 || 1.9625 || 40 || (1,-1) || 4.620e-24 || 1.677e-12
+w12 || 2.5625 || 40 || (1,-2) || 5.687e-20 || 2.846e-11
+w23 || 3.0250 || 40 || (2,-3) || 9.467e-17 || 2.050e-12
+w34 || 3.4000 || 40 || (3,-4) || 5.215e-13 || 5.044e-12
+w27_high || 3.6750 || 70 || (2,-7) || 1.618e-15 || 9.244e-11
+
+TABLE 8
+T* || mean u || mean v || 95% CI v || P(v_cycle<0) || P target (1,-1)
+0.02 || 1.2034 || -2.4077 || [-2.4137,-2.4015] || 0.9979 || 0.0393
+0.04 || 1.0705 || -2.1465 || [-2.1551,-2.1379] || 0.9747 || 0.0686
+0.06 || 0.9149 || -1.8446 || [-1.8547,-1.8347] || 0.9281 || 0.0818
+0.10 || 0.6639 || -1.3463 || [-1.3589,-1.3339] || 0.8178 || 0.0734
+0.16 || 0.4362 || -0.8848 || [-0.9003,-0.8696] || 0.6882 || 0.0533
+0.24 || 0.2619 || -0.5369 || [-0.5558,-0.5179] || 0.5973 || 0.0371
+0.32 || 0.1647 || -0.3467 || [-0.3685,-0.3251] || 0.5534 || 0.0255
+0.50 || 0.0696 || -0.1501 || [-0.1780,-0.1223] || 0.5199 || 0.0156
+0.55 || 0.0548 || -0.1186 || [-0.1491,-0.0891] || 0.5134 || 0.0138
+0.60 || 0.0433 || -0.1039 || [-0.1350,-0.0725] || 0.5128 || 0.0132
+0.65 || 0.0276 || -0.0752 || [-0.1065,-0.0437] || 0.5090 || 0.0114
+0.70 || 0.0229 || -0.0658 || [-0.0996,-0.0319] || 0.5078 || 0.0114
+
+TABLE 9
+T* || mean u || 95% CI u || mean v || 95% CI v || T_H^2/T_0.95^2 || zero vector
+0.50 || 0.08001 || [0.06012,0.10008] || -0.15509 || [-0.17531,-0.13503] || 38.23 || excluded
+0.55 || 0.06175 || [0.04054,0.08276] || -0.12366 || [-0.14502,-0.10270] || 21.30 || excluded
+0.60 || 0.05112 || [0.02898,0.07370] || -0.10720 || [-0.12979,-0.08488] || 14.62 || excluded
+0.65 || 0.04223 || [0.01892,0.06553] || -0.08690 || [-0.10977,-0.06367] || 9.00 || excluded
+0.70 || 0.03700 || [0.01265,0.06132] || -0.07645 || [-0.10088,-0.05195] || 6.33 || excluded
+
+TABLE 10
+Case / theta || F_c,+* || F_c,-* || rho || Max principal strain
+Rigid, 1.5 deg || 3.071135 || 1.258672 || 0.418601 || 0
+Elastic C, 1.5 deg || 2.934302 || 1.190210 || 0.422860 || 0.459%
+Elastic C/2, 1.5 deg || 2.807397 || 1.135229 || 0.424125 || 0.824%
+Elastic 2C, 1.5 deg || 3.001636 || 1.222534 || 0.421172 || 0.244%
+Elastic C, 3 deg || 1.573022 || 0.631274 || 0.427233 || 0.864%
+Elastic C/2, 3 deg || 1.244897 || 0.516821 || 0.413276 || 1.597%
+Rigid-limit 100C, 1.5 deg || 3.069751 || 1.257886 || 0.418673 || 0.0052%
+
+TABLE 11
+case || F_c,+* || F_c,-* || rho || vs FEM F+ || vs FEM F- || sign
+theta=1.5, C/2 || 2.810107 || 1.135693 || 0.424353 || +0.0966% || +0.0390% || positive
+theta=1.5, C || 2.935400 || 1.190479 || 0.422921 || +0.0374% || +0.0226% || positive
+theta=3.0, C || 1.574365 || 0.631006 || 0.427755 || +0.0854% || -0.0425% || positive
+
+TABLE 12
+quantity || published DFT || public SW+KC candidate || decision
+W1 (meV) || 7.9 || 8.770 || near target
+W2 (meV) || 0.1 || 1.494 || fail
+W3 (meV) || 0.1 || 0.741 || fail
+odd RMS || 0.206243 || 0.216118 || qualitative pass
+full-shape correlation || 1.000 || 0.98105 || qualitative pass
+N=127, theta=1.5 rho || 0.418601 || 0.379220 || same sign; not quantitative

@@ -1,0 +1,80 @@
+{
+  "gate": "PASS",
+  "scope": "rigid compact self-similar contacts; hexagonal and disk-like families tested",
+  "original_hex_N": [
+    37,
+    61,
+    91,
+    127,
+    169,
+    217,
+    271,
+    331,
+    397,
+    469
+  ],
+  "collapse_metrics": [
+    {
+      "Theta_limit": 18,
+      "Fp_max_rel": 0.0023640330125594,
+      "Fm_max_rel": 0.0023046461718496,
+      "rho_max_rel": 5.844242583662013e-05,
+      "Fp_worst": "(18.0, 37)",
+      "Fm_worst": "(18.0, 37)",
+      "rho_worst": "(18.0, 37)"
+    },
+    {
+      "Theta_limit": 24,
+      "Fp_max_rel": 0.0045775726162442,
+      "Fm_max_rel": 0.0045079050404649,
+      "rho_max_rel": 7.050696787225546e-05,
+      "Fp_worst": "(24.0, 37)",
+      "Fm_worst": "(24.0, 37)",
+      "rho_worst": "(23.0, 37)"
+    },
+    {
+      "Theta_limit": 30,
+      "Fp_max_rel": 0.0077396065909016,
+      "Fm_max_rel": 0.0077335061842693,
+      "rho_max_rel": 7.050696787225546e-05,
+      "Fp_worst": "(30.0, 37)",
+      "Fm_worst": "(30.0, 37)",
+      "rho_worst": "(23.0, 37)"
+    }
+  ],
+  "characteristic_alpha_range_all_sizes": [
+    0.5035654105411335,
+    0.5036533006788927
+  ],
+  "characteristic_R2_min": 0.999992929532304,
+  "q090_plus_alpha": 0.503626441855883,
+  "q090_minus_alpha": 0.5036533006788927,
+  "q090_plus_alpha_Nmin217": 0.5012922886624136,
+  "q090_minus_alpha_Nmin217": 0.5013016799194828,
+  "alpha_range_Nmin217": [
+    0.5012706293658121,
+    0.5013016799194828
+  ],
+  "max_characteristic_residual": 8.095869864469522e-14,
+  "min_characteristic_hard_mode": 11.6368235756346,
+  "extended_dense_Theta_range": [
+    0,
+    20
+  ],
+  "extended_shape_max": {
+    "hex_plus_within": 0.0008180331968626,
+    "hex_minus_within": 0.0007997899154197,
+    "disk_plus_within": 0.0002296810656841,
+    "disk_minus_within": 0.0002224264175609,
+    "hex_disk_plus_between": 0.0010479549579583,
+    "hex_disk_minus_between": 0.0010224437514814,
+    "hex_disk_rho_between": 2.51773764232854e-05
+  },
+  "prepared_highTheta_checks": {
+    "n": 14,
+    "all_pass": true,
+    "min_zero_force_ground_gap": 0.2064361830802665,
+    "min_soft_mode_below_fold": 0.0962767089301932
+  },
+  "interpretation": "theta*sqrt(N) similarity with small finite-size corrections; 0.5036 is not a universal critical exponent"
+}

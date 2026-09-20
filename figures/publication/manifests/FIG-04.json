@@ -1,0 +1,93 @@
+{
+  "figure_id": "FIG-04",
+  "core_conclusion": "Boundary orientation creates competition between two stable registry families with opposite directional biases; the equilibrium ground-state crossing reverses the prepared response while its location is strongly edge-model dependent.",
+  "claim_ids": [
+    "C8",
+    "C9"
+  ],
+  "archetype": "quantitative-grid",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 123.44,
+    "min_text_pt": 7.0,
+    "min_line_pt": 0.7
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Generated from the current reproducibility release; no illustrative values."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "Where do the zero-force registry energies cross for the two triangular edge orientations?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C8"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/triangle_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "B",
+      "question": "Do registry families A and B carry opposite branch-followed directional splittings?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C8"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/triangle_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "C",
+      "question": "How does selecting the lower-energy prepared registry change the sign across the equilibrium crossing?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C8"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/triangle_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "D",
+      "question": "How sensitive is the equilibrium crossing angle to outer-site energy weighting?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C9"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/edge_weight_ground_switch.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    }
+  ],
+  "exports": {
+    "pdf": null,
+    "svg": "/mnt/data/janus_n18_publication_figures/figures/Figure_4_boundary_registry_switching.svg",
+    "tiff": "/mnt/data/janus_n18_publication_figures/figures/Figure_4_boundary_registry_switching.tif",
+    "png_preview": "/mnt/data/janus_n18_publication_figures/figures/Figure_4_boundary_registry_switching.png",
+    "source": "/mnt/data/janus_n18_publication_figures/source/make_publication_figures.py"
+  },
+  "caption": "Figure 4. Boundary-induced competition between registry minima. (a) The zero-force energies of registry families A and B cross at high twist for 20 and 25 deg triangular cuts. (b) The two families carry opposite branch-followed directional splittings. (c) Selecting the lower-energy zero-force state therefore produces a sign reversal of the prepared-state response at the registry switch. (d) Varying the outer-site energy weight shifts the transition substantially, showing that the exact switch angle is edge-model sensitive.",
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "WARN"
+  }
+}

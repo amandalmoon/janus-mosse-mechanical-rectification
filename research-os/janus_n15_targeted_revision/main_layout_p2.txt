@@ -1,0 +1,57 @@
+interpretations. Headline static thresholds follow the lowest-energy zero-force minimum under quasi-static positive-
+and negative-y loading, with competing metastable branches continued separately. The chosen y axis is a declared
+crystallographic loading protocol rather than a rotationally invariant material scalar. Finite-size calculations are
+extended across compact hexagonal and disk-like families, while rotated triangular boundaries are treated as a
+competing-registry problem. Deterministic transport is mapped over drive amplitude and period, representative
+plateaus are tested as attracting relative-periodic orbits, thermal transport is inferred from trajectory-level statistics,
+and in-plane model-form dependence is tested with both a linear finite-element membrane and a nonlinear bond-angle
+network. Transverse confinement is retained only as a secondary pathway-control comparison.
+
+2. Model and computational methods
+2.1 Published MoSSe GSFE
+    The primary conservative input is the three-shell Fourier representation of the 2H Se-S-Se-S MoSSe GSFE
+coefficient set reported by Angeli et al. [12]. For each reciprocal shell, the six C6-related reciprocal vectors split into
+two C3-related triads connected by G -> -G. C3 symmetry together with the reality of the scalar registry energy
+makes the corresponding complex Fourier amplitudes conjugate. Pairing each G with -G and choosing one C3-related
+triad as the positive representatives therefore gives the equivalent real form used here,
+
+                                                                                                                        (1)
+
+   with W=(7.9, 0.1, 0.1) meV and phi=(131.9, 1.2, 85.4) deg for the asymmetric 2H surface [12]. Choosing the
+conjugate reciprocal triad changes phi -> -phi, which is the spatially inverted convention; the same-spectrum
+inversion contracts are tested explicitly below. Energies are normalized by 6W1. In the source first-principles
+workflow, the aligned bilayer was sampled on a 9 x 9 lateral-displacement grid; the in-plane atomic coordinates were
+fixed at each registry while the interlayer distance was relaxed before the stacking-dependent quantities were fitted
+[12]. Ref. [13] is an erratum to Ref. [12], but its published corrections concern inverse-effective-mass labeling,
+Brillouin-zone path information, and a Supplemental interface label rather than the GSFE Fourier coefficients or the
+conjugate phase pairing used here. Thus the imported GSFE contains local registry-by-registry vertical separation
+relaxation, but not collective corrugation or edge reconstruction of a finite flake. The same 2022 parameterization
+provides three 3R configurations used below as material-derived controls.
+2.2 Finite rigid contact and twist averaging
+   A rigid finite contact contains N sites at reference positions r_i on the triangular lattice. After a relative twist theta
+and a center-of-mass translation R, the per-site interfacial energy is
+
+                                                                                                                        (2)
+
+   For each reciprocal component, finite-contact cancellation is controlled by the structure factor
+                                                                                                                        (3)
+    For compact self-similar contacts, the linear size R scales as sqrt(N). The small-angle expansion R_theta-I=theta
+J+O(theta^2), with J the in-plane rotation generator, gives a local Fourier phase shift G dot (R_theta-I) r of order |G| R
+theta. The natural similarity variable is therefore Theta=theta sqrt(N); the numerical tests below ask whether finite-
+contact thresholds follow this geometric structure-factor scaling rather than treating the fitted exponent as a new
+critical exponent.
+2.3 Coordinate-invariant registry asymmetry
+   Separating a Fourier series into cosine and sine coefficients at one chosen registry origin does not by itself define a
+material observable, because those coefficients mix under translation. We therefore translate the origin by a and
+minimize the total squared inversion-odd coefficient over the primitive cell, using a 181 x 181 registry grid followed
+by multiple independent local refinements. If c_alpha(a) and s_alpha(a) are the translated even and odd coefficients,
+Eq. (4) defines A_odd(a) and A_min=min_a A_odd(a); the reported odd RMS fraction is sqrt(A_min). As an
+independent phase diagnostic, we use the normalized complex-amplitude triad invariant chi_1=Im[(C_1 C_2 C_3)/|
+C_1 C_2 C_3|] for the first reciprocal shell. Because G_1+G_2+G_3=0, the triad product is translation invariant; in
+the equal-phase representation used for the published coefficients it reduces to sin(3 phi_1). Registry-origin shifts are
+also used as a falsification test: physical thresholds must remain invariant even though an origin-fixed cosine/sine
+decomposition need not.
+
+
+
+                                                             2

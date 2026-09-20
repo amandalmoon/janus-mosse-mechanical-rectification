@@ -1,0 +1,31 @@
+{
+  "A_min": 0.0425360852808329,
+  "odd_rms_min": 0.20624278237270002,
+  "published_origin_odd_fraction": 0.5539814185805109,
+  "published_origin_odd_rms": 0.7442992802498944,
+  "tested_origins": 26,
+  "eta1_Delta_spread_across_tested_origins": 9.769962616701378e-15,
+  "eta0_degenerate_pair_origins": 9,
+  "eta0_single_minimum_origins": 17,
+  "triad_chi1": 0.5835412113561179,
+  "triad_chi1_max_translation_error": 9.992007221626409e-16,
+  "canonical_center_covariance_max_center_error": 1.8833991155046486e-09,
+  "canonical_center_covariance_max_cos_error": 9.161336134155815e-10,
+  "canonical_center_covariance_max_sin_error": 4.347365106793788e-09,
+  "published_origin_local_slope": 2.833382127901496,
+  "published_origin_local_slope_R2": 0.9999997641051801,
+  "published_origin_eta_opt_grid": 0.925,
+  "published_origin_eta_opt_quadratic_estimate": 0.9254351128624001,
+  "published_origin_Delta_opt_quadratic_estimate": 1.8196247564597399,
+  "Amin_center_eta_opt_grid": 1.0,
+  "Amin_center_Delta_eta_0p025": 1.142632733253682,
+  "Amin_center_Delta_eta_1": 1.8124630400393016,
+  "Amin_center_eta0_branch_specific_abs_split": 1.1242312911670513,
+  "decision": {
+    "arbitrary_origin_eta_material_susceptibility": "REJECTED",
+    "intermediate_eta_material_optimum": "REJECTED",
+    "Amin_centered_eta_homotopy": "RETAIN_AS_COMPUTATIONAL_DIAGNOSTIC_ONLY",
+    "coordinate_invariant_Amin": "VERIFIED",
+    "triad_product_phase_diagnostic": "VERIFIED"
+  }
+}

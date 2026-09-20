@@ -1,0 +1,6 @@
+issue_id,severity,status,topic,resolution_owner
+CM-1,MINOR,CLOSED_BY_SCOPE,within-model causal scope,manuscript wording already bounded
+CM-2,MAJOR,CLOSED_BY_SCOPE,damping/protocol dependence,manuscript/SI explicitly conditioned
+CM-3,MAJOR,CLOSED_BY_REVISION,in-plane model independence wording,writer targeted revision v5
+CM-4,MAJOR,CLOSED_BY_SCOPE,thermal finite-protocol scope,stationary wording already bounded
+CM-5,BLOCKER,OPEN,reproducibility release is not independently current/replayed,N17 reproducibility rebuild

@@ -1,0 +1,39 @@
+13. Angeli, M.; Schleder, G. R.; Kaxiras, E. Erratum: Twistronics of Janus transition metal dichalcogenide bilayers
+    [Phys. Rev. B 106, 235159 (2022)]. Physical Review B 109, 199902(E) (2024).
+    https://doi.org/10.1103/PhysRevB.109.199902.
+14. Li, H.; Guo, Y.; Guo, W. Electro-lubrication in Janus transition metal dichalcogenide bilayers. Friction 10, 1851-
+    1858 (2022). https://doi.org/10.1007/s40544-021-0562-9.
+15. Chen, R.; Wang, S.; Jia, X.; Jiang, W.; Liu, Z.; Ouyang, W.; Gao, E. Intrinsic Friction Diodes at the Interfaces of
+    Two-Dimensional Materials. ACS Applied Materials & Interfaces 18, 21195-21203 (2026).
+    https://doi.org/10.1021/acsami.6c00303.
+16. Torche, P. C.; Silva, A.; Kramer, D.; Polcar, T.; Hovorka, O. Multi-scale model predicting friction of crystalline
+    materials. Advanced Materials Interfaces 9, 2100914 (2022). https://doi.org/10.1002/admi.202100914.
+17. Guo, S.-D. Phonon transport in Janus monolayer MoSSe: a first-principles study. Physical Chemistry Chemical
+    Physics 20, 7236-7242 (2018). https://doi.org/10.1039/C8CP00350E.
+18. Dong, R.; Lunghi, A.; Sanvito, S. Stiffness and Atomic-Scale Friction in Superlubricant MoS2 Bilayers. The
+    Journal of Physical Chemistry Letters 14, 6086-6091 (2023). https://doi.org/10.1021/acs.jpclett.3c01066.
+19. Hanggi, P.; Marchesoni, F. Artificial Brownian motors: Controlling transport on the nanoscale. Reviews of
+    Modern Physics 81, 387-442 (2009). https://doi.org/10.1103/RevModPhys.81.387.
+20. Barbi, M.; Salerno, M. Phase locking effect and current reversals in deterministic underdamped ratchets. Physical
+    Review E 62, 1988-1994 (2000). https://doi.org/10.1103/PhysRevE.62.1988.
+21. Shaidu, Y.; Naik, M. H.; Louie, S. G.; Neaton, J. B. Transferable dispersion-aware machine learning interatomic
+    potentials for multilayer transition metal dichalcogenide heterostructures. npj Computational Materials 11, 273
+    (2025). https://doi.org/10.1038/s41524-025-01761-9.
+22. Lu, L.; Ying, T.; Cui, C.-X.; Yang, C.; Leng, J.; Li, J.; Jiang, J.-W.; Chang, T. Friction Dissymmetry on
+Hexagonal Boron Carbon Nitride. Nano Letters 25, 7909-7915 (2025). https://doi.org/10.1021/acs.nanolett.5c01360.
+23. Reichhardt, C.; Olson, C. J.; Hastings, M. B. Rectification and Phase Locking for Particles on Symmetric Two-
+Dimensional Periodic Substrates. Physical Review Letters 89, 024101 (2002).
+https://doi.org/10.1103/PhysRevLett.89.024101.
+24. Wang, C.-L.; Tekic, J.; Duan, W.-S.; Shao, Z.-G.; Yang, L. Ratchet effect and amplitude dependence of phase
+locking in a two-dimensional Frenkel-Kontorova model. The Journal of Chemical Physics 138, 034307 (2013).
+https://doi.org/10.1063/1.4776226.
+25. Liu, Z. Edge energy fluctuation: A unified theory of friction scaling laws in twisted layered material interfaces.
+arXiv:2609.08063v1 (2026). Preprint submitted 8 September 2026. https://arxiv.org/abs/2609.08063.
+26. Wang, K.; Chen, A.; Huang, J.; Zhang, Y.; Liang, Y.; Han, Q. Moire boundary dominated twisting graphene
+friction: Scaling laws and geometrical control. International Journal of Solids and Structures 337, 114061 (2026).
+https://doi.org/10.1016/j.ijsolstr.2026.114061.
+
+
+
+
+                                                          15

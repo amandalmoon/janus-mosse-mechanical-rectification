@@ -1,0 +1,47 @@
+{
+  "manuscript_type": "Article",
+  "title": "Unguided Full-2D Mechanical Rectification and Vector Mode Locking in Finite Janus MoSSe Contacts",
+  "abstract_words": 231,
+  "abstract_has_references": false,
+  "abstract_has_novelty_claim": false,
+  "keywords": [
+    "Janus MoSSe",
+    "mechanical rectification",
+    "depinning",
+    "finite-contact scaling",
+    "elastic relaxation",
+    "vector mode locking",
+    "generalized stacking-fault energy",
+    "rocking ratchet"
+  ],
+  "introduction_words": 467,
+  "introduction_heading_present": true,
+  "sections_numbered": true,
+  "sections": [
+    "Introduction",
+    "Model and computational methods",
+    "Results",
+    "Discussion",
+    "Conclusion",
+    "Data and code availability",
+    "References"
+  ],
+  "methods_is_last_text_section": false,
+  "toc_graphic": {
+    "present": false,
+    "width_cm": null,
+    "height_cm": null,
+    "format": null,
+    "dpi": null,
+    "original_author_created": null,
+    "has_logo": null
+  },
+  "figures": [
+    {"id":"Figure 1","font_family":null,"min_font_pt":null,"min_line_pt":null,"format":null,"dpi":null,"is_photographic":false,"caption_present":true},
+    {"id":"Figure 2","font_family":null,"min_font_pt":null,"min_line_pt":null,"format":null,"dpi":null,"is_photographic":false,"caption_present":true},
+    {"id":"Figure 3","font_family":null,"min_font_pt":null,"min_line_pt":null,"format":null,"dpi":null,"is_photographic":false,"caption_present":true},
+    {"id":"Figure 4","font_family":null,"min_font_pt":null,"min_line_pt":null,"format":null,"dpi":null,"is_photographic":false,"caption_present":true},
+    {"id":"Figure 5","font_family":null,"min_font_pt":null,"min_line_pt":null,"format":null,"dpi":null,"is_photographic":false,"caption_present":true},
+    {"id":"Figure 6","font_family":"non-Arial fallback in current environment","min_font_pt":7,"min_line_pt":1.0,"format":"PNG/SVG/EPS/TIF available","dpi":300,"is_photographic":false,"caption_present":true}
+  ]
+}

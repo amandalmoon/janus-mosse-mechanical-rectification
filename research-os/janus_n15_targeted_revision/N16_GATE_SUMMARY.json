@@ -1,0 +1,8 @@
+{
+  "red_team_closure": "PASS",
+  "five_reviewer_audit": "COMPLETE",
+  "scientific_blockers": 0,
+  "writing_only_major_fixes_applied": 1,
+  "next_gate": "N17 Current Reproducibility Release Rebuild + Clean Replay",
+  "venue_handoff": "BLOCKED_BY_STALE_RELEASE"
+}

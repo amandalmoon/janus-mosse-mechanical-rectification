@@ -1,0 +1,54 @@
+                                                                                                                   (4)
+
+   Two matched controls are constructed from the same translation-centered 2H Fourier spectrum. In the matched
+symmetrized surface the centered odd coefficients are set to zero; in the exact-inversion surface those odd coefficients
+change sign. The symmetrized landscape contains an inversion-paired pair of degenerate minima, so branch-specific
+thresholds need not be individually direction-degenerate; symmetry requires the paired/global envelope to be
+degenerate. Exact inversion imposes the stronger contracts F_c,+[U_inv]=F_c,-[U], F_c,-[U_inv]=F_c,+[U], and
+reversal of the lattice-vector current. A centered homotopy U_eta=U_even+eta U_odd is retained only as an SI
+mechanism-isolation diagnostic. No derivative with respect to eta, intermediate eta optimum, or mapping between eta
+and physical polarization is interpreted as a material law.
+2.4 Unguided full-2D depinning and stability boundaries
+   A constant longitudinal force F_y tilts the unguided contact energy according to
+                                                                                                                   (5)
+    Pinned states are full two-dimensional local minima satisfying grad U_N=(0,F_y) with a positive-definite Hessian
+H. Here F_y is a spatially uniform center-of-mass/body-force tilt applied at fixed imposed twist; rotational relaxation,
+applied torque, finite-stiffness spring pulling, and edge- or center-pulling protocols are not included. The operational
+threshold used for all headline claims is branch-followed: at F_y=0 the lowest-energy minimum is identified, and that
+same minimum is continued quasi-statically under positive or negative force until its stability is lost. Representative
+21 x 21 registry-seed enumerations find six stationary points and two stable minima per primitive cell. After an initial
+0.25-deg survey, both zero-force minima and their positive/negative loading thresholds were tracked on a 491-point
+dense/adaptive theta grid from 0 to 3 deg, with 16 independent 21 x 21 stationary-point checkpoints concentrated near
+the isolated high-order boundary point. Throughout that numerically resolved interval the prepared ground-state
+family remains lower in zero-force energy and longer lived under both loading directions. This is a numerical interval
+verification, not an interval-arithmetic proof over every real theta. The older last-stable-minimum-anywhere quantity
+is retained only as a diagnostic envelope.
+                                                                                                                   (6)
+   Candidate folds are refined from the continued branch by solving g_x=0, g_y=0 and det H=0 with residual below
+1e-7; the nonsoft eigenvalue must exceed 1e-6. Equilibrium continuation uses analytic gradients and Hessians with
+root tolerances of order 1e-11, and augmented fold refinements use 1e-13-scale nonlinear tolerances. Generic folds
+additionally require a nonzero cubic derivative along the soft eigenvector and nonzero coupling to the force
+parameter. An isolated point near theta=2.9734 deg violates the generic cubic condition and is therefore described as
+a higher-order stability degeneracy rather than being forced into the saddle-node label.
+2.5 Finite-size and boundary protocols
+   The inverse-linear-size test uses ten compact hexagonal contacts N=37, 61, 91, 127, 169, 217, 271, 331, 397 and
+469. Characteristic angles are obtained by directly solving F_c(theta_q)=q F_c(0) for q=0.95, 0.90, 0.85 and 0.80
+rather than by interpolation. A separate shape/size robustness calculation extends the compact hexagonal family to
+N=127, 217, 331, 469, 631, 817, 1027 and 1261 and adds disk-like compact contacts N=127, 241, 367, 517, 721 and
+931. The extended families are evaluated on a dense scaled-twist grid Theta=theta sqrt(N)=0,1,...,20 deg. Boundary
+sensitivity is treated separately with fixed-N=127 triangular contacts. For the 20 and 25 deg cuts, both low-energy
+registry-minimum families are continued and the zero-force ground state is selected before loading. Their zero-force
+energy crossing defines a prepared-state registry switch. As a sensitivity analysis rather than a microscopic edge
+model, the 48 outer sites are assigned relative local-GSFE weights from 0.5 to 1.5 while interior sites retain unit
+weight.
+                                                                                                                   (7)
+   Boundary sensitivity is tested with a fixed-N=127 triangular family whose cut orientation is rotated from 5 to 25
+deg relative to the underlying lattice. The small circumradius adjustment needed to preserve N is treated as part of the
+boundary family rather than as a continuous fixed-area rotation.
+2.6 In-plane relaxation hierarchy: linear membrane and nonlinear discrete model
+   Because elasticity and structural relaxation can renormalize friction even when the underlying interlayer energy
+surface is held fixed [7,8,18], we use two independent in-plane relaxation models without replacing the published
+GSFE. Tier 1 is a free-edge triangular finite-element membrane for the N=127 contact. Each site acquires a two-
+
+
+                                                           3

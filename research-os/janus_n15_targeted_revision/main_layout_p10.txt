@@ -1,0 +1,39 @@
+winding pair; the largest single-cycle lattice-lock residual is below 1e-9. A denser tau*=40 amplitude scan resolves
+finite-width plateaus including (0,0), (1,-1), (1,-2), (2,-3), (3,-4) and higher windings. This establishes broad sampled
+vector locking without implying that every point in continuous parameter space is locked or that each sampled
+attractor is unique.
+    The canonical (1,-1) plateau satisfies the stronger relative-periodic-orbit tests. Its one-cycle closure is of order
+1e-11, and independent DOP853 and Radau integrations give rho_F approximately 6.31e-22. Five additional plateaus
+spanning (0,0), (1,-2), (2,-3), (3,-4) and (2,-7) also have rho_F<1 under the same cross-solver test. Across these six
+representative states, 24/24 time-step checks preserve the expected winding and 162/162 local position/velocity
+perturbations return to the same winding. Increasing and decreasing amplitude continuation at tau*=40 agree at all 61
+sampled amplitudes. We interpret these results as attraction and local basin robustness of representative relative-
+periodic states, not as a proof of global attractor uniqueness or a complete continuous phase diagram.
+    The matched symmetry calculation supplies a direct dynamical falsification test. Exact spatial inversion of the
+same 2H GSFE maps (1,-1) to (-1,1) with current-reversal errors below 1.7e-14, while the matched symmetrized
+surface carries zero deterministic current within 8.6e-18 for the symmetric preparation. The directionality is therefore
+consistent with registry inversion asymmetry in the reduced landscape rather than with a fixed numerical preference
+for one forcing direction.
+
+
+
+
+Figure 5. Two-dimensional vector mode locking. (a,b) Integer windings m and n over the 91-point rocking-amplitude/period grid at
+theta=1.5 deg. (c) The tau*=40 slice shows a staircase of oblique lattice-vector states. (d) Independent DOP853 and Radau monodromy
+integrations agree on the very small leading Floquet spectral radius of the representative (1,-1) orbit; the magnitude is used only as
+evidence of strong attraction.
+
+3.7 Thermal current persists after exact winding identity is lost
+    Thermal robustness is quantified from stationary long-window trajectories, with the trajectory rather than the
+individual cycle used as the inference unit. The full T*=0.02-0.70 series uses N=500 trajectories after 60 burn cycles
+and 100 measured cycles, and T*=0.50-0.70 is independently replicated with a second N=500 ensemble. Exact
+deterministic winding identity is fragile: over the sampled nonzero temperatures the cycle-level probability assigned
+to the target (1,-1) cell never exceeds about 0.0818, and in the pooled high-temperature band it is only about 0.011-
+0.016. This does not imply loss of directed transport because noisy cycles can populate many lattice-vector channels
+while retaining a small nonzero mean drift.
+    The stationarity audit supports long-window trajectory-level inference. Late measurement blocks show no resolved
+two-component drift in either high-temperature seed ensemble, and deterministic-orbit, zero-force ground-state and
+competing-metastable starts lose their displacement memory by cycle 38 at the latest under matched noise. In the
+
+
+                                                                 10

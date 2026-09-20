@@ -1,0 +1,12 @@
+{
+  "theta_deg": 2.9733856558252625,
+  "n_stable_zero_force": 2,
+  "ground_U0": -0.3306160283530729,
+  "meta_U0": -0.15487855936780034,
+  "prepared_branch_position_at_1p91006": [
+    0.9999999999873402,
+    0.20463925593287197
+  ],
+  "periodic_distance_to_special_fold": 1.9571553264562166e-06,
+  "special_fold_force": 1.9100735314967028
+}

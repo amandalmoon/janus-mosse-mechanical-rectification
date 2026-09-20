@@ -1,0 +1,58 @@
+toward the inverse-linear-size law, while rotated triangular boundaries can reverse the equilibrium prepared bias
+through an edge-sensitive registry energy crossing under fixed-twist re-preparation; kinetic twist-sweep switching or
+hysteresis is not established. Under the declared m*=1, gamma*=4 protocol, zero-mean forcing generates cycle-
+resolved integer lattice-vector transport over all 91 sampled amplitude-period points, with representative plateaus
+independently verified as attracting. Thermal exact-winding identity is fragile, but after stationarity and replication
+checks a weaker mean vector drift remains statistically nonzero through the largest sampled T*=0.70; no extinction
+temperature is established. Linear FEM and independently reconstructed nonlinear VFF relaxations soften absolute
+thresholds while preserving the directional split. The resulting evidence supports a self-consistent DFT-anchored
+reduced-model mechanism; it does not establish loading-axis or damping invariance, a unique experimental friction
+coefficient, a physical polarity law, full 3D atomistic relaxation, a Kelvin-scale thermal boundary, or a universal
+nonlinear phase diagram.
+
+6. Data and code availability
+   The accompanying numerical materials contain the canonical unguided rigid-model release, the linear elastic-
+validation package, the independently reconstructed nonlinear bond-angle source and outputs, the Tier-2 interlayer-
+potential prescreen, and the Gate-level audit records used to freeze manuscript claims. The rigid and audit packages
+include the published-GSFE engine; dense prepared-branch enumeration and continuation; matched symmetry and
+exact-inversion controls; registry-origin and odd-sector gauge audits; exact finite-size/shape and boundary analyses;
+cycle-resolved vector-locking and Floquet checks; stationary thermal trajectories with block-drift, initialization-
+memory, independent-seed, bootstrap/Hotelling and timestep audits; and elasticity validation outputs. A citation-audit
+patch removes an earlier source-comment attribution that incorrectly described the 2024 Erratum as a GSFE phase-
+convention correction; no numerical coefficient or computed result changes under that documentation correction. No
+archival DOI is claimed until external repository deposition is completed.
+
+References
+1. Wang, J.; Khosravi, A.; Vanossi, A.; Tosatti, E. Colloquium: Sliding and pinning in structurally lubric 2D material
+    interfaces. Reviews of Modern Physics 96, 011002 (2024). https://doi.org/10.1103/RevModPhys.96.011002.
+2. Koren, E.; Duerig, U. Moire scaling of the sliding force in twisted bilayer graphene. Physical Review B 94, 045401
+    (2016). https://doi.org/10.1103/PhysRevB.94.045401.
+3. Yan, W.; Ouyang, W.; Liu, Z. Origin of frictional scaling law in circular twist layered interfaces: Simulations and
+    theory. Journal of the Mechanics and Physics of Solids 170, 105114 (2023).
+    https://doi.org/10.1016/j.jmps.2022.105114.
+4. Verhoeven, G. S.; Dienwiebel, M.; Frenken, J. W. M. Model calculations of superlubricity of graphite. Physical
+    Review B 70, 165418 (2004). https://doi.org/10.1103/PhysRevB.70.165418.
+5. Yan, W.; Gao, X.; Ouyang, W.; Liu, Z.; Hod, O.; Urbakh, M. Shape-dependent friction scaling laws in twisted
+    layered material interfaces. Journal of the Mechanics and Physics of Solids 185, 105555 (2024).
+    https://doi.org/10.1016/j.jmps.2024.105555.
+6. Liao, M. et al. Ultra-low friction and edge-pinning effect in large-lattice-mismatch van der Waals heterostructures.
+    Nature Materials 21, 47-53 (2022). https://doi.org/10.1038/s41563-021-01058-4.
+7. Gao, X.; Yan, W.; Ouyang, W.; Liu, Z.; Urbakh, M.; Hod, O. Frictional Dissipation and Scaling Laws at van der
+    Waals Interfaces: The Role of Edge and Corner Elastic Moire Pinning. ACS Nano 19, 29255-29264 (2025).
+    https://doi.org/10.1021/acsnano.5c04617.
+8. Minkin, A. S.; Lebedeva, I. V.; Popov, A. M.; Vyrko, S. A.; Poklonski, N. A.; Lozovik, Y. E. Restriction of
+    macroscopic structural superlubricity due to structure relaxation by the example of twisted graphene bilayer.
+    Physical Review Materials 9, 024002 (2025). https://doi.org/10.1103/PhysRevMaterials.9.024002.
+9. Lu, A.-Y. et al. Janus monolayers of transition metal dichalcogenides. Nature Nanotechnology 12, 744-749 (2017).
+    https://doi.org/10.1038/nnano.2017.100.
+10. Zhang, K. et al. Enhancement of van der Waals interlayer coupling through polar Janus MoSSe. Journal of the
+    American Chemical Society 142, 17499-17507 (2020). https://doi.org/10.1021/jacs.0c07051.
+11. Lin, L.; Hu, X.; Meng, R.; Li, X.; Guo, Y.; Da, H.; Jiang, Y.; Wang, D.; Yang, Y.; Yan, X. Sliding ferroelectricity
+    and the moire effect in Janus bilayer MoSSe. Nanoscale 16, 4841-4850 (2024).
+    https://doi.org/10.1039/D3NR05730E.
+12. Angeli, M.; Schleder, G. R.; Kaxiras, E. Twistronics of Janus transition metal dichalcogenide bilayers. Physical
+    Review B 106, 235159 (2022). https://doi.org/10.1103/PhysRevB.106.235159.
+
+
+
+                                                          14

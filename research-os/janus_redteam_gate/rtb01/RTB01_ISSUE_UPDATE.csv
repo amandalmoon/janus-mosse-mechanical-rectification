@@ -1,0 +1,2 @@
+issue_id,old_severity,new_status,resolution,claim_action,next_action
+RT-B01,BLOCKER,RESOLVED_WITH_CLAIM_REDEFINITION,"Burn=60/measure=100 stationarity audit; two independent N=500 high-T seeds; start-state memory gone by <=38 cycles; late-block drift not detected; high-T timestep effect sizes compatible.","Retire 0.60/0.65/0.70 detectability boundaries. Replace with monotonic stationary mean-current decay and nonzero mean current through sampled T*=0.70.","Update Claim-Evidence Matrix then run ACS Nano Figure Preflight before regenerating thermal figure."

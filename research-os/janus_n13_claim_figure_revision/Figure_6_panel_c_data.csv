@@ -1,0 +1,13 @@
+T,P_vcycle_negative,P_target_winding,source
+0.02,0.9979,0.0393,N500_stationary
+0.04,0.97466,0.0686,N500_stationary
+0.06,0.92814,0.08176,N500_stationary
+0.1,0.8178,0.07342,N500_stationary
+0.16,0.68818,0.05332,N500_stationary
+0.24,0.59732,0.03712,N500_stationary
+0.32,0.55344,0.0255,N500_stationary
+0.5,0.5193300000000001,0.01556,N1000_pooled_two_seed
+0.55,0.5148,0.01403,N1000_pooled_two_seed
+0.6,0.51181,0.01293,N1000_pooled_two_seed
+0.65,0.5096900000000001,0.01168,N1000_pooled_two_seed
+0.7,0.50802,0.01116,N1000_pooled_two_seed

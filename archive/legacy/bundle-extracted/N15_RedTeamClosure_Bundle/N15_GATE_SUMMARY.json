@@ -1,0 +1,12 @@
+{
+  "gate": "N15_SHORT_RED_TEAM_CLOSURE",
+  "status": "CLOSED",
+  "blockers": 0,
+  "majors_open": 0,
+  "minors_open": 0,
+  "legacy_thermal_wording": "PASS",
+  "thermal_claim_sync": "PASS",
+  "red_team_major_scope_limits": "PASS",
+  "visual_qa": "PASS",
+  "next_gate": "FIVE_REVIEWER_PAPER_AUDIT"
+}

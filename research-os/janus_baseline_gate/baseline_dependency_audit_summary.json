@@ -1,0 +1,23 @@
+{
+  "reference_initialization": {
+    "root_energy": -0.5596581941027724,
+    "ground_energy": -0.5596581941027724,
+    "matched_min_index": 0,
+    "distance_to_ground": 0.0,
+    "distance_to_matched": 0.0,
+    "n_minima": 2
+  },
+  "shape_checks": {
+    "rows": 28,
+    "max_abs_dFp": 1.0658141036401503e-14,
+    "max_abs_dFm": 1.7763568394002505e-15,
+    "all_shipped_equal_prepared_1e-7": true,
+    "min_number_of_zero_force_minima": 2,
+    "max_number_of_zero_force_minima": 2
+  },
+  "triangle_checks": {
+    "max_grad_norm": 1.0454821624085051e-15,
+    "min_eig_min": 5.892228603469965,
+    "all_AB_are_stationary_stable": true
+  }
+}

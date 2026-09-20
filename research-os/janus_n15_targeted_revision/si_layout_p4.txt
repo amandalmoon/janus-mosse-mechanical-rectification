@@ -1,0 +1,68 @@
+Table S8b. High-temperature stationary two-seed pooled joint-current audit (N=1000 per T*).
+                                                                                                   T_H^2/
+T*                 mean u              95% CI u            mean v              95% CI v                                zero vector
+                                                                                                   T_0.95^2
+                                       [0.06012,0.100                          [-0.17531,-
+0.50               0.08001                                 -0.15509                                38.23               excluded
+                                       08]                                     0.13503]
+                                       [0.04054,0.082                          [-0.14502,-
+0.55               0.06175                                 -0.12366                                21.30               excluded
+                                       76]                                     0.10270]
+                                       [0.02898,0.073                          [-0.12979,-
+0.60               0.05112                                 -0.10720                                14.62               excluded
+                                       70]                                     0.08488]
+                                       [0.01892,0.065                          [-0.10977,-
+0.65               0.04223                                 -0.08690                                9.00                excluded
+                                       53]                                     0.06367]
+                                       [0.01265,0.061                          [-0.10088,-
+0.70               0.03700                                 -0.07645                                6.33                excluded
+                                       32]                                     0.05195]
+
+Each trajectory contains 60 burn cycles and 100 measured cycles at dt=0.02. The full T*=0.02-0.70 series uses N=500 independent
+trajectories per temperature, and the high-temperature band T*=0.50-0.70 is repeated with a second independent N=500 ensemble.
+The trajectory is the inferential unit. Late 20-cycle blocks show no resolved two-component drift in either high-temperature seed
+ensemble, and deterministic-orbit, zero-force ground-state and competing-metastable starts become identical to numerical precision
+by cycle 38 at the latest under common noise. The pooled high-temperature mean vector decreases from (0.08001,-0.15509) at
+T*=0.50 to (0.03700,-0.07645) at T*=0.70, but a 50,000-resample trajectory bootstrap still excludes the zero vector at every sampled
+high-temperature point. At T*=0.70 the component intervals are u in [0.01265,0.06132] and v in [-0.10088,-0.05195]. P(v_cycle<0)
+approaches one-half but remains slightly above it through 0.70, while the exact target-winding probability is only about 1.1-1.6% over
+T*=0.50-0.70. Targeted dt=0.04, 0.02 and 0.01 reruns at T*=0.60, 0.65 and 0.70 agree within 1.12 combined standard errors in either
+mean-current component.
+
+S9. In-plane relaxation hierarchy
+The rigid-model result was challenged first by allowing all N=127 sites to relax in plane under a free-edge triangular finite-element
+membrane. The same published 2H GSFE is retained at each local registry. Internal x/y translations and infinitesimal rigid rotation are
+projected out so that global registry and imposed twist remain external coordinates. The source Angeli GSFE already includes local
+relaxation of the interlayer separation at each sampled aligned registry; the present extensions therefore test collective in-plane finite-
+contact compliance, not the local vertical separation already folded into the GSFE.
+Table S9. In-plane elastic branch-followed validation for N=127.
+Case / theta                 F_c,+*                    F_c,-*                      rho                         Max principal strain
+Rigid, 1.5 deg               3.071135                  1.258672                    0.418601                    0
+Elastic C, 1.5 deg           2.934302                  1.190210                    0.422860                    0.459%
+Elastic C/2, 1.5 deg         2.807397                  1.135229                    0.424125                    0.824%
+Elastic 2C, 1.5 deg          3.001636                  1.222534                    0.421172                    0.244%
+Elastic C, 3 deg             1.573022                  0.631274                    0.427233                    0.864%
+Elastic C/2, 3 deg           1.244897                  0.516821                    0.413276                    1.597%
+Rigid-limit 100C, 1.5
+                             3.069751                  1.257886                    0.418673                    0.0052%
+deg
+At theta=1.5 deg a fresh nominal linear-membrane rerun gives F_c,+*=2.934302, F_c,-*=1.190210 and rho=0.422860; C/2 gives
+2.807397, 1.135229 and 0.424125; 2C gives 3.001636, 1.222534 and 0.421172; the alternative elastic constants give 2.944409,
+1.194897 and 0.422658; and 100C recovers 3.069751, 1.257886 and 0.418673. At theta=3 deg the nominal values are 1.573022 and
+0.631274 with rho=0.427233. Thus in-plane relaxation renormalizes absolute thresholds while preserving the directional sign over the
+tested stiffness range. The nonlinear bond-angle model is independently reconstructed from the documented 342-bond/648-angle
+network and calibrated coefficients before comparison.
+
+S10. Nonlinear discrete-relaxation cross-check
+The independently reconstructed nonlinear triangular-site model reproduces the target homogeneous elastic constants to numerical
+precision. At theta=1.5 deg the nominal branch gives F_c,+*=2.935400, F_c,-*=1.190479 and rho=0.422921; the half-stiffness branch
+gives 2.810107, 1.135693 and 0.424353. At theta=3 deg the nominal nonlinear result is 1.574365, 0.631006 and 0.427755. These
+values remain within about 0.13% of the corresponding fresh linear-FEM thresholds. At theta=1.5 deg nominal stiffness the largest
+last-stable-state bond strain is below 0.40% and the largest local angle change below 0.40 deg.
+  case                F_c,+*              F_c,-*             rho                vs FEM F+       vs FEM F-         sign
+  theta=1.5, C/2      2.810107            1.135693           0.424353           +0.0966%        +0.0390%          positive
+  theta=1.5, C        2.935400            1.190479           0.422921           +0.0374%        +0.0226%          positive
+  theta=3.0, C        1.574365            0.631006           0.427755           +0.0854%        -0.0425%          positive
+Table S10. Nonlinear discrete in-plane relaxation versus the linear finite-element model.
+
+                                                                      4

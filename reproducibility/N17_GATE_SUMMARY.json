@@ -1,0 +1,10 @@
+{
+  "gate": "PASS",
+  "five_reviewer_CM5": "CLOSED",
+  "sha256_manifest": "PASS",
+  "current_release_validation": "PASS",
+  "canonical_baseline_validation": "PASS",
+  "stationary_thermal_recompute": "PASS",
+  "scientific_blockers_remaining": 0,
+  "next_gate": "ACS Nano venue/submission layer"
+}

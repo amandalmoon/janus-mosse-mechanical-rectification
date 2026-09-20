@@ -1,0 +1,32 @@
+{
+  "n_theta": 13,
+  "theta_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0
+  ],
+  "all_two_minima": true,
+  "all_ground_lower_and_longer_both_directions": true,
+  "theta1p5": {
+    "ground_Fc_plus": 3.07113533853926,
+    "ground_Fc_minus": 1.2586722984999545,
+    "meta_Fc_plus": 0.21105864341942915,
+    "meta_Fc_minus": 0.611697272231306,
+    "U_ground": -0.5596581941027724,
+    "U_meta": -0.2514737433951883
+  },
+  "max_augmented_fold_residual": 1.0831806703673445e-11,
+  "min_hard_fold_eigenvalue": 6.805938570882001,
+  "global_spotcheck_above_has_no_stable_minimum": true,
+  "gate": "PASS"
+}

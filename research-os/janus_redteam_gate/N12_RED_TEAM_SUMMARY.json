@@ -1,0 +1,24 @@
+{
+  "current_stage": "Red Team",
+  "gate": "BLOCKED",
+  "blockers": [
+    "RT-B01"
+  ],
+  "majors": [
+    "RT-M01",
+    "RT-M02",
+    "RT-M03",
+    "RT-M04",
+    "RT-M05",
+    "RT-M06"
+  ],
+  "residuals": [
+    "RT-R01"
+  ],
+  "passed_challenges": [
+    "RT-P01",
+    "RT-P02",
+    "RT-P03"
+  ],
+  "next_action": "Return thermal analysis upstream for burn-length/stationarity convergence before Five Reviewer Paper Audit."
+}

@@ -1,0 +1,33 @@
+{
+  "approved_manifest_rows": 597,
+  "unique_nested_extracted": 7,
+  "excluded_zip_bundles": 23,
+  "missing_files": 0,
+  "staged_file_count": 611,
+  "staged_bytes": 144596230,
+  "status_counts": {
+    "LEGACY": 25,
+    "CURRENT": 49,
+    "SUPPORTING": 516,
+    "LEGACY_NESTED_EXTRACT": 7
+  },
+  "github_repository": "amandalmoon/janus-mosse-mechanical-rectification",
+  "github_base_commit_sha": "704b053050fbb70573d09f0856be1ba1d2239920",
+  "github_existing_commit_count": 4,
+  "migration_payload_paths_changed": 609,
+  "final_repo_file_count": 612,
+  "single_migration_commit_expected": true,
+  "git_lfs_required": true,
+  "git_lfs_extensions": [
+    ".docx",
+    ".pdf",
+    ".zip",
+    ".tif",
+    ".tiff",
+    ".npz",
+    ".png"
+  ],
+  "final_repo_raw_bytes": 144597881,
+  "sha256_manifest_rows": 610,
+  "migration_payload_file_count": 609
+}

@@ -1,0 +1,125 @@
+{
+  "reference_endpoint": {
+    "forward": {
+      "old_linear": 1.944451626443851,
+      "exact": 1.9444693296175262,
+      "delta_deg": 1.7703173675220896e-05
+    },
+    "reverse": {
+      "old_linear": 1.0099068387052372,
+      "exact": 1.009973479607291,
+      "delta_deg": 6.664090205377171e-05
+    },
+    "W_D_old": 0.9345447877386137,
+    "W_D_exact": 0.9344958500102352,
+    "W_D_delta": -4.8937728378550815e-05
+  },
+  "size_scaling": {
+    "fit_old": {
+      "alpha": 0.5031315862697574,
+      "prefactor": 10.703652531133649,
+      "R2_log": 0.9999948668285461
+    },
+    "fit_exact": {
+      "alpha": 0.5031332445728818,
+      "prefactor": 10.703443456617402,
+      "R2_log": 0.999994817615992
+    },
+    "alpha_delta": 1.6583031243744273e-06,
+    "mean_WDsqrtN_old": 10.533684709148535,
+    "sd_WDsqrtN_old": 0.029465441836439024,
+    "mean_WDsqrtN_exact": 10.533389726984314,
+    "sd_WDsqrtN_exact": 0.029495159782376944,
+    "max_abs_WD_change_deg": 7.73834567404652e-05,
+    "max_rel_WD_change": 0.00012112596162327209
+  },
+  "factorization": {
+    "rho_mean": 0.10328916625342521,
+    "rho_sd_sample": 0.0013642697166123072,
+    "rho_min": 0.10168984243739265,
+    "rho_max": 0.10604626249824672,
+    "factorization_max_relerr_forward_percent": 0.24927494792070476,
+    "factorization_max_relerr_reverse_percent": 0.30841598722172214,
+    "band_area_force_deg": 2.10844902402581,
+    "endpoint_patch_dependency": "none: metrics use direct threshold surface values on fixed theta grid"
+  },
+  "odd_sector": {
+    "slope": 2.8322126801610508,
+    "R2": 0.99999984833088,
+    "eta_opt": 0.49999999999999994,
+    "DeltaFc_at_opt": 1.378647370616474,
+    "rho_at_opt": 0.280902077089547,
+    "endpoint_patch_dependency": "none: fixed theta=1.5 direct guided_threshold calls"
+  },
+  "edge": {
+    "reconstruction_certified_against_published_guided_roots": false,
+    "published_root_anchors_deg": {
+      "20": 2.963732,
+      "25": 2.890673
+    },
+    "root_differences_deg": {
+      "20": null,
+      "25": null
+    },
+    "metrics": {
+      "5": {
+        "R": 9.177,
+        "N": 127,
+        "rho_mean": 0.07691436670215913,
+        "max_factorization_error_percent": 8.880280413343185,
+        "theta_f_F0_exact": 1.757385576201598,
+        "theta_r_F0_exact": 0.9445674456665399,
+        "W_D_F0_exact": 0.812818130535058,
+        "sign_reversal_theta_exact": 2.9232533126945888
+      },
+      "10": {
+        "R": 9.2,
+        "N": 127,
+        "rho_mean": 0.08011109110809585,
+        "max_factorization_error_percent": 7.747999318005502,
+        "theta_f_F0_exact": 1.7710442212899062,
+        "theta_r_F0_exact": 0.9484406579684208,
+        "W_D_F0_exact": 0.8226035633214854,
+        "sign_reversal_theta_exact": null
+      },
+      "15": {
+        "R": 9.2,
+        "N": 127,
+        "rho_mean": 0.08494036061552877,
+        "max_factorization_error_percent": 6.168568452783423,
+        "theta_f_F0_exact": 1.772039324317393,
+        "theta_r_F0_exact": 0.9415028240284544,
+        "W_D_F0_exact": 0.8305365002889387,
+        "sign_reversal_theta_exact": null
+      },
+      "20": {
+        "R": 9.2,
+        "N": 127,
+        "rho_mean": 0.09056587658049187,
+        "max_factorization_error_percent": 4.333082378193451,
+        "theta_f_F0_exact": 1.7888799425244646,
+        "theta_r_F0_exact": 0.9436403905060576,
+        "W_D_F0_exact": 0.845239552018407,
+        "sign_reversal_theta_exact": null
+      },
+      "25": {
+        "R": 9.238,
+        "N": 127,
+        "rho_mean": 0.09991961624931497,
+        "max_factorization_error_percent": 0.7987361714482253,
+        "theta_f_F0_exact": 1.8060066786294466,
+        "theta_r_F0_exact": 0.9378440639704406,
+        "W_D_F0_exact": 0.868162614659006,
+        "sign_reversal_theta_exact": null
+      }
+    }
+  },
+  "dependency_verdict": {
+    "W_D": "DIRECTLY DEPENDENT on crossing interpolation; exact-root patch changes values slightly",
+    "size_scaling_exponent_and_WDsqrtN": "DEPENDENT because built from W_D endpoints for every N; recomputed exact values required",
+    "rho_and_factorization": "INDEPENDENT of endpoint interpolation; computed from direct Fc surfaces at fixed theta",
+    "scaled_surface_collapse": "INDEPENDENT of endpoint interpolation; direct Fc(theta,N) surface observable",
+    "edge_factorization_and_sign_reversal": "INDEPENDENT of F0 endpoint interpolation; direct threshold-surface/rho zeros; F0 edge-window widths are dependent",
+    "odd_sector_continuation": "INDEPENDENT of endpoint interpolation; fixed theta direct thresholds"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "legacy_060_065_absent": true,
+  "legacy_065_070_absent": true,
+  "pilot_boundary_absent": true,
+  "earlier_thermal_boundary_absent": true,
+  "damping_protocol_specific": true,
+  "damping_sweep": true,
+  "loading_axis_scope": true,
+  "preparation_opposite_sign": true,
+  "boundary_kinetics_excluded": true,
+  "mechanical_constraints": true,
+  "elasticity_scope": true,
+  "thermal_claim_070": true,
+  "si_damping_scope": true,
+  "si_mech_scope": true
+}

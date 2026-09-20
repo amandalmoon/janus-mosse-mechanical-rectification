@@ -1,0 +1,38 @@
+fresh linear membrane by only about 0.037%, 0.023% and 0.014% in F_c,+, F_c,- and rho. The largest bond strain
+and local angle change at the last stable states remain below 0.40% and 0.40 deg. At theta=3 deg the nonlinear model
+gives 1.574365 and 0.631006 with rho=0.427755, again close to the linear-membrane result while retaining the
+directional sign. The in-plane robustness result is therefore not a linear-FEM discretization artifact, but it is still not a
+collective three-dimensional atomistic relaxation.
+3.5 Boundary orientation drives competing-registry ground-state switching
+   The high-twist boundary reversal has a more specific mechanism than the earlier global-envelope description. For
+the 20 and 25 deg triangular cuts, two low-energy registry minima coexist and carry opposite branch-followed
+directional biases. As twist increases their zero-force energies cross, changing which registry is selected as the
+prepared ground state when the contact is re-prepared independently at each fixed twist. The ground-state crossings
+occur at theta=2.92127801 deg for the 20 deg cut and 2.84723312 deg for the 25 deg cut. Immediately across each
+crossing the prepared-state Delta F_c changes from about +0.67/+0.70 to about -0.67/-0.70. This is an equilibrium
+family-selection result under fixed-twist re-preparation. No A-to-B transition path, activation barrier, continuous
+twist-sweep switching protocol, or hysteresis was calculated, so the result is not a kinetic switching prediction.
+   The switch position is not a universal material constant. In the boundary-weight sensitivity test, changing the
+relative local-GSFE weight of the 48 outer sites from 0.5 to 1.5 moves the 20 deg crossing from 3.1701 to 2.7779 deg
+and the 25 deg crossing from 3.0832 to 2.7108 deg. In all ten tested weight/cut combinations the A/B energy crossing
+persists and the two registry families carry opposite directional biases, but the crossing does not lie inside the nominal
+0-3 deg window for every weight. The robust reduced-model statement is therefore the competing-registry
+mechanism and sign exchange, not a universal reversal angle or a guarantee that a chosen finite twist window
+contains the switch. Relaxed or reconstructed edges require new atomistic or elastic input.
+
+
+
+
+Figure 4. Boundary-induced competition between registry minima. (a) The zero-force energies of registry families A and B cross at high
+twist for 20 and 25 deg triangular cuts. (b) The two families carry opposite branch-followed directional splittings. (c) Selecting the lower-
+energy zero-force state therefore produces a sign reversal of the prepared-state response at the registry switch. (d) Varying the outer-site
+energy weight shifts the transition substantially, showing that the exact switch angle is edge-model sensitive.
+
+3.6 A broad drive-period map supports oblique vector mode locking
+   At theta=1.5 deg, zero-mean longitudinal forcing produces genuinely two-dimensional lattice transport without a
+guide. The canonical point F0*=2.0, tau*=40 advances by (m,n)=(1,-1) per cycle. More broadly, all 91 sampled
+combinations in the F0*=1.0-4.0 and tau*=20-80 grid reproduce integer lattice transport. The stricter cycle-resolved
+rerun shows that, after transients, every one of the 40 measured cycles at every sampled point repeats the same
+
+
+                                                                     9

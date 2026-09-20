@@ -1,0 +1,39 @@
+3.3 Finite-size similarity survives removal of the guide
+   The original ten-contact hexagonal calculation gives characteristic-angle fits theta_q proportional to N^-alpha with
+alpha=0.50357-0.50365 across q=0.80-0.95 and both loading directions, with R^2 at least 0.999993. Removing the
+smallest contacts drives the fitted exponent monotonically toward 1/2; for N>=217 the corresponding range is
+0.50127-0.50130. The result is therefore interpreted as inverse-linear-size structure-factor scaling with finite-size
+corrections, not as a new universal exponent. The extended audit strengthens that interpretation: compact hexagons
+N=127-1261 and disk-like contacts N=127-931 were evaluated on every integer Theta from 0 to 20 deg. At Theta=20
+the maximum cross-size deviations are 0.0818% (+y) and 0.0800% (-y) for hexagons and 0.0230% and 0.0222% for
+disks; no larger hidden deviation appears at intermediate Theta.
+   The two compact-shape families nearly coincide as well. Across the dense Theta=0-20 grid, the largest difference
+between their family-mean normalized thresholds occurs at Theta=20 and is 0.1048% for +y and 0.1022% for -y,
+while the normalized splitting differs by only about 2.5e-5 in absolute terms. High-Theta spot checks for the smallest
+contacts also confirm that the reported thresholds remain prepared-ground-state stability losses even when theta
+exceeds the original 0-3 deg N=127 audit window. Thus theta sqrt(N) is a robust similarity coordinate for the tested
+compact rigid families, not a claim for arbitrary edges, reconstructed boundaries, or deformable flakes.
+
+
+
+
+Figure 3. Extended finite-size and compact-shape similarity. (a,b) Branch-followed forward (solid) and reverse (dashed) thresholds for
+larger hexagonal and independent disk-like contact families collapse when plotted against Theta=theta sqrt(N). (c) Maximum cross-size
+deviations remain below 0.1% through Theta=20. (d) Hexagonal and disk family means differ by about 0.1% or less over the sampled
+scaled range.
+
+3.4 Two distinct in-plane relaxation models preserve the directional split
+   The linear membrane extension changes the absolute pinning scale but does not remove the headline directional
+split. A fresh nominal-stiffness rerun at theta=1.5 deg gives F_c,+*=2.934302 and F_c,-*=1.190210, corresponding to
+rho=0.422860. Relative to the rigid values, the thresholds decrease by about 4.46% and 5.44%, while rho changes by
+about 1%. The maximum principal strains at the last stable states are 0.328% and 0.459%, with nodal displacements
+below 0.06 A. The C/2 bracket gives 2.807397 and 1.135229 with rho=0.424125; 2C gives 3.001636 and 1.222534
+with rho=0.421172. An independent elastic-constant pair gives 2.944409 and 1.194897, and a 100C calculation
+recovers the rigid thresholds within about 0.06%.
+   The nonlinear discrete model provides a distinct constitutive/discretization check while sharing the same GSFE
+and target elastic constants. Reconstructing the documented 342-bond/648-angle model independently yields
+C11=119.299994 N/m, C12=27.500000 N/m and C66=45.899997 N/m under homogeneous-strain tests. At theta=1.5
+deg the reconstructed model gives F_c,+*=2.935400 and F_c,-*=1.190479 with rho=0.422921, differing from the
+
+
+                                                                  8

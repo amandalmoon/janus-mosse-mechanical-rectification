@@ -1,0 +1,10 @@
+{
+  "rows": 112,
+  "all_connected": true,
+  "max_final_dist": 0.0059086868673459605,
+  "max_branch_jump": 0.012331432109630421,
+  "min_pre_fold_eigenvalue": 0.07408361482449666,
+  "max_equilibrium_residual": 3.9553203655349747e-13,
+  "min_n_minima": 2,
+  "max_n_minima": 2
+}

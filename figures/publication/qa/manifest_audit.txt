@@ -1,0 +1,12 @@
+### FIG-01.json
+RESULT: PASS
+### FIG-02.json
+RESULT: PASS
+### FIG-03.json
+RESULT: PASS
+### FIG-04.json
+RESULT: PASS
+### FIG-05.json
+RESULT: PASS
+### FIG-06.json
+RESULT: PASS

@@ -1,0 +1,93 @@
+{
+  "legacy_thermal_forbidden_absent": true,
+  "legacy_hits": [],
+  "required_scope_present": {
+    "damping_protocol_specific": true,
+    "damping_sweep": true,
+    "loading_axis": true,
+    "preparation_sign": true,
+    "boundary_no_kinetics": true,
+    "mechanics_scope": true,
+    "elasticity_scope": true
+  },
+  "figure6_a_headers": [
+    "T",
+    "mean_u",
+    "u_ci_lo",
+    "u_ci_hi",
+    "mean_v",
+    "v_ci_lo",
+    "v_ci_hi",
+    "source"
+  ],
+  "figure6_c_headers": [
+    "T",
+    "P_vcycle_negative",
+    "P_target_winding",
+    "source"
+  ],
+  "figure6_a_T070": [
+    {
+      "T": "0.7",
+      "mean_u": "0.0369976538720492",
+      "u_ci_lo": "0.0126497852007917",
+      "u_ci_hi": "0.061316091337157",
+      "mean_v": "-0.0764475302089921",
+      "v_ci_lo": "-0.1008811009342779",
+      "v_ci_hi": "-0.0519549338703813",
+      "source": "N1000_pooled_two_seed"
+    }
+  ],
+  "figure6_c_T070": [
+    {
+      "T": "0.7",
+      "P_vcycle_negative": "0.50802",
+      "P_target_winding": "0.01116",
+      "source": "N1000_pooled_two_seed"
+    }
+  ],
+  "table3_index": 13,
+  "table3_thermal_row": [
+    "Thermal current",
+    "stationary current nonzero through sampled T*=0.70; at 0.70 pooled <u,v>=(0.03700,-0.07645), bootstrap u [0.01265,0.06132], v [-0.10088,-0.05195]; P target=0.01116",
+    "Weak directed drift persists after exact mode identity is strongly mixed; no extinction temperature established"
+  ],
+  "si_s8b_table_index": 9,
+  "si_s8b_T070": [
+    "0.70",
+    "0.03700",
+    "[0.01265,0.06132]",
+    "-0.07645",
+    "[-0.10088,-0.05195]",
+    "6.33",
+    "excluded"
+  ],
+  "matrix_C15_C19_present": [
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19"
+  ],
+  "matrix_C17_claim": "The full two-component stationary mean lattice current remains statistically nonzero through the largest sampled temperature T*=0.70.",
+  "matrix_C18_contract": "Pooled high-T trajectory bootstrap: P(v_cycle<0)=0.51933 [0.51632,0.52237] at 0.50 and 0.50802 [0.50506,0.51100] at 0.70; target-winding probability simultaneously falls to ~0.011.",
+  "sync_strings_main": {
+    "0.03700": true,
+    "-0.07645": true,
+    "0.01265": true,
+    "0.06132": true,
+    "-0.10088": true,
+    "-0.05195": true,
+    "0.50802": true,
+    "0.01116": true
+  },
+  "sync_strings_si": {
+    "0.03700": true,
+    "-0.07645": true,
+    "0.01265": true,
+    "0.06132": true,
+    "-0.10088": true,
+    "-0.05195": true
+  },
+  "all_scope_checks_pass": true
+}

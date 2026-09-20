@@ -1,0 +1,3 @@
+CANONICAL UNGUIDED BASELINE VALIDATION: PASS
+config/canonical_unguided.json is authoritative for headline physics
+config/production.json is legacy guided provenance only (k_perp=25)

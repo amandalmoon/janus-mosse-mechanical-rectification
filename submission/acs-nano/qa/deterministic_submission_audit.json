@@ -1,0 +1,37 @@
+{
+  "status": "CONDITIONAL_READY",
+  "blockers": 0,
+  "major": 6,
+  "issues": [
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 1: ACS Nano checklist specifies Arial lettering within graphics."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 2: ACS Nano checklist specifies Arial lettering within graphics."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 3: ACS Nano checklist specifies Arial lettering within graphics."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 4: ACS Nano checklist specifies Arial lettering within graphics."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 5: ACS Nano checklist specifies Arial lettering within graphics."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 6: ACS Nano checklist specifies Arial lettering within graphics."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+  Result                                            Audit-resolved value                       Interpretation
+
+                                          stationary current nonzero through
+                                          sampled T*=0.70; at 0.70 pooled         Weak directed drift persists after
+  Thermal current
+                                          <u,v>=(0.03700,-0.07645),               exact mode identity is strongly
+                                          bootstrap u [0.01265,0.06132], v        mixed; no extinction temperature
+                                          [-0.10088,-0.05195]; P                  established
+                                          target=0.01116
+                                           FEM: 2.934302 / 1.190210,
+                                                                                  Absolute scale softens; split
+                                           rho=0.422860; nonlinear VFF:
+   In-plane relaxation, theta=1.5 deg                                             survives two independent in-plane
+                                           2.935400 / 1.190479,
+                                                                                  models
+                                           rho=0.422921
+
+
+4. Discussion
+4.1 What the recalculated mechanism establishes
+    The principal result is branch-resolved as well as fully two-dimensional. The published MoSSe GSFE and finite-
+contact geometry are sufficient, within the local-GSFE reduced model, to produce a direction-split stability boundary
+when loading begins from the zero-force ground state. Dense/adaptive prepared-branch verification rules out a switch
+to a different metastable basin as the source of the headline split, while same-spectrum symmetrization and exact
+inversion remove or reverse the directional observables as symmetry requires. The registry-origin audit adds a
+complementary negative result: the physical asymmetry is invariant, but an arbitrary cosine/sine odd-sector
+continuation is not. Consequently the mechanism is attributed to nonremovable registry inversion asymmetry, not to a
+gauge-dependent eta susceptibility or optimum.
+    The term 'intrinsic' remains deliberately narrow. It means only that no transverse guiding potential is required to
+obtain rectification in the baseline finite-contact GSFE model. It does not mean preparation independent, loading-axis
+independent, damping independent, or mechanically protocol independent: the competing metastable basin at
+theta=1.5 deg carries the opposite signed static split, the force-direction scan is strongly anisotropic, and the
+dynamical map is conditioned on declared reduced inertial/damping parameters. The headline model is rigid, and the
+two extensions introduced here add in-plane compliance only; neither is a fully three-dimensional atomistic slider.
+Inertia, damping, load response and experimental state preparation are also not supplied by the same first-principles
+calculation. Engineered confinement is therefore best viewed as pathway control applied to an already rectifying
+reduced system.
+    The relaxation hierarchy changes the scope of the robustness claim in a useful way. It rules out the interpretation
+of the rigid numerical thresholds as material constants, because even sub-percent in-plane strains reduce the absolute
+threshold scale and the reduction grows with twist. At the same time, the sign and normalized splitting remain close
+to their rigid values across a factor-of-four stiffness bracket and across two distinct internal representations that share
+the same GSFE and target elastic constants: a linear finite-element membrane and a geometrically nonlinear discrete
+bond-angle network. This is consistent with the broader literature showing that elasticity can strongly renormalize
+frictional magnitude and scaling [7,8,18], while indicating that the present directional mechanism is not eliminated by
+the tested in-plane compliance.
+4.2 Geometry separates into compact-contact similarity and registry-state boundary switching
+    The theta sqrt(N) similarity is substantially more robust than in the initial ten-size calculation. Larger hexagons
+and an independent disk-like compact family remain collapsed to about 0.1% or better across a dense Theta=0-20
+grid, supporting the structure-factor interpretation for compact rigid contacts. This result sits alongside established
+shape- and edge-controlled finite-contact scaling [5,7] and very recent moire-boundary/edge-energy theories [25,26];
+the novelty claim is therefore not the generic existence of edge-controlled scaling or an inverse-linear-size angle.
+Boundary orientation behaves differently in the present model: sufficiently rotated triangular cuts bring two registry
+minima into competition; their zero-force energy crossing changes the equilibrium prepared ground state and reverses
+its branch-followed directional bias under fixed-twist re-preparation. The A/B competition and crossing persist across
+the tested surrogate outer-site weights, but the switch angle - and whether it falls inside the nominal 0-3 deg interval -
+is edge-model dependent. Because no transition barrier or twist-sweep hysteresis was calculated, the qualitative
+registry competition is an equilibrium reduced-model prediction rather than a demonstrated kinetic switching event,
+and the numerical reversal angle is not a universal material constant.
+
+
+
+                                                            12

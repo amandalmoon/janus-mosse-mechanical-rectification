@@ -1,0 +1,68 @@
+   The same branch-resolved search is repeated for selected k_perp* values. In this manuscript the guide is not a
+prerequisite for physical admissibility; it is an external control that reshapes accessible escape pathways. Because the
+guide is secondary to the unguided claim, we do not interpret the sampled k_perp scan as a complete confinement
+phase diagram. The formerly used k_perp*=25 point is retained as a representative guided comparison, including the
+separately rerun protocol-specific switching metrics.
+2.10 Reproducibility and numerical checks
+   The published-GSFE engine, analytic gradient and Hessian, and canonical unguided release were regenerated from
+clean directories and checked against independent reference implementations. The final evidence package includes
+dense prepared-branch continuation; same-2H symmetrization and exact-inversion contracts; registry-origin and odd-
+sector gauge audits; exact characteristic-angle and dense hexagonal/disk scaling; competing-registry boundary and
+edge-weight analyses; cycle-resolved 91-point vector locking; multi-plateau Floquet, time-step, basin and amplitude-
+continuation checks; trajectory-level thermal raw data with component and joint-vector bootstraps; fresh linear-elastic
+continuation; and the independently reconstructed nonlinear bond-angle source and outputs. Scripts, raw/summary
+CSV and JSON files, environment information, Gate reports, and manuscript/Supplementary Information sources are
+retained with the submission materials.
+Table 1. Core model inputs and audit-resolved protocols.
+  Quantity                                                   Value / protocol                                    Role
+                                                2H MoSSe Se-S-Se-S; W=(7.9,0.1,0.1) meV;
+  Reference material                                                                                 Published conservative GSFE
+                                                       phi=(131.9,1.2,85.4) deg
+
+                                                N=127 compact hexagon; lowest-energy zero-
+  Reference contact                                                                                 Prepared-state full-2D depinning
+                                                            force minimum
+
+                                              491-point dense/adaptive theta scan;
+                                                                                   Prepared-state / global-envelope
+  Branch audit                                16 independent 21 x 21 stationary-
+                                                                                   ambiguity
+                                              point checkpoints
+                                                 Same-2H symmetrized surface; exact spatial
+  Matched controls                                                                                    Causal symmetry contracts
+                                                              inversion
+
+                                              Exact q=0.80-0.95 characteristic
+  Size / shape
+                                              angles; extended hex N=127-1261                            Similarity robustness
+                                              and disk N=127-931; dense
+                                              Theta=0-20
+                                              theta=1.5 deg; F0*=1-4; tau*=20-
+                                                                                              Sampled vector locking +
+  Rocking map                                 80; 91 points; 40 measured cycles;
+                                                                                              representative Floquet states
+                                              cycle-resolved winding audit
+                                              Stationary BAOAB: dt=0.02; 60
+                                              burn + 100 measured cycles; N=500
+                                              per T* over 0.02-0.70; independent Stationary current decay, seed
+  Thermal inference                           second N=500 seed at T*=0.50-      replication and finite-observation
+                                              0.70; trajectory-level             robustness
+                                              stationarity/bootstrap/Hotelling
+                                              checks
+  Guided comparison                               Selected k_perp*; reference k_perp*=25              Secondary pathway control
+                                               N=127 free-edge linear FEM plus
+                                               independently reconstructed
+                                                                                              Independent in-plane model-form
+   In-plane relaxation hierarchy               nonlinear bond-angle VFF;
+                                                                                              robustness [17,18]
+                                               stiffness brackets and rigid-limit
+                                               checks
+
+
+3. Results
+3.1 The published 2H GSFE is genuinely inversion asymmetric
+   The translation-minimized search gives A_min=0.0425361 for the asymmetric 2H MoSSe landscape,
+corresponding to an odd RMS fraction 0.206243. A 181 x 181 grid plus independent local refinements converges to
+
+
+                                                                     5

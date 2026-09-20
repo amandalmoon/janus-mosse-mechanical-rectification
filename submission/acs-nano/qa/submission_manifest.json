@@ -1,0 +1,101 @@
+{
+  "manuscript_type": "Article",
+  "title": "Unguided Full-2D Mechanical Rectification and Vector Mode Locking in Finite Janus MoSSe Contacts",
+  "abstract_words": 235,
+  "abstract_has_references": false,
+  "abstract_has_novelty_claim": false,
+  "keywords": [
+    "janus transition-metal dichalcogenides",
+    "mechanical rectification",
+    "depinning",
+    "finite-contact scaling",
+    "structural lubricity",
+    "vector mode locking",
+    "rocking ratchet"
+  ],
+  "introduction_words": 466,
+  "introduction_heading_present": false,
+  "sections_numbered": false,
+  "sections": [
+    "Results",
+    "Discussion",
+    "Conclusions",
+    "Methods",
+    "Data Availability Statement",
+    "Supporting Information",
+    "Acknowledgments",
+    "References"
+  ],
+  "methods_is_last_text_section": true,
+  "toc_graphic": {
+    "present": true,
+    "width_cm": 9.0,
+    "height_cm": 4.0,
+    "format": "tif",
+    "dpi": 600,
+    "original_author_created": null,
+    "has_logo": false
+  },
+  "figures": [
+    {
+      "id": "Figure 1",
+      "font_family": "Arimo",
+      "min_font_pt": 7.0,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "Figure 2",
+      "font_family": "Arimo",
+      "min_font_pt": 7.0,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "Figure 3",
+      "font_family": "Arimo",
+      "min_font_pt": 7.0,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "Figure 4",
+      "font_family": "Arimo",
+      "min_font_pt": 7.0,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "Figure 5",
+      "font_family": "Arimo",
+      "min_font_pt": 7.0,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    },
+    {
+      "id": "Figure 6",
+      "font_family": "Arimo",
+      "min_font_pt": 7.0,
+      "min_line_pt": 0.6,
+      "format": "eps",
+      "dpi": 1200,
+      "is_photographic": false,
+      "caption_present": true
+    }
+  ]
+}

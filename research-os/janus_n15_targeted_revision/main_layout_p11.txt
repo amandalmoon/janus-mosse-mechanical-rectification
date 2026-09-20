@@ -1,0 +1,54 @@
+long-window N=500 temperature series the mean-current magnitude decreases monotonically with T*. Pooling the
+two independent high-temperature ensembles gives mean (u,v)=(0.08001,-0.15509) at T*=0.50 and (0.03700,-
+0.07645) at T*=0.70. At T*=0.70 a 50,000-resample trajectory bootstrap gives u in [0.01265,0.06132] and v in
+[-0.10088,-0.05195], and the zero-current vector remains outside the 95% joint region. The cycle-sign statistic
+approaches one-half but remains weakly biased at the largest sampled temperature, P(v_cycle<0)=0.50802
+[0.50506,0.51100], while the target-winding probability is only 0.01116. These are finite-protocol effect-size and
+detectability statements: no current-extinction temperature, equilibrium transition or behavior beyond T*=0.70 is
+established.
+   The guided k_perp*=25 calculation remains a secondary protocol-specific comparison. Its dense half-cycle rerun
+gives T50*=0.047987 [0.047066,0.049352], with 50% switching-window widths 0.92453 deg [0.91617,0.93435] at
+T*=0.005 and 1.01158 deg [0.98983,1.03135] at T*=0.010. These scalar switching metrics are not transferred to the
+free two-dimensional vector-current problem.
+
+
+
+
+Figure 6. Stationary thermal hierarchy from trajectory-level inference. (a) Mean lattice-coordinate currents <u> and
+<v> after 60 burn cycles and 100 measured cycles. The low-temperature full series uses N=500 trajectories per T*,
+while T*=0.50-0.70 uses the pooled two-seed N=1000 estimates; error bars are trajectory-level 95% intervals. (b)
+High-temperature Hotelling zero-current rejection ratio for the pooled two-seed ensembles; values above one reject
+the zero-current vector under the declared test and are not interpreted as a thermal critical scale. (c) The negative-v
+cycle probability approaches one-half while the exact deterministic target-winding probability remains near 1% in the
+high-temperature band, separating weak directed drift from preservation of the deterministic mode identity.
+Table 3. Central quantitative results after branch, symmetry, statistical, and two-model in-plane robustness audits.
+  Result                                              Audit-resolved value                                    Interpretation
+
+                                         A_min=0.0425361; odd
+  2H registry asymmetry
+                                         RMS=0.206243; chi_1=0.583541;                         Origin-independent asymmetry; eta
+                                         physical split invariant under                        material-law interpretation rejected
+                                         registry-origin shifts
+                                                F_c,+*=3.071135; F_c,-*=1.258672;
+  Prepared N=127, theta=1.5 deg                                                                   Ground-state branch-followed depinning
+                                                          rho=0.418601
+
+                                         sym. global split 6.6e-10; inversion threshold-swap
+  Matched symmetry contract                                                                            Same-spectrum causal control
+                                                            error <1.8e-15
+
+                                         hex N<=1261; disk N<=931; dense
+  Extended size/shape                    Theta=0-20; max within-family                               Robust compact-contact similarity
+                                         error <0.1%
+                                          2.921278 deg (20 deg cut); 2.847233 deg (25 deg
+  Boundary ground switch                                                                          Prepared registry changes directional sign
+                                                               cut)
+
+                                         91/91 sampled points repeat one                       Broad sampled locking +
+  Vector locking                         winding cycle-by-cycle; canonical                     representative attracting relative-
+                                         and selected plateaus have rho_F<1                    periodic states
+
+
+
+
+                                                                11

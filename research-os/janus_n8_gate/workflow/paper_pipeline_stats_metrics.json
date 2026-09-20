@@ -1,0 +1,84 @@
+{
+  "thermal": {
+    "n_per_temperature": 1000,
+    "bootstrap_reps": 10000,
+    "last_T_mean_current_CI_excludes_zero": 0.6,
+    "first_T_mean_current_CI_includes_zero": 0.65,
+    "last_T_cycle_sign_CI_above_half": 0.55,
+    "first_T_cycle_sign_CI_touches_or_below_half": 0.6,
+    "max_abs_CI_endpoint_difference_vs_canonical": 0.002823099714510363
+  },
+  "vector_locking": {
+    "locked_points": 91,
+    "total_points": 91,
+    "unique_integer_modes": 23,
+    "max_lock_residual": 3.915959514976326e-12
+  },
+  "branch_audit": {
+    "all_sampled_ground_is_lowest_and_longest_lived": true,
+    "twist_points": 13,
+    "theta_min": 0.0,
+    "theta_max": 3.0
+  },
+  "symmetry_contracts": {
+    "sym_global_static_split_abs": 6.57410570426009e-10,
+    "inv_threshold_swap_plus_abs": 2.220446049250313e-16,
+    "inv_threshold_swap_minus_abs": 1.7763568394002505e-15,
+    "inv_current_u_sum_abs": 9.547918011776346e-15,
+    "inv_current_v_sum_abs": 1.6653345369377348e-14,
+    "sym_current_norm": 8.510169834795409e-18
+  },
+  "size_similarity": {
+    "hex_Theta20_Fp_max_rel_percent": 0.08180331968629,
+    "hex_Theta20_Fm_max_rel_percent": 0.079978991542,
+    "disk_Theta20_Fp_max_rel_percent": 0.02296810656839,
+    "disk_Theta20_Fm_max_rel_percent": 0.022242641756070002,
+    "family_mean_abs_diff": {
+      "10": {
+        "Fp_norm": 0.0002224132048062044,
+        "Fm_norm": 0.00021590100302693038,
+        "rho": 2.9258948121002604e-06
+      },
+      "15": {
+        "Fp_norm": 0.0005011599918839371,
+        "Fm_norm": 0.0004885841514769007,
+        "rho": 6.4508637359073084e-06
+      },
+      "20": {
+        "Fp_norm": 0.0008727703132977993,
+        "Fm_norm": 0.0008568401020512262,
+        "rho": 1.0519119034435587e-05
+      }
+    }
+  },
+  "elastic_crosscheck": {
+    "theta1p5_vff_Fp": 2.935449218750001,
+    "theta1p5_vff_Fm": 1.19052734375,
+    "theta1p5_vff_rho": 0.4229112426035504,
+    "theta1p5_vs_FEM_Fp_percent": 0.0432669906144322,
+    "theta1p5_vs_FEM_Fm_percent": 0.0410306909568447,
+    "theta1p5_rho_vs_FEM_percent": 0.0021701995136735,
+    "theta3_vff_Fp": 1.5743164062500004,
+    "theta3_vff_Fm": 0.63095703125,
+    "theta3_vff_rho": 0.4277743335399877
+  },
+  "floquet": {
+    "rho_mean": 6.311087063224581e-22,
+    "rho_relative_span": 2.763716810816255e-06,
+    "max_state_closure": 1.91455596328642e-11
+  },
+  "boundary_edge_weight": {
+    "20": {
+      "nominal_deg": 2.921278008381212,
+      "min_deg": 2.777913879130666,
+      "max_deg": 3.1700953181060294,
+      "span_deg": 0.3921814389753635
+    },
+    "25": {
+      "nominal_deg": 2.847233122261797,
+      "min_deg": 2.7108289738593734,
+      "max_deg": 3.083165346175891,
+      "span_deg": 0.37233637231651784
+    }
+  }
+}

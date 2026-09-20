@@ -1,0 +1,27 @@
+ref,source,claim_role,status,action,notes
+1,Wang et al. 2024 RMP,2D sliding/pinning; boundaries/elasticity,VERIFIED,Keep,Review supports broad framework; not novelty source.
+2,Koren & Duerig 2016 PRB,finite-contact moire cancellation/scaling,VERIFIED,Keep,Supports finite-contact interference/scaling.
+3,Yan et al. 2023 JMPS,moire-boundary origin of finite-contact scaling,VERIFIED,Keep,Supports boundary/scaling context.
+4,Verhoeven et al. 2004 PRB,rigid finite-flake size/shape/pulling direction,VERIFIED,Keep,Direct model precedent.
+5,Yan et al. 2024 JMPS,shape/edge-dependent scaling,VERIFIED,Keep,Direct overlap; narrows novelty.
+6,Liao et al. 2022 Nat Mater,edge pinning in vdW contacts,VERIFIED,Keep,Supports boundary importance.
+7,Gao et al. 2025 ACS Nano,elastic edge/corner moire pinning,VERIFIED,Keep,Supports elasticity and boundary sensitivity.
+8,Minkin et al. 2025 PR Materials,relaxation changes PES corrugation/topology,VERIFIED,Keep,Strong limitation/support for elastic robustness motivation.
+9,Lu et al. 2017 Nat Nanotech,Janus TMD material basis,VERIFIED,Keep,Supports Janus monolayer basis.
+10,Zhang et al. 2020 JACS,polar Janus MoSSe interlayer coupling,VERIFIED,Keep,Supports polarity/interlayer coupling.
+11,Lin et al. 2024 Nanoscale,sliding ferroelectricity/moire in bilayer MoSSe,VERIFIED,Keep,Supports sliding/stacking/polarization context; not tribological depinning.
+12,Angeli et al. 2022 PRB,GSFE coefficients and DFT workflow,VERIFIED,Keep - primary,Primary source for coefficients/workflow. C3+reality justify conjugate triad pairing.
+13,Angeli et al. 2024 Erratum,erratum scope,VERIFIED WITH RESTRICTION,Keep only for explicit erratum note,Does NOT correct GSFE phase convention. Earlier attribution was wrong and is removed.
+14,Li et al. 2022 Friction,Janus TMD sliding/shear under field/load,VERIFIED,Keep,Supports Janus tribology context.
+15,Chen et al. 2026 ACS AMI,intrinsic friction diodes from asymmetric PES,VERIFIED,Keep,Closest friction-diode prior art; generic diode novelty not available.
+16,Torche et al. 2022 Adv Mater Interfaces,first-principles PES + stochastic friction dynamics,VERIFIED,Keep,Supports distinction between static PES and dynamic friction.
+17,Guo 2018 PCCP,MoSSe elastic constants,VERIFIED,Keep,Supports C11/C12 input.
+18,Dong et al. 2023 JPCL,stiffness alters friction at fixed ISES,VERIFIED,Keep,Supports elasticity sensitivity.
+19,Hanggi & Marchesoni 2009 RMP,rocked ratchet framework,VERIFIED,Keep,Generic ratchet prior art.
+20,Barbi & Salerno 2000 PRE,phase locking/current reversal,VERIFIED,Keep,Generic deterministic ratchet prior art.
+21,Shaidu et al. 2025 npj Comput Mater,dispersion-aware MLIP for multilayer TMDs,VERIFIED SCOPE,Keep,Prospective route only; not Janus-MoSSe validation.
+22,Lu et al. 2025 Nano Letters,friction dissymmetry on graphene/h-BCN,NEW - VERIFIED,Add,Direct directional-friction prior art; further narrows generic diode novelty.
+23,Reichhardt et al. 2002 PRL,2D periodic-substrate rectification/phase locking,NEW - VERIFIED,Add,Direct generic 2D mode-locking prior art.
+24,Wang et al. 2013 JCP,2D Frenkel-Kontorova ratchet/phase locking,NEW - VERIFIED,Add,Additional generic 2D ratchet/locking precedent.
+25,Ze Liu 2026 arXiv:2609.08063,edge-energy fluctuation/friction scaling,NEW - PREPRINT VERIFIED,Add as preprint,Very recent overlap with edge orientation/scaling; not prepared-state Janus depinning.
+26,Wang et al. 2026 IJSS,moire-boundary friction/critical-angle scaling,NEW - VERIFIED,Add,Recent critical-angle/geometric scaling overlap; rotational focus.

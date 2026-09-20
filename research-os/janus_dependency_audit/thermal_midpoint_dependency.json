@@ -1,0 +1,12 @@
+{
+  "old_theta_deg": 1.4771792325745448,
+  "exact_theta_deg": 1.4772214046124086,
+  "delta_theta_deg": 4.217203786383017e-05,
+  "all_counts_identical": true,
+  "temperatures_with_any_count_change": 0,
+  "max_abs_delta_D": 0.0,
+  "T50_both": 0.05381737435712747,
+  "width_both": 0.017831236764691765,
+  "R2_both": 0.9757275236018639,
+  "note": "Same seed schedule, 1000 trajectories per direction per temperature; endpoint midpoint correction caused no classification changes."
+}

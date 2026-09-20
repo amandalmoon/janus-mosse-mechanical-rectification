@@ -1,0 +1,12 @@
+{
+  "bond_count": 342,
+  "angle_count": 648,
+  "C11_Npm": 119.29999374354448,
+  "C12_Npm": 27.49999975622343,
+  "C66_Npm": 45.899996993499514,
+  "constraint_residual": 4.145989107584569e-15,
+  "energy_gradient_fd_max": 8.301664911058992e-11,
+  "gradient_hessian_col_fd_max": 1.3896404332802703e-08,
+  "ground_grad_norm": 1.494811555930089e-07,
+  "ground_hessian_min_eig": 0.7565758737769874
+}

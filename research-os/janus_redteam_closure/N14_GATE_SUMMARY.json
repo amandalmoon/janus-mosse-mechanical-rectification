@@ -1,0 +1,14 @@
+{
+  "gate": "N14 Short Red-Team Closure",
+  "status": "NOT_CLOSED_YET",
+  "scientific_blockers": 0,
+  "open_major_issues": 5,
+  "open_minor_issues": 1,
+  "checks": {
+    "legacy_thermal_boundary_removed": "PARTIAL_FAIL",
+    "figure6_table3_siS8_C15_C19_consistency": "PASS",
+    "red_team_major_scope_constraints": "PARTIAL_FAIL"
+  },
+  "five_reviewer_ready": false,
+  "next_action": "targeted scope-only manuscript revision, then rerun short Red-Team closure"
+}

@@ -1,0 +1,48 @@
+--- /mnt/data/janus_dependency_audit/run_dft_material_validation_v12.py	2026-09-19 07:06:27.218434937 +0000
++++ /mnt/data/janus_dependency_audit/run_dft_material_validation_v12_exactroot.py	2026-09-19 07:06:38.724358985 +0000
+@@ -10,7 +10,7 @@
+ from pathlib import Path
+ import numpy as np
+ import pandas as pd
+-from scipy.optimize import minimize
++from scipy.optimize import minimize, brentq
+ 
+ import janus_fourier_landscapes_v12 as J
+ import dft_guided_material_v12 as M
+@@ -23,13 +23,24 @@
+ BOOT=3000
+ 
+ 
+-def crossing(theta, Fc, level):
++def crossing_exact(theta, Fc, level, material, direction, kp=KP):
++    """Refine sampled F_c(theta)=level brackets with the actual full-Hessian threshold solver.
++
++    The sampled curve is used only to locate a bracket.  The reported root is then
++    obtained from scipy.brentq applied to M.guided_threshold(theta,...)["Fc"]-level,
++    so the endpoint is no longer a linear interpolation between 0.025-degree samples.
++    """
+     theta=np.asarray(theta,float); Fc=np.asarray(Fc,float); d=Fc-level
++    sgn=+1 if direction == 'forward' else -1
+     roots=[]
+     for i in range(len(theta)-1):
+-        if d[i]==0: roots.append(float(theta[i]))
++        if d[i] == 0:
++            roots.append(float(theta[i])); continue
+         if d[i]*d[i+1] < 0:
+-            roots.append(float(theta[i]+(theta[i+1]-theta[i])*(-d[i])/(d[i+1]-d[i])))
++            a=float(theta[i]); b=float(theta[i+1])
++            def residual(th):
++                return M.guided_threshold(float(th),material,sgn,kp)["Fc"]-level
++            roots.append(float(brentq(residual,a,b,xtol=2e-13,rtol=1e-14,maxiter=100)))
+     return roots
+ 
+ 
+@@ -62,7 +73,7 @@
+     vals={}
+     for direction in ('forward','reverse'):
+         g=df[df.direction==direction].sort_values('theta_deg')
+-        rr=crossing(g.theta_deg,g.Fc,F0)
++        rr=crossing_exact(g.theta_deg,g.Fc,F0,material,direction,KP)
+         if not rr: raise RuntimeError(f'No F0 crossing for {direction}')
+         vals[direction]=rr[0]
+     window=pd.DataFrame([{'landscape':material.name,'k_perp':KP,'F0':F0,

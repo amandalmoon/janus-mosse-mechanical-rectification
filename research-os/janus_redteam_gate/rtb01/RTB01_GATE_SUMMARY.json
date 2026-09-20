@@ -1,0 +1,20 @@
+{
+  "issue_id": "RT-B01",
+  "stage": "Simulation -> Statistics -> Robustness",
+  "status": "RESOLVED_WITH_CLAIM_REDEFINITION",
+  "primary_protocol": {
+    "dt": 0.02,
+    "burn_cycles": 60,
+    "measure_cycles": 100,
+    "n_per_seed": 500,
+    "high_temperature_seeds": 2,
+    "temperatures": [0.50, 0.55, 0.60, 0.65, 0.70]
+  },
+  "key_result": "Mean vector current decays monotonically but remains nonzero through the largest tested T*=0.70 under the stationary protocol; old 0.65/0.70 detectability boundary is retired.",
+  "retired_claims": [
+    "v-component resolved through 0.60 and unresolved at 0.65",
+    "full vector current resolved at 0.65 and unresolved at 0.70",
+    "P(Delta y<0) becomes unresolved by 0.60 as a physical thermal boundary"
+  ],
+  "next_gate": "Claim-Evidence update -> ACS Nano Figure Preflight"
+}

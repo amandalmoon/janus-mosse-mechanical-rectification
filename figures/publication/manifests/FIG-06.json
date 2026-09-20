@@ -1,0 +1,86 @@
+{
+  "figure_id": "FIG-06",
+  "core_conclusion": "Thermal noise strongly mixes exact cycle winding while a weaker stationary directed mean current remains resolved through the largest sampled T*=0.70.",
+  "claim_ids": [
+    "C15",
+    "C16",
+    "C17",
+    "C18"
+  ],
+  "archetype": "quantitative-grid",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 58.99,
+    "min_text_pt": 7.0,
+    "min_line_pt": 0.7
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Generated from the current reproducibility release; no illustrative values."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "How do stationary mean lattice-current components decay with temperature, including trajectory-level uncertainty?",
+      "visual_type": "errorbar",
+      "evidence_ids": [
+        "C15",
+        "C16"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/thermal_stationary_series_N500.csv",
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_current_two_seed_pooled.csv",
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_thermal_bootstrap_50k.csv"
+      ],
+      "uncertainty_shown": true,
+      "uncertainty_definition": "trajectory-level 95% intervals; low-T N=500 and pooled high-T N=1000 as declared in caption",
+      "processing_notes": []
+    },
+    {
+      "id": "B",
+      "question": "Does the full two-component stationary mean current remain distinguishable from zero at high temperature?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C17"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_current_two_seed_pooled.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "C",
+      "question": "How does weak directional cycle bias compare with preservation of the exact deterministic target winding?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C15",
+        "C18"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/thermal_stationary_series_N500.csv",
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_sign_target_bootstrap.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    }
+  ],
+  "exports": {
+    "pdf": null,
+    "svg": "/mnt/data/janus_n18_publication_figures/figures/Figure_6_thermal_stationary_hierarchy.svg",
+    "tiff": "/mnt/data/janus_n18_publication_figures/figures/Figure_6_thermal_stationary_hierarchy.tif",
+    "png_preview": "/mnt/data/janus_n18_publication_figures/figures/Figure_6_thermal_stationary_hierarchy.png",
+    "source": "/mnt/data/janus_n18_publication_figures/source/make_publication_figures.py"
+  },
+  "caption": "Figure 6. Stationary thermal hierarchy from trajectory-level inference. (a) Mean lattice-coordinate currents <u> and <v> after 60 burn cycles and 100 measured cycles. The low-temperature full series uses N=500 trajectories per T*, while T*=0.50-0.70 uses the pooled two-seed N=1000 estimates; error bars are trajectory-level 95% intervals. (b) High-temperature Hotelling zero-current rejection ratio for the pooled two-seed ensembles; values above one reject the zero-current vector under the declared test and are not interpreted as a thermal critical scale. (c) The negative-v cycle probability approaches one-half while the exact deterministic target-winding probability remains near 1% in the high-temperature band, separating weak directed drift from preservation of the deterministic mode identity.",
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "WARN"
+  }
+}

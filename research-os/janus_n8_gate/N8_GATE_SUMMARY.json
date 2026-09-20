@@ -1,0 +1,50 @@
+{
+  "gate": "PASS_WITH_THERMAL_CLAIM_UPDATE",
+  "thermal": {
+    "v_component_last_resolved_T": 0.6,
+    "v_component_first_unresolved_T": 0.65,
+    "joint_vector_last_resolved_sample_T": 0.65,
+    "joint_vector_first_unresolved_sample_T": 0.7,
+    "Pneg_last_clearly_resolved_T": 0.5,
+    "Pneg_marginal_T": 0.55,
+    "Pneg_first_unresolved_T": 0.6,
+    "production_n_per_T": 1000,
+    "joint_boundary_bootstrap_reps": 100000,
+    "dt_pairwise_max_z_u": 1.373782899322932,
+    "dt_pairwise_max_z_v": 1.5510281698464563
+  },
+  "elasticity": {
+    "rigid_theta1p5": {
+      "Fp": 3.0711353385392584,
+      "Fm": 1.2586722984999543,
+      "rho": 0.41860128485493026
+    },
+    "FEM_nominal_theta1p5": {
+      "Fp": 2.9343017578125012,
+      "Fm": 1.1902099609375,
+      "rho": 0.4228601870486564
+    },
+    "FEM_100C_theta1p5": {
+      "Fp": 3.0697509765625015,
+      "Fm": 1.2578857421874998,
+      "rho": 0.41867313550716484
+    },
+    "VFF_nominal_theta1p5": {
+      "Fp": 2.9354003906250012,
+      "Fm": 1.190478515625,
+      "rho": 0.4229212525740256
+    },
+    "VFF_nominal_theta3": {
+      "Fp": 1.5743652343750003,
+      "Fm": 0.6310058593750001,
+      "rho": 0.42775539122348677
+    }
+  },
+  "scope_limitations": [
+    "reduced temperature/time units",
+    "no full-3D buckling/corrugation",
+    "no atomistic edge reconstruction",
+    "no load-dependent GSFE",
+    "no validated Janus-specific full atomistic potential"
+  ]
+}

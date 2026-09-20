@@ -1,0 +1,77 @@
+{
+  "inversion_center": {
+    "uv": [
+      0.666666666141638,
+      0.6666666660945844
+    ],
+    "xy": [
+      0.9999999991889302,
+      0.5773502686941879
+    ],
+    "A_min": 0.04253608528083287,
+    "odd_RMS": 0.20624278237269994,
+    "local_refinement_spread": 2.1510571102112408e-16
+  },
+  "pointwise_identities": {
+    "local_sym_even_max_abs": 0.0,
+    "local_inv_identity_max_abs": 0.0,
+    "contact_sym_even_max_abs": 1.1102230246251565e-16,
+    "contact_inv_identity_max_abs": 2.220446049250313e-16
+  },
+  "static": {
+    "centered_ground_plus": 3.071135338539257,
+    "centered_ground_minus": 1.2586722984999543,
+    "centered_vs_prior_max_abs": 3.9257042061535685e-11,
+    "sym_global_plus": 1.7677022304519074,
+    "sym_global_minus": 1.7677022304520231,
+    "sym_global_split": 1.156852391659413e-13,
+    "inverted_ground_plus": 1.258672298499955,
+    "inverted_ground_minus": 3.071135338539251,
+    "inversion_swap_errors": [
+      6.661338147750939e-16,
+      6.217248937900877e-15
+    ],
+    "max_fold_residual": 3.75497641924119e-09,
+    "min_hard_eigenvalue": 10.932479101004489
+  },
+  "dynamics": {
+    "theta_deg": 1.5,
+    "F0": 2.0,
+    "period": 40.0,
+    "n_eq": 20,
+    "n_meas": 40,
+    "steps_per_cycle": 4000,
+    "original_winding": [
+      1,
+      -1
+    ],
+    "inverted_winding": [
+      -1,
+      1
+    ],
+    "current_reversal_vector": [
+      6.217248937900877e-15,
+      -9.769962616701378e-15
+    ],
+    "current_reversal_norm": 1.1580429779916289e-14,
+    "sym_balanced_current": [
+      -3.4238391339834e-17,
+      6.570122511810511e-17
+    ],
+    "sym_balanced_current_norm": 7.408723522685636e-17,
+    "max_locking_error": 1.2074409138593832e-14
+  },
+  "gate_checks": {
+    "A_min_match": true,
+    "sym_local_even": true,
+    "inv_local_exact": true,
+    "sym_contact_even": true,
+    "inv_contact_exact": true,
+    "sym_static_degenerate": true,
+    "exact_inversion_threshold_swap": true,
+    "exact_inversion_current_reversal": true,
+    "sym_balanced_zero_current": true,
+    "fold_numerics": true
+  },
+  "gate": "PASS"
+}

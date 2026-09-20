@@ -1,0 +1,10 @@
+{
+  "model": "free-edge triangular finite-element membrane on N=127 contact; same corrected 2H MoSSe local GSFE; COM translation and infinitesimal rigid rotation removed from internal displacements",
+  "nominal_elastic_constants": {
+    "a_angstrom": 3.25,
+    "C11_N_per_m": 119.3,
+    "C12_N_per_m": 27.5,
+    "source": "S.-D. Guo, Phys. Chem. Chem. Phys. 20, 7236-7242 (2018), DOI 10.1039/C8CP00350E"
+  },
+  "caveat": "Tier-1 in-plane linear-elastic sensitivity validation only; no out-of-plane relaxation, atomistic edge reconstruction, defects, nonlocal edge energy, load-dependent GSFE, or dissipative parameter calibration."
+}

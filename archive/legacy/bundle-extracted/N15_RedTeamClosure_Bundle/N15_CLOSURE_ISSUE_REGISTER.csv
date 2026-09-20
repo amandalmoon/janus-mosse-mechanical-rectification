@@ -1,0 +1,8 @@
+issue_id,severity,status,topic,resolution
+RTC-MIN01,MINOR,CLOSED,Legacy thermal boundary wording,Removed superseded short-window boundary history from publication-facing main text and SI
+RT-M01,MAJOR,CLOSED,Damping dependence,Declared protocol-specific dynamics and reported verified gamma sweep; rejected material-only phase-diagram interpretation
+RT-M02,MAJOR,CLOSED,Loading-axis dependence,Declared chosen crystallographic axis and reported strong angular dependence; rejected rotational invariance
+RT-M03,MAJOR,CLOSED,Preparation dependence,Reported opposite-sign ground versus metastable branch splits and made headline claim state-conditioned
+RT-M04,MAJOR,CLOSED,Boundary-switch dynamics,Restricted claim to equilibrium fixed-twist re-preparation; explicitly excluded kinetic switching/hysteresis
+RT-M05,MAJOR,CLOSED,Mechanical loading constraints,Declared fixed twist plus uniform COM/body-force loading; excluded torque/spring/edge/center pulling
+RT-M06,MAJOR,CLOSED,Elasticity independence,Retained explicit shared-GSFE/shared-elastic-constant limitation and no full-3D atomistic claim

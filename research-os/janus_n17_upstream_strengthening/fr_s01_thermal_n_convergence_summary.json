@@ -1,0 +1,28 @@
+{
+  "resamples_per_subsample_N": 500,
+  "Ns": [
+    50,
+    100,
+    200,
+    300,
+    500,
+    750,
+    1000
+  ],
+  "temperatures": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7
+  ],
+  "criterion": "fraction of without-replacement trajectory subsamples whose 95% Hotelling T2 test excludes the zero vector",
+  "min_N_for_95pct_rejection_stability": {
+    "0.50": 100,
+    "0.55": 200,
+    "0.60": 200,
+    "0.65": 300,
+    "0.70": 500
+  },
+  "interpretation": "The pooled N=1000 high-temperature design is precision-motivated: lower N increasingly destabilizes the reject/non-reject decision at the weakest T*=0.70 signal. This is a precision/convergence audit, not a post hoc power calculation."
+}

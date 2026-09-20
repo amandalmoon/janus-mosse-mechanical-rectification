@@ -1,0 +1,96 @@
+{
+  "figure_id": "FIG-01",
+  "core_conclusion": "The published 2H MoSSe GSFE has non-removable registry-space inversion asymmetry, and matched same-spectrum symmetry operations remove or reverse directional response as expected.",
+  "claim_ids": [
+    "M0",
+    "C1",
+    "C4"
+  ],
+  "archetype": "quantitative-grid",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 133.36,
+    "min_text_pt": 7.0,
+    "min_line_pt": 0.6
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Generated from the current reproducibility release; no illustrative values."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "How does the centered asymmetric 2H GSFE vary across registry space?",
+      "visual_type": "contour",
+      "evidence_ids": [
+        "M0",
+        "C1"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/asymmetry_global_check.csv",
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/audit_scripts/matched_symmetry_audit.py"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "B",
+      "question": "What changes when the inversion-odd component is removed at the matched center?",
+      "visual_type": "contour",
+      "evidence_ids": [
+        "C4"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/audit_scripts/matched_symmetry_audit.py"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "C",
+      "question": "Is the 2H inversion-odd sector non-removable compared with symmetric controls?",
+      "visual_type": "bar",
+      "evidence_ids": [
+        "C1"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/asymmetry_global_check.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "D",
+      "question": "Do matched symmetrization and exact inversion enforce the expected threshold/winding contracts?",
+      "visual_type": "bar",
+      "evidence_ids": [
+        "C4"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/matched_symmetry_final.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    }
+  ],
+  "exports": {
+    "pdf": null,
+    "svg": "/mnt/data/janus_n18_publication_figures/figures/Figure_1_symmetry_contracts.svg",
+    "tiff": "/mnt/data/janus_n18_publication_figures/figures/Figure_1_symmetry_contracts.tif",
+    "png_preview": "/mnt/data/janus_n18_publication_figures/figures/Figure_1_symmetry_contracts.png",
+    "source": "/mnt/data/janus_n18_publication_figures/source/make_publication_figures.py"
+  },
+  "caption": "Figure 1. Material registry asymmetry and matched symmetry contracts. (a) Translation-centered asymmetric 2H MoSSe GSFE. (b) Matched same-2H surface after removing the inversion-odd component at the optimized inversion center. (c) Translation-minimized odd RMS fraction for published 3R/2H configurations. (d) At theta=1.5 deg, the matched symmetrized envelope is direction-degenerate and carries zero deterministic winding, whereas exact spatial inversion swaps F_c,+ and F_c,- and reverses (1,-1) to (-1,1).",
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "WARN"
+  }
+}

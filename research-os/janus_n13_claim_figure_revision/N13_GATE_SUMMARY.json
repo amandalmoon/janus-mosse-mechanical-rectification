@@ -1,0 +1,17 @@
+{
+  "stage": "Claim-Evidence synchronization -> ACS Nano Figure Preflight -> thermal figure/table regeneration -> targeted revision",
+  "gate": "PASS",
+  "figure6_venue_status": "CONDITIONAL_READY",
+  "figure6_condition": "Regenerate final production artwork with literal Arial or approved outlined Arial at the ACS Nano venue layer.",
+  "claim_updates": ["M0", "C15", "C16", "C17", "C18", "C19"],
+  "retired_thermal_boundaries": [
+    "v resolved through T*=0.60 / unresolved at T*=0.65",
+    "full vector resolved at T*=0.65 / unresolved at T*=0.70",
+    "P(Delta y<0) unresolved by T*=0.60"
+  ],
+  "final_main_pages": 15,
+  "final_si_pages": 5,
+  "embedded_figure6_sha256": "2b075ece2e3cce6348026a4dd30d6b2c0ce4842104b30c9a21a0cf7511b0f94e",
+  "next_gate": "short Red-Team closure",
+  "next_if_pass": "Five Reviewer Paper Audit"
+}

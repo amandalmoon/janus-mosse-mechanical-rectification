@@ -1,0 +1,57 @@
+{
+  "stage": "N18 Publication Figure Designer Final Figure Audit",
+  "date": "2026-09-19",
+  "figure_designer_gate": "VENUE_HANDOFF_READY",
+  "acs_nano_figure_gate": "CONDITIONAL_READY",
+  "scientific_blockers": 0,
+  "venue_conditions": [
+    "Literal Arial unavailable in runtime; final artwork re-export required on Arial-equipped system."
+  ],
+  "figures": [
+    {
+      "figure_id": "FIG-01",
+      "scientific_qa": "PASS",
+      "visual_qa": "PASS",
+      "manifest_audit": "PASS",
+      "venue": "WARN"
+    },
+    {
+      "figure_id": "FIG-02",
+      "scientific_qa": "PASS",
+      "visual_qa": "PASS",
+      "manifest_audit": "PASS",
+      "venue": "WARN"
+    },
+    {
+      "figure_id": "FIG-03",
+      "scientific_qa": "PASS",
+      "visual_qa": "PASS",
+      "manifest_audit": "PASS",
+      "venue": "WARN"
+    },
+    {
+      "figure_id": "FIG-04",
+      "scientific_qa": "PASS",
+      "visual_qa": "PASS",
+      "manifest_audit": "PASS",
+      "venue": "WARN"
+    },
+    {
+      "figure_id": "FIG-05",
+      "scientific_qa": "PASS",
+      "visual_qa": "PASS",
+      "manifest_audit": "PASS",
+      "venue": "WARN"
+    },
+    {
+      "figure_id": "FIG-06",
+      "scientific_qa": "PASS",
+      "visual_qa": "PASS",
+      "manifest_audit": "PASS",
+      "venue": "WARN"
+    }
+  ],
+  "final_manuscript": "/mnt/data/janus_n18_publication_figures/Janus_MoSSe_PublicationFigure_Manuscript_v7.docx",
+  "current_si": "/mnt/data/janus_n18_publication_figures/Janus_MoSSe_PublicationFigure_SI_v4.docx",
+  "next_gate": "ACS Nano venue/submission layer"
+}

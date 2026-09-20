@@ -1,0 +1,13 @@
+component,novelty_status,closest_prior_art,allowed_positioning
+Generic friction diode / opposite-direction friction,NOT NOVEL,Chen 2026; Lu 2025,Do not use first friction diode / first directional friction.
+Asymmetric PES as source of directional friction,NOT NOVEL,Chen 2026; Lu 2025,"Frame as material-specific symmetry mechanism, not generic discovery."
+Finite-contact twist/shape/edge scaling,NOT NOVEL,Koren 2016; Yan 2023/2024; Gao 2025; Liu 2026 preprint; Wang 2026,"Use as context; specific prepared-threshold collapse is a result, not generic novelty."
+Inverse-linear-size critical-angle scaling,NOT NOVEL / ADJACENT PRIOR,Wang 2026; finite-size moire literature,Do not sell alpha~0.5036 or N^-1/2 as new exponent/law.
+Generic 2D ratchet / phase locking,NOT NOVEL,Reichhardt 2002; Wang et al. 2013; Hanggi 2009; Barbi 2000,Do not use first ratchet / first mode locking.
+Published MoSSe GSFE + unguided prepared full-2D directional stability boundary,LIKELY NOVEL,No direct match in >300 result slots across >30 targeted searches,Use cautious contribution wording; no first claim.
+Same-spectrum symmetrization + exact-inversion falsification tied to the MoSSe GSFE,LIKELY NOVEL,No direct tribology match found,Strong methodological contribution within reduced model.
+Ground-state registry-switch reversal for rotated finite Janus boundary,UNCERTAIN to LIKELY,Edge orientation and stacking instabilities exist in prior art; no same mechanism found,"Describe as specific reduced-model mechanism, not first edge reversal."
+Zero-mean longitudinal rocking -> lattice-vector relative-periodic/Floquet states in same finite MoSSe contact,LIKELY NOVEL,"Generic 2D locking exists, but no direct vdW/Janus finite-interface counterpart found",Emphasize material-specific integration with same static landscape.
+Thermal vector-current bootstrap hierarchy,"METHOD/ROBUSTNESS, not standalone novelty",Statistical validation of this model,Use as robustness evidence.
+FEM/VFF in-plane compliance preservation of directional split,"METHOD/ROBUSTNESS, not standalone novelty",Elasticity-friction prior art extensive,Use as falsification/robustness evidence.
+Overall integrated mechanism package,LIKELY NOVEL,No single source found combining all components,Safest novelty statement; explicitly time-stamped to 2026-09-19 search.

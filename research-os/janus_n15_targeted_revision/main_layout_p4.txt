@@ -1,0 +1,53 @@
+component internal displacement while the global center-of-mass registry and imposed twist remain external
+coordinates; rigid x/y translation and infinitesimal rigid rotation are projected out. The total energy is the sitewise
+GSFE plus isotropic membrane strain energy, and the resulting 2+(2N-3)=253 degree-of-freedom equilibrium is
+continued under positive- and negative-y load while monitoring the full Hessian.
+   The nominal monolayer constants are a=3.25 A, C11=119.3 N/m and C12=27.5 N/m from first-principles
+calculations for Janus MoSSe [17], giving C66=(C11-C12)/2=45.9 N/m. We test C/2, 2C, an independent literature-
+level elastic pair (C11=126.8 N/m, C12=27.4 N/m), and a 100C rigid-limit check. Tier 1.5 replaces the linear
+constitutive discretization by a geometrically nonlinear triangular-site valence-force model containing 342 nearest-
+neighbor bond-stretching terms and 648 local 60-deg angle terms. Its documented coefficients, k_s=5.289992 eV/A^2
+and k_theta=2.334491 eV/rad^2 at nominal stiffness, were independently reconstructed and verified to reproduce
+C11=119.3 N/m, C12=27.5 N/m and C66=45.9 N/m before the N=127 branches were recomputed. The same rigid
+modes are projected out. These tests address collective in-plane compliance only; they do not add out-of-plane
+buckling, atomistic edge reconstruction, or nonlocal edge chemistry.
+2.7 Zero-mean two-dimensional rocking and relative-periodic states
+   For deterministic transport the unguided contact obeys
+                                                                                                                     (8)
+   with m*=1 and gamma*=4. These are reduced dynamical parameters, not values supplied by the GSFE; the mode-
+locking map is therefore conditional on the declared inertial/damping protocol. The canonical operating point
+theta=1.5 deg, F0*=2.0 and tau*=40 is supplemented by a 13 x 7 amplitude-period grid: F0*=1.0-4.0 in steps of 0.25
+and tau*=20, 30, 40, 50, 60, 70 and 80. Each grid point uses 20 transient and 40 measured cycles with 4000 steps per
+cycle. The original finite-run classification requires the mean lattice displacement per cycle to lie within 1e-4 of an
+integer pair (m,n). A stricter cycle-resolved rerun then checks whether every measured cycle repeats the same integer
+winding. Representative plateaus spanning pinned, low-winding, and high-winding states are tested more strongly by
+one-period relative-lattice closure, cross-solver Floquet multipliers, time-step refinement, increasing/decreasing
+amplitude continuation, and position/velocity basin perturbations.
+                                                                                                                     (9)
+   For the canonical (1,-1) orbit, the monodromy matrix is integrated independently with DOP853 at two tolerance
+levels and with Radau. The three calculations agree on the leading Floquet spectral radius at approximately 6.31e-22
+and give one-cycle state closures of order 1e-11. The same cross-solver criterion rho_F<1 is applied to selected
+additional plateaus, including (0,0), (1,-2), (2,-3), (3,-4), and a high-winding (2,-7) state. The extreme numerical
+magnitude of any individual multiplier is used only as evidence of strong contraction, not as a separately measurable
+physical quantity.
+2.8 Thermal dynamics and vector-current observables
+   Finite-temperature dynamics use the two-dimensional Langevin equation
+                                                                                                                    (10)
+    integrated with BAOAB. For the unguided system a scalar half-cycle label is insufficient because trajectories
+move across both lattice directions. The stationarity-audited thermal protocol uses dt=0.02, 60 burn cycles and 100
+measured cycles. A full T*=0.02-0.70 series uses N=500 independent trajectories per temperature, and the high-
+temperature band T*=0.50-0.70 is independently replicated with a second N=500 seed ensemble. All cycle data from
+a trajectory are reduced first to trajectory-level observables; inference is then performed over trajectories rather than
+individual     cycles.   Late      20-cycle     blocks    are    compared      by    paired   two-dimensional       tests,
+deterministic-orbit/ground/metastable initial states are checked under common noise for memory loss, and high-
+temperature mean currents are assessed with trajectory-level bootstrap and Hotelling statistics. We separately report
+mean u and v, P(v_cycle<0), and the probability that a cycle is assigned to the deterministic target (m,n)=(1,-1).
+Targeted dt=0.04, 0.02 and 0.01 simulations test high-temperature effect-size compatibility as well as the previously
+checked low-noise regime.
+2.9 Engineered transverse confinement as a comparison
+   To connect the intrinsic calculation with a guided device, we optionally add
+                                                                                                                    (11)
+
+
+
+                                                            4

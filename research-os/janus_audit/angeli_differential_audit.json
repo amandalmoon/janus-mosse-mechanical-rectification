@@ -1,0 +1,85 @@
+{
+  "tolerance": 1e-12,
+  "geometry": {
+    "shell_1": {
+      "C6_cycle_error": 6.0402662910232525e-15,
+      "stored_even_rep_error": 4.5288390936029406e-15,
+      "opposite_pair_error": 3.354116995289434e-15
+    },
+    "shell_2": {
+      "C6_cycle_error": 1.0695084443661336e-14,
+      "stored_even_rep_error": 8.747542958250513e-15,
+      "opposite_pair_error": 6.282983697961988e-15
+    },
+    "shell_3": {
+      "C6_cycle_error": 1.2080532582046505e-14,
+      "stored_even_rep_error": 9.057678187205881e-15,
+      "opposite_pair_error": 6.708233990578868e-15
+    }
+  },
+  "configs": {
+    "3R_MoSSe_Se-S-Se-S": {
+      "n_potential_points": 20000,
+      "n_derivative_points": 1000,
+      "max_abs_potential_residual": 5.814793091474257e-15,
+      "max_abs_gradient_residual": 2.9531932455029164e-14,
+      "max_abs_hessian_residual": 1.6342482922482304e-13,
+      "max_normalized_imag_reference": 4.2494743356342205e-15,
+      "energy_unit_meV": 52.199999999999996,
+      "pass": true
+    },
+    "3R_MoSSe_S-Se-Se-S": {
+      "n_potential_points": 20000,
+      "n_derivative_points": 1000,
+      "max_abs_potential_residual": 5.773159728050814e-15,
+      "max_abs_gradient_residual": 3.0309088572266774e-14,
+      "max_abs_hessian_residual": 2.0794477251229182e-13,
+      "max_normalized_imag_reference": 4.643589066819717e-15,
+      "energy_unit_meV": 44.400000000000006,
+      "pass": true
+    },
+    "3R_MoSSe_Se-S-S-Se": {
+      "n_potential_points": 20000,
+      "n_derivative_points": 1000,
+      "max_abs_potential_residual": 5.745404152435185e-15,
+      "max_abs_gradient_residual": 2.864375403532904e-14,
+      "max_abs_hessian_residual": 1.6342482922482304e-13,
+      "max_normalized_imag_reference": 4.478809551527442e-15,
+      "energy_unit_meV": 36.599999999999994,
+      "pass": true
+    },
+    "2H_MoSSe_Se-S-Se-S": {
+      "n_potential_points": 20000,
+      "n_derivative_points": 1000,
+      "max_abs_potential_residual": 5.648259637780484e-15,
+      "max_abs_gradient_residual": 2.853273173286652e-14,
+      "max_abs_hessian_residual": 1.6608936448392342e-13,
+      "max_normalized_imag_reference": 4.757387639012174e-15,
+      "energy_unit_meV": 47.400000000000006,
+      "pass": true
+    }
+  },
+  "finite_contact_primary_2H": {
+    "N": 127,
+    "n_tests": 50,
+    "max_abs_potential_residual": 1.887379141862766e-15,
+    "max_abs_gradient_residual": 1.2878587085651816e-14,
+    "max_abs_hessian_residual": 5.684341886080802e-14,
+    "max_normalized_imag_reference": 2.787561555236317e-15,
+    "pass": true
+  },
+  "normalization_contract": {
+    "primary_W1_meV": 7.9,
+    "expected_E0_6W1_meV": 47.400000000000006,
+    "module_energy_unit_meV": 47.400000000000006,
+    "hex_shell_6_site_count": 127,
+    "expected_N": 127,
+    "pass": true
+  },
+  "summary": {
+    "global_max_differential_residual": 2.0794477251229182e-13,
+    "global_max_geometry_residual": 1.2080532582046505e-14,
+    "all_under_1e-12": true,
+    "material_input_gate": "PASS"
+  }
+}

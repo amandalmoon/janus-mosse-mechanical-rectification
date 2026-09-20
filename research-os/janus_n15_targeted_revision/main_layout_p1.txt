@@ -1,0 +1,57 @@
+               Unguided Full-2D Mechanical Rectification
+         and Vector Mode Locking in Finite Janus MoSSe Contacts
+A DFT-anchored finite-contact model with prepared-state, symmetry, statistical, and in-plane relaxation falsification
+                                                     tests
+
+Abstract
+      Twist suppresses interfacial corrugation in many incommensurate two-dimensional contacts, but a laterally
+   inversion-asymmetric registry landscape can make finite-contact pinning direction dependent. We analyze the
+   published three-shell generalized stacking-fault-energy (GSFE) landscape of 2H Janus MoSSe using an
+   unguided finite contact whose center of mass is free in the full two-dimensional registry plane. Headline
+   depinning thresholds are followed from the lowest-energy zero-force minimum rather than selected from an
+   unconstrained last-surviving-minimum envelope. For the N=127 reference contact at theta=1.5 deg, under the
+   chosen positive/negative-y crystallographic loading axis, the prepared rigid branch loses metastability at F_c,
+   +*=3.071135 and F_c,-*=1.258672. Same-spectrum symmetrization removes the global directional bias and
+   exact spatial inversion swaps the thresholds and reverses the deterministic current. Compact hexagonal and disk-
+   like contacts collapse under theta sqrt(N), rotated triangular cuts can reverse the equilibrium prepared response
+   through registry-state competition, and zero-mean forcing produces cycle-resolved integer lattice-vector
+   transport over all 91 sampled amplitude-period points for the declared m*=1, gamma*=4 dynamical protocol.
+   Representative plateaus are attracting under independent Floquet checks. Thermal exact-winding identity is
+   fragile, whereas under a stationarity-audited protocol a weaker mean current vector remains statistically nonzero
+   throughout the sampled range to T*=0.70; no thermal extinction scale is inferred. Two in-plane relaxation
+   representations preserve the directional split while renormalizing absolute thresholds. The claims are therefore
+   state-, loading-axis-, and protocol-conditioned DFT-anchored reduced-model results, not a parameter-free
+   experimental device prediction.
+Keywords: Janus MoSSe; mechanical rectification; depinning; finite-contact scaling; elastic relaxation; vector mode
+locking; generalized stacking-fault energy; rocking ratchet
+
+1. Introduction
+   Twisted van der Waals interfaces are a canonical setting for structural lubricity because registry forces from
+different parts of a finite contact partially cancel as the local phase winds across the interface [1-4]. Finite size,
+contact shape, boundaries, and elastic relaxation nevertheless remain active variables and can alter both the
+magnitude and topology of the effective sliding landscape [5-8]. Recent work continues to sharpen the role of edge
+geometry and moire-boundary mechanics in finite-contact friction and critical-angle scaling [25,26]. Once the local
+registry energy lacks inversion symmetry, the same finite-contact interference that suppresses corrugation can
+therefore act differently under opposite loading directions.
+   Janus transition-metal dichalcogenides provide a natural materials setting for testing this possibility. Replacing the
+two chalcogen planes by different species produces an out-of-plane polar monolayer [9,10], while bilayer stacking
+and lateral sliding modify interlayer coupling and polarization [10,11,14]. Out-of-plane polarity and lateral registry-
+space inversion, however, are distinct symmetry statements. A defensible mechanical-rectification mechanism must
+begin from the actual lateral energy landscape rather than assuming that the Janus label alone implies a friction diode.
+The three-shell GSFE coefficient set reported for bilayer Janus MoSSe by Angeli, Schleder, and Kaxiras [12] supplies
+a material-anchored conservative input for such a test.
+   Directional friction, friction dissymmetry, and friction-diode behavior have already been demonstrated in two-
+dimensional interfaces [15,22], and rectification and phase locking on one- and two-dimensional periodic substrates
+are established nonlinear-transport phenomena [19,20,23,24]. First-principles-informed stochastic friction models
+likewise show why a static energy surface and a dynamical friction observable should not be conflated [16]. The
+contribution sought here is therefore narrower than a generic 'first friction diode', 'first finite-size law', or 'first ratchet'
+claim: we ask whether the published MoSSe GSFE supports a branch-resolved, full-2D prepared-state stability
+asymmetry, whether that asymmetry survives matched same-spectrum falsification and finite-contact robustness tests,
+and whether the same material-anchored landscape supports lattice-vector relative-periodic transport under zero-mean
+forcing.
+   We separate material symmetry, state preparation, geometry, nonlinear dynamics, stochastic transport, and internal
+compliance. A translation-minimized diagnostic first tests whether the published GSFE has nonremovable registry
+inversion asymmetry; registry-origin shifts are then used as a falsification test for coordinate-dependent odd-sector
+
+
+                                                               1

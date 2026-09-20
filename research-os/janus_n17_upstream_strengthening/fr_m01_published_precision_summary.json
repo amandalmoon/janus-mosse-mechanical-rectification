@@ -1,0 +1,44 @@
+{
+  "contract": "publication rounding-resolution propagation only; not statistical fit uncertainty",
+  "n_lhs_validation": 16,
+  "bounds": {
+    "Fplus": {
+      "nominal": 3.0711353385392495,
+      "linear_hyperrect_min": 2.9699091275285125,
+      "linear_hyperrect_max": 3.1723615495499864,
+      "lhs_min": 2.9978970646274785,
+      "lhs_max": 3.1374387371628267
+    },
+    "Fminus": {
+      "nominal": 1.2586722984999528,
+      "linear_hyperrect_min": 1.2109212251149812,
+      "linear_hyperrect_max": 1.3064233718849243,
+      "lhs_min": 1.2244382514364933,
+      "lhs_max": 1.2903548771937678
+    },
+    "Delta": {
+      "nominal": 1.8124630400392967,
+      "linear_hyperrect_min": 1.7589860410278075,
+      "linear_hyperrect_max": 1.8659400390507859,
+      "lhs_min": 1.7726378998842534,
+      "lhs_max": 1.8470838599690589
+    },
+    "rho": {
+      "nominal": 0.4186012848549296,
+      "linear_hyperrect_min": 0.41641134877304353,
+      "linear_hyperrect_max": 0.42079122093681565,
+      "lhs_min": 0.4171567197667274,
+      "lhs_max": 0.4200184685578667
+    }
+  },
+  "lhs_all_Delta_positive": true,
+  "dynamics_all_cycle_locked": true,
+  "dynamics_winding_pairs": [
+    [
+      1,
+      -1
+    ]
+  ],
+  "source_fit_uncertainty_available": false,
+  "remaining_limitation": "The accessed primary publication reports rounded Fourier coefficients but no coefficient covariance or machine-readable 9x9 GSFE raw-energy table. Actual DFT/fit uncertainty is therefore NOT_ASSESSABLE from public inputs; manuscript claims must remain conditional on the published Fourier model."
+}

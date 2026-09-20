@@ -1,0 +1,43 @@
+S11. Tier-2 interlayer-potential prescreen and Janus-specific atomistic gate
+A public Stillinger-Weber plus registry-dependent Kolmogorov-Crespi candidate was screened before any full finite-flake atomistic
+calculation. For 2H Se-S-Se-S, a 31 x 31 registry map with optimized interface spacing was fitted in the same three-shell Fourier basis
+and aligned under lattice D6 operations and translation. The dominant first shell is close to the published DFT reference, and the
+inversion-odd RMS plus the finite-contact rectification sign are preserved, but the second and third harmonic amplitudes are much too
+large. The candidate is therefore useful only as a qualitative mechanism stress test and is rejected as a quantitative replacement for the
+published DFT GSFE.
+  quantity                          published DFT                       public SW+KC candidate             decision
+  W1 (meV)                          7.9                                 8.770                              near target
+  W2 (meV)                          0.1                                 1.494                              fail
+  W3 (meV)                          0.1                                 0.741                              fail
+  odd RMS                           0.206243                            0.216118                           qualitative pass
+  full-shape correlation            1.000                               0.98105                            qualitative pass
+  N=127, theta=1.5 rho              0.418601                            0.379220                           same sign; not quantitative
+Table S11. Tier-2 empirical interlayer-potential prescreen. The higher-shell failure enforces a no-go for quantitative full-3D
+validation.
+The hard gate for future MLIP use is predeclared before full finite-contact relaxation: 2H Se-S-Se-S; at least a 31 x 31 registry map;
+independent relaxation of interlayer separation at every lateral registry; D6 plus lattice-translation alignment; first-shell amplitude
+error <=10%; first-shell phase error <=5 deg; inversion-odd RMS error <=10%; full-GSFE correlation >=0.98; affine-normalized
+RMSE/range <=0.05; and preferably <=0.2 meV absolute error in W2 and W3. Recent dispersion-aware multilayer TMD neural-
+network potentials provide a plausible route, but Janus MoSSe must pass this contract before any result is called atomistic validation.
+
+S12. Remaining model-input limitations
+The audit resolves the computational ambiguities that can be decided with the published GSFE and shows that the headline directional
+split survives two in-plane compliance representations. Remaining inputs are a Janus-specific full-three-dimensional atomistic
+potential that passes the published 2H GSFE contract; collective finite-flake corrugation/buckling and edge reconstruction; load-
+dependent stacking energetics; polarity-resolved first-principles surfaces; dissipative and inertial calibration; laboratory state
+preparation; and experiment. The present mechanics keep twist externally fixed and use a spatially uniform center-of-mass/body-force
+protocol; rotational relaxation or torque, finite-stiffness spring pulling, edge/center pulling, and corresponding stress localization are
+not represented. The exact triangular switch angle is especially edge-model sensitive, and reduced temperature or period must not be
+converted into kelvin or physical frequency without independent calibration.
+
+S13. Reproducibility release contents
+The accompanying materials retain the canonical unguided rigid-model release and add the Gate-level prepared-branch,
+symmetry/gauge, size/shape, boundary, deterministic-locking, thermal, and elasticity audits used to freeze manuscript claims. The
+final package also archives the independently reconstructed nonlinear VFF source, fresh linear/VFF result tables, joint-vector thermal
+bootstrap tables, and the rewritten manuscript/SI sources. The Tier-2 empirical interlayer candidate remains explicitly no-go for
+quantitative atomistic use because its published higher-harmonic GSFE spectrum fails the predeclared Janus-specific contract.
+
+
+
+
+                                                                    5

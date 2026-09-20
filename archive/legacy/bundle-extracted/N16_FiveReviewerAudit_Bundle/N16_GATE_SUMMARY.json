@@ -1,0 +1,11 @@
+{
+  "gate": "N16_FIVE_REVIEWER_PAPER_AUDIT",
+  "mode": "full_audit",
+  "scientific_blockers": 0,
+  "major_upstream_issues": 2,
+  "moderate_statistics_issues": 1,
+  "writing_only_major_issues": 0,
+  "venue_reproducibility_minor": 1,
+  "decision": "UPSTREAM_STRENGTHENING_RECOMMENDED_BEFORE_VENUE_HANDOFF",
+  "next_owner": ["Data/Theory", "Simulation", "Statistics"]
+}

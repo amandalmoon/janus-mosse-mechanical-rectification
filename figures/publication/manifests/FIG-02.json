@@ -1,0 +1,96 @@
+{
+  "figure_id": "FIG-02",
+  "core_conclusion": "For the canonical unguided prepared state, the lowest-energy zero-force branch remains the lower-energy and longer-lived pinned family over the sampled 0-3 degree interval, yielding direction-split depinning thresholds.",
+  "claim_ids": [
+    "C2",
+    "C5"
+  ],
+  "archetype": "quantitative-grid",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 123.44,
+    "min_text_pt": 7.0,
+    "min_line_pt": 0.7
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Generated from the current reproducibility release; no illustrative values."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "What is the positive-y branch-followed depinning threshold for ground and metastable prepared families?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv",
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "B",
+      "question": "What is the negative-y branch-followed depinning threshold for ground and metastable prepared families?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv",
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "C",
+      "question": "Does the prepared ground family remain lowest in zero-force energy?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2",
+        "C5"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "D",
+      "question": "Does the prepared ground family retain the larger branch-followed stability threshold?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    }
+  ],
+  "exports": {
+    "pdf": null,
+    "svg": "/mnt/data/janus_n18_publication_figures/figures/Figure_2_branch_resolved_depinning.svg",
+    "tiff": "/mnt/data/janus_n18_publication_figures/figures/Figure_2_branch_resolved_depinning.tif",
+    "png_preview": "/mnt/data/janus_n18_publication_figures/figures/Figure_2_branch_resolved_depinning.png",
+    "source": "/mnt/data/janus_n18_publication_figures/source/make_publication_figures.py"
+  },
+  "caption": "Figure 2. Branch-resolved unguided depinning. (a,b) Positive- and negative-y thresholds followed from the lowest-energy zero-force minimum, with the competing metastable family shown separately. (c) The prepared minimum remains lower in zero-force energy over the sampled 0-3 deg interval. (d) It also remains the longer-lived pinned branch in both force directions, removing the last-surviving-basin ambiguity from the headline thresholds.",
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "WARN"
+  }
+}

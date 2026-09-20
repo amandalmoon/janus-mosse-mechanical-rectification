@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "status": "canonical_headline_baseline",
+  "model_scope": "rigid local-GSFE finite contact",
+  "material": {
+    "key": "2H_MoSSe_Se-S-Se-S",
+    "source": "Angeli 2022 coefficients with 2024 Erratum phase convention",
+    "energy_normalization": "6 W1",
+    "spectrum_policy": "full three-shell spectrum"
+  },
+  "contact": {
+    "family": "compact_hexagon",
+    "shell": 6,
+    "N": 127,
+    "rigid": true,
+    "k_perp": 0.0
+  },
+  "preparation": {
+    "zero_force_state": "lowest-energy stable minimum in one primitive registry cell",
+    "stationary_search": "multistart periodic-cell enumeration",
+    "loading_protocol": "adiabatic continuation of that same minimum",
+    "global_last_surviving_envelope": "diagnostic_only"
+  },
+  "static": {
+    "force_axis": "+/- y",
+    "theta_interval_deg": [0.0, 3.0],
+    "depinning_definition": "loss of positive-definite Hessian on the prepared branch",
+    "generic_label_policy": "use fold/saddle-node only where nondegeneracy conditions hold; otherwise stability/depinning boundary"
+  },
+  "dynamics": {
+    "theta_reference_deg": 1.5,
+    "mass": 1.0,
+    "gamma": 4.0,
+    "drive": "F_y(t)=F0 sin(2 pi t / tau)",
+    "initial_condition": "prepared zero-force ground minimum",
+    "reference_F0": 2.0,
+    "reference_period": 40.0
+  },
+  "stage_variations": {
+    "same_spectrum_symmetry": "change only centered odd Fourier sector; preserve geometry and dynamics",
+    "finite_size_shape": "change compact contact geometry/N; re-identify prepared zero-force ground state for each geometry",
+    "boundary": "change triangular boundary orientation; enumerate competing registry minima and select lowest-energy prepared state",
+    "vector_mode_map": "change F0 and period only; keep unguided prepared baseline",
+    "thermal": "add Langevin noise to the same unguided deterministic model",
+    "elasticity": "secondary model-form extension adding internal in-plane degrees of freedom",
+    "guided_comparison": "secondary device-control branch only; k_perp > 0 is never part of the headline baseline"
+  },
+  "legacy_config_policy": {
+    "config/production.json": "legacy guided v17/v18 settings; provenance only, not canonical headline baseline"
+  }
+}

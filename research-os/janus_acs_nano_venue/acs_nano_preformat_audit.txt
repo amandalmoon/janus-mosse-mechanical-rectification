@@ -1,0 +1,42 @@
+{
+  "status": "NOT_READY",
+  "blockers": 5,
+  "major": 2,
+  "issues": [
+    {
+      "severity": "BLOCKER",
+      "code": "KEYWORDS_COUNT",
+      "message": "Article has 8 keywords; expected 5-7."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "KEYWORDS_CASE",
+      "message": "Article keywords should be lowercase."
+    },
+    {
+      "severity": "BLOCKER",
+      "code": "INTRO_HEADING",
+      "message": "Do not use an Introduction heading."
+    },
+    {
+      "severity": "BLOCKER",
+      "code": "SECTION_NUMBERING",
+      "message": "ACS Nano Article sections are not numbered."
+    },
+    {
+      "severity": "BLOCKER",
+      "code": "METHODS_POSITION",
+      "message": "Methods/Experimental Section must be the last text section."
+    },
+    {
+      "severity": "BLOCKER",
+      "code": "TOC_MISSING",
+      "message": "ACS Nano Article requires a TOC graphic."
+    },
+    {
+      "severity": "MAJOR",
+      "code": "FIG_FONT",
+      "message": "Figure 6: ACS Nano checklist specifies Arial lettering within graphics."
+    }
+  ]
+}

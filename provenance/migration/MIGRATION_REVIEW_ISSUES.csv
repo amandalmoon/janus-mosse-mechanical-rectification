@@ -1,0 +1,5 @@
+﻿severity,item,detail
+NOTICE_GT25MB,janus_n19_acs_submission/N19_ACS_Nano_Initial_Submission_Package.zip,Size 40701754 bytes; review GitHub storage strategy.
+NOTICE_GT25MB,janus_n19_acs_submission/reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2.zip,Size 27492335 bytes; review GitHub storage strategy.
+KNOWN_PENDING,ACS submission metadata,"SUBMISSION_METADATA_REQUIRED.md indicates author/contact/submission-system metadata still needs user completion; keep file, do not infer values."
+KNOWN_PENDING,Figure Arial final export,N18 figure preflight flagged local Arial fallback; final ACS artwork derivatives should be re-exported in an Arial-capable environment before submission.

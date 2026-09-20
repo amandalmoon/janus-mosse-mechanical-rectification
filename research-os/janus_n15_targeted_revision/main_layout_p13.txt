@@ -1,0 +1,57 @@
+4.3 Static rectification and dynamical transport are related but not identical
+   A static threshold inequality does not by itself determine a rocking-ratchet phase diagram. Generic rectification
+and phase locking on periodic substrates are established [19,20,23,24]; the material-specific question here is whether
+the same finite MoSSe contact that exhibits prepared-state directional depinning supports lattice-vector relative-
+periodic transport under zero-mean longitudinal forcing. The 91-point F0-tau scan is stronger than a mean-
+displacement classification because every sampled state repeats one winding cycle-by-cycle after transients, and
+representative plateaus spanning several windings are independently verified as attracting relative-periodic states. The
+map is nevertheless protocol specific. At fixed theta=1.5 deg, F0*=2.0 and tau*=40, a targeted damping sweep gives
+windings (1,-10), (1,-3) and (2,-2) at gamma*=1, 2 and 3, retains (1,-1) for gamma*=4-6, and becomes pinned (0,0)
+for gamma*=8-10. The sampled vector-locking map is therefore a property of the declared m*=1, gamma*=4 reduced
+dynamical protocol, not a material-only MoSSe phase diagram. Thermal trajectories separate exact mode identity
+from stationary directed transport. After explicit burn-in, block-stationarity, initial-state-memory, independent-seed
+and timestep checks, the deterministic target winding is already strongly mixed while a smaller mean drift remains
+statistically nonzero throughout the sampled range to T*=0.70. The negative-v cycle fraction approaches one-half as
+temperature rises, showing that a weak bias can survive even when individual cycles are nearly balanced and exact
+mode identity is rare. No universal thermal critical temperature or complete operating diagram is inferred outside the
+tested drive, damping and reduced-temperature ranges.
+4.4 Registry inversion asymmetry is supported; a physical polarity law is not yet established
+    The material conclusion can now be stated more sharply. Translation-minimized optimization shows that the
+published 2H MoSSe GSFE coefficient set is genuinely inversion asymmetric in registry space, and the reciprocal-
+triad phase diagnostic provides an independent translation-invariant check. Matched same-2H symmetrization and
+exact inversion satisfy the expected static and dynamical contracts to numerical precision, which is stronger causal
+evidence within the reduced model than comparing only chemically different stackings. What remains unknown is the
+map from a physical experimental polarization change P_z to the complete set of GSFE amplitudes and phases. Exact
+spatial inversion is therefore a mathematical symmetry control, not a demonstrated polarization reversal. A
+quantitative polarity-to-rectification law requires paired polarity-resolved first-principles surfaces or equivalent
+atomistic input.
+4.5 Limitations and next tests
+    Three model-input limitations remain central. First, the source DFT GSFE relaxes the interlayer separation
+independently at each aligned registry [12], but the finite-contact model still represents the interface as a sitewise
+local-registry sum. Collective out-of-plane corrugation or buckling, atomistic edge reconstruction and chemistry,
+defects, and nonlocal edge energetics are absent. The in-plane calculations show why a higher model level matters:
+absolute thresholds shift with compliance even when the directional ratio survives. A public empirical SW plus
+registry-dependent interlayer candidate is therefore retained only as a qualitative stress test because it fails the
+published higher-harmonic GSFE contract. Recent dispersion-aware machine-learning potentials for multilayer
+TMDs provide a plausible route toward higher-level relaxation [21], but a Janus-specific 2H MoSSe GSFE contract
+must be passed before such a model is used as quantitative validation. Second, the present thresholds and driven
+trajectories are defined at fixed imposed twist under a spatially uniform center-of-mass/body-force protocol.
+Rotational relaxation or applied torque, finite-stiffness spring pulling, edge or center pulling, and the associated load-
+localization physics are not modeled. Load-dependent registry energetics, dissipative calibration, participating mass,
+and laboratory state preparation are likewise not supplied by the present GSFE; reduced temperature and time must
+not be converted into kelvin or physical frequency without independent calibration. Third, physical polarity reversal
+is not represented by eta scaling or the matched mathematical inversion control. Beyond these material-input
+limitations, the isolated higher-order stability point near theta=2.9734 deg merits a dedicated two-parameter normal-
+form study, and the continuous amplitude-period phase diagram may contain unsampled multistability or bifurcation
+structure.
+
+5. Conclusion
+   For the lowest-energy zero-force preparation, fixed imposed twist, and the chosen positive/negative-y center-of-
+mass loading axis, a finite contact constructed from the published 2H Janus MoSSe GSFE exhibits branch-followed
+full two-dimensional mechanical rectification without an added transverse guide. At theta=1.5 deg the prepared
+N=127 rigid thresholds are F_c,+*=3.071135 and F_c,-*=1.258672; the competing metastable basin carries the
+opposite signed split, so the response is explicitly state conditioned. Translation-minimized asymmetry diagnostics
+and matched same-2H controls identify registry-space inversion asymmetry as the causal conservative ingredient
+within the reduced model. Compact-contact thresholds obey theta sqrt(N) similarity with finite-size corrections
+
+                                                           13

@@ -1,0 +1,16 @@
+{
+  "gate": "N17_UPSTREAM_STRENGTHENING_AND_TARGETED_REVISION",
+  "FR-M01": "CLOSED_WITH_SCOPE",
+  "FR-M02": "CLOSED",
+  "FR-S01": "CLOSED",
+  "FR-R01": "OPEN_VENUE_MINOR",
+  "scientific_blockers": 0,
+  "scientific_major_open": 0,
+  "scientific_moderate_open": 0,
+  "venue_minor_open": 1,
+  "decision": "SCIENTIFIC_STOP_GATE_PASS",
+  "next": "ACS Nano venue/submission layer",
+  "writing_qa": "PASS",
+  "citation_recheck": "PASS_NO_NEW_CITATIONS",
+  "docx_visual_qa": "PASS_MAIN_16P_SI_6P"
+}

@@ -1,0 +1,6 @@
+issue_id,severity,owner,status,issue,resolution_path
+FR-M01,MAJOR,Data/Theory,CLOSED_WITH_SCOPE,No propagation of GSFE fit/input uncertainty into threshold and dynamics claims,Published-decimal precision propagated; sign/winding robust. Actual source fit covariance is unavailable and explicitly retained as NOT_ASSESSABLE input limitation; claims conditional on published Fourier model.
+FR-M02,MAJOR,Simulation,CLOSED,Damping robustness is only tested at one canonical drive point,72-point gamma x drive map completed; confirms strong damping-drive interaction and validates protocol-specific wording.
+FR-S01,MODERATE,Statistics,CLOSED,Thermal trajectory count has no explicit precision/N-convergence justification,Trajectory-count subsampling convergence completed; high-T N=1000 design is conservative relative to >=95% decision-stability thresholds.
+FR-R01,MINOR,Reproducibility/Venue,OPEN_VENUE,Code/data package has no immutable archival DOI/identifier yet,Deposit final release and cite immutable repository identifier during venue package
+FR-W01,INFO,Writing,CLOSED,State/axis/damping/boundary/mechanical scope was previously under-specified,N15 targeted revision now makes these boundaries explicit

@@ -1,0 +1,38 @@
+3.2 Branch-followed unguided depinning is intrinsic to the rigid reduced model
+   The full-2D directional split survives the stricter prepared-state definition. The N=127 primitive cell contains two
+stable zero-force minima. On the 491-point dense/adaptive theta grid from 0 to 3 deg, the energy margin U_meta-
+U_ground, the positive-loading lifetime margin F_c,+^ground-F_c,+^meta, and the negative-loading lifetime margin
+F_c,-^ground-F_c,-^meta remain positive at every point. Their minimum values occur at the high-twist end and
+remain 0.17313, 1.70275 and 0.26086, respectively. Sixteen independent 21 x 21 stationary-point checkpoints also
+recover exactly two stable zero-force minima. At theta=1.5 deg the ground-state thresholds are F_c,+*=3.071135 and
+F_c,-*=1.258672, giving Delta F_c=+1.812463, whereas the higher-energy minimum loses stability at 0.211059 and
+0.611697, giving Delta F_c=-0.400638. Thus the same GSFE supports opposite directional signs for the two prepared
+zero-force basins; the headline rectification is explicitly ground-state-preparation conditioned rather than basin
+independent.
+   For the ground-state family, the positive- and negative-y thresholds are 3.485120 and 1.422236 at zero twist,
+3.071135 and 1.258672 at theta=1.5 deg, and 1.883315 and 0.782412 at theta=3 deg. Over 0-3 deg the normalized
+split has mean rho=0.417894, sample SD 0.002279 and range 0.412984-0.420366. A separate in-plane force-direction
+scan at theta=1.5 deg shows that the signed split is strongly axis dependent: |rho| is about 1.63e-4 on a symmetry-axis
+orientation and reaches about 0.4186 on the tested strong-rectification orientation. The headline positive/negative-y
+comparison is therefore one chosen crystallographic loading axis, not a rotationally invariant friction scalar. The
+branch-followed thresholds retain the near-common geometric envelope found in the unguided reanalysis along that
+declared axis. The k_perp*=25 reference gives a much smaller rho=0.102977 at theta=1.5 deg; confinement
+reorganizes the escape pathway rather than creating the free-contact directionality.
+   The generic-fold audit also survives. Most points have a positive hard Hessian mode and nonzero soft-mode cubic
+coefficient. One isolated forward point near theta=2.97338566 deg and F*=1.91007353 has vanishing transverse
+quadratic and cubic terms while the orthogonal curvature remains positive (H_yy=6.913808). Stable-minimum
+enumeration still shows loss of metastability across that point, so we use 'depinning/stability boundary' globally and
+reserve 'fold' for generic segments.
+
+
+
+
+Figure 2. Branch-resolved unguided depinning. (a,b) Positive- and negative-y thresholds followed from the lowest-energy zero-force
+minimum, with the competing metastable family shown separately. (c) The prepared minimum remains lower in zero-force energy over
+the sampled 0-3 deg interval. (d) It also remains the longer-lived pinned branch in both force directions, removing the last-surviving-
+basin ambiguity from the headline thresholds.
+
+
+
+
+                                                                  7

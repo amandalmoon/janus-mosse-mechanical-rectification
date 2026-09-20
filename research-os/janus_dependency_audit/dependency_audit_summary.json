@@ -1,0 +1,73 @@
+{
+  "reference_endpoint": {
+    "forward": {
+      "old_linear": 1.944451626443851,
+      "exact": 1.9444693296175262,
+      "delta_deg": 1.7703173675220896e-05
+    },
+    "reverse": {
+      "old_linear": 1.0099068387052372,
+      "exact": 1.009973479607291,
+      "delta_deg": 6.664090205377171e-05
+    },
+    "W_D_old": 0.9345447877386137,
+    "W_D_exact": 0.9344958500102352,
+    "W_D_delta": -4.8937728378550815e-05
+  },
+  "size_scaling": {
+    "fit_old": {
+      "alpha": 0.5031315862697574,
+      "prefactor": 10.703652531133649,
+      "R2_log": 0.9999948668285461
+    },
+    "fit_exact": {
+      "alpha": 0.5031332445728818,
+      "prefactor": 10.703443456617402,
+      "R2_log": 0.999994817615992
+    },
+    "alpha_delta": 1.6583031243744273e-06,
+    "mean_WDsqrtN_old": 10.533684709148535,
+    "sd_WDsqrtN_old": 0.029465441836439024,
+    "mean_WDsqrtN_exact": 10.533389726984314,
+    "sd_WDsqrtN_exact": 0.029495159782376944,
+    "max_abs_WD_change_deg": 7.73834567404652e-05,
+    "max_rel_WD_change": 0.00012112596162327209
+  },
+  "factorization": {
+    "rho_mean": 0.10328916625342521,
+    "rho_sd_sample": 0.0013642697166123072,
+    "rho_min": 0.10168984243739265,
+    "rho_max": 0.10604626249824672,
+    "factorization_max_relerr_forward_percent": 0.24927494792070476,
+    "factorization_max_relerr_reverse_percent": 0.30841598722172214,
+    "band_area_force_deg": 2.10844902402581,
+    "endpoint_patch_dependency": "none: metrics use direct threshold surface values on fixed theta grid"
+  },
+  "odd_sector": {
+    "slope": 2.8322126801610508,
+    "R2": 0.99999984833088,
+    "eta_opt": 0.49999999999999994,
+    "DeltaFc_at_opt": 1.378647370616474,
+    "rho_at_opt": 0.280902077089547,
+    "endpoint_patch_dependency": "none: fixed theta=1.5 direct guided_threshold calls"
+  },
+  "edge": {
+    "current_v18_clean_replay_roots_deg": {
+      "20": 2.963732,
+      "25": 2.890673
+    },
+    "dependency_on_F0_endpoint_patch": false,
+    "independent_geometry_reconstruction_certified": false,
+    "note": "Do not use attempted reconstructed edge metrics; exact v18 edge generator is not separately accessible."
+  },
+  "hidden_dependency": {
+    "thermal_mid_theta_old_deg": 1.4771792325745448,
+    "thermal_mid_theta_exact_deg": 1.4772214046124086,
+    "delta_deg": 4.217203786383017e-05,
+    "paired_replay_all_counts_identical": true,
+    "temperatures_with_any_count_change": 0,
+    "max_abs_delta_D": 0.0,
+    "T50_both": 0.05381737435712747,
+    "status": "PASS: numerically inert at current stochastic resolution"
+  }
+}

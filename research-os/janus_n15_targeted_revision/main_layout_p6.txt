@@ -1,0 +1,40 @@
+the same minimum with a multistart spread below 8.4e-17. The first-shell complex-amplitude triad invariant is
+chi_1=0.583541 and remains unchanged under random registry translations to about 1e-15. Two symmetric 3R
+controls have minimized odd-power fractions at numerical zero, while an asymmetric 3R configuration retains a
+smaller finite odd RMS fraction 0.01745. Registry-space inversion asymmetry, rather than the label 2H or 3R by
+itself, is therefore the relevant conservative property. A separate 26-origin falsification leaves the physical theta=1.5
+deg threshold split invariant to below 1e-14 but changes the eta=0 reference topology and the small-eta response. We
+therefore reject arbitrary-origin d(Delta F_c)/d eta and any intermediate eta optimum as material observables; the only
+retained eta path is an A_min-centered computational homotopy in the SI.
+    The matched same-2H controls give the decisive symmetry test at theta=1.5 deg. The original centered 2H surface
+has F_c,+*=3.071135 and F_c,-*=1.258672 and produces the deterministic lattice winding (1,-1). The symmetrized
+same-2H surface contains two exactly degenerate inversion-paired minima: each selected minimum has an
+asymmetric branch threshold, but the paired/global threshold envelope is direction-degenerate, F_c,+*=F_c,-
+*=1.767700 within 6.6e-10, and the deterministic current is zero within 8.6e-18. Exact inversion of the 2H surface
+swaps the thresholds to 1.258672 and 3.071135 and reverses the current to (-1,1); threshold-swap errors are below
+1.8e-15 and current-reversal errors below 1.7e-14. Thus the causal claim is a symmetry contract of the same GSFE
+spectrum, not a comparison between chemically different stackings.
+
+
+
+
+Figure 1. Material registry asymmetry and matched symmetry contracts. (a) Translation-centered asymmetric 2H MoSSe GSFE. (b)
+Matched same-2H surface after removing the inversion-odd component at the optimized inversion center. (c) Translation-minimized odd
+RMS fraction for published 3R/2H configurations. (d) At theta=1.5 deg, the matched symmetrized envelope is direction-degenerate and
+carries zero deterministic winding, whereas exact spatial inversion swaps F_c,+ and F_c,- and reverses (1,-1) to (-1,1).
+Table 2. Matched symmetry and material controls at theta=1.5 deg.
+    Control / preparation            F_c,+*                    F_c,-*                 Delta F_c*          deterministic winding
+  2H ground-state branch            3.071135                  1.258672                +1.812463                   (1,-1)
+
+  Matched same-2H sym.
+                                    1.767700                  1.767700                  6.6e-10                   (0,0)
+  global envelope
+
+  Exact inversion of same 2H        1.258672                  3.071135                 -1.812463                  (-1,1)
+
+  3R symmetric S-Se-Se-S            3.098559                  3.098559                  2.1e-9                  static null
+
+
+
+
+                                                                    6

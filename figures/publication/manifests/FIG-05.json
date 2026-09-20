@@ -1,0 +1,93 @@
+{
+  "figure_id": "FIG-05",
+  "core_conclusion": "Zero-mean forcing produces a sampled family of integer vector-locked states, and the canonical (1,-1) relative-periodic orbit is strongly attracting with cross-solver Floquet consistency.",
+  "claim_ids": [
+    "C13",
+    "C14"
+  ],
+  "archetype": "quantitative-grid",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 123.48,
+    "min_text_pt": 7.0,
+    "min_line_pt": 0.7
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Generated from the current reproducibility release; no illustrative values."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "What integer winding m occurs across the sampled amplitude-period map?",
+      "visual_type": "discrete-heatmap",
+      "evidence_ids": [
+        "C13"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/vector_mode_map_F0_period.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "B",
+      "question": "What integer winding n occurs across the sampled amplitude-period map?",
+      "visual_type": "discrete-heatmap",
+      "evidence_ids": [
+        "C13"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/vector_mode_map_F0_period.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "C",
+      "question": "What vector-locking staircase appears along the tau*=40 slice?",
+      "visual_type": "step",
+      "evidence_ids": [
+        "C13"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/vector_mode_map_F0_period.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "D",
+      "question": "Do independent ODE solvers agree on the canonical Floquet multiplier and relative-periodic closure?",
+      "visual_type": "paired-mini-panels",
+      "evidence_ids": [
+        "C14"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/floquet_conditioning_check.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    }
+  ],
+  "exports": {
+    "pdf": null,
+    "svg": "/mnt/data/janus_n18_publication_figures/figures/Figure_5_vector_mode_map_floquet.svg",
+    "tiff": "/mnt/data/janus_n18_publication_figures/figures/Figure_5_vector_mode_map_floquet.tif",
+    "png_preview": "/mnt/data/janus_n18_publication_figures/figures/Figure_5_vector_mode_map_floquet.png",
+    "source": "/mnt/data/janus_n18_publication_figures/source/make_publication_figures.py"
+  },
+  "caption": "Figure 5. Two-dimensional vector mode locking. (a,b) Integer windings m and n over the 91-point rocking-amplitude/period grid at theta=1.5 deg. (c) The tau*=40 slice shows a staircase of oblique lattice-vector states. (d) Independent DOP853 and Radau monodromy integrations agree on the very small leading Floquet spectral radius of the representative (1,-1) orbit; the magnitude is used only as evidence of strong attraction.",
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "WARN"
+  }
+}

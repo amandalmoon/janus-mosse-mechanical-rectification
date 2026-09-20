@@ -1,0 +1,52 @@
+{
+  "grid": {
+    "n_points": 491,
+    "scheme": "0.01 deg to 2.75; 0.002 deg to 2.94; 0.0005 deg to 3.0",
+    "n_checkpoints": 16
+  },
+  "margins": {
+    "DeltaU0": {
+      "min": 0.1731303404437084,
+      "theta_at_min_deg": 3.00000000000002,
+      "max": 0.3665603972859556,
+      "all_positive": true,
+      "max_adjacent_change": 0.0009759371972563879,
+      "safety_ratio_min_over_max_adjacent_change": 177.39905900750847,
+      "n_positive_slopes": 0
+    },
+    "DeltaF_plus": {
+      "min": 1.7027472609889105,
+      "theta_at_min_deg": 3.00000000000002,
+      "max": 3.289447223964176,
+      "all_positive": true,
+      "max_adjacent_change": 0.00880435034488447,
+      "safety_ratio_min_over_max_adjacent_change": 193.39839900603747,
+      "n_positive_slopes": 0
+    },
+    "DeltaF_minus": {
+      "min": 0.2608645551166525,
+      "theta_at_min_deg": 3.00000000000002,
+      "max": 0.8543384274029325,
+      "all_positive": true,
+      "max_adjacent_change": 0.0027190416736515566,
+      "safety_ratio_min_over_max_adjacent_change": 95.93988854401138,
+      "n_positive_slopes": 0
+    }
+  },
+  "all_dense_positive": true,
+  "all_checkpoints_exactly_two_stable_minima": true,
+  "max_zero_root_residual": 1.3297535223456003e-15,
+  "max_fold_residual": 5.409512558801488e-08,
+  "min_hard_eigenvalue": 6.805938570882143,
+  "max_periodic_tracking_jump": 0.0011138053000121033,
+  "prior_match_max_abs": {
+    "dU_abs": 1.887379141862766e-15,
+    "dFp_abs": 4.39648317751562e-14,
+    "dFm_abs": 8.026912468039882e-14,
+    "groundFp_abs": 4.39648317751562e-14,
+    "groundFm_abs": 8.43769498715119e-15
+  },
+  "known_nongeneric_point_deg": 2.9733856558,
+  "interpretation": "dense/adaptive numerical continuation plus independent 21x21 stationary-point checkpoints; not formal interval arithmetic proof",
+  "gate": "PASS"
+}

@@ -1,0 +1,71 @@
+       surface          minimum                   U0                   F_c,+                   F_c,-                  Delta F_c               winding
+etrized
+2H_exact_inverted          0                  -0.559658               1.258672               3.071135                 -1.81246
+2H_exact_inverted          1                  -0.251474               0.611697               0.211059                 0.400639
+2H_exact_inverted       GLOBAL                -0.559658               1.258672               3.071135                 -1.81246                  (-1,1)
+
+
+The symmetry-respecting global envelope of the matched symmetrized surface has |F_c,+-F_c,-|=6.574e-10. Exact inversion swaps
+the original thresholds with absolute errors 2.220e-16 and 1.776e-15. The inverted and original vector currents sum to less than
+1.665e-14 in lattice coordinates, while the matched-symmetric deterministic current norm is 8.510e-18. Individual degenerate minima
+on the symmetric surface can have asymmetric branch thresholds, but the inversion partner carries the swapped response; this is why
+the global paired envelope, rather than one arbitrarily selected degenerate minimum, is the symmetry-null static observable.
+
+S4. Global check of the inversion-asymmetry diagnostic
+Table S3. Translation-minimized odd-power search.
+     configuration                    A_min                          odd RMS                   triad invariant chi_1                 multistart spread
+3R_MoSSe_Se-S-Se-S                0.00030466354                    0.017454614                         0.052335956                       2.06e-18
+3R_MoSSe_S-Se-Se-S                2.7160792e-34                   1.6480532e-17                              0                           3.70e-26
+3R_MoSSe_Se-S-S-Se                      0                                0                                   0                           7.08e-26
+2H_MoSSe_Se-S-Se-S                 0.042536085                      0.20624278                          0.58354121                       8.33e-17
+
+
+A brute 181 x 181 translation grid followed by multiple independent local refinements yields the same 2H A_min to numerical
+precision. The first-shell phase diagnostic is more precisely the normalized imaginary part of the complex-amplitude triad product,
+chi_1=Im[(C_1 C_2 C_3)/|C_1 C_2 C_3|]; because G_1+G_2+G_3=0 it is invariant under registry translation and reduces to sin(3
+phi_1) in the equal-phase representation. In 1000 random translations the maximum chi_1 variation is below 1e-15. A complementary
+26-origin test shows why an arbitrary cosine/sine continuation is not a material law: the physical eta=1 threshold split changes by less
+than 9.8e-15 across origins, but the eta=0 ground-state topology changes (17 origins with one stable ground minimum, 9 with an
+inversion-degenerate pair) and the small-eta response changes with origin. At the published origin a local fit gives d(Delta F_c)/d eta
+approximately 2.833, whereas at the A_min center the prepared-ground observable has a finite branch-selection jump at eta=0.
+Therefore no eta susceptibility or intermediate eta optimum is interpreted physically. An A_min-centered eta homotopy is retained
+only as a coordinate-covariant mechanism-isolation path, with no mapping to experimental polarization.
+
+S5. Extended compact-contact similarity
+Table S4. Maximum normalized spread in the extended size/shape audit (%).
+           scope                     Theta                    +y spread / family diff            -y spread / family diff          rho spread / family diff
+hex                                    0                             0.0000                              0.0000                          0.00000
+hex                                   10                             0.0179                              0.0174                          0.00054
+hex                                   15                             0.0429                              0.0417                          0.00118
+hex                                   20                             0.0818                              0.0800                          0.00180
+disk                                   0                             0.0000                              0.0000                          0.00000
+disk                                  10                             0.0053                              0.0051                          0.00016
+disk                                  15                             0.0124                              0.0121                          0.00036
+disk                                  20                             0.0230                              0.0222                          0.00072
+hex_vs_disk                            0                             0.0000                              0.0000                          0.00000
+hex_vs_disk                           10                             0.0232                              0.0225                          0.00070
+hex_vs_disk                           15                             0.0553                              0.0537                          0.00154
+hex_vs_disk                           20                             0.1048                              0.1022                          0.00252
+
+
+The hexagonal family contains N=127, 217, 331, 469, 631, 817, 1027 and 1261, and the disk-like family contains N=127, 241, 367,
+517, 721 and 931. A later dense rerun evaluates every integer Theta from 0 to 20, not only the four summary values in Table S4. The
+worst within-family deviations still occur at Theta=20 and remain below 0.1%, while the hexagon-disk family-mean difference
+remains about 0.10%. Independent high-Theta prepared-state spot checks for the smallest contacts also confirm that the reported folds
+remain connected to the zero-force ground branch. These calculations support theta sqrt(N) similarity for the tested compact rigid
+families, not arbitrary boundary geometries or deformable contacts.
+
+S6. Boundary registry competition and edge sensitivity
+Table S5. Ground-state registry switches for rotated triangular contacts.
+      cut angle            switch theta                ground below              Delta F below               ground above                Delta F above
+20                         2.921278008                      A                     +0.666122                       B                       -0.669050
+25                         2.847233122                      A                     +0.700632                       B                       -0.703441
+
+Table S6. Surrogate outer-site weighting sensitivity.
+            cut angle                        outer-site weight                          outer sites / N                    ground-state switch theta
+20                                                 0.50                                       48                                  3.170095
+20                                                 0.75                                       48                                  3.026591
+20                                                 1.00                                       48                                  2.921278
+20                                                 1.25                                       48                                  2.841009
+
+                                                                           2

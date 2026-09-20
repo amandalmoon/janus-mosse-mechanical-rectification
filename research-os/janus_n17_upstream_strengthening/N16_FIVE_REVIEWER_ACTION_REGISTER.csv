@@ -1,0 +1,6 @@
+issue_id,severity,owner,status,issue,resolution_path
+FR-M01,MAJOR,Data/Theory,OPEN,No propagation of GSFE fit/input uncertainty into threshold and dynamics claims,Run predeclared coefficient/raw-grid uncertainty ensemble and propagate to DeltaFc/rho
+FR-M02,MAJOR,Simulation,OPEN,Damping robustness is only tested at one canonical drive point,Run compact joint gamma x drive robustness map
+FR-S01,MODERATE,Statistics,OPEN,Thermal trajectory count has no explicit precision/N-convergence justification,Subsample existing trajectory pools and report CI/decision stability vs N
+FR-R01,MINOR,Reproducibility/Venue,OPEN,Code/data package has no immutable archival DOI/identifier yet,Deposit final release and cite immutable repository identifier during venue package
+FR-W01,INFO,Writing,CLOSED,State/axis/damping/boundary/mechanical scope was previously under-specified,N15 targeted revision now makes these boundaries explicit

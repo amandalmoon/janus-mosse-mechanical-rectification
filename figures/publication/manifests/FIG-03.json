@@ -1,0 +1,94 @@
+{
+  "figure_id": "FIG-03",
+  "core_conclusion": "Prepared-state thresholds of tested compact self-similar contacts collapse primarily under Theta=theta sqrt(N), with sub-percent finite-size deviations and close agreement between hexagonal and disk-like families through Theta=20.",
+  "claim_ids": [
+    "C6",
+    "C7"
+  ],
+  "archetype": "quantitative-grid",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 123.44,
+    "min_text_pt": 7.0,
+    "min_line_pt": 0.7
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Generated from the current reproducibility release; no illustrative values."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "Do larger compact hexagons collapse under the scaled twist coordinate?",
+      "visual_type": "line-small-multiple",
+      "evidence_ids": [
+        "C6"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_extended.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "B",
+      "question": "Does an independent disk-like compact family show the same collapse?",
+      "visual_type": "line-small-multiple",
+      "evidence_ids": [
+        "C6",
+        "C7"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_extended.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "C",
+      "question": "How large are residual cross-size deviations within each compact family?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C6"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_metrics.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    },
+    {
+      "id": "D",
+      "question": "How closely do the hexagonal and disk-like family means agree?",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C7"
+      ],
+      "source_paths": [
+        "/mnt/data/janus_n17_repro_release/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_metrics.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": []
+    }
+  ],
+  "exports": {
+    "pdf": null,
+    "svg": "/mnt/data/janus_n18_publication_figures/figures/Figure_3_extended_size_shape_similarity.svg",
+    "tiff": "/mnt/data/janus_n18_publication_figures/figures/Figure_3_extended_size_shape_similarity.tif",
+    "png_preview": "/mnt/data/janus_n18_publication_figures/figures/Figure_3_extended_size_shape_similarity.png",
+    "source": "/mnt/data/janus_n18_publication_figures/source/make_publication_figures.py"
+  },
+  "caption": "Figure 3. Extended finite-size and compact-shape similarity. (a,b) Branch-followed forward (solid) and reverse (dashed) thresholds for larger hexagonal and independent disk-like contact families collapse when plotted against Theta=theta sqrt(N). (c) Maximum cross-size deviations remain below 0.1% through Theta=20. (d) Hexagonal and disk family means differ by about 0.1% or less over the sampled scaled range.",
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "WARN"
+  }
+}

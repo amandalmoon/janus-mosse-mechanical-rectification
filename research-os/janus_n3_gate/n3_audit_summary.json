@@ -1,0 +1,53 @@
+{
+  "gate": "N3 boundary registry competition",
+  "status": "PASS_WITH_SCOPE_REFINEMENT",
+  "nominal": {
+    "20": {
+      "prepared_switch_deg": 2.921278008381212,
+      "global_envelope_zero_deg": 2.9133466018865875,
+      "prepared_minus_global_deg": 0.007931406494618,
+      "deltaA_at_switch": 0.6652712674470842,
+      "deltaB_at_switch": -0.6690496477403547,
+      "prepared_delta_jump": -1.334320915187439,
+      "dE_slope_per_deg": 0.2161974785125364
+    },
+    "25": {
+      "prepared_switch_deg": 2.847233122261797,
+      "global_envelope_zero_deg": 2.8394006149943336,
+      "prepared_minus_global_deg": 0.0078325072674401,
+      "deltaA_at_switch": 0.699753628176546,
+      "deltaB_at_switch": -0.7034406360760764,
+      "prepared_delta_jump": -1.4031942642526225,
+      "dE_slope_per_deg": 0.2243187989472983
+    }
+  },
+  "orientation_switches_inside_0_3_deg": [
+    20,
+    25
+  ],
+  "edge_weight": {
+    "all_tested_crossings_exist": true,
+    "all_tested_A_B_have_opposite_directional_split": true,
+    "all_tested_global_enumerations_have_exactly_two_stable_minima": true,
+    "all_tested_A_B_stationary_stable": true,
+    "phi20_switch_range_deg": [
+      2.777913879130666,
+      3.1700953181060294
+    ],
+    "phi25_switch_range_deg": [
+      2.7108289738593734,
+      3.083165346175891
+    ],
+    "phi20_inside_0_3_count": 3,
+    "phi25_inside_0_3_count": 4,
+    "max_stationary_grad_resid": 1.839654821520898e-15,
+    "min_stationary_eig": 5.92939848282395,
+    "max_fold_resid": 3.580325424288602e-14,
+    "min_fold_hard_eig": 8.376837872340793
+  },
+  "nominal_stationary": {
+    "all_checkpoints_two_minima": true,
+    "max_grad_resid": 1.3951885623693297e-15,
+    "min_eig": 5.939151888039478
+  }
+}
