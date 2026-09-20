@@ -221,6 +221,52 @@
       ],
       "supersedes": null,
       "material_change_note": "Public content-addressed Git commit 327c58e2684398ba7bc11205865f8222066c3539 is the immutable source identifier; bundle SHA-256 is recorded."
+    },
+    {
+      "id": "ACS-AUDIT-N28",
+      "type": "ACS Nano submission audit",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "research-os/janus_n28_acs_nano_submission/ACS_NANO_SUBMISSION_AUDIT.md",
+      "hash": "9e44ec6cce0be327fcf215fdc2c2bab1d3e64b8a",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "DOCX-N27-FINAL",
+        "RELEASE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Current official ACS Nano guidance verified on 2026-09-20; venue package status NOT_READY."
+    },
+    {
+      "id": "ACS-SUBMISSION-MANIFEST-N28",
+      "type": "ACS Nano submission manifest",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "acs-nano-submission",
+      "path": "research-os/janus_n28_acs_nano_submission/submission_manifest.json",
+      "hash": "223acd6cd674492fc3b7c6f7adaa8b8e70ebbe63",
+      "depends_on": [
+        "ACS-AUDIT-N28"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N28",
+      "type": "ACS Nano initial submission package",
+      "version": 1,
+      "status": "BLOCKED",
+      "owner": "acs-nano-submission",
+      "path": null,
+      "hash": null,
+      "depends_on": [
+        "ACS-AUDIT-N28",
+        "DOCX-N27-FINAL",
+        "RELEASE-N27"
+      ],
+      "supersedes": null,
+      "material_change_note": "Blocked by venue/package requirements only; scientific freeze remains valid."
     }
   ]
 }
