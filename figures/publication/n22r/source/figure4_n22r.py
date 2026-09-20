@@ -182,7 +182,7 @@ ax_c.axhline(0, color=LIGHT, lw=0.75, zorder=0)
 ax_c.set_xticks(x, xlabels)
 ax_c.set_xlim(-0.35, 4.35)
 ax_c.set_ylim(-0.08, 1.50)
-ax_c.set_xlabel(r'in-plane stiffness, $\theta=1.5^\circ$')
+ax_c.set_xlabel(r'in-plane stiffness, $\theta=1.5$°')
 ax_c.set_ylabel(r'$100(\rho/\rho_{\mathrm{rigid}}-1)$ (%)')
 ax_c.legend(handles=[
     Line2D([0], [0], color=DARK, marker='o', mfc=DARK, mec=DARK, label='FEM'),
