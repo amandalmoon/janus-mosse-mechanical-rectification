@@ -72,8 +72,8 @@ def main() -> None:
     tr = pd.read_csv(DATA / 'triangle_ground_switch.csv')
     ew = pd.read_csv(DATA / 'edge_weight_ground_switch.csv')
     styles = {
-        20: dict(color=DARK, linestyle='-', label=r'$\phi_e=20^\circ$'),
-        25: dict(color=PALE, linestyle=(0, (4, 2)), label=r'$\phi_e=25^\circ$'),
+        20: dict(color=DARK, linestyle='-', label=r'$\phi_e=20$°'),
+        25: dict(color=PALE, linestyle=(0, (4, 2)), label=r'$\phi_e=25$°'),
     }
 
     fig = plt.figure(figsize=(inch(177.8), inch(116.0)))
@@ -122,9 +122,9 @@ def main() -> None:
                label='family B'),
     ]
     b.legend(handles=family_handles, loc='center', ncol=2, columnspacing=1.0, handlelength=1.7)
-    b.text(0.02, 0.97, r'$20^\circ$', transform=b.transAxes, color=DARK, fontsize=7.0,
+    b.text(0.02, 0.97, r'$20$°', transform=b.transAxes, color=DARK, fontsize=7.0,
            ha='left', va='top')
-    b.text(0.98, 0.97, r'$25^\circ$', transform=b.transAxes, color=PALE, fontsize=7.0,
+    b.text(0.98, 0.97, r'$25$°', transform=b.transAxes, color=PALE, fontsize=7.0,
            ha='right', va='top')
     panel_label(b, 'b'); panel_title(b, 'competing families carry opposite bias'); finish(b)
 
