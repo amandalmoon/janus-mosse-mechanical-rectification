@@ -324,6 +324,36 @@
       ],
       "supersedes": null,
       "material_change_note": "Final TOC must be human-created; AI-assisted concept excluded under current ACS AI policy."
+    },
+    {
+      "id": "ACS-MANUSCRIPT-N29-REPAIRED",
+      "type": "ACS Nano venue manuscript visual/math repair derivative",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx + publication-figure-designer",
+      "path": "external-deliverable:ACS_Nano_N29_Priority_Repaired_Manuscript_AUTHOR_METADATA_PENDING.docx",
+      "hash": "eb4b063285733a61295f7dc89ef425d85aa7fff90ba46127aec0f5363f067fb5",
+      "depends_on": [
+        "SCI-FREEZE-N27",
+        "ACS-MANUSCRIPT-N28",
+        "ACS-FIGSET-N28"
+      ],
+      "supersedes": "ACS-MANUSCRIPT-N28",
+      "material_change_note": "Presentation-only repair: display math rendering, targeted inline-math renderer fallbacks, caption cleanup, and whitespace-only figure scaling; scientific content unchanged."
+    },
+    {
+      "id": "N29-VISUAL-MATH-QA",
+      "type": "visual/math render QA",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "docx + publication-figure-designer",
+      "path": "research-os/janus_n29_visual_math_repair/N29_VISUAL_MATH_REPAIR_REPORT.md",
+      "hash": "4d75ea5638b9644c19e046c8bbfb2d6ea6af02aa",
+      "depends_on": [
+        "ACS-MANUSCRIPT-N29-REPAIRED"
+      ],
+      "supersedes": null,
+      "material_change_note": "19-page visual inspection pass; accessibility 0/0/0; PDF preflight openable/text-based."
     }
   ]
 }
