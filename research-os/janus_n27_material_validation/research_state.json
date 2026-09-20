@@ -1,6 +1,6 @@
 {
   "research_id": "JANUS-MOSSE-N27-R01",
-  "current_stage": "venue submission layer",
+  "current_stage": "ACS Nano submission audit",
   "last_valid_gate": "GATE-SCIENTIFIC-FREEZE",
   "gate_status": "PASS",
   "target_venue": "ACS Nano",
@@ -102,6 +102,14 @@
     {
       "id": "DEC-N27-FINAL-CLAIMS-FREEZE",
       "status": "VERIFIED"
+    },
+    {
+      "id": "DOCX-N27-FINAL",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "RELEASE-N27",
+      "status": "VERIFIED"
     }
   ],
   "blockers": [
@@ -179,6 +187,16 @@
       "stage": "N27 scientific freeze",
       "gate_status": "PASS",
       "note": "Claims, manuscript, figures, statistics, references, and review state synchronized; scientific content is read-only for venue handoff."
+    },
+    {
+      "stage": "N27 final DOCX assembly/render QA",
+      "gate_status": "PASS",
+      "note": "20 pages, 7 figures, 356 OMML objects, accessibility 0/0/0; all pages visually inspected."
+    },
+    {
+      "stage": "N27 immutable reproducibility release",
+      "gate_status": "PASS",
+      "note": "Frozen public source identifier 327c58e2684398ba7bc11205865f8222066c3539; bundle SHA-256 7436e985937e7cc9e2a5cac1f58affbd3e955dd2763eca9d69324c1fd0af34a8; N27-R02 resolved."
     }
   ]
 }
