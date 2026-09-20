@@ -1,0 +1,79 @@
+{
+  "issues": [
+    {
+      "issue_id": "N27-R01",
+      "severity": "MAJOR",
+      "type": "material-model external validity",
+      "claim_ids": ["C2", "C3", "C4", "C5", "C6", "C7"],
+      "figure_ids": ["FIG-02", "FIG-03", "FIG-04", "FIG-05", "FIG-06", "FIG-07"],
+      "equation_ids": ["Eq. 2", "Eq. 13", "Eq. 15"],
+      "source_locator": "Methods 2.10; Discussion 4.4; Conclusions",
+      "finding": "The manuscript's finite-contact MoSSe conclusions are generated from a published local GSFE plus rigid and in-plane-only relaxation models. The study does not directly validate a finite three-dimensional Janus MoSSe contact with collective out-of-plane corrugation, reconstructed/chemical edges, defects, or load-dependent interlayer energetics. The reduced-model mechanism is internally well supported, but material-level external validity remains unverified.",
+      "evidence": "The manuscript explicitly states that it does not supply a full three-dimensional atomistically relaxed finite MoSSe interface and lists collective buckling/corrugation, reconstructed edges, defects, load-dependent energetics, and the lack of a validated Janus-specific 3D interatomic potential as unresolved. The same-spectrum controls, FEM/VFF checks, deterministic dynamics, and thermal statistics do not test those missing degrees of freedom.",
+      "required_fix": "Before presenting the result as a material-specific finite-contact prediction, add a Janus-specific three-dimensional validation layer: at minimum, an independently validated atomistic/MLIP/first-principles spot check of 2-3 canonical cases that tests the prepared-state directional sign and relative scale after full structural relaxation. If that calculation is not feasible, narrow the title/abstract/conclusion to state explicitly that this is a DFT-GSFE-anchored finite-contact model prediction rather than a finite-contact material prediction.",
+      "route_owner": "experiment/simulation",
+      "rerun_gate": "model-validity -> claim-evidence -> Five Reviewer preflight",
+      "status": "OPEN"
+    },
+    {
+      "issue_id": "N27-R02",
+      "severity": "MINOR",
+      "type": "reproducibility archive metadata",
+      "claim_ids": [],
+      "figure_ids": [],
+      "equation_ids": [],
+      "source_locator": "Data and Code Availability",
+      "finding": "The draft points to the project repository and reproducibility materials but has no immutable archival DOI or equivalent frozen release identifier.",
+      "evidence": "Section 6 explicitly says an archival DOI has not yet been assigned and will be added at venue submission.",
+      "required_fix": "Create a frozen archival release with an immutable identifier and cite the exact release/version in the final submission package.",
+      "route_owner": "acs-nano-submission",
+      "rerun_gate": "submission reproducibility audit",
+      "status": "OPEN"
+    },
+    {
+      "issue_id": "N27-R03",
+      "severity": "MINOR",
+      "type": "preparation and switching kinetics boundary",
+      "claim_ids": ["C2", "C5"],
+      "figure_ids": ["FIG-02", "FIG-05"],
+      "equation_ids": [],
+      "source_locator": "Methods 2.4-2.5; Results 3.2 and 3.5; Discussion 4.2",
+      "finding": "The prepared-state and boundary-switching results are equilibrium/branch-following statements. They do not establish a realizable kinetic preparation path, activation barrier, switching rate, or hysteresis law.",
+      "evidence": "The manuscript explicitly states that no transition path, activation barrier, continuous twist-sweep protocol, or hysteresis calculation is used to infer kinetic switching and repeatedly labels the response preparation-conditioned.",
+      "required_fix": "Keep the current equilibrium/prepared-state scope boundary. Any stronger experimental switching claim requires a kinetic pathway calculation such as barrier/path analysis or a physically defined loading/twist protocol.",
+      "route_owner": "claim-evidence",
+      "rerun_gate": "claim-language audit if preparation/switching wording changes",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    },
+    {
+      "issue_id": "N27-R04",
+      "severity": "MINOR",
+      "type": "thermal transport mechanism decomposition",
+      "claim_ids": ["C7"],
+      "figure_ids": ["FIG-07"],
+      "equation_ids": ["Eq. 15", "Eq. 16"],
+      "source_locator": "Results 3.7; Discussion 4.3",
+      "finding": "The trajectory-level statistics establish a nonzero stationary mean current through T*=0.70 while exact target-winding identity is strongly mixed, but they do not identify which features of the cycle-displacement distribution generate the residual mean drift.",
+      "evidence": "The source audit shows P(v_cycle<0) approaches one-half while the mean vector remains nonzero. A persistent mean can arise from sign-probability imbalance, unequal conditional displacement magnitudes, tail asymmetry, or combinations thereof; the manuscript does not claim to distinguish them.",
+      "required_fix": "Retain the current observable-level wording. If a microscopic high-temperature transport mechanism is claimed later, add conditional-magnitude and tail/distribution decomposition at the trajectory level.",
+      "route_owner": "statistics/robustness",
+      "rerun_gate": "thermal mechanism claim audit",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    },
+    {
+      "issue_id": "N27-R05",
+      "severity": "MINOR",
+      "type": "dimensional and experimental calibration",
+      "claim_ids": ["C6", "C7"],
+      "figure_ids": ["FIG-06", "FIG-07"],
+      "equation_ids": ["Eq. 13", "Eq. 15"],
+      "source_locator": "Methods 2.7-2.10; Discussion 4.4",
+      "finding": "The dynamical and thermal results are expressed in reduced mass, damping, force, time, and temperature units, so the sampled protocol is not yet tied to experimental force, frequency, damping, or kelvin scales.",
+      "evidence": "The manuscript explicitly states that m*, gamma*, F0*, tau*, and T* are not supplied by the GSFE and cannot be converted to physical units without independent atomistic or experimental inputs.",
+      "required_fix": "Maintain the reduced-protocol wording. For device-level or experimental claims, derive and document a physical calibration from independently justified mass/damping/energy/time scales before submission of those stronger claims.",
+      "route_owner": "experiment/simulation",
+      "rerun_gate": "experimental-translatability audit",
+      "status": "ACCEPTED_WITH_BOUNDARY"
+    }
+  ]
+}
