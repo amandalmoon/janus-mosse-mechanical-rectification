@@ -1,8 +1,8 @@
 {
   "research_id": "JANUS-MOSSE-N27-R01",
-  "current_stage": "ACS Nano submission audit",
+  "current_stage": "ACS Nano venue repair",
   "last_valid_gate": "GATE-SCIENTIFIC-FREEZE",
-  "gate_status": "PASS",
+  "gate_status": "BLOCKED",
   "target_venue": "ACS Nano",
   "claims": [
     {
@@ -110,6 +110,14 @@
     {
       "id": "RELEASE-N27",
       "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-AUDIT-N28",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-SUBMISSION-PACKAGE-N28",
+      "status": "BLOCKED"
     }
   ],
   "blockers": [
@@ -197,6 +205,11 @@
       "stage": "N27 immutable reproducibility release",
       "gate_status": "PASS",
       "note": "Frozen public source identifier 327c58e2684398ba7bc11205865f8222066c3539; bundle SHA-256 7436e985937e7cc9e2a5cac1f58affbd3e955dd2763eca9d69324c1fd0af34a8; N27-R02 resolved."
+    },
+    {
+      "stage": "ACS Nano submission audit",
+      "gate_status": "BLOCKED",
+      "note": "Current official 2026 ACS Nano rules verified. Scientific freeze passes, but venue package is NOT_READY due title acronym, missing author metadata/cover letter/TOC, keyword count, section structure/Methods placement, and FIG-01 0.45 pt line width."
     }
   ]
 }
