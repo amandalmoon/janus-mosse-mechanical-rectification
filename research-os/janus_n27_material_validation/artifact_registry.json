@@ -17,21 +17,21 @@
       "id": "MANUSCRIPT-N27-PREFLIGHT",
       "type": "scientific manuscript",
       "version": 1,
-      "status": "TENTATIVE",
+      "status": "VERIFIED",
       "owner": "research-os-manuscript-writer",
       "path": "research-os/janus_n26_manuscript_rewrite/MANUSCRIPT_DRAFT_N26.md",
-      "hash": "fe0fee85cf27aae8a9153d91cb45e4c55e871299",
+      "hash": "2ee160a40e07bb2d51be6845e780c7f349bc4386",
       "depends_on": [
         "FIGSET-N25"
       ],
       "supersedes": null,
-      "material_change_note": "N27 Five Reviewer preflight repairs are present, but scientific freeze is withheld while N27-R01 is open."
+      "material_change_note": "Headline scope narrowed to a published-GSFE-anchored finite-contact model; Five Reviewer re-audit passed with 0 unresolved MAJOR."
     },
     {
-      "id": "REVIEW-N27-FIVE",
+      "id": "REVIEW-N27-FIVE-ORIGINAL",
       "type": "independent five-reviewer audit",
       "version": 1,
-      "status": "VERIFIED",
+      "status": "SUPERSEDED",
       "owner": "five-reviewer-paper-audit",
       "path": "research-os/janus_n27_five_reviewer_preflight/N27_FIVE_REVIEWER_PREFLIGHT.md",
       "hash": "4d58c10dfe495ce5dc6c99946584e1d385020c61",
@@ -89,22 +89,22 @@
       "id": "DEC-N27-R01",
       "type": "human decision record",
       "version": 1,
-      "status": "BLOCKED",
+      "status": "SUPERSEDED",
       "owner": "human",
       "path": "research-os/janus_n27_material_validation/DEC-N27-R01.json",
-      "hash": "1b4e771d38a1ccf33c9fa0a89cf060409a1c6103",
+      "hash": "53d4569a32d6ce894d38af66462a45e79f60e0b7",
       "depends_on": [
         "DESIGN-N27-R01",
         "REVIEW-N27-FIVE"
       ],
       "supersedes": null,
-      "material_change_note": "PENDING explicit approval."
+      "material_change_note": "Superseded by explicit boundary acceptance."
     },
     {
       "id": "EXP-N27-R01-DATA",
       "type": "3D material-validation raw/processed data",
       "version": 1,
-      "status": "BLOCKED",
+      "status": "SUPERSEDED",
       "owner": "experiment/simulation",
       "path": null,
       "hash": null,
@@ -113,7 +113,38 @@
         "DEC-N27-R01"
       ],
       "supersedes": null,
-      "material_change_note": "No scientific execution has occurred."
+      "material_change_note": "3D branch intentionally not executed for the present manuscript after boundary decision."
+    },
+    {
+      "id": "DEC-N27-R01-BOUNDARY",
+      "type": "human limitation decision",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "human",
+      "path": "research-os/janus_n27_material_validation/DEC-N27-R01-BOUNDARY.json",
+      "hash": "dd9a1e44b703385c42f5d8d011c9d368d0e1b895",
+      "depends_on": [
+        "REVIEW-N27-FIVE-ORIGINAL",
+        "DESIGN-N27-R01"
+      ],
+      "supersedes": "DEC-N27-R01",
+      "material_change_note": "Approves GSFE-anchored claim boundary; full 3D validation is future work."
+    },
+    {
+      "id": "REVIEW-N27-REAUDIT",
+      "type": "independent five-reviewer re-audit",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "five-reviewer-paper-audit",
+      "path": "research-os/janus_n27_five_reviewer_preflight/N27_FIVE_REVIEWER_REAUDIT_BOUNDARY.md",
+      "hash": "b75fde40625ceb79fde3ea9a7ce41da8260d8218",
+      "depends_on": [
+        "MANUSCRIPT-N27-PREFLIGHT",
+        "FIGSET-N25",
+        "DEC-N27-R01-BOUNDARY"
+      ],
+      "supersedes": "REVIEW-N27-FIVE-ORIGINAL",
+      "material_change_note": "Re-audit result: 0 BLOCKER, 0 unresolved MAJOR."
     }
   ]
 }
