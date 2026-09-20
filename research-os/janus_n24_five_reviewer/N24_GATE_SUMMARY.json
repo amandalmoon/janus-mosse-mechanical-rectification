@@ -1,0 +1,14 @@
+{
+  "gate": "N24_FIVE_REVIEWER_PAPER_AUDIT",
+  "status": "PASS_WITH_TARGETED_REVISION",
+  "scientific_blockers": 0,
+  "major_issues": [
+    "M1 narrow rigid-artifact wording to tested in-plane representations",
+    "M2 thermal sentence must stop at observed T*=0.70 rather than imply future unresolved point"
+  ],
+  "literature_handoff": [
+    "L1 final closest-prior-art reverse search before stronger novelty positioning"
+  ],
+  "current_first_novelty_claim_allowed": false,
+  "next_stage": "targeted revision"
+}
