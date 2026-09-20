@@ -1,0 +1,23 @@
+{
+  "repair_id": "N29-VISUAL-MATH-REPAIR",
+  "status": "PASS",
+  "scientific_freeze_reopened": false,
+  "source_manuscript": "N27 scientific freeze / N28 venue derivative",
+  "repaired_docx_sha256": "eb4b063285733a61295f7dc89ef425d85aa7fff90ba46127aec0f5363f067fb5",
+  "qa_pdf_sha256": "2771a10978890ba45f3060b802188bcda0358081739b0c57bd9c8c6bd6e266f9",
+  "repair_package_sha256": "fbcce7f7e5d4d777aa10e01ff721af16314f5a76c8c1cc95bf5df2d5fa28dc1b",
+  "pages": 19,
+  "figures": 7,
+  "display_equations": 24,
+  "inline_math_renderer_repairs": 57,
+  "accessibility": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "visual_qa": "PASS_ALL_19_PAGES",
+  "remaining_gate": [
+    "author-controlled submission metadata",
+    "final human-created non-AI TOC graphic"
+  ]
+}
