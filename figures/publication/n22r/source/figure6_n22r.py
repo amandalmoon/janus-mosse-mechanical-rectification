@@ -157,7 +157,7 @@ def make_figure(release: Path, out: Path) -> None:
     ax_d1.axhline(0, color=LIGHT, lw=0.7)
     ax_d1.set_ylabel(r'$\rho_F$ rel. dev. (ppm)')
     ax_d1.set_ylim(-0.25, max(3.15, float(ppm.max()) * 1.10))
-    ax_d1.text(0.98, 0.84, r'$\rho_{F,ref}=6.31108124\times10^{-22}\ll1$',
+    ax_d1.text(0.98, 0.84, r'$\rho_{F,ref}=6.31108124\times10^{-22}$  << 1',
                transform=ax_d1.transAxes, ha='right', va='top', fontsize=7.0, color=DARK)
     ax_d1.text(0.98, 0.56, 'max cross-solver spread = 2.764 ppm',
                transform=ax_d1.transAxes, ha='right', va='top', fontsize=6.8, color=MID)
