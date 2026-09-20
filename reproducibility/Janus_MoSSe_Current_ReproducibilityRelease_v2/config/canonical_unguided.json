@@ -4,7 +4,7 @@
   "model_scope": "rigid local-GSFE finite contact",
   "material": {
     "key": "2H_MoSSe_Se-S-Se-S",
-    "source": "Angeli 2022 coefficients with 2024 Erratum phase convention",
+    "source": "Angeli 2022 published three-shell GSFE coefficients; the 2024 Erratum does not modify the GSFE coefficients or conjugate phase pairing",
     "energy_normalization": "6 W1",
     "spectrum_policy": "full three-shell spectrum"
   },
@@ -13,7 +13,7 @@
     "shell": 6,
     "N": 127,
     "rigid": true,
-    "k_perp": 0.0
+    "k_perp": 0
   },
   "preparation": {
     "zero_force_state": "lowest-energy stable minimum in one primitive registry cell",
@@ -23,18 +23,21 @@
   },
   "static": {
     "force_axis": "+/- y",
-    "theta_interval_deg": [0.0, 3.0],
+    "theta_interval_deg": [
+      0,
+      3
+    ],
     "depinning_definition": "loss of positive-definite Hessian on the prepared branch",
     "generic_label_policy": "use fold/saddle-node only where nondegeneracy conditions hold; otherwise stability/depinning boundary"
   },
   "dynamics": {
     "theta_reference_deg": 1.5,
-    "mass": 1.0,
-    "gamma": 4.0,
+    "mass": 1,
+    "gamma": 4,
     "drive": "F_y(t)=F0 sin(2 pi t / tau)",
     "initial_condition": "prepared zero-force ground minimum",
-    "reference_F0": 2.0,
-    "reference_period": 40.0
+    "reference_F0": 2,
+    "reference_period": 40
   },
   "stage_variations": {
     "same_spectrum_symmetry": "change only centered odd Fourier sector; preserve geometry and dynamics",

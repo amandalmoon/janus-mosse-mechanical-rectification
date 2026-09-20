@@ -1,13 +1,13 @@
-"""Canonical v17 numerical analysis for the Janus MoSSe mechanical rectifier.
+"""Legacy guided v17 numerical analysis retained for provenance.
 
-This module is a clean rebuild from the surviving v12 published-GSFE engine.
-It does not claim to recover the lost v14 implementation.  Production settings
-are frozen in ``config/production.json`` and outputs are written to
-``data/canonical``.
+This module defaults to `config/production.json`, whose k_perp=25 settings belong
+to the historical guided v17/v18 branch. It is NOT the canonical headline
+unguided pipeline used by the current manuscript. The current headline contract
+is declared in `config/canonical_unguided.json` and checked by the top-level
+release validators plus the current audit scripts.
 
-The heavy stages (231-point mode map and 1000-trajectory thermal fidelity scan)
-are deterministic given the frozen configuration but may take substantial CPU
-time.  The provided release already contains the completed canonical outputs.
+Running this legacy entry point writes only to legacy-guided output directories
+so that it cannot overwrite the current manuscript-facing canonical data.
 """
 from __future__ import annotations
 
@@ -25,8 +25,8 @@ from scipy.optimize import curve_fit, minimize
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 CONFIG_PATH = ROOT / "config" / "production.json"
-DATA = ROOT / "data" / "canonical"
-REPORTS = ROOT / "reports"
+DATA = ROOT / "data" / "legacy_guided_v17"
+REPORTS = ROOT / "reports" / "legacy_guided_v17"
 DATA.mkdir(parents=True, exist_ok=True)
 REPORTS.mkdir(parents=True, exist_ok=True)
 

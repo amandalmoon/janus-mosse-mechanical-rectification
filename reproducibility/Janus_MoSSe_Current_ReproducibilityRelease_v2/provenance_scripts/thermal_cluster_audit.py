@@ -1,3 +1,10 @@
+"""RETIRED ORIGINAL-PATH PROVENANCE SCRIPT.
+
+This file preserves the historical 10-burn/10-measure thermal workflow and its
+original execution paths. It is not a clean-run entry point and is not evidence
+for the current manuscript thermal claim. See thermal_stationarity_*_provenance.py
+and the top-level validators for the current 60-burn/100-measure contract.
+"""
 import sys, math, time
 from pathlib import Path
 import numpy as np, pandas as pd

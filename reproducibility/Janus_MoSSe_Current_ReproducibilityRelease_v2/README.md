@@ -20,3 +20,12 @@ python recompute_stationary_thermal.py
 ```
 
 The validator checks the current stationary thermal contract and rejects the retired 10-burn/10-measure thermal-boundary formulation.
+
+## Current, legacy, and provenance-only code
+
+- Current clean checks are the three top-level validators/recomputations listed above plus `pre_submission_integrity_check.py`.
+- `config/canonical_unguided.json` is the headline baseline contract.
+- `source/canonical_analysis_v17.py` and `config/production.json` are retained as **legacy guided v17/v18 provenance**; the script now writes only under `data/legacy_guided_v17/`.
+- `audit_scripts/thermal_cluster_audit.py` is the explicitly **retired 10-burn/10-measure** calculation and writes only under `data/legacy_thermal_10x10/`.
+- `provenance_scripts/` preserves original execution provenance and may contain historical absolute working paths. Those files are not clean-run entry points; path-independent manuscript-facing validation is provided at the release root.
+- The GSFE source documentation follows the manuscript citation audit: the 2024 Erratum does **not** modify the published GSFE coefficients or conjugate phase pairing.

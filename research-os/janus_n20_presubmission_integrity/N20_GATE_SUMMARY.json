@@ -1,0 +1,17 @@
+{
+  "gate": "N20_PRE_SUBMISSION_REPRODUCIBILITY_INTEGRITY",
+  "status": "PASS",
+  "scientific_result_regression": false,
+  "issues_found": 6,
+  "repairs_applied": true,
+  "current_release_validation": "PASS",
+  "canonical_unguided_baseline_validation": "PASS",
+  "stationary_thermal_recompute": "PASS",
+  "pre_submission_integrity_check": "PASS",
+  "sha256_manifest": "PASS",
+  "manifest_entries": 111,
+  "supporting_information_restored": true,
+  "verified_ci_run_id": 35480474546,
+  "verified_head_sha": "155535d60b8981853c0b76561b0d19ddf6722112",
+  "next_gate": "N19 author metadata completion"
+}
