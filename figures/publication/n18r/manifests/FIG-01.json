@@ -19,7 +19,7 @@
   },
   "design_system": {
     "style_profile": "research-os-publication-v2-strict",
-    "font_family": "Arimo (benchmark render; literal Arial required at ACS Nano venue handoff)",
+    "font_family": "Arial in venue render; STIX retained only for mathematical glyphs where Matplotlib requires a math font",
     "axis_label_pt": 8.2,
     "tick_label_pt": 7.3,
     "legend_pt": 7.1,
@@ -128,12 +128,12 @@
     "redundant_series_encoding": true,
     "caption_parameter_complete": true,
     "not_default_matplotlib": true,
-    "notes": "Local final-size benchmark render visually inspected. Literal Arial is a separate venue-handoff gate."
+    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
   },
   "qa": {
     "scientific": "PASS",
     "visual": "PASS",
-    "venue": "WARN"
+    "venue": "PASS"
   },
-  "publication_gate": "BENCHMARK_PASS"
+  "publication_gate": "PUBLICATION_READY"
 }
