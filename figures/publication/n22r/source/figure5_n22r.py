@@ -121,7 +121,8 @@ def main() -> None:
         Line2D([0], [0], color=DARK, ls='-', marker='s', mfc=DARK, mec=DARK,
                label='family B'),
     ]
-    b.legend(handles=family_handles, loc='center', ncol=2, columnspacing=1.0, handlelength=1.7)
+    b.legend(handles=family_handles, loc='center', bbox_to_anchor=(0.50, 0.61),
+             ncol=2, columnspacing=1.0, handlelength=1.7)
     b.text(0.02, 0.97, r'$20$°', transform=b.transAxes, color=DARK, fontsize=7.0,
            ha='left', va='top')
     b.text(0.98, 0.97, r'$25$°', transform=b.transAxes, color=PALE, fontsize=7.0,
@@ -144,7 +145,7 @@ def main() -> None:
     c.set_ylim(-0.82, 0.82)
     c.set_xlabel(r'twist $\theta$ (deg)')
     c.set_ylabel(r'prepared $\Delta F_c^*$')
-    c.legend(loc='center right')
+    c.legend(loc='center right', bbox_to_anchor=(0.98, 0.60))
     c.text(0.03, 0.88, 'A selected', transform=c.transAxes, fontsize=7.0, color=MID)
     c.text(0.75, 0.10, 'B selected', transform=c.transAxes, fontsize=7.0, color=MID)
     panel_label(c, 'c'); panel_title(c, 'equilibrium preparation reverses the sign'); finish(c)
