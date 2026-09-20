@@ -131,8 +131,8 @@ def main() -> None:
     finish(a)
 
     orientation_handles = [
-        Line2D([0], [0], color=ORIENT_20, ls='-', lw=1.3, label=r'$\\phi_e=20$°'),
-        Line2D([0], [0], color=ORIENT_25, ls=(0, (4, 2)), lw=1.3, label=r'$\\phi_e=25$°'),
+        Line2D([0], [0], color=ORIENT_20, ls='-', lw=1.3, label=r'$\phi_e=20$°'),
+        Line2D([0], [0], color=ORIENT_25, ls=(0, (4, 2)), lw=1.3, label=r'$\phi_e=25$°'),
     ]
     fig.legend(
         handles=orientation_handles, loc='upper center',
