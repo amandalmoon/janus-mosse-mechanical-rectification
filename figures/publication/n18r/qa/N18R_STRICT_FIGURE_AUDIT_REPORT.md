@@ -14,7 +14,7 @@ This gate reopens the publication-figure layer after the stricter publication-fi
 - The strict plot-source audit passes.
 - The strict benchmark package audit passes for all six figures with file existence checks.
 - Final-size 96 dpi renders were opened and inspected for all six figures. No clipping, overlap, missing marks, ambiguous color-only critical encoding, or unreadable annotations were observed.
-- Current ACS Nano guidance was rechecked on 2026-09-20. The online Author Guidelines report an update date of 2026-08-27. The ACS Nano checklist still specifies Arial lettering, >=6 pt final lettering, >=0.5 pt lines, final published size, and EPS for vector graphics.
+- Current ACS Nano guidance was rechecked on 2026-09-20. The live ACS Nano Author Guidelines report **Last updated: July 03, 2026**. The ACS Nano checklist still specifies Arial lettering, >=6 pt final lettering, >=0.5 pt lines, final published size, and EPS for vector graphics.
 
 ## Major redesign changes
 
