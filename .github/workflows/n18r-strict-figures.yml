@@ -46,6 +46,10 @@ jobs:
         run: |
           python figures/publication/n18r/source/verify_n18r_outputs.py figures/publication/n18r/figures
 
+      - name: Audit current strict publication-figure contract
+        shell: pwsh
+        run: python figures/publication/n18r/source/audit_current_publication_contract.py
+
       - name: Compile figure sources
         shell: pwsh
         run: python -m compileall -q figures/publication/n18r/source
