@@ -1,6 +1,6 @@
 {
   "research_id": "JANUS-MOSSE-N27-R01",
-  "current_stage": "ACS Nano venue repair",
+  "current_stage": "ACS Nano author-input / TOC gate",
   "last_valid_gate": "GATE-SCIENTIFIC-FREEZE",
   "gate_status": "BLOCKED",
   "target_venue": "ACS Nano",
@@ -116,6 +116,22 @@
       "status": "VERIFIED"
     },
     {
+      "id": "ACS-MANUSCRIPT-N28",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-FIGSET-N28",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "ACS-COVER-N28",
+      "status": "TENTATIVE"
+    },
+    {
+      "id": "ACS-TOC-N28",
+      "status": "BLOCKED"
+    },
+    {
       "id": "ACS-SUBMISSION-PACKAGE-N28",
       "status": "BLOCKED"
     }
@@ -134,6 +150,27 @@
         "C6",
         "C7",
         "C-MATERIAL-INTEGRATED"
+      ]
+    },
+    {
+      "id": "N28-V01",
+      "type": "VENUE_FORMAT / author-controlled submission metadata",
+      "owner": "human",
+      "status": "OPEN",
+      "affected_ids": [
+        "ACS-MANUSCRIPT-N28",
+        "ACS-COVER-N28",
+        "ACS-SUBMISSION-PACKAGE-N28"
+      ]
+    },
+    {
+      "id": "N28-V02",
+      "type": "VENUE_FORMAT / final non-AI TOC graphic",
+      "owner": "human + publication-figure-designer",
+      "status": "OPEN",
+      "affected_ids": [
+        "ACS-TOC-N28",
+        "ACS-SUBMISSION-PACKAGE-N28"
       ]
     }
   ],
@@ -210,6 +247,11 @@
       "stage": "ACS Nano submission audit",
       "gate_status": "BLOCKED",
       "note": "Current official 2026 ACS Nano rules verified. Scientific freeze passes, but venue package is NOT_READY due title acronym, missing author metadata/cover letter/TOC, keyword count, section structure/Methods placement, and FIG-01 0.45 pt line width."
+    },
+    {
+      "stage": "ACS Nano N28 venue repair",
+      "gate_status": "PARTIAL",
+      "note": "All machine-editable manuscript/figure venue issues repaired. Structured ACS audit now has 1 blocker only (TOC missing), 0 major. Actual upload also awaits author-controlled metadata/funding/COI/cover-letter confirmations."
     }
   ]
 }
