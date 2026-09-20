@@ -1,13 +1,16 @@
 """General Fourier registry landscapes for phenomenological and literature-DFT Janus models.
 
-The literature parameterization follows Angeli, Schleder & Kaxiras,
-Phys. Rev. B 106, 235159 (2022), with the phase convention corrected in
-Phys. Rev. B 109, 199902(E) (2024).  The GSFE is represented as
-
-  Omega(r) = sum_l sum_j W_l exp[i g_j^l.r + i(-1)^j phi_l].
-
-Pairing +/- reciprocal vectors and dividing by E0=6 W1 gives a real,
-dimensionless three-vector representation per shell:
+The literature parameterization follows the three-shell GSFE coefficient set
+reported by Angeli, Schleder & Kaxiras, Phys. Rev. B 106, 235159 (2022).
+For each shell, C3 symmetry and the reality of the scalar registry energy make
+the two C3-related reciprocal-vector triads complex conjugates. Choosing one
+triad as the positive representatives and pairing each G with -G gives the real
+form below. Choosing the conjugate triad corresponds to spatial inversion.
+The 2024 Erratum (Phys. Rev. B 109, 199902) does not change these GSFE
+coefficients or this conjugate phase pairing; its corrections concern effective-
+mass labeling, Brillouin-zone path information, and one Supplemental interface
+label. Dividing by E0=6 W1 gives a real, dimensionless three-vector
+representation per shell:
 
   u(r) = sum_l (W_l/(3 W1)) sum_{m=1}^3 cos(G_{l,m}.r + phi_l).
 
@@ -112,8 +115,9 @@ def symmetric_control():
     return phenomenological(0.0, 0.0, "phenomenological_symmetric")
 
 
-# Published GSFE coefficients from Table II of Angeli et al. (2022),
-# using the 2024 erratum phase convention. Only configurations used in v12
+# Published GSFE coefficients from Table II of Angeli et al. (2022).
+# The 2024 Erratum does not modify these GSFE coefficients or phase pairing.
+# Only configurations used in v12
 # are encoded here. Energies W_l are meV.
 DFT_TABLE = {
     "3R_MoSSe_Se-S-Se-S": {
