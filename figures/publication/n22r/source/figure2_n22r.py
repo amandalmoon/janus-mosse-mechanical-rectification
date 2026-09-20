@@ -103,7 +103,7 @@ legend_handles = [
 ]
 ax_a.legend(handles=legend_handles, loc='upper right', ncol=2, columnspacing=1.2,
             handlelength=2.3, borderaxespad=0.25)
-ax_a.text(1.5, 3.47, r'$\theta=1.5^\circ$', fontsize=6.8, color=MID,
+ax_a.text(1.5, 3.47, r'$\theta=1.5$°', fontsize=6.8, color=MID,
           ha='center', va='top')
 panel_label(ax_a, 'a', x=-0.04)
 panel_title(ax_a, 'Directional depinning')
