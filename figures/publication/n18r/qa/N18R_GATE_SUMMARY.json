@@ -26,9 +26,6 @@
     "Update figure captions to N18R captions after venue render is frozen"
   ],
   "next_gate": "Manuscript integration of N18R figures and wording correction",
-  "venue_render_run_id": 35483192116,
-  "venue_render_head_sha": "3ee045c0b81f93fa80b628d52ac4108937877c21",
-  "venue_render_artifact_id": 10596990921,
-  "venue_render_artifact_digest": "sha256:d4cd20e064631907b555327320961e07b59e9c9060607521459684c18202dbd9",
-  "final_size_arial_visual_qa": "6/6 PASS"
+  "final_size_arial_visual_qa": "6/6 PASS",
+  "venue_render_ci": "PASS required on exact PR head before merge"
 }
