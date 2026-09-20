@@ -29,13 +29,6 @@ jobs:
           python -m pip install -r reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/requirements.txt
           python -m pip install pymupdf pillow
 
-      - name: Restore frozen N22R figure sources
-        shell: pwsh
-        run: |
-          $b64 = Get-Content figures/publication/n22r/ci/n22r_sources.b64 -Raw
-          [IO.File]::WriteAllBytes("n22r_sources.tar.gz", [Convert]::FromBase64String($b64.Trim()))
-          python -c "import tarfile; tarfile.open('n22r_sources.tar.gz','r:gz').extractall('.')"
-
       - name: Verify literal Arial is available
         shell: pwsh
         run: python -c "from matplotlib import font_manager; print(font_manager.findfont('Arial', fallback_to_default=False))"
