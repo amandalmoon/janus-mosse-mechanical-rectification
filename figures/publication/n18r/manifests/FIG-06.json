@@ -1,0 +1,127 @@
+{
+  "figure_id": "FIG-06",
+  "manuscript_role": "main",
+  "core_conclusion": "Thermal noise strongly mixes exact cycle winding while a weaker stationary directed mean current remains statistically resolved through the largest sampled T*=0.70.",
+  "claim_ids": [
+    "C15",
+    "C16",
+    "C17",
+    "C18"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 102,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v2-strict",
+    "font_family": "Arial in venue render; STIX retained only for mathematical glyphs where Matplotlib requires a math font",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7.1,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.8,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Executed simulation values only; +y=blue circle/solid, -y=vermillion square/dashed; controls/guides subordinate; no measured-vs-theory claim.",
+    "scale_policy": "Shared scales for direct comparisons; transformed scales only when the transform itself is disclosed and scientifically necessary.",
+    "legend_policy": "Direct labels where simple; compact legends only in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Frozen current reproducibility release; no illustrative/placeholder numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "How do stationary mean lattice-current components vary with temperature and trajectory-level uncertainty?",
+      "role": "hero",
+      "visual_type": "errorbar",
+      "evidence_ids": [
+        "C15",
+        "C16"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/thermal_stationary_series_N500.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_current_two_seed_pooled.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_thermal_bootstrap_50k.csv"
+      ],
+      "uncertainty_shown": true,
+      "uncertainty_definition": "trajectory-level 95% intervals; low-T N=500, pooled high-T N=1000",
+      "processing_notes": [
+        "open markers single-seed; filled markers pooled two-seed"
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "Does the two-component stationary current remain distinguishable from zero at high temperature?",
+      "role": "statistical-validation",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C17"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_current_two_seed_pooled.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "Hotelling T2 / declared 95% critical value; threshold=1"
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "How does directional cycle bias compare with preservation of the exact deterministic target winding?",
+      "role": "mechanism",
+      "visual_type": "line-errorbar",
+      "evidence_ids": [
+        "C15",
+        "C18"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/thermal_stationary_series_N500.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/stationary_sign_target_bootstrap.csv"
+      ],
+      "uncertainty_shown": true,
+      "uncertainty_definition": "high-temperature bootstrap 95% intervals where available",
+      "processing_notes": [
+        "no critical-temperature inference"
+      ],
+      "scale": "linear"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_6_thermal_stationary_hierarchy_N18R.pdf",
+    "svg": "../figures/Figure_6_thermal_stationary_hierarchy_N18R.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_6_thermal_stationary_hierarchy_N18R.png",
+    "source": "../source/make_publication_figures_n18r.py"
+  },
+  "caption": "Figure 6. Stationary thermal hierarchy from trajectory-level inference. (a) Mean lattice-coordinate currents after 60 burn cycles and 100 measured cycles with trajectory-level 95% intervals; open low-temperature markers use N=500 trajectories per T*, whereas filled T*=0.50-0.70 markers use pooled two-seed N=1000 estimates. (b) High-temperature Hotelling zero-current rejection ratio relative to the declared 95% threshold; this ratio is not interpreted as a thermal critical scale. (c) The negative-v cycle probability approaches one-half while the exact deterministic target-winding probability remains near 1% in the high-temperature band, with bootstrap intervals shown where available.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "PASS"
+  },
+  "publication_gate": "PUBLICATION_READY"
+}

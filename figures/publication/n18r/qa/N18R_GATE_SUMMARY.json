@@ -1,0 +1,31 @@
+{
+  "gate": "N18R_STRICT_FIGURE_REDESIGN",
+  "status": "PUBLICATION_READY",
+  "scientific_result_regression": false,
+  "figures": {
+    "FIG-01": "PUBLICATION_READY",
+    "FIG-02": "PUBLICATION_READY",
+    "FIG-03": "PUBLICATION_READY",
+    "FIG-04": "PUBLICATION_READY",
+    "FIG-05": "PUBLICATION_READY",
+    "FIG-06": "PUBLICATION_READY"
+  },
+  "final_width_pt": 504,
+  "minimum_text_pt": 7,
+  "minimum_line_pt": 0.55,
+  "plot_source_audit": "PASS",
+  "manifest_package_audits": "6/6 PASS",
+  "final_size_visual_qa": "6/6 PASS",
+  "local_font": "Arimo benchmark render",
+  "venue_font_requirement": "Arial lettering, >=6 pt at final size; lines >=0.5 pt",
+  "venue_status": "PASS",
+  "official_guidelines_verified": "2026-09-20",
+  "official_guidelines_last_updated": "2026-07-03",
+  "manuscript_followup": [
+    "Replace overstrong all-91-point transport wording with integer winding states including pinned and transporting states",
+    "Update figure captions to N18R captions after venue render is frozen"
+  ],
+  "next_gate": "Manuscript integration of N18R figures and wording correction",
+  "final_size_arial_visual_qa": "6/6 PASS",
+  "venue_render_ci": "PASS required on exact PR head before merge"
+}

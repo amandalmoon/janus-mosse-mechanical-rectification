@@ -1,0 +1,137 @@
+{
+  "figure_id": "FIG-03",
+  "manuscript_role": "main",
+  "core_conclusion": "Tested compact hexagonal and disk-like contacts collapse closely under Theta=theta sqrt(N), with residual size and shape deviations below about 0.1% through Theta=20.",
+  "claim_ids": [
+    "C6",
+    "C7"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 120,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v2-strict",
+    "font_family": "Arial in venue render; STIX retained only for mathematical glyphs where Matplotlib requires a math font",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7.1,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.8,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Executed simulation values only; +y=blue circle/solid, -y=vermillion square/dashed; controls/guides subordinate; no measured-vs-theory claim.",
+    "scale_policy": "Shared scales for direct comparisons; transformed scales only when the transform itself is disclosed and scientifically necessary.",
+    "legend_policy": "Direct labels where simple; compact legends only in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Frozen current reproducibility release; no illustrative/placeholder numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "Do larger compact hexagons collapse under the scaled twist coordinate?",
+      "role": "hero",
+      "visual_type": "mean-envelope-plus-raw",
+      "evidence_ids": [
+        "C6"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_extended.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "raw size-family points plus mean and min-max envelope"
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "Does an independent disk-like compact family show the same collapse?",
+      "role": "validation",
+      "visual_type": "mean-envelope-plus-raw",
+      "evidence_ids": [
+        "C6",
+        "C7"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_extended.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "same encoding and scale as panel A"
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "How large are residual cross-size deviations within each compact family?",
+      "role": "robustness",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C6"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_metrics.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "D",
+      "question": "How closely do hexagonal and disk-like family means agree?",
+      "role": "robustness",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C7"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/shape_scaling_metrics.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "absolute family-mean difference"
+      ],
+      "scale": "linear"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_3_extended_size_shape_similarity_N18R.pdf",
+    "svg": "../figures/Figure_3_extended_size_shape_similarity_N18R.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_3_extended_size_shape_similarity_N18R.png",
+    "source": "../source/make_publication_figures_n18r.py"
+  },
+  "caption": "Figure 3. Extended finite-size and compact-shape similarity. (a,b) All sampled compact-contact size points are shown together with family means and min-max envelopes under Theta=theta sqrt(N). (c) Maximum within-family cross-size deviations remain below 0.1% through Theta=20. (d) Absolute hexagonal-versus-disk family-mean differences are of the same sub-0.1% scale over the sampled range.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "PASS"
+  },
+  "publication_gate": "PUBLICATION_READY"
+}

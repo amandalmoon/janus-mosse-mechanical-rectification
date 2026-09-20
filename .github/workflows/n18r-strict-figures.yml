@@ -1,0 +1,68 @@
+name: N18R Strict Figure Gate
+
+on:
+  pull_request:
+    paths:
+      - "figures/publication/n18r/**"
+      - "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/**"
+      - ".github/workflows/n18r-strict-figures.yml"
+  workflow_dispatch:
+
+jobs:
+  render-acs-nano:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+          cache-dependency-path: reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/requirements.txt
+
+      - name: Install figure environment
+        shell: pwsh
+        run: |
+          python -m pip install -r reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/requirements.txt
+          python -m pip install pymupdf pillow
+
+      - name: Verify literal Arial is available
+        shell: pwsh
+        run: |
+          python -c "from matplotlib import font_manager; print(font_manager.findfont('Arial', fallback_to_default=False))"
+
+      - name: Render final-size figures with literal Arial
+        shell: pwsh
+        run: |
+          python figures/publication/n18r/source/make_publication_figures_n18r.py `
+            --release reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2 `
+            --out figures/publication/n18r/figures `
+            --font-family Arial
+
+      - name: Verify fonts, physical size, exports, and checksums
+        shell: pwsh
+        run: |
+          python figures/publication/n18r/source/verify_n18r_outputs.py figures/publication/n18r/figures
+
+      - name: Compile figure sources
+        shell: pwsh
+        run: python -m compileall -q figures/publication/n18r/source
+
+      - name: Upload N18R venue-render artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Janus_MoSSe_N18R_Strict_Figures_Arial
+          path: |
+            figures/publication/n18r/figures/*.pdf
+            figures/publication/n18r/figures/*.svg
+            figures/publication/n18r/figures/*.eps
+            figures/publication/n18r/figures/*.png
+            figures/publication/n18r/figures/N18R_FIGURE_SHA256SUMS.txt
+            figures/publication/n18r/manifests/*.json
+            figures/publication/n18r/FIGURE_REDESIGN_MASTER_SPEC.md
+            figures/publication/n18r/qa/*.md
+            figures/publication/n18r/qa/*.json
+          if-no-files-found: error
+          retention-days: 90

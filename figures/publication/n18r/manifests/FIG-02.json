@@ -1,0 +1,137 @@
+{
+  "figure_id": "FIG-02",
+  "manuscript_role": "main",
+  "core_conclusion": "For the declared prepared state, the ground-state branch remains lower in zero-force energy and longer-lived in both force directions throughout the sampled 0-3 degree twist range.",
+  "claim_ids": [
+    "C2",
+    "C5"
+  ],
+  "archetype": "quantitative-grid",
+  "benchmark_profile": "evidence-dense-physics-v1",
+  "target_venue": "ACS Nano Article",
+  "final_size": {
+    "role": "double-column",
+    "width_mm": 177.8,
+    "height_mm": 124,
+    "min_text_pt": 7,
+    "min_line_pt": 0.55
+  },
+  "design_system": {
+    "style_profile": "research-os-publication-v2-strict",
+    "font_family": "Arial in venue render; STIX retained only for mathematical glyphs where Matplotlib requires a math font",
+    "axis_label_pt": 8.2,
+    "tick_label_pt": 7.3,
+    "legend_pt": 7.1,
+    "panel_label_pt": 9.2,
+    "primary_line_pt": 1.2,
+    "secondary_line_pt": 0.8,
+    "marker_pt": 3.7,
+    "redundant_series_encoding": true,
+    "theory_data_semantics": "Executed simulation values only; +y=blue circle/solid, -y=vermillion square/dashed; controls/guides subordinate; no measured-vs-theory claim.",
+    "scale_policy": "Shared scales for direct comparisons; transformed scales only when the transform itself is disclosed and scientifically necessary.",
+    "legend_policy": "Direct labels where simple; compact legends only in data-sparse regions."
+  },
+  "provenance": {
+    "class": "SIMULATION_EXECUTED",
+    "manuscript_evidence_eligible": true,
+    "notes": "Frozen current reproducibility release; no illustrative/placeholder numerical evidence."
+  },
+  "panels": [
+    {
+      "id": "A",
+      "question": "What is the positive-y branch-followed depinning threshold for ground and metastable prepared families?",
+      "role": "hero",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "B",
+      "question": "What is the negative-y branch-followed depinning threshold for ground and metastable prepared families?",
+      "role": "validation",
+      "visual_type": "line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/free_fold_nondegeneracy.csv",
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [],
+      "scale": "linear"
+    },
+    {
+      "id": "C",
+      "question": "Does the prepared family remain lower in zero-force energy?",
+      "role": "control",
+      "visual_type": "margin-line",
+      "evidence_ids": [
+        "C2",
+        "C5"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "plots U_meta-U_ground"
+      ],
+      "scale": "linear"
+    },
+    {
+      "id": "D",
+      "question": "Does the prepared family remain the last surviving pinned branch in both directions?",
+      "role": "validation",
+      "visual_type": "margin-line",
+      "evidence_ids": [
+        "C2"
+      ],
+      "source_paths": [
+        "reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2/data/canonical/branch_family_summary.csv"
+      ],
+      "uncertainty_shown": false,
+      "uncertainty_definition": null,
+      "processing_notes": [
+        "plots Fc_ground-Fc_meta"
+      ],
+      "scale": "linear"
+    }
+  ],
+  "exports": {
+    "pdf": "../figures/Figure_2_branch_resolved_depinning_N18R.pdf",
+    "svg": "../figures/Figure_2_branch_resolved_depinning_N18R.svg",
+    "tiff": null,
+    "png_preview": "../figures/Figure_2_branch_resolved_depinning_N18R.png",
+    "source": "../source/make_publication_figures_n18r.py"
+  },
+  "caption": "Figure 2. Branch-resolved unguided depinning. (a,b) Positive- and negative-y branch-followed thresholds for the prepared ground family and competing metastable family. (c) The positive energy margin U_meta-U_ground shows that the prepared family remains the lower zero-force minimum over 0-3 deg. (d) Positive stability margins F_c^ground-F_c^meta in both force directions show that the prepared branch remains the last survivor over the same sampled interval.",
+  "visual_qa": {
+    "render_opened": true,
+    "final_size_inspected": true,
+    "no_overlap_or_clipping": true,
+    "panel_hierarchy_clear": true,
+    "theory_data_semantics_clear": true,
+    "redundant_series_encoding": true,
+    "caption_parameter_complete": true,
+    "not_default_matplotlib": true,
+    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+  },
+  "qa": {
+    "scientific": "PASS",
+    "visual": "PASS",
+    "venue": "PASS"
+  },
+  "publication_gate": "PUBLICATION_READY"
+}
