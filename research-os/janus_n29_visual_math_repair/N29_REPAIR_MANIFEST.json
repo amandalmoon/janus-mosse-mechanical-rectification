@@ -3,19 +3,29 @@
   "status": "PASS",
   "scientific_freeze_reopened": false,
   "source_manuscript": "N27 scientific freeze / N28 venue derivative",
-  "repaired_docx_sha256": "eb4b063285733a61295f7dc89ef425d85aa7fff90ba46127aec0f5363f067fb5",
-  "qa_pdf_sha256": "2771a10978890ba45f3060b802188bcda0358081739b0c57bd9c8c6bd6e266f9",
-  "repair_package_sha256": "fbcce7f7e5d4d777aa10e01ff721af16314f5a76c8c1cc95bf5df2d5fa28dc1b",
+  "repaired_docx_sha256": "79dd95856a19285ceba00d097795df6a21627001123a57962a89023796000aa8",
+  "qa_pdf_sha256": "5df51bd286c24e757b7a4a75c5d7d577303365025d4a406565c86bcb00a69943",
+  "submission_package_sha256": "02d509c869d9f961238cebe8eb7f9be3cab1315a3353958a2ca3183900a7e2e3",
   "pages": 19,
   "figures": 7,
   "display_equations": 24,
   "inline_math_renderer_repairs": 57,
+  "equation_mapping": "ACS Results use frozen blocks 19-24; Methods use frozen blocks 1-18",
   "accessibility": {
     "high": 0,
     "medium": 0,
     "low": 0
   },
+  "pdf_preflight": "PASS_OPENABLE_UNENCRYPTED_TEXT_BASED",
   "visual_qa": "PASS_ALL_19_PAGES",
+  "figure_set_qa": "PASS_0_WARNINGS",
+  "acs_structured_audit": {
+    "status": "NOT_READY",
+    "blockers": 1,
+    "major": 0,
+    "sole_blocker": "TOC_MISSING",
+    "upstream_handoffs": 0
+  },
   "remaining_gate": [
     "author-controlled submission metadata",
     "final human-created non-AI TOC graphic"
