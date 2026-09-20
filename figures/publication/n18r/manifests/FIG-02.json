@@ -114,7 +114,7 @@
     "svg": "../figures/Figure_2_branch_resolved_depinning_N18R.svg",
     "tiff": null,
     "png_preview": "../figures/Figure_2_branch_resolved_depinning_N18R.png",
-    "source": "../source/make_publication_figures_n18r.py"
+    "source": "../source/n18r_figures_1_2.py"
   },
   "caption": "Figure 2. Branch-resolved unguided depinning. (a,b) Positive- and negative-y branch-followed thresholds for the prepared ground family and competing metastable family. (c) The positive energy margin U_meta-U_ground shows that the prepared family remains the lower zero-force minimum over 0-3 deg. (d) Positive stability margins F_c^ground-F_c^meta in both force directions show that the prepared branch remains the last survivor over the same sampled interval.",
   "visual_qa": {
@@ -126,7 +126,7 @@
     "redundant_series_encoding": true,
     "caption_parameter_complete": true,
     "not_default_matplotlib": true,
-    "notes": "Final-size literal-Arial venue render from GitHub Actions run 35483192116 was opened and visually inspected; no overlap, clipping, missing marks, or unreadable annotations were observed."
+    "notes": "Final-size literal-Arial venue render was opened and visually inspected; current Publication Figure Designer manifest/package audits are required before downstream freeze."
   },
   "qa": {
     "scientific": "PASS",
