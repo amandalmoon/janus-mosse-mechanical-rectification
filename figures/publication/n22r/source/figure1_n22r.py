@@ -57,7 +57,7 @@ L=J.dft_landscape('2H_MoSSe_Se-S-Se-S')
 ad=pd.read_csv(ROOT/'data'/'canonical'/'asymmetry_global_check.csv')
 
 fig=plt.figure(figsize=(inch(177.8),inch(80.0)))
-gs=fig.add_gridspec(1,3,left=0.045,right=0.985,bottom=0.20,top=0.88,wspace=0.66,width_ratios=[1.00,1.00,1.30])
+gs=fig.add_gridspec(1,3,left=0.045,right=0.975,bottom=0.20,top=0.88,wspace=0.66,width_ratios=[1.00,1.00,1.30])
 a=fig.add_subplot(gs[0,0]); b=fig.add_subplot(gs[0,1]); c=fig.add_subplot(gs[0,2])
 
 # (a) Actual shell-6 finite contact. Protocol details remain in the caption.
