@@ -1,0 +1,128 @@
+name: Package N29 Simulation Code
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/package-n29-simulation-code.yml"
+
+jobs:
+  package-simulation-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build simulation-code package
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="Janus_MoSSe_N29_Simulation_Code"
+          REPRO="reproducibility/Janus_MoSSe_Current_ReproducibilityRelease_v2"
+          N8="research-os/janus_n8_gate"
+          FIG="figures/publication/n22r/source"
+
+          rm -rf "$ROOT"
+          mkdir -p "$ROOT/core_reproducibility" "$ROOT/elasticity_and_thermal_validation" "$ROOT/figure_generation"
+
+          cp "$REPRO/README.md" "$ROOT/core_reproducibility/"
+          cp "$REPRO/ENVIRONMENT.md" "$ROOT/core_reproducibility/"
+          cp "$REPRO/RUNNING_AUDITS.md" "$ROOT/core_reproducibility/"
+          cp "$REPRO/requirements.txt" "$ROOT/core_reproducibility/"
+          cp "$REPRO/recompute_stationary_thermal.py" "$ROOT/core_reproducibility/"
+          cp "$REPRO/pre_submission_integrity_check.py" "$ROOT/core_reproducibility/"
+          cp "$REPRO/validate_canonical_baseline.py" "$ROOT/core_reproducibility/"
+          cp "$REPRO/validate_release.py" "$ROOT/core_reproducibility/"
+          cp -R "$REPRO/config" "$ROOT/core_reproducibility/"
+          cp -R "$REPRO/source" "$ROOT/core_reproducibility/"
+          cp -R "$REPRO/audit_scripts" "$ROOT/core_reproducibility/"
+          cp -R "$REPRO/provenance_scripts" "$ROOT/core_reproducibility/"
+          mkdir -p "$ROOT/core_reproducibility/data"
+          cp -R "$REPRO/data/canonical" "$ROOT/core_reproducibility/data/"
+
+          find "$N8" -maxdepth 1 -type f \( -name "*.py" -o -name "*.md" -o -name "*.json" -o -name "*.csv" \) -exec cp {} "$ROOT/elasticity_and_thermal_validation/" \;
+          mkdir -p "$ROOT/elasticity_and_thermal_validation/elastic"
+          find "$N8/elastic" -maxdepth 1 -type f \( -name "*.py" -o -name "*.md" -o -name "*.json" -o -name "*.csv" \) -exec cp {} "$ROOT/elasticity_and_thermal_validation/elastic/" \;
+          if [ -d "$N8/elastic/final_output" ]; then
+            mkdir -p "$ROOT/elasticity_and_thermal_validation/elastic/final_output"
+            find "$N8/elastic/final_output" -maxdepth 1 -type f \( -name "*.json" -o -name "*.csv" \) -exec cp {} "$ROOT/elasticity_and_thermal_validation/elastic/final_output/" \;
+          fi
+
+          cp "$FIG/publication_n22r.mplstyle" "$ROOT/figure_generation/"
+          cp "$FIG/make_all_n22r.py" "$ROOT/figure_generation/"
+          cp "$FIG/verify_n22r_outputs.py" "$ROOT/figure_generation/"
+          cp "$FIG"/figure*_n22r.py "$ROOT/figure_generation/"
+
+          cat > "$ROOT/README_PACKAGE.md" <<'EOF'
+          # Janus MoSSe N29 Simulation Code Package
+
+          This package collects the executable scientific code used for the N29 manuscript evidence chain.
+
+          ## Contents
+
+          - core_reproducibility/
+            - rigid finite-contact GSFE model
+            - prepared-state depinning / branch continuation
+            - matched symmetry and exact-inversion audits
+            - finite-size and shape scaling
+            - vector mode-locking / Floquet audits
+            - stationary thermal simulation and inference
+            - canonical configuration and frozen canonical CSV outputs
+          - elasticity_and_thermal_validation/
+            - linear in-plane elastic relaxation validation
+            - nonlinear VFF reconstruction and checks
+            - independent high-temperature / timestep sensitivity scripts
+            - reference validation summaries
+          - figure_generation/
+            - N22R/N29 figure-generation scripts and export verifier
+
+          ## Scientific snapshot
+
+          N29 manuscript scientific baseline:
+          327c58e2684398ba7bc11205865f8222066c3539
+
+          Packaging branch changes only figure layout/QA code; simulation source is unchanged from that scientific baseline.
+
+          ## Environment
+
+          Start with:
+              python -m pip install -r core_reproducibility/requirements.txt
+
+          Then read:
+              core_reproducibility/README.md
+              core_reproducibility/ENVIRONMENT.md
+              core_reproducibility/RUNNING_AUDITS.md
+
+          The package intentionally excludes large generated binary trajectory arrays, manuscript files, and rendered figure binaries. Frozen canonical CSV outputs needed for checking/replotting are included.
+          EOF
+
+          {
+            echo "N29 scientific baseline: 327c58e2684398ba7bc11205865f8222066c3539"
+            echo "Packaged workflow head: ${GITHUB_SHA}"
+            echo "Generated UTC: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > "$ROOT/SNAPSHOT.txt"
+
+          (
+            cd "$ROOT"
+            find . -type f ! -name FILE_MANIFEST_SHA256.txt -print0 | sort -z | xargs -0 sha256sum > FILE_MANIFEST_SHA256.txt
+          )
+
+          zip -r -9 Janus_MoSSe_N29_Simulation_Code.zip "$ROOT" >/dev/null
+          python - <<'PY'
+          import zipfile
+          p="Janus_MoSSe_N29_Simulation_Code.zip"
+          with zipfile.ZipFile(p) as z:
+              bad=z.testzip()
+              assert bad is None, bad
+              names=z.namelist()
+              assert any(n.endswith("core_reproducibility/source/janus_fourier_landscapes_v12.py") for n in names)
+              assert any(n.endswith("elasticity_and_thermal_validation/vff_reconstruction.py") for n in names)
+              assert any(n.endswith("figure_generation/figure7_n22r.py") for n in names)
+              print("ZIP integrity PASS; files:", len(names))
+          PY
+
+      - name: Upload simulation-code package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Janus_MoSSe_N29_Simulation_Code
+          path: Janus_MoSSe_N29_Simulation_Code.zip
+          if-no-files-found: error
+          retention-days: 30
