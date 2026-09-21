@@ -53,7 +53,7 @@ def inch(mm: float) -> float:
     return mm / MM_PER_IN
 
 
-def panel_label(ax, letter: str, x: float = -0.055, y: float = 1.045) -> None:
+def panel_label(ax, letter: str, x: float = -0.055, y: float = 1.030) -> None:
     ax.text(
         x, y, f'({letter})', transform=ax.transAxes,
         ha='left', va='bottom', fontsize=9.3,
@@ -61,7 +61,7 @@ def panel_label(ax, letter: str, x: float = -0.055, y: float = 1.045) -> None:
     )
 
 
-def panel_title(ax, title: str, x: float = 0.055, y: float = 1.025) -> None:
+def panel_title(ax, title: str, x: float = 0.060, y: float = 1.015) -> None:
     ax.text(
         x, y, title, transform=ax.transAxes,
         ha='left', va='bottom', fontsize=8.4,
@@ -172,7 +172,7 @@ def main() -> None:
         ),
     ]
     b.legend(
-        handles=family_handles, loc='center',
+        handles=family_handles, loc='center', bbox_to_anchor=(0.50, 0.64),
         ncol=2, columnspacing=1.0, handlelength=1.7,
     )
     panel_label(b, 'b')

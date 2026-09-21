@@ -2,7 +2,7 @@ from __future__ import annotations
 import argparse, hashlib
 from pathlib import Path
 import pymupdf as fitz
-from PIL import Image
+from PIL import Image, ImageChops
 
 EXPECTED_MM={
  'Figure_1_credibility_registry_asymmetry_N22R':(177.8,80.0),
@@ -36,7 +36,13 @@ def main():
         doc.close()
         png=Image.open(out/f'{stem}.png'); expected=(round(wmm/25.4*300),round(hmm/25.4*300))
         if any(abs(a-b)>1 for a,b in zip(png.size,expected)): raise AssertionError(f'{stem}: wrong PNG canvas {png.size}, expected {expected} +/-1')
-        print(stem,'PASS',sorted(fonts),png.size)
+        rgb=png.convert('RGB'); white=Image.new('RGB',rgb.size,'white')
+        diff=ImageChops.difference(rgb,white).convert('L').point(lambda p: 255 if p>8 else 0)
+        bbox=diff.getbbox()
+        if bbox is None: raise AssertionError(f'{stem}: rendered PNG is blank')
+        margins=(bbox[0],bbox[1],rgb.width-bbox[2],rgb.height-bbox[3])
+        if min(margins)<12: raise AssertionError(f'{stem}: content too close to canvas edge, margins={margins}px')
+        print(stem,'PASS',sorted(fonts),png.size,'edge_margins_px',margins)
     (out/'N22R_FIGURE_SHA256SUMS.txt').write_text(''.join(f'{h}  {n}\n' for h,n in sorted(sums,key=lambda z:z[1])),encoding='utf-8')
     print('N22R FIGURE EXPORT PREFLIGHT: PASS')
 if __name__=='__main__': main()
