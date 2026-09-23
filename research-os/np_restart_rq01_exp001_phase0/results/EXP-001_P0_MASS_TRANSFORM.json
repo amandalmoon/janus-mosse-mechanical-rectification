@@ -1,0 +1,8 @@
+{
+  "n_trials": 100,
+  "max_abs_error": 1.1368683772161603e-13,
+  "mean_abs_error": 2.3305801732931285e-14,
+  "mass_matrix": "diag(N,N,1,...,1)",
+  "N": 127,
+  "nint": 251
+}
