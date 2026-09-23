@@ -1,32 +1,113 @@
 {
   "research_id": "NP-RESTART-RQ01",
-  "current_stage": "execution/data preparation — Phase-0 complete; Phase-1 freeze pending",
+  "current_stage": "execution/data preparation — Phase-1 production freeze ready for approval",
   "last_valid_gate": "GATE-EXP001-P0",
   "gate_status": "PARTIAL",
   "target_venue": null,
   "claims": [
-    {"id":"CLAIM-RQ01-PREDICTABILITY","status":"PENDING","version":1,"supersedes":null},
-    {"id":"CLAIM-RQ01-MINIMAL-REDUCTION","status":"PENDING","version":1,"supersedes":null}
+    {
+      "id": "CLAIM-RQ01-PREDICTABILITY",
+      "status": "PENDING",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "CLAIM-RQ01-MINIMAL-REDUCTION",
+      "status": "PENDING",
+      "version": 1,
+      "supersedes": null
+    }
   ],
   "artifacts": [
-    {"id":"THEORY-01","status":"VERIFIED"},
-    {"id":"DESIGN-01","status":"VERIFIED"},
-    {"id":"EXP-001-P0","status":"VERIFIED"},
-    {"id":"EXP-001-P0-RESULTS","status":"VERIFIED"},
-    {"id":"N29-FROZEN","status":"VERIFIED"}
+    {
+      "id": "THEORY-01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DESIGN-01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "EXP-001-P0",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "EXP-001-P0-RESULTS",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DESIGN-02",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "EQ-001-PREDICTOR-SCHEMA",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "N29-FROZEN",
+      "status": "VERIFIED"
+    }
   ],
-  "blockers": [],
+  "blockers": [
+    {
+      "id": "B-004",
+      "type": "HUMAN_APPROVAL",
+      "owner": "user",
+      "status": "OPEN",
+      "affected_ids": [
+        "DESIGN-02",
+        "EQ-001-PREDICTOR"
+      ]
+    }
+  ],
   "human_gates": [
-    {"gate_id":"GATE-RQ-SCOPE","status":"APPROVED","decision_id":null},
-    {"gate_id":"GATE-NOVELTY-HYPOTHESIS","status":"APPROVED","decision_id":null},
-    {"gate_id":"GATE-MATERIAL-BRANCH","status":"APPROVED","decision_id":"DEC-001"},
-    {"gate_id":"GATE-PHASE1-PRODUCTION-FREEZE","status":"PENDING","decision_id":null}
+    {
+      "gate_id": "GATE-RQ-SCOPE",
+      "status": "APPROVED",
+      "decision_id": null
+    },
+    {
+      "gate_id": "GATE-NOVELTY-HYPOTHESIS",
+      "status": "APPROVED",
+      "decision_id": null
+    },
+    {
+      "gate_id": "GATE-MATERIAL-BRANCH",
+      "status": "APPROVED",
+      "decision_id": "DEC-001"
+    },
+    {
+      "gate_id": "GATE-PHASE1-FREEZE-PREPARATION",
+      "status": "APPROVED",
+      "decision_id": "DEC-002"
+    },
+    {
+      "gate_id": "GATE-PHASE1-PRODUCTION-FREEZE",
+      "status": "PENDING",
+      "decision_id": null
+    }
   ],
   "dirty_artifact_ids": [],
   "stage_history": [
-    {"stage":"theory/model","gate_status":"PASS","note":"THEORY-01 frozen"},
-    {"stage":"experiment/simulation design","gate_status":"PASS","note":"DESIGN-01 preregistered; EXP-001 Phase-0 approved"},
-    {"stage":"execution/data preparation — EXP-001 Phase-0","gate_status":"PASS","note":"P0.1-P0.5 completed; no scientific driven validation performed"},
-    {"stage":"execution/data preparation — Phase-1 production freeze","gate_status":"PARTIAL","note":"Awaiting explicit human approval and freeze of production/predictor settings"}
+    {
+      "stage": "theory/model",
+      "gate_status": "PASS",
+      "note": "THEORY-01 frozen"
+    },
+    {
+      "stage": "experiment/simulation design",
+      "gate_status": "PASS",
+      "note": "DESIGN-01 preregistered; EXP-001 Phase-0 approved"
+    },
+    {
+      "stage": "execution/data preparation — EXP-001 Phase-0",
+      "gate_status": "PASS",
+      "note": "P0.1-P0.5 completed; no scientific driven validation performed"
+    },
+    {
+      "stage": "execution/data preparation — Phase-1 production freeze",
+      "gate_status": "PARTIAL",
+      "note": "DESIGN-02 and predictor schema frozen technically; explicit approval of production cost/policy pending"
+    }
   ]
 }
