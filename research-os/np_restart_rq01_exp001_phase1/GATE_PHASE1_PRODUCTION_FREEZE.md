@@ -29,28 +29,31 @@ All entry requirements are satisfied.
 8. predictor artifact schema fixed;
 9. explicit human approval of this production cost/policy.
 
-Items 1-8 are satisfied in DESIGN-02. Item 9 is pending.
+All exit requirements are satisfied.
 
 ## Status
 
-**PARTIAL — READY FOR HUMAN APPROVAL**
+**PASS — PHASE-1 EQUILIBRIUM PRODUCTION AUTHORIZED**
 
-## Authorized subset
+Human approval record: `DEC-003_phase1_production_approval.json`.
 
-- repository organization
-- documentation
-- code implementation that cannot expose scientific production results
-- deterministic unit tests against Phase-0 fixtures
+## Authorized scope
 
-## Blocked subset
+- primary 8 x 2500 constrained-equilibrium production;
+- preregistered precision extensions to 12 x 2500 and then 12 x 5000 only if DESIGN-02 triggers them;
+- equilibrium force-correlation analysis;
+- equilibrium response/predictor freeze;
+- half-dt and other equilibrium-only diagnostics declared in DESIGN-02.
 
-- primary 8 x 2500 equilibrium production
-- any precision extension
-- freezing EQ-001 predictor values
-- any prescribed-drive scientific validation
+## Still blocked
+
+- prescribed-drive scientific validation;
+- post hoc frequency substitution after driven data are inspected;
+- M0/M1/M3 winner claims before driven validation;
+- corner/edge or winding branches.
 
 ## Notes
 
-The previous user instruction "다음작업" is recorded as authorization to prepare this Phase-1 freeze, not as approval of production parameters that had not yet been presented.
+The user's instruction to proceed was received after the complete production cost and estimator policy were presented. It is therefore recorded as approval of DESIGN-02 execution, bounded by this file.
 
-No scientific result has been generated at this gate.
+No driven scientific result is authorized by this gate.
