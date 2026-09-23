@@ -1,0 +1,15 @@
+{
+  "decision_id": "DEC-005",
+  "decision_type": "PRECISION_EXTENSION",
+  "status": "APPROVED_BY_PREREGISTRATION",
+  "choice": "Extend all 12 Phase-1 equilibrium trajectories from 2500 to 5000 reduced production time units total.",
+  "rationale": "After the preregistered 12 x 2500 equilibrium-only analysis, Gamma0 remained unresolved and no contiguous equilibrium-resolved frequency band spanning factor >= 8 existed. DESIGN-02 mandates the 12 x 5000 extension before human review.",
+  "affected_ids": [
+    "EQ-001-PREDICTOR"
+  ],
+  "supersedes": null,
+  "evidence_ids": [
+    "EQ001-PRIMARY12-ANALYSIS"
+  ],
+  "boundary": "No scientific driven validation is authorized. The extension uses deterministic PRNG replay to reconstruct the exact 2500 endpoint and appends a second 2500-unit recorded segment; prefix equivalence was verified exactly for forces, kinetic/potential energy, heat and anorm, with mode-coordinate discrepancy only 3.3e-13."
+}
