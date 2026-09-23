@@ -1,0 +1,17 @@
+{
+  "decision_id": "DEC-002",
+  "decision_type": "EXPERIMENT_BRANCH",
+  "status": "APPROVED",
+  "choice": "Prepare and store the exact Phase-1 production/predictor freeze after EXP-001 Phase-0 PASS; do not execute scientific production until the frozen cost and estimator policy are presented.",
+  "rationale": "The user instructed continuation to the next task immediately after Phase-0. The next declared task was GATE-PHASE1-PRODUCTION-FREEZE. Parameters did not yet exist at the time of that instruction, so execution approval is not inferred.",
+  "affected_ids": [
+    "DESIGN-02",
+    "EQ-001-PREDICTOR"
+  ],
+  "supersedes": null,
+  "evidence_ids": [
+    "EXP-001-P0-RESULTS",
+    "EXP-001-P0-REPORT"
+  ],
+  "boundary": "Authorization covers design freeze and repository updates only. Primary Phase-1 production and all driven validation remain blocked pending explicit approval."
+}
