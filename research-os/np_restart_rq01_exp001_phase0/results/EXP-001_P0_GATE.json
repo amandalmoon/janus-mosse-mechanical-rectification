@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": {"P0.1_static":true,"P0.2_mass":true,"P0.3_FDT":true,"P0.4_pilot":true,"P0.5_energy":true},
+  "static_relative_to_frozen_independent_vff": {"Fc_plus":1.3307385747571464e-07,"Fc_minus":4.068740398691101e-07,"rho":5.972132516077652e-07},
+  "phase0_scope": "implementation/baseline/FDT/constrained-equilibrium planning only",
+  "scientific_claims_generated": false,
+  "driven_scientific_validation_performed": false,
+  "pilot_memory_note": "Ensemble force ACF shows oscillatory long tails/recurrences; tau=9.7679 is a conservative planning cutoff, not evidence for a single-exponential memory law.",
+  "phase1_min_production_time_from_preregistered_200tau_rule": 1953.5857962567206,
+  "next_action": "Human approval required before Phase-1 production. Freeze production seeds/length, correlation estimator/window policy, and predictor artifact schema before any driven scientific validation.",
+  "blocker_if_any": null
+}
