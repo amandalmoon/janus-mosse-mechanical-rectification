@@ -1,0 +1,16 @@
+{
+  "A": 0.0025,
+  "Omega": 0.1,
+  "dt": 0.000576312996712703,
+  "nsteps": 109024,
+  "elapsed_time": 62.83194815360573,
+  "delta_E": 0.30404131352921127,
+  "work_parameter": 0.00016814918409002733,
+  "heat_bath_to_system": 0.30392439095772994,
+  "first_law_residual": -5.1226612608701316e-05,
+  "relative_residual_vs_turnover": 0.00016845731429258575,
+  "pre_equilibration_time": 29.999973043879752,
+  "nominal_period": 62.83185307179586,
+  "period_fraction_simulated": 1.0000015132740039,
+  "note": "implementation-only prescribed-q energy bookkeeping after fixed-q equilibration; excluded from predictor/model selection and scientific driven validation"
+}
