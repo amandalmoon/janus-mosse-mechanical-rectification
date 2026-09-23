@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "EQ-001-PREDICTOR",
+  "status_allowed": [
+    "FROZEN",
+    "UNRESOLVED",
+    "BLOCKED"
+  ],
+  "metadata": {
+    "research_id": "NP-RESTART-RQ01",
+    "frozen_n29_commit": "string",
+    "phase1_branch": "string",
+    "source_hashes": "object",
+    "q0": "[float,float]",
+    "N": "integer",
+    "theta_deg": "float",
+    "T_star": "float",
+    "zeta_b_star": "float",
+    "dt": "float",
+    "sample_dt": "float",
+    "production_seeds": "integer[]",
+    "burn_time": "float",
+    "production_time_per_trajectory": "float",
+    "extension_level": "8x2500 | 12x2500 | 12x5000"
+  },
+  "equilibrium_response": {
+    "lag_grid": "float[]",
+    "C_xx": "float[]",
+    "C_xy": "float[]",
+    "C_yx": "float[]",
+    "C_yy": "float[]",
+    "C_bootstrap_se": "object",
+    "lag_cutoffs": [
+      100,
+      150,
+      200,
+      250
+    ],
+    "rectangular_L250_sensitivity": "object"
+  },
+  "markov_predictor": {
+    "status": "FROZEN | UNRESOLVED",
+    "Gamma0": "2x2 float matrix or null",
+    "Gamma0_ci95": "object or null",
+    "gamma0_scalar": "float or null",
+    "gamma0_ci95": "[float,float] or null"
+  },
+  "frequency_response": {
+    "candidate_Omega": "float[81]",
+    "Ktilde_real": "array",
+    "Ktilde_imag": "array",
+    "G_dissipative": "array",
+    "ci95": "object",
+    "resolved_mask": "bool[81]",
+    "selected_five_Omega": "float[5] or null",
+    "discovery_indices": [
+      1,
+      3,
+      4
+    ],
+    "heldout_indices": [
+      2,
+      5
+    ]
+  },
+  "predicted_cycle_loss": {
+    "amplitudes": [
+      0.0025,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "directions": [
+      "x",
+      "y",
+      "diag"
+    ],
+    "models": [
+      "M0",
+      "M1",
+      "M3"
+    ],
+    "rows": "condition table with W_pred, SE, CI, status"
+  },
+  "diagnostics": {
+    "stationarity": "object",
+    "equipartition": "object",
+    "half_dt": "object",
+    "cutoff_stability": "object",
+    "first4_vs_second4": "object",
+    "structural_drift": "object",
+    "precision_extension_decision": "object"
+  },
+  "provenance": {
+    "predictor_package_sha256": "string",
+    "raw_artifact_manifest": "object"
+  }
+}
