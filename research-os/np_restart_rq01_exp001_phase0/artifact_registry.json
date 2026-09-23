@@ -115,6 +115,64 @@
       ],
       "supersedes": null,
       "material_change_note": "Phase-0 gate advanced from PARTIAL to PASS; downstream Phase-1 remains approval-blocked."
+    },
+    {
+      "id": "DESIGN-02",
+      "type": "production_freeze_design",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "experiment/simulation design",
+      "path": "research-os/np_restart_rq01_exp001_phase1/DESIGN-02_PHASE1_PRODUCTION_FREEZE.md",
+      "hash": "git-blob:5d2d9a1f2c193057200b6723b2b99a549904dc1c",
+      "depends_on": [
+        "EXP-001-P0-RESULTS",
+        "DESIGN-01"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "EQ-001-PREDICTOR-SCHEMA",
+      "type": "predictor_schema",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "experiment/simulation design",
+      "path": "research-os/np_restart_rq01_exp001_phase1/PREDICTOR_ARTIFACT_SCHEMA.json",
+      "hash": "git-blob:721e04d906c7442c4d7aeca93a4333c1871a1e94",
+      "depends_on": [
+        "DESIGN-02"
+      ],
+      "supersedes": null,
+      "material_change_note": null
+    },
+    {
+      "id": "GATE-PHASE1-PRODUCTION-FREEZE",
+      "type": "gate_record",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "research-os-orchestrator",
+      "path": "research-os/np_restart_rq01_exp001_phase1/GATE_PHASE1_PRODUCTION_FREEZE.md",
+      "hash": "git-blob:3f738c0f022b09e467b35a49c8fcfbfe0dbb6d04",
+      "depends_on": [
+        "DESIGN-02",
+        "EQ-001-PREDICTOR-SCHEMA"
+      ],
+      "supersedes": null,
+      "material_change_note": "Technical freeze ready; execution remains human-gated."
+    },
+    {
+      "id": "DEC-002",
+      "type": "decision_record",
+      "version": 1,
+      "status": "VERIFIED",
+      "owner": "human decision",
+      "path": "research-os/np_restart_rq01_exp001_phase1/DEC-002_phase1_freeze_authorization.json",
+      "hash": "git-blob:1524fc0b7a658af93d1d8f397bf1f98682406c84",
+      "depends_on": [
+        "EXP-001-P0-RESULTS"
+      ],
+      "supersedes": null,
+      "material_change_note": null
     }
   ]
 }
