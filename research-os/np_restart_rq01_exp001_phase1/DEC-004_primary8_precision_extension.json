@@ -1,0 +1,15 @@
+{
+  "decision_id": "DEC-004",
+  "decision_type": "PRECISION_EXTENSION",
+  "status": "APPROVED_BY_PREREGISTRATION",
+  "choice": "Extend Phase-1 equilibrium production from the primary 8 x 2500 ensemble to 12 x 2500 by adding seeds 2026092319-2026092322.",
+  "rationale": "The primary 8-trajectory equilibrium-only analysis did not resolve Gamma0 under the frozen L=200 vs L=250 and first4-vs-second4 criteria, and it did not produce a contiguous equilibrium-resolved frequency band spanning a factor of 8. DESIGN-02 explicitly requires the four-seed extension in this case.",
+  "affected_ids": [
+    "EQ-001-PREDICTOR"
+  ],
+  "supersedes": null,
+  "evidence_ids": [
+    "EQ001-PRIMARY8-ANALYSIS"
+  ],
+  "boundary": "No driven scientific validation has been inspected. This decision is an automatic precision extension under DESIGN-02 and does not authorize model selection or new-physics interpretation."
+}
