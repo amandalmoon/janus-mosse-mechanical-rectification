@@ -2,74 +2,38 @@
   "research_id": "NP-RESTART-RQ01",
   "artifacts": [
     {
-      "id": "N29-FROZEN",
-      "type": "upstream_science_reference",
-      "version": 1,
-      "status": "VERIFIED",
-      "owner": "frozen N29",
-      "path": "commit:327c58e2684398ba7bc11205865f8222066c3539",
-      "hash": null,
-      "depends_on": [],
-      "supersedes": null,
-      "material_change_note": "Read-only scientific reference; this branch must not mutate N29 claims."
+      "id":"N29-FROZEN","type":"upstream_science_reference","version":1,"status":"VERIFIED","owner":"frozen N29",
+      "path":"commit:327c58e2684398ba7bc11205865f8222066c3539","hash":null,"depends_on":[],"supersedes":null,
+      "material_change_note":"Read-only scientific reference; this branch must not mutate N29 claims."
     },
     {
-      "id": "THEORY-01",
-      "type": "theory_contract",
-      "version": 1,
-      "status": "VERIFIED",
-      "owner": "theory/model",
-      "path": "research-os/np_restart_rq01_exp001_phase0/THEORY-01_equilibrium_response_model.md",
-      "hash": null,
-      "depends_on": [
-        "N29-FROZEN"
-      ],
-      "supersedes": null,
-      "material_change_note": null
+      "id":"THEORY-01","type":"theory_contract","version":1,"status":"VERIFIED","owner":"theory/model",
+      "path":"research-os/np_restart_rq01_exp001_phase0/THEORY-01_equilibrium_response_model.md","hash":null,"depends_on":["N29-FROZEN"],"supersedes":null,"material_change_note":null
     },
     {
-      "id": "DESIGN-01",
-      "type": "preregistered_simulation_design",
-      "version": 1,
-      "status": "VERIFIED",
-      "owner": "experiment/simulation design",
-      "path": "research-os/np_restart_rq01_exp001_phase0/DESIGN-01_preregistered_small_oscillation_test.md",
-      "hash": null,
-      "depends_on": [
-        "THEORY-01"
-      ],
-      "supersedes": null,
-      "material_change_note": null
+      "id":"DESIGN-01","type":"preregistered_simulation_design","version":1,"status":"VERIFIED","owner":"experiment/simulation design",
+      "path":"research-os/np_restart_rq01_exp001_phase0/DESIGN-01_preregistered_small_oscillation_test.md","hash":null,"depends_on":["THEORY-01"],"supersedes":null,"material_change_note":null
     },
     {
-      "id": "EXP-001-P0",
-      "type": "execution_branch",
-      "version": 1,
-      "status": "TENTATIVE",
-      "owner": "simulation/data workflow",
-      "path": "research-os/np_restart_rq01_exp001_phase0/EXP-001_PHASE0_PLAN.md",
-      "hash": null,
-      "depends_on": [
-        "DESIGN-01",
-        "N29-FROZEN"
-      ],
-      "supersedes": null,
-      "material_change_note": "Phase-0 only; no driven scientific validation authorized."
+      "id":"EXP-001-P0","type":"execution_branch","version":1,"status":"VERIFIED","owner":"simulation/data workflow",
+      "path":"research-os/np_restart_rq01_exp001_phase0/EXP-001_PHASE0_PLAN.md","hash":null,"depends_on":["DESIGN-01","N29-FROZEN"],"supersedes":null,
+      "material_change_note":"Phase-0 completed only; no driven scientific validation authorized."
     },
     {
-      "id": "GATE-REPORT",
-      "type": "gate_record",
-      "version": 1,
-      "status": "VERIFIED",
-      "owner": "research-os-orchestrator",
-      "path": "research-os/np_restart_rq01_exp001_phase0/GATE_REPORT.md",
-      "hash": null,
-      "depends_on": [
-        "DESIGN-01",
-        "EXP-001-P0"
-      ],
-      "supersedes": null,
-      "material_change_note": null
+      "id":"EXP-001-P0-RESULTS","type":"execution_results","version":1,"status":"VERIFIED","owner":"simulation/data workflow",
+      "path":"research-os/np_restart_rq01_exp001_phase0/results/EXP-001_P0_GATE.json","hash":null,
+      "depends_on":["EXP-001-P0","N29-FROZEN"],"supersedes":null,
+      "material_change_note":"P0.1-P0.5 pass. Pilot tau is planning-only and does not establish a Markov or memory model."
+    },
+    {
+      "id":"EXP-001-P0-REPORT","type":"execution_report","version":1,"status":"VERIFIED","owner":"simulation/data workflow",
+      "path":"research-os/np_restart_rq01_exp001_phase0/EXP-001_PHASE0_EXECUTION_REPORT.md","hash":null,
+      "depends_on":["EXP-001-P0-RESULTS"],"supersedes":null,"material_change_note":null
+    },
+    {
+      "id":"GATE-REPORT","type":"gate_record","version":2,"status":"VERIFIED","owner":"research-os-orchestrator",
+      "path":"research-os/np_restart_rq01_exp001_phase0/GATE_REPORT.md","hash":null,
+      "depends_on":["DESIGN-01","EXP-001-P0-RESULTS"],"supersedes":null,"material_change_note":"Phase-0 gate advanced from PARTIAL to PASS; downstream Phase-1 remains approval-blocked."
     }
   ]
 }
