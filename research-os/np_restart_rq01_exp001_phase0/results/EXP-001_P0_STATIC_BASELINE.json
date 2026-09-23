@@ -1,0 +1,21 @@
+{
+  "theta_deg": 1.5,
+  "N": 127,
+  "nint": 251,
+  "bond_count": 342,
+  "angle_count": 648,
+  "constraint_residual": 4.145989107584569e-15,
+  "ground_energy_per_site": -0.5601061245382339,
+  "ground_grad_norm": 1.494811555930089e-07,
+  "ground_hessian_min_eig_per_site": 0.7565758737769874,
+  "ground_hessian_max_eig_per_site": 59.267889208892306,
+  "optimizer_success": true,
+  "fd_energy_gradient_max": 8.301664911058992e-11,
+  "fd_gradient_hessian_max": 1.3896404332802703e-08,
+  "Fc_plus": 2.9354003906250012,
+  "Fc_minus": 1.190478515625,
+  "rho": 0.4229212525740256,
+  "q0": [1.5, 0.8660254037844386],
+  "metrics_plus": {"max_bond_strain": 0.0027592440333972235, "max_angle_change_deg": 0.29356156580642034, "max_disp_A": 0.047438853865617955},
+  "metrics_minus": {"max_bond_strain": 0.003958330026683443, "max_angle_change_deg": 0.39407182135058, "max_disp_A": 0.058072085054671096}
+}
