@@ -1,0 +1,24 @@
+{
+  "stage": "EXTENDED_12x2500",
+  "decision": "EXTEND_TO_12x5000",
+  "automatic_under_DESIGN_02": true,
+  "Gamma0_resolved": false,
+  "valid_factor8_band": false,
+  "best_contiguous_resolved_band": {
+    "start_index_0based": 49,
+    "end_index_0based": 50,
+    "ratio": 1.0881785145054987
+  },
+  "driven_validation_inspected": false,
+  "continuation_method": "Exact-PRNG state-only replay of burn + first 2500, then record second 2500 and concatenate with immutable first-half observables.",
+  "replay_prefix_validation": {
+    "seed": 2026092311,
+    "n_samples": 64,
+    "max_abs_fq": 0,
+    "max_abs_ke": 0,
+    "max_abs_pe": 0,
+    "max_abs_heat": 0,
+    "max_abs_anorm": 0,
+    "max_abs_modes": 3.281359559070829e-13
+  }
+}
