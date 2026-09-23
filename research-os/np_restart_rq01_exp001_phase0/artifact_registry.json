@@ -20,9 +20,15 @@
       "material_change_note":"Phase-0 completed only; no driven scientific validation authorized."
     },
     {
+      "id":"EXP-001-P0-SOURCE","type":"reproducibility_source","version":1,"status":"VERIFIED","owner":"simulation/data workflow",
+      "path":"research-os/np_restart_rq01_exp001_phase0/source/exp001_phase0_repro.py","hash":null,
+      "depends_on":["EXP-001-P0","N29-FROZEN"],"supersedes":null,
+      "material_change_note":"Clean reproducibility harness for the Phase-0 dynamic extension; frozen upstream VFF/GSFE remain the scientific reference."
+    },
+    {
       "id":"EXP-001-P0-RESULTS","type":"execution_results","version":1,"status":"VERIFIED","owner":"simulation/data workflow",
       "path":"research-os/np_restart_rq01_exp001_phase0/results/EXP-001_P0_GATE.json","hash":null,
-      "depends_on":["EXP-001-P0","N29-FROZEN"],"supersedes":null,
+      "depends_on":["EXP-001-P0","EXP-001-P0-SOURCE","N29-FROZEN"],"supersedes":null,
       "material_change_note":"P0.1-P0.5 pass. Pilot tau is planning-only and does not establish a Markov or memory model."
     },
     {
@@ -33,7 +39,8 @@
     {
       "id":"GATE-REPORT","type":"gate_record","version":2,"status":"VERIFIED","owner":"research-os-orchestrator",
       "path":"research-os/np_restart_rq01_exp001_phase0/GATE_REPORT.md","hash":null,
-      "depends_on":["DESIGN-01","EXP-001-P0-RESULTS"],"supersedes":null,"material_change_note":"Phase-0 gate advanced from PARTIAL to PASS; downstream Phase-1 remains approval-blocked."
+      "depends_on":["DESIGN-01","EXP-001-P0-RESULTS"],"supersedes":null,
+      "material_change_note":"Phase-0 gate advanced from PARTIAL to PASS; downstream Phase-1 remains approval-blocked."
     }
   ]
 }
