@@ -1,0 +1,18 @@
+{
+  "stage": "PRIMARY_8x2500",
+  "decision": "EXTEND_TO_12x2500",
+  "automatic_under_DESIGN_02": true,
+  "reasons": [
+    "Gamma0 mandatory low-frequency stability criteria unresolved",
+    "No contiguous equilibrium-resolved frequency band spanning factor >= 8"
+  ],
+  "Gamma0_resolved": false,
+  "resolved_frequency_count": 16,
+  "candidate_frequency_count": 81,
+  "best_contiguous_resolved_band": {
+    "start_index_0based": 47,
+    "end_index_0based": 48,
+    "ratio": 1.0881785145054983
+  },
+  "driven_validation_inspected": false
+}
