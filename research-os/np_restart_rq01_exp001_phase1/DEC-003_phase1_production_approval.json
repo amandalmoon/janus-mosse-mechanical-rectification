@@ -1,0 +1,18 @@
+{
+  "decision_id": "DEC-003",
+  "decision_type": "EXPERIMENT_BRANCH",
+  "status": "APPROVED",
+  "choice": "Execute EXP-001 Phase-1 constrained-equilibrium production under the exact DESIGN-02 production, convergence, uncertainty, and precision-extension rules. Do not perform scientific driven validation.",
+  "rationale": "After the full Phase-1 production cost and estimator policy were presented, the user explicitly instructed to proceed to the next task.",
+  "affected_ids": [
+    "DESIGN-02",
+    "EQ-001-PREDICTOR"
+  ],
+  "supersedes": null,
+  "evidence_ids": [
+    "GATE-EXP001-P0",
+    "DESIGN-02",
+    "EQ-001-PREDICTOR-SCHEMA"
+  ],
+  "boundary": "Approval covers equilibrium production, allowed preregistered precision extensions, response analysis, and predictor freeze only. Prescribed-drive scientific validation remains blocked."
+}
