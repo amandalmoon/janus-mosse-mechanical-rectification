@@ -1,0 +1,19 @@
+{
+  "decision_id": "DEC-001",
+  "decision_type": "EXPERIMENT_BRANCH",
+  "status": "APPROVED",
+  "choice": "Authorize EXP-001 Phase-0 only: frozen VFF static reproduction, mass-transform verification, internal Langevin FDT verification, constrained-equilibrium pilot, and implementation energy accounting. Store the branch separately in GitHub and stop before driven validation or production claims.",
+  "rationale": "User explicitly selected EXP-001 Phase-0 as the next scientific execution and requested separate repository preservation. This bounded branch increases falsification power while preventing post hoc model selection from driven data.",
+  "affected_ids": [
+    "EXP-001-P0",
+    "DESIGN-01",
+    "THEORY-01"
+  ],
+  "supersedes": null,
+  "evidence_ids": [
+    "N29-FROZEN",
+    "THEORY-01",
+    "DESIGN-01"
+  ],
+  "boundary": "No corner-edge crossover, no free-running transport, no production equilibrium-response claim, no driven validation, and no modification of frozen N29 scientific results."
+}
