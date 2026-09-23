@@ -1,0 +1,33 @@
+{
+  "theta_deg": 1.5,
+  "T_star": 0.01,
+  "zeta_b_star": 1.0,
+  "n_seeds": 2,
+  "production_time_per_seed": 100.0,
+  "sample_dt": 0.00979732094411595,
+  "acf_window": 40.0,
+  "ensemble_mean_acf_x": {
+    "first_sustained_abs_lt_0p10_for_1": 5.731432752307831,
+    "first_sustained_abs_lt_0p05_for_1": 6.084136306296005,
+    "abs_corr_integral": 2.8185129665763724,
+    "tail_abs_integral_growth_last20pct": 0.38413407213479633,
+    "signed_corr_integral": 0.014431313522871834,
+    "acf_at_end": -0.06437267824848993,
+    "window_end": 39.99266409388131,
+    "max_abs_acf_last20pct": 0.15842287658435592
+  },
+  "ensemble_mean_acf_y": {
+    "first_sustained_abs_lt_0p10_for_1": 5.280755988878497,
+    "first_sustained_abs_lt_0p05_for_1": 9.767928981283603,
+    "abs_corr_integral": 3.2806645025345067,
+    "tail_abs_integral_growth_last20pct": 0.5322138731024082,
+    "signed_corr_integral": -0.01553366538862096,
+    "acf_at_end": 0.0280643595545575,
+    "window_end": 39.99266409388131,
+    "max_abs_acf_last20pct": 0.13860474900936642
+  },
+  "cutoff_resolved": true,
+  "tau_mem_planning_estimate": 9.767928981283603,
+  "production_time_rule_200tau": 1953.5857962567206,
+  "note": "Phase-0 planning-only ensemble ACF. Long oscillatory tails/recurrences are retained rather than forced into a single relaxation time."
+}
