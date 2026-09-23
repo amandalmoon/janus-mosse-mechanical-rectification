@@ -1,0 +1,85 @@
+{
+  "research_id": "NP-RESTART-RQ01",
+  "current_stage": "execution/data preparation — EXP-001 Phase-0",
+  "last_valid_gate": "GATE-DESIGN",
+  "gate_status": "PARTIAL",
+  "target_venue": null,
+  "claims": [
+    {
+      "id": "CLAIM-RQ01-PREDICTABILITY",
+      "status": "PENDING",
+      "version": 1,
+      "supersedes": null
+    },
+    {
+      "id": "CLAIM-RQ01-MINIMAL-REDUCTION",
+      "status": "PENDING",
+      "version": 1,
+      "supersedes": null
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "THEORY-01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "DESIGN-01",
+      "status": "VERIFIED"
+    },
+    {
+      "id": "EXP-001-P0",
+      "status": "TENTATIVE"
+    },
+    {
+      "id": "N29-FROZEN",
+      "status": "VERIFIED"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "B-003",
+      "type": "ROBUSTNESS_GAP",
+      "owner": "simulation/data workflow",
+      "status": "OPEN",
+      "affected_ids": [
+        "EXP-001-P0"
+      ]
+    }
+  ],
+  "human_gates": [
+    {
+      "gate_id": "GATE-RQ-SCOPE",
+      "status": "APPROVED",
+      "decision_id": null
+    },
+    {
+      "gate_id": "GATE-NOVELTY-HYPOTHESIS",
+      "status": "APPROVED",
+      "decision_id": null
+    },
+    {
+      "gate_id": "GATE-MATERIAL-BRANCH",
+      "status": "APPROVED",
+      "decision_id": "DEC-001"
+    }
+  ],
+  "dirty_artifact_ids": [],
+  "stage_history": [
+    {
+      "stage": "theory/model",
+      "gate_status": "PASS",
+      "note": "THEORY-01 frozen"
+    },
+    {
+      "stage": "experiment/simulation design",
+      "gate_status": "PASS",
+      "note": "DESIGN-01 preregistered; EXP-001 Phase-0 approved"
+    },
+    {
+      "stage": "execution/data preparation — EXP-001 Phase-0",
+      "gate_status": "PARTIAL",
+      "note": "Implementation checks not yet executed"
+    }
+  ]
+}
